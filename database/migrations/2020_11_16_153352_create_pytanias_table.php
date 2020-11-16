@@ -22,6 +22,7 @@ class CreatePytaniasTable extends Migration
 
         });
 
+    }
     /**
      * Reverse the migrations.
      *
