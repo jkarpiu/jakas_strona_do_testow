@@ -10,10 +10,10 @@ use Illuminate\Database\Eloquent\Model;
 class wyniki extends Model
 {
     public function user() {
-        return $this->belongsTo('App\User', 'user_id');
+        return $this->belongsTo('App\User', 'id_user');
     }
 
     public function dzial() {
-        return $this->belongsTo('App\Dzialy', 'dzialy_id');
+        return $this->belongsTo('App\Dzialy', 'id_dzial');
     }
 }

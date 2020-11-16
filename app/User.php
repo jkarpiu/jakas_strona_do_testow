@@ -41,7 +41,7 @@ class User extends Authenticatable
 
 
     public function klasa() {
-        return $this->belongsTo('App\klasy', 'klasy_id');
+        return $this->belongsTo('App\klasy', 'id_klasy');
     }
 
     public function wyniki() {

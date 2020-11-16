@@ -15,8 +15,8 @@ class CreateWynikisTable extends Migration
     {
         Schema::create('wynikis', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
-            $table->integer('dzialy_id');
+            $table->integer('id_user');
+            $table->integer('id_dzial');
             $table->integer('max_points');
             $table->integer('points');
             $table->timestamps();
