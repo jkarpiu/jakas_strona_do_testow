@@ -19,6 +19,7 @@ class CreateOdpowiedzisTable extends Migration
             $table->text('tresc');
             $table->boolean('poprawna');
             $table->integer('opcja'); 
+            $table->integer('id_pytanie');
         });
     }
 
