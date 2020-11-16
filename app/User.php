@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\klasy;
+use App\wyniki;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -36,4 +38,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function klasa() {
+        return $this->belongsTo('App\klasy', 'klasy_id');
+    }
+
+    public function wyniki() {
+        return $this -> hasMany('App\Wyniki');
+    }
 }
