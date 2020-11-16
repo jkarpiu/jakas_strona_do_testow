@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Odpowiedzi;
 use App\Dzialy;
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,7 +14,6 @@ class Pytania extends Model
     }
     public function odpowiedzi()
     {
-        return $this->hasMany('app\Odpowiedzi');
-
+        return $this->hasMany('App\Odpowiedzi');
     }
 }
