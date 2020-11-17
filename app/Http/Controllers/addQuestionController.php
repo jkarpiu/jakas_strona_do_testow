@@ -21,10 +21,10 @@ class addQuestionController extends Controller
             Odpowiedzi::create([
                 'tresc' => $request['a'.(String)$i],
                 'id_pytanie' =>  $pytanie -> id,
-                'poprawna' => false,
+                'poprawna' => ($request['valid'] == 'a'.(String)$i),
             ]);
         }
-        dd(Pytania::where('id', $pytanie->id)->get()[0]);
+        dd(Pytania::where('id', $pytanie->id)->get()[0]-> odpowiedzi);
     }
 
 
