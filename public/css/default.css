@@ -1,0 +1,115 @@
+html,
+body {
+    background-color: rgb(25, 25, 25);
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    margin: 0;
+}
+
+.links ul {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+.links li {
+    line-height: 2.5rem;
+    float: left;
+    text-align: center;
+    color: black;
+    margin: 0;
+    list-style-type: none;
+    width: 180px;
+}
+
+.links>ul>span>li>ul {
+    display: none;
+}
+
+.links>ul>span>li:hover>ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    background-color: rgb(25, 25, 25);
+    position: relative;
+    height: 2.5rem;
+    z-index: 2;
+}
+
+.links>ul>span>li>ul:hover>a {
+    opacity: 0.3;
+}
+
+.full-height {
+    height: 8vh;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+}
+
+.top-left>a {
+    position: absolute;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    margin-top: 1px;
+    color: #fcfcfc;
+    left: 10px;
+    top: 18px;
+}
+
+.top-left>a:hover {
+    opacity: 0.3;
+}
+
+.top-right>ul>span>li>a:hover {
+    opacity: 0.3;
+}
+
+.top-right>ul>li>a:hover {
+    opacity: 0.3;
+}
+
+.content {
+    text-align: center;
+    background-color: #fcfcfc;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 3vh;
+
+}
+
+.dropdown-display {
+    width: 50px;
+    position: static;
+    left: 25px;
+}
+
+.links>ul a {
+    color: #fcfcfc;
+    padding: 0 15px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#footer {
+    background-color: rgb(25, 25, 25);
+    clear: both;
+    color: #fcfcfc;
+    display: block;
+    height: 2vh;
+    margin-bottom: 3vh;
+    text-align: center;
+    text-transform: uppercase;
+}

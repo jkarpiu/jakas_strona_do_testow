@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Egzaminki</title>
+    <title>ipies</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
@@ -24,8 +24,8 @@
 
         .links ul{
             margin-left: auto;
-           margin-right: auto;
-           padding: 0;
+            margin-right: auto;
+            padding: 0;
         }
 
         .links li{
@@ -35,21 +35,28 @@
             color: black;
             margin: 0;
             list-style-type:none;
+            width: 180px;
         }
 
-        .links > ul > li > ul {
+        .links > ul > span > li > ul  {
             display:none;
         }
 
-        .links  > ul > li:hover > ul{  
+        .links > ul > span > li:hover > ul {  
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
             justify-content: flex-start;
             align-items: stretch;
             align-content: stretch;
+            background-color: rgb(25, 25, 25);
             position: relative;
+            height: 2.5rem;
             z-index: 2;
+        } 
+
+        .links > ul > span > li > ul:hover >a {  
+            opacity: 0.3;
         } 
 
         .full-height {
@@ -58,10 +65,7 @@
 
         .top-right {
             position: absolute;
-            margin-top: 0.3rem;
             right: 10px;
-            top: 18px;
-
         }
 
         .top-left>a {
@@ -79,7 +83,11 @@
             opacity: 0.3;
         }
 
-        .top-right>a:hover {
+        .top-right>ul >span >li >a:hover {
+            opacity: 0.3;
+        }
+
+        .top-right>ul >li >a:hover {
             opacity: 0.3;
         }
 
@@ -90,8 +98,14 @@
             margin-left: auto;
             margin-right: auto;
             width: 100%;
-            margin-top: 10vh;
+            margin-top: 3vh;
 
+        }
+
+        .dropdown-display {
+            width: 50px; 
+            position: static;
+            left: 25px;
         }
 
         .links>ul a {
@@ -124,6 +138,7 @@
         <div id="nav">
             <div class="top-right links">
             <ul>
+            <span class="dropdown-display">
                 <li><a href="">Losuj 40 pytań</a></li>
                 <li><a href="">Losuj 1 pytanie</a></li>
                 @guest
@@ -132,10 +147,12 @@
                  <li><a class="nav-link" href="{{ route('register') }}">Zarejestruj się</a></li>
                 @endif
                 @else
+                
                     <li><a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
                          </a>
+    
                             <ul><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
                                 Wyloguj się
@@ -145,15 +162,16 @@
                             @csrf
                         </form>
                     </li>
+                </span>    
             </ul>
             </div>
                     
-            <ul>
+        
                 @endguest
 
             </div>
             <div class="top-left">
-                <a href="">Egzaminki</a>
+                <a href="">ipies</a>
             </div>
         </div>
 
