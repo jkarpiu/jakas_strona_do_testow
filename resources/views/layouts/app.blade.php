@@ -18,10 +18,22 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+            #footer {
+                background-color: rgb(25, 25, 25);
+                clear: both;
+                color: #fcfcfc;
+                display: block;
+                height: 2vh;
+                text-align: center;
+                text-transform: uppercase;
+                margin-bottom: 3vh;
+            }     
+    </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <div id="nav">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -70,11 +82,15 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </div>
 
         <main class="py-4">
             @yield('content')
         </main>
+        <div id="footer">
+            <p>Stroneczka egzaminki no copyrights</p>
+        </div>
+
     </div>
 </body>
 </html>
