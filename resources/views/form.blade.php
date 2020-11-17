@@ -6,8 +6,8 @@
         <input class="form-control" placeholder="Pytanie" type="text" name="pytanie">
         <br>
         @foreach (['a1', 'a2', 'a3', 'a4'] as $item)
-            <p>Poprawna: <input type="radio" name="valid" value="{{ $item }}"></p>
-            <input placeholder="Odpowiedź" class="form-control" type="text" name="{{ $item }}" id=" {{ $item }} ">
+            <p>Poprawna: <input type="radio" name="valid" value="{{ $item }}">
+            <input placeholder="Odpowiedź" class="form-control" type="text" name="{{ $item }}" id=" {{ $item }} "></p>
             <br>
         @endforeach
         <select class="form-control" name="dzial">
