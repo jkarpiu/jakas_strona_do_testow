@@ -6,4 +6,7 @@
         <input name="odpowiedz" type="radio" value="{{$odpowiedz->id}}">
             <label>{{$odpowiedz->tresc}}</label>
     @endforeach
+    <button type="submit" href="Route::controller('odpowiedz', 'randQuestionController')" class="btn btn-primary">
+            Wybierz
+    </button>
 @endsection

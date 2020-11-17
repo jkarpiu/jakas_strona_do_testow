@@ -22,6 +22,36 @@
             margin: 0;
         }
 
+        .links ul{
+            margin-left: auto;
+           margin-right: auto;
+           padding: 0;
+        }
+
+        .links li{
+            line-height: 2.5rem;
+            float: left;
+            text-align: center;
+            color: black;
+            margin: 0;
+            list-style-type:none;
+        }
+
+        .links > ul > li > ul {
+            display:none;
+        }
+
+        .links  > ul > li:hover > ul{  
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: stretch;
+            align-content: stretch;
+            position: relative;
+            z-index: 2;
+        } 
+
         .full-height {
             height: 8vh;
         }
@@ -64,7 +94,7 @@
 
         }
 
-        .links>a {
+        .links>ul a {
             color: #fcfcfc;
             padding: 0 15px;
             font-size: 13px;
@@ -93,30 +123,32 @@
         @if (Route::has('login'))
         <div id="nav">
             <div class="top-right links">
-                <a href="">Losuj 40 pytań</a>
-                <a href="">Losuj 1 pytanie</a>
+            <ul>
+                <li><a href="">Losuj 40 pytań</a></li>
+                <li><a href="">Losuj 1 pytanie</a></li>
                 @guest
-                    <a class="nav-link" href="{{ route('login') }}">Zaloguj się</a>
+                 <li><a class="nav-link" href="{{ route('login') }}">Zaloguj się</a></li>
                 @if (Route::has('register'))
-                    <a class="nav-link" href="{{ route('register') }}">Zarejestruj się</a>
+                 <li><a class="nav-link" href="{{ route('register') }}">Zarejestruj się</a></li>
                 @endif
                 @else
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                    <li><a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
-                    </a>
-
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                            Wyloguj się
-                        </a>
-
+                         </a>
+                            <ul><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                Wyloguj się
+                            <ul></a>
+                    
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
-                    </div>
-                </li>
+                    </li>
+            </ul>
+            </div>
+                    
+            <ul>
                 @endguest
 
             </div>

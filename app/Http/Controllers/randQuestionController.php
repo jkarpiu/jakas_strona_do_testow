@@ -13,6 +13,5 @@ class randQuestionController extends Controller
      $nr_pytania = rand(1,Pytania::count());
      $pytanie = Pytania::where('id', $nr_pytania)->get();
         return view('random', ['pytanie'=>$pytanie]);
-
     }
 }
