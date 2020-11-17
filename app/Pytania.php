@@ -14,6 +14,8 @@ class Pytania extends Model
     }
     public function odpowiedzi()
     {
-        return $this->hasMany('App\Odpowiedzi');
+        return $this->hasMany('App\Odpowiedzi', 'id_pytanie');
     }
+    protected $fillable = ['image', 'id_dzial', 'tresc'];
+    protected $primarykey='id';
 }

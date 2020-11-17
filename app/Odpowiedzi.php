@@ -11,4 +11,6 @@ class Odpowiedzi extends Model
     {
         return $this->belongsTo('App\Pytanie', 'id_pytanie');
     }
+    protected $primarykey='id';
+    protected $fillable = ['tresc', 'poprawna', 'opcja', 'id_pytanie'];
 }

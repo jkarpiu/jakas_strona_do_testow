@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Pytania;
+use App\Dzialy;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +21,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/add', function () {
+    return view('form', [
+        'dzialy' => Dzialy::get()
+    ]);
+});
+
+Route::post('/dodaj_pytanie', 'addQuestionController@addQuestion');
