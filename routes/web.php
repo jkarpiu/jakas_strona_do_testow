@@ -28,4 +28,6 @@ Route::get('/add', function () {
     ]);
 });
 
+Route::get('/losowanie1', 'randQuestionController@onequestion');
+
 Route::post('/dodaj_pytanie', 'addQuestionController@addQuestion');

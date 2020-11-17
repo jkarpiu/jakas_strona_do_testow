@@ -22,7 +22,6 @@ class addQuestionController extends Controller
                 'tresc' => $request['a'.(String)$i],
                 'id_pytanie' =>  $pytanie -> id,
                 'poprawna' => false,
-                'opcja' => 12
             ]);
         }
         dd(Pytania::where('id', $pytanie->id)->get()[0]);
