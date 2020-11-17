@@ -9,7 +9,7 @@ class Odpowiedzi extends Model
 {
     public function pytanie()
     {
-        return $this->belongsTo('App\Pytanie', 'id_pytanie');
+        return $this->belongsTo('App\Pytania', 'id_pytanie');
     }
     protected $primarykey='id';
     protected $fillable = ['tresc', 'poprawna', 'opcja', 'id_pytanie'];
