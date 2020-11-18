@@ -6,6 +6,9 @@ body {
     font-weight: 200;
     margin: 0;
 }
+main{
+    margin-top: 60px;
+}
 
 .links ul {
     margin-left: auto;
@@ -49,8 +52,7 @@ body {
 }
 
 .top-right {
-    position: absolute;
-    right: 10px;
+    float: right;
 }
 
 .top-left>a {
@@ -83,8 +85,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    margin-top: 3vh;
-
+    margin-top: 10vh;
 }
 
 .dropdown-display {
@@ -92,6 +93,7 @@ body {
     position: static;
     left: 25px;
 }
+
 
 .links>ul a {
     color: #fcfcfc;

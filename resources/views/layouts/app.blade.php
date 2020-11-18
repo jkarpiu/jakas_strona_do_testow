@@ -24,8 +24,7 @@
 </head>
 
 <body>
-    <div id="app">
-        <div id="nav">
+        <nav id="nav">
             <div class="top-right links">
                 <ul>
                     <span class="dropdown-display">
@@ -59,13 +58,12 @@
 
             @endguest
 
-        </div>
+        </nav>
         <div class="top-left">
             <a href="">ipies</a>
         </div>
-    </div>
 
-    <main class="py-4">
+    <main class="py-4 my-content">
         @yield('content')
     </main>
     <div id="footer">
