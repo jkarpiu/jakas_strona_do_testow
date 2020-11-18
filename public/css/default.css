@@ -1,12 +1,16 @@
-html,
-body {
+html, body {
     background-color: rgb(25, 25, 25);
     color: #636b6f;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
     margin: 0;
 }
-main{
+
+nav {
+    display: block;
+}
+
+.my-content {
     margin-top: 60px;
 }
 
@@ -31,12 +35,6 @@ main{
 }
 
 .links>ul>span>li:hover>ul {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    align-content: stretch;
     background-color: rgb(25, 25, 25);
     position: relative;
     height: 2.5rem;
@@ -51,9 +49,6 @@ main{
     height: 8vh;
 }
 
-.top-right {
-    float: right;
-}
 
 .top-left>a {
     position: absolute;
@@ -64,6 +59,12 @@ main{
     color: #fcfcfc;
     left: 10px;
     top: 18px;
+}
+
+.top-right {
+    position: absolute;
+    top: 20px;
+    right: 15px;
 }
 
 .top-left>a:hover {
@@ -78,21 +79,7 @@ main{
     opacity: 0.3;
 }
 
-.content {
-    text-align: center;
-    background-color: #fcfcfc;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    margin-top: 10vh;
-}
 
-.dropdown-display {
-    width: 50px;
-    position: static;
-    left: 25px;
-}
 
 
 .links>ul a {

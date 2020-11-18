@@ -57,15 +57,15 @@
 
 
             @endguest
-
-        </nav>
         <div class="top-left">
             <a href="">ipies</a>
         </div>
 
-    <main class="py-4 my-content">
+        </nav>
+
+    <div class="py-4 my-content">
         @yield('content')
-    </main>
+    </div >
     <div id="footer">
         <p>Stroneczka egzaminki no copyrights</p>
     </div>
