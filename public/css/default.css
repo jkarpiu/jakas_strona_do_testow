@@ -1,13 +1,15 @@
 html,
 body {
-    background-color: rgb(25, 25, 25);
+    background: #007BFF;
     color: #636b6f;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
     margin: 0;
 }
-.my-content{
+
+.my-content {
     margin-top: 60px;
+    background: rgb(25, 25, 25);
 }
 
 .links ul {
@@ -109,7 +111,6 @@ body {
 }
 
 #footer {
-    background-color: rgb(25, 25, 25);
     clear: both;
     color: #fcfcfc;
     display: block;
