@@ -12,10 +12,9 @@
 import Question from "./Question";
 import axios from "axios";
 export default {
-
   methods:{
     click:function (){
-      this.$refs.Question.sprawdzanie();
+      this.$refs.Question[0].sprawdzanie();
     }
   },
   components: {
