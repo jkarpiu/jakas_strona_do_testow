@@ -24,18 +24,22 @@
 </head>
 
 <body>
-        <nav id="nav">
-            <div class="top-right links">
-                <ul>
-                    <span class="dropdown-display">
-                        <li><a href="">Losuj 40 pytań</a></li>
-                        <li><a href="">Losuj 1 pytanie</a></li>
-                        @guest
+    <nav id="nav">
+
+        <div class="top-left">
+            <a href="">ipies</a>
+        </div>
+        <div class="top-right links">
+            <ul>
+                <span class="dropdown-display">
+                    <li><a href="">Losuj 40 pytań</a></li>
+                    <li><a href="">Losuj 1 pytanie</a></li>
+                    @guest
                         <li><a class="nav-link" href="{{ route('login') }}">Zaloguj się</a></li>
                         @if (Route::has('register'))
-                        <li><a class="nav-link" href="{{ route('register') }}">Zarejestruj się</a></li>
+                            <li><a class="nav-link" href="{{ route('register') }}">Zarejestruj się</a></li>
                         @endif
-                        @else
+                    @else
 
                         <li><a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -43,9 +47,10 @@
                             </a>
 
                             <ul><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
+                                                            document.getElementById('logout-form').submit();">
                                     Wyloguj się
-                                    <ul></a>
+                                    <ul>
+                                </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
@@ -56,16 +61,14 @@
             </div>
 
 
-            @endguest
-        <div class="top-left">
-            <a href="">ipies</a>
-        </div>
+        @endguest
 
-        </nav>
+
+    </nav>
 
     <div class="py-4 my-content">
         @yield('content')
-    </div >
+    </div>
     <div id="footer">
         <p>Stroneczka egzaminki no copyrights</p>
     </div>
