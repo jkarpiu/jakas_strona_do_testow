@@ -2,6 +2,7 @@
 
 @section('content')
 <div id="app">
+    
 </div>
     <form action="/dodaj_pytanie" method="POST">
         @csrf
@@ -17,9 +18,9 @@
         @foreach (['a1', 'a2', 'a3', 'a4'] as $item)
         <div id="head-answer-all">
             <div id="answer-all">
-                <p class="check-valid">Poprawna: <input type="radio" name="valid" value="{{ $item }}"></p>
-                    <input class="form-control answer-input" placeholder="Odpowiedź"
-                    type="text" name="{{ $item }}" id=" {{ $item }} ">
+            <p class="check-valid">Poprawna:    <input type="radio" name="valid" value="{{ $item }}"></p>
+                <input class="form-control answer-input" placeholder="Odpowiedź"
+                type="text" name="{{ $item }}" id=" {{ $item }} ">
             </div>
         </div> 
         @endforeach
