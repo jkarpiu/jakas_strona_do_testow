@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+    <div id="app">
+        <example-component/>
+    </div>
     <h1> {{$pytanie[0]->tresc}} </h1>
     <form action="/odp" method="POST">
     @csrf

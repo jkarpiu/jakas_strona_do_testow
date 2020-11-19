@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+<div id="app">
+    <jakis-tam-komponent />
+</div>
     <form action="/dodaj_pytanie" method="POST">
         @csrf
         <input class="form-control" placeholder="Pytanie" type="text" name="pytanie">
