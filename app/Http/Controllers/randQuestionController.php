@@ -10,20 +10,22 @@ use App\Odpowiedzi;
 
 class randQuestionController extends Controller
 {
-    function getQuestion()
+    function getQuestion($amount)
     {
         $nr_pytania = rand(1, Pytania::count());
-        $pytanie = Pytania::where('id', $nr_pytania)->with('odpowiedzi')->get();
+        $pytanie = Pytania::where('id', $nr_pytania)->with('odpowiedzi')->take($amount)->get();
         return $pytanie;
     }
     public function onequestion()
     {
-        return view('random', ['pytanie' => $this->getQuestion()]);
+    
+        return view('random', ['pytanie' => $this->getQuestion(1)]);
     }
 
     public function json_onequestion()
     {
-        return response()->json($this->getQuestion());
+        
+        return response()->json($this->getQuestion(1));
     }
 
     public function odpowiadanie(Request $request)
