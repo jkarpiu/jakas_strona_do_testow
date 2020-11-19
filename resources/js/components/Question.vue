@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{ zawartoscPytania.tresc }}</p>
+    <h1>{{ zawartoscPytania.tresc }}</h1>
     <div
       v-bind:key="odpowiedz.id"
       v-for="odpowiedz in zawartoscPytania.odpowiedzi"

@@ -1987,6 +1987,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -37748,7 +37749,15 @@ var render = function() {
         })
       }),
       _vm._v(" "),
-      _c("button", { on: { click: _vm.click } }, [_vm._v("Wybierz")])
+      _c(
+        "button",
+        { staticClass: "btn btn-primary", on: { click: _vm.click } },
+        [_vm._v("Wybierz")]
+      ),
+      _vm._v(" "),
+      _c("button", { staticClass: "btn btn-primary" }, [
+        _vm._v("Następne pytanie")
+      ])
     ],
     2
   )
@@ -37778,7 +37787,7 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("p", [_vm._v(_vm._s(_vm.zawartoscPytania.tresc))]),
+      _c("h1", [_vm._v(_vm._s(_vm.zawartoscPytania.tresc))]),
       _vm._v(" "),
       _vm._l(_vm.zawartoscPytania.odpowiedzi, function(odpowiedz) {
         return _c("div", { key: odpowiedz.id }, [

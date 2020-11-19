@@ -5,7 +5,8 @@
       v-for="item in myQuestion"
       :zawartoscPytania="item"
     />
-     <button @click="click">Wybierz</button>  
+     <button class="btn btn-primary" @click="click">Wybierz</button> 
+     <button class="btn btn-primary">Następne pytanie</button>
   </div>
 </template>
 <script>
