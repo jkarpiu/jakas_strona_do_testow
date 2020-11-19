@@ -33,7 +33,7 @@
             <ul>
                 <span class="dropdown-display">
                     <li><a href="">Losuj 40 pytań</a></li>
-                    <li><a href="">Losuj 1 pytanie</a></li>
+                <li><a href="{{ route('losowanie1') }}">Losuj 1 pytanie</a></li>
                     @guest
                         <li><a class="nav-link" href="{{ route('login') }}">Zaloguj się</a></li>
                         @if (Route::has('register'))
