@@ -27,8 +27,9 @@ export default {
     };
   },
   created() {
-    axios.get("/api/randQuestion").then((res) => {
+    axios.get("/api/randQuestion", {params:{dzial:1}}).catch((error)=>{console.log(error)}).then((res) => {
       this.myQuestion = res.data;
+      console.log(res);
     });
   },
 };

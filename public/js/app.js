@@ -2007,8 +2007,15 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/randQuestion").then(function (res) {
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/randQuestion", {
+      params: {
+        dzial: 1
+      }
+    })["catch"](function (error) {
+      console.log(error);
+    }).then(function (res) {
       _this.myQuestion = res.data;
+      console.log(res);
     });
   }
 });
@@ -50403,8 +50410,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/karp/Dokumenty/jaks_strona_do_testow/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/karp/Dokumenty/jaks_strona_do_testow/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\jakas_strona_do_testow\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\jakas_strona_do_testow\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
