@@ -12,6 +12,7 @@ class randQuestionController extends Controller
 {
     function getQuestion($amount, $dzial)
     {
+        
         $wszystkiepytania = Pytania::select('id')->where('id_dzial', $dzial)->get();
         $nr_pytania = rand(1, sizeof($wszystkiepytania)-1);
         $pytanie = Pytania::where('id', $nr_pytania)->with('odpowiedzi')->take($amount)->get();
@@ -19,7 +20,7 @@ class randQuestionController extends Controller
     }
     public function onequestion()
     {
-        return view('random', ['pytanie' => $this->getQuestion(1,1)]);
+        return view('random');
     }
 
     public function json_onequestion(Request $request)
