@@ -1,3 +1,12 @@
+<p>
+Są przemdioty i w tych przemdiotach są działy, każdy nauczyciel może dodawać pytanie do działu. Nauczyciel może też dodać dział
+Nauczyciel moze uczyc kilku przedmiotów.
+Nauczyciele tworzą "classroomy". W tych classroomach mogą zadawać do zrobienia testy z danego działy. (jeden test jeden dział, nauczyciel wybiera ilość pytań tylko)
+Istnieją też "classroomy" nie prowadzone rpzez nacuzyceili, ich jedynym zadnaiem jest udsotępninie testóœ do egzaminóœ zawodowtch matur itd.
+Jest kilka rodzai pytań otwarte, zamknięte, jakies tam łączenie itd. 
+Taki jest plan
+</p>
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
