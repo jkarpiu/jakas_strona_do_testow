@@ -2,7 +2,6 @@
 
 @section('content')
 <div id="app">
-    <jakis-tam-komponent />
 </div>
     <form action="/dodaj_pytanie" method="POST">
         @csrf
