@@ -1,7 +1,7 @@
 html,
 body {
-    background: #007BFF;
-    color: #636b6f;
+    background: #0061c9;
+    color: #fcfcfc;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
     margin: 0;
@@ -25,11 +25,21 @@ body {
     color: black;
     margin: 0;
     list-style-type: none;
-    width: 180px;
+    width: 160px;
 }
 
 .links>ul>span>li>ul {
     display: none;
+}
+
+.links>ul a {
+    color: #fcfcfc;
+    padding: 0 15px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .links>ul>span>li:hover>ul {
@@ -53,6 +63,10 @@ body {
     height: 8vh;
 }
 
+.top-left {
+    margin: auto;
+
+}
 .top-right {
     position: absolute;
     top: 20px;
@@ -100,15 +114,40 @@ body {
 }
 
 
-.links>ul a {
-    color: #fcfcfc;
-    padding: 0 15px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
+.form-control{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
 }
+
+.header1 {
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.header2 {
+    text-align: center;
+    margin-bottom: 0.2vh;
+}
+
+.check{
+    margin-left: 40vh;
+}
+
+.btn {
+    width: 20vh;
+}
+/* #footer {
+    background-color: #007BFF;
+    clear: both;
+    color: #fcfcfc;
+    height: 5vh;
+    display: block;
+    text-align: center;
+    margin-top: 2.2vh;
+    text-transform: uppercase;
+} */
 
 #footer {
     clear: both;
