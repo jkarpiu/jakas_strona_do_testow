@@ -105,11 +105,11 @@ body {
     margin-top: 10vh;
 }
 
-.dropdown-display {
+/* .dropdown-display {
     width: 50px;
     position: static;
     left: 25px;
-}
+} */
 
 .question-input {
     width: 500px;
@@ -158,19 +158,44 @@ body {
 }
 
 .btn {
-    width: 20vh;
+    width: 10vw;
     background-color: #0061c9;
+    color: #fcfcfc;
     margin-bottom: 10vh;
     margin-top: 2vh;
 }
 
-.form-group {
-    color: rgb(25,25,25);
+.card {
+    background: rgb(25,25,25);
+    color: #fcfcfc;
 }
 
 .card-header {
-    color: rgb(25,25,25);
+    border: none;
+    background: rgb(25, 25, 25);
 }
+
+.btn-primary { 
+    width: 12vw;
+    color: #fcfcfc;
+    height: 6vh;;
+    text-decoration: none;
+} 
+
+.btn-karp {
+    background: #696969;
+    color:#fcfcfc;
+    width: 12.5vw;
+    border: none;
+}
+
+.btn-karp:hover {
+    background: rgb(110, 110, 110);
+    box-shadow: inset 0 0 100px 100px 
+    rgba(255, 255, 255, 0.1);
+    
+}
+
 #footer {
     clear: both;
     color: #fcfcfc;
