@@ -12,6 +12,7 @@ body {
     background: rgb(25, 25, 25);
 }
 
+
 .links ul {
     margin-left: auto;
     margin-right: auto;
@@ -176,17 +177,18 @@ body {
 }
 
 .btn-primary { 
-    width: 12vw;
+    width: 9.7rem;
     color: #fcfcfc;
-    height: 6vh;;
+    height: 2.5rem;
     text-decoration: none;
 } 
 
 .btn-karp {
     background: #696969;
     color:#fcfcfc;
-    width: 12.5vw;
+    width: 10.7rem;
     border: none;
+    line-height: 1.75rem;
 }
 
 .btn-karp:hover {
