@@ -36,7 +36,7 @@
                         @if (Auth::user()->role == 1)
                             <li> <a class="dropdown-item" href="">Panel ucznia</a> </li>
                         @else
-                            <li> <a class="dropdown-item" href="">Panel nauczuciela</a> </li>
+                            <li> <a class="dropdown-item" href="">Panel nauczyciela</a> </li>
                         @endif
                     @endif
                     <li><a class="dropdown-item" href="">Losuj 40 pytań</a></li>
