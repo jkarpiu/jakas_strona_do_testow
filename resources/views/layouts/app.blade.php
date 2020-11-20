@@ -31,7 +31,7 @@
         </div>
         <div class="top-right links">
             <ul>
-                <span class="dropdown-display">
+                <span class="dropdown-display">     
                     @if (Auth::user())
                         @if (Auth::user()->role == 1)
                             <li> <a class="dropdown-item" href="">Panel ucznia</a> </li>
