@@ -32,12 +32,19 @@
         <div class="top-right links">
             <ul>
                 <span class="dropdown-display">
-                    <li><a href="">Losuj 40 pytań</a></li>
-                <li><a href="{{ route('losowanie1') }}">Losuj 1 pytanie</a></li>
+                    @if (Auth::user())
+                        @if (Auth::user()->role == 1)
+                            <li> <a class="dropdown-item" href="">Panel ucznia</a> </li>
+                        @else
+                            <li> <a class="dropdown-item" href="">Panel nauczuciela</a> </li>
+                        @endif
+                    @endif
+                    <li><a class="dropdown-item" href="">Losuj 40 pytań</a></li>
+                    <li><a class="dropdown-item" href="{{ route('losowanie1') }}">Losuj 1 pytanie</a></li>
                     @guest
-                        <li><a class="nav-link" href="{{ route('login') }}">Zaloguj się</a></li>
+                        <li><a class="dropdown-item" href="{{ route('login') }}">Zaloguj się</a></li>
                         @if (Route::has('register'))
-                            <li><a class="nav-link" href="{{ route('register') }}">Zarejestruj się</a></li>
+                            <li><a class="dropdown-item" href="{{ route('register') }}">Zarejestruj się</a></li>
                         @endif
                     @else
 
@@ -47,7 +54,7 @@
                             </a>
 
                             <ul><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                            document.getElementById('logout-form').submit();">
+                                                                    document.getElementById('logout-form').submit();">
                                     Wyloguj się
                                     <ul>
                                 </a>
