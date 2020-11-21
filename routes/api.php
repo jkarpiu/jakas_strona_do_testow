@@ -19,3 +19,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('randQuestion', 'randQuestionController@json_onequestion');
+
+Route::group(['prefix' => 'basic'], function () {
+    Route::get('dzialy', 'basicServicesController@dzialy');
+});
+
+Route::post('sendAnswers', 'randQuestionController@json_odpowiadanie');
