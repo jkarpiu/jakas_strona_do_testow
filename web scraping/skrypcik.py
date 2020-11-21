@@ -22,14 +22,15 @@ def sprawdzanko(tresc):
     return False
 
 #otwieranie stronki
-for i in range(6):
+for g in range(6):
     options = Options()
     options.add_argument("--start-maximized")
     driver = webdriver.Chrome(chrome_options=options, executable_path='C:\Python39\chromedriver.exe')
+    print("Łącze się z oknem przeglądarki")
     driver.get("https://egzamin-informatyk.pl/testy-inf02-ee08-sprzet-systemy-sieci/")
+    time.sleep(7.5)
     driver.execute_script("top.window.onbeforeunload = null;")
     driver.find_element_by_id("hcks").click()
-    time.sleep(2)
     driver.find_element_by_id("sprawdz").click()
     driver.implicitly_wait(5)
 
@@ -47,33 +48,45 @@ for i in range(6):
             repeat = sprawdzanko(one_pytanie['tresc'])
             if not repeat:
                 all_pytania.append(one_pytanie)
+                print("Pobieram pytanie: ")
+                print(one_pytanie)
             id_pytanie = id_pytanie + 1
 
         elif i.get_attribute("class")=="obrazek" and not repeat:
             photo = i.find_element_by_class_name("img-responsive").get_attribute("src")
             filename = 'images\pytanie' + str(id_pytanie - 1) + '.jpg'
+            print("Pobieram obrazek: " + filename)
             all_pytania[-1]['image'] = filename.replace('\\', '/')
             urllib.request.urlretrieve(photo, filename)
 
         elif i.get_attribute("class")=="odpbad" and not repeat:
             one_odpowiedz = {'id':id_odpowiedz, 'id_pytanie':all_pytania[-1]['id'], 'poprawna':False, 'tresc':i.text.split('. ', 1)[1].capitalize()}
+            print("Pobieram odpowiedź")
+            print(one_odpowiedz)
             all_odpowiedzi.append(one_odpowiedz)
             id_odpowiedz = id_odpowiedz + 1
 
         elif i.get_attribute("class")=="odpgood" and not repeat:
             one_odpowiedz = {'id':id_odpowiedz, 'id_pytanie':all_pytania[-1]['id'], 'poprawna':True, 'tresc':i.text.split('. ', 1)[1].capitalize()}
+            print("Pobieram odpowiedź")
+            print(one_odpowiedz)
             all_odpowiedzi.append(one_odpowiedz)
             id_odpowiedz = id_odpowiedz + 1
 
 
+    driver.quit()
+    print("\n Zapisywanie plików... \n ")
     #zapisywanie pytan do zapis.txt
-    f1 = open("zapis_pytan.txt", "w", encoding='utf8')
-    f1.write(f"{all_pytania}\n")
+    f1 = open("zapis_pytan.json", "w")
+    json.dump (all_pytania, f1, ensure_ascii=False, sort_keys=True, indent=4)
     f1.close()
     #zapisywanie odpowiedzi do odpowiedzi.txt
-    f2 = open("zapis_odpowiedzi.txt", "w", encoding='utf8')
-    f2.write(f"{all_odpowiedzi}\n")
+    f2 = open("zapis_odpowiedzi.json", "w")
+    json.dump(all_odpowiedzi, f2, ensure_ascii=False, sort_keys=True, indent=4)
     f2.close()
-    print(len(all_pytania))
-    print(id_pytanie)
-
+    print("\n-----------------------------------------")
+    print("Ilość zapisanych pytań: " + str(len(all_pytania)))
+    print("Najwyższe id pytania: " + str(id_pytanie - 1))
+    print("Ilość odpowiedzi: " + str(len(all_odpowiedzi)))
+    print("Powtórek: " + str(g + 1))
+    print("-----------------------------------------\n") 
