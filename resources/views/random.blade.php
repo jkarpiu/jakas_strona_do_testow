@@ -2,6 +2,6 @@
 
 @section('content')
     <div id="app">
-        <pobieranie-pytan />
+        <pytanka-copy/>
     </div>
 @endsection

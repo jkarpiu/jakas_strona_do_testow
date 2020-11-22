@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Pytania;
 use App\Odpowiedzi;
+use Illuminate\Support\Facades\Session;
 use PhpParser\Node\Expr\Cast\String_;
 
 class addQuestionController extends Controller
@@ -24,7 +25,8 @@ class addQuestionController extends Controller
                 'poprawna' => ($request['valid'] == 'a'.(String)$i),
             ]);
         }
-        dd(Pytania::where('id', $pytanie->id)->get()[0]-> odpowiedzi);
+       Session::flash('message', 'Dodano pytanie');
+        return back();
     }
 
 
