@@ -16,9 +16,9 @@ class CreateActiveTestsTable extends Migration
     {
         Schema::create('active_tests', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('deadLine')->default();
-            $table->string('token')-> nullable();
-            $table->boolean('sent') ->nullable();
+            $table->dateTime('deadLine') ->nullable();
+            $table->string('token');
+            $table->boolean('sent') -> default(0);
             $table->timestamps();
         });
     }

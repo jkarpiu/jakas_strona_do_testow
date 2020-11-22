@@ -22,10 +22,9 @@ def sprawdzanko(tresc):
     return False
 
 #otwieranie stronki
-for g in range(6):
+for g in range(10000):
     options = Options()
-    options.add_argument("--start-maximized")
-    driver = webdriver.Chrome(chrome_options=options, executable_path='C:\Python39\chromedriver.exe')
+    driver = webdriver.Chrome(chrome_options=options, executable_path='/usr/bin/chromedriver')
     print("Łącze się z oknem przeglądarki")
     driver.get("https://egzamin-informatyk.pl/testy-inf02-ee08-sprzet-systemy-sieci/")
     time.sleep(7.5)
@@ -40,9 +39,9 @@ for g in range(6):
 
     all_divs = driver.find_elements_by_css_selector(".aos-init > div")
 
+    repeat = False
     #dziwne rzecczy z divami, przydzielanie obrazka do pytania itpitp
     for index, i in enumerate(all_divs):
-        repeat = False
         if (i.get_attribute("class")=="trescE"):
             one_pytanie = {'id': id_pytanie, 'id_dzial': 1, 'image':'', 'tresc': i.text.split('. ', 1)[1]}
             repeat = sprawdzanko(one_pytanie['tresc'])
@@ -54,7 +53,7 @@ for g in range(6):
 
         elif i.get_attribute("class")=="obrazek" and not repeat:
             photo = i.find_element_by_class_name("img-responsive").get_attribute("src")
-            filename = 'images\pytanie' + str(id_pytanie - 1) + '.jpg'
+            filename = 'questionImages/pytanie' + str(id_pytanie - 1) + '.jpg'
             print("Pobieram obrazek: " + filename)
             all_pytania[-1]['image'] = filename.replace('\\', '/')
             urllib.request.urlretrieve(photo, filename)

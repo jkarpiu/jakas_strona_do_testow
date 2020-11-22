@@ -1996,14 +1996,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   methods: {
     click: function click() {
-      this.$refs.Question.forEach(function (element) {
-        element.sprawdzanie();
-      });
+      if (this.answered.length == 0) {
+        console.log(this.answered);
+        this.answers = [];
+        this.$refs.Question.forEach(function (element) {
+          element.sprawdzanie();
+        });
+      }
     },
     getQuestion: function getQuestion() {
       var _this = this;
@@ -2013,29 +2018,34 @@ __webpack_require__.r(__webpack_exports__);
           dzial: this.dzial,
           amount: 2
         }
-      })["catch"](function (error) {
-        console.log(error.response);
-      }).then(function (res) {
+      })["catch"](function (error) {}).then(function (res) {
         console.log(res);
         _this.myQuestion = res.data;
       });
     },
     oneAnswer: function oneAnswer(check) {
       this.answers.push(check);
-      console.log(this.answers);
 
       if (this.myQuestion.size == this.answers.size) {
         this.sendAnswers();
       }
     },
     sendAnswers: function sendAnswers() {
+      var _this2 = this;
+
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("/api/sendAnswers", {
-        'answers': this.answers,
-        'session': this.myQuestion["ses sion"]
+        answers: this.answers,
+        session: this.myQuestion["session"]
+      }, {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        }
       })["catch"](function (err) {
         console.log(err.response);
       }).then(function (res) {
-        console.log(res.body);
+        console.log(res.data);
+        _this2.answered = res.data;
       });
     }
   },
@@ -2046,7 +2056,8 @@ __webpack_require__.r(__webpack_exports__);
     return {
       myQuestion: [],
       dzial: 1,
-      answers: []
+      answers: [],
+      answered: []
     };
   },
   created: function created() {
@@ -2082,16 +2093,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       check: " "
     };
   },
-  props: ["zawartoscPytania"],
+  props: ["zawartoscPytania", 'answered'],
   methods: {
     sprawdzanie: function sprawdzanie() {
-      this.$emit('answer', this.check != " " ? this.check : 0);
+      this.$emit('answer', this.check != " " ? this.check : 1);
     }
   }
 });
@@ -37824,19 +37848,23 @@ var render = function() {
   return _c(
     "div",
     [
-      _vm._l(_vm.myQuestion["questions"], function(item) {
+      _vm._l(_vm.myQuestion["questions"], function(item, index) {
         return _c("question", {
           key: item.id,
           ref: "Question",
           refInFor: true,
-          attrs: { zawartoscPytania: item },
+          attrs: { zawartoscPytania: item, answered: _vm.answered[index] },
           on: { answer: _vm.oneAnswer }
         })
       }),
       _vm._v(" "),
       _c(
         "button",
-        { staticClass: "btn btn-primary", on: { click: _vm.click } },
+        {
+          staticClass: "btn btn-primary",
+          attrs: { disabled: _vm.answered.length > 0 },
+          on: { click: _vm.click }
+        },
         [_vm._v("Wybierz")]
       ),
       _vm._v(" "),
@@ -37918,6 +37946,8 @@ var render = function() {
     [
       _c("h1", [_vm._v(_vm._s(_vm.zawartoscPytania.tresc))]),
       _vm._v(" "),
+      _c("img", { attrs: { src: _vm.zawartoscPytania.image, alt: "" } }),
+      _vm._v(" "),
       _vm._l(_vm.zawartoscPytania.odpowiedzi, function(odpowiedz) {
         return _c("div", { key: odpowiedz.id }, [
           _c("input", {
@@ -37943,7 +37973,15 @@ var render = function() {
           _vm._v(" "),
           _c("label", [_vm._v(_vm._s(odpowiedz.tresc))])
         ])
-      })
+      }),
+      _vm._v(" "),
+      !_vm.answered
+        ? _c("p")
+        : _vm.answered.poprawna == 0
+        ? _c("p", [_vm._v("\n    Źle\n  ")])
+        : _vm.answered.poprawna == 1
+        ? _c("p", [_vm._v("\n    Dobrze\n  ")])
+        : _c("p")
     ],
     2
   )
