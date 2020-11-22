@@ -34,9 +34,9 @@
                 <span class="dropdown-display">     
                     @if (Auth::user())
                         @if (Auth::user()->role == 1)
-                            <li> <a class="dropdown-item" href="">Panel ucznia</a> </li>
+                            <li> <a class="dropdown-item panel" href="">Panel ucznia</a> </li>
                         @else
-                            <li> <a class="dropdown-item" href="">Panel nauczyciela</a> </li>
+                            <li> <a class="dropdown-item panel" href="">Panel nauczyciela</a> </li>
                         @endif
                     @endif
                     <li><a class="dropdown-item" href="">Losuj 40 pytań</a></li>
@@ -76,10 +76,9 @@
     <div class="py-4 my-content">
         @yield('content')
     </div>
-    <div id="footer">
-        <p>Stroneczka egzaminki no copyrights</p>
-    </div>
-
+        <div class="page-footer footer">
+            <p>Stroneczka egzaminki no copyrights</p>
+        </div>
     </div>
 </body>
 

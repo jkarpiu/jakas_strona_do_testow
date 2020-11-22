@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ zawartoscPytania.tresc }}</h1>
+    <h1 class="questionH">{{ zawartoscPytania.tresc }}</h1>
     <div
       v-bind:key="odpowiedz.id"
       v-for="odpowiedz in zawartoscPytania.odpowiedzi"
@@ -31,4 +31,14 @@ export default {
 };
 </script>
 <style scoped>
+    .questionH{
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+    input {
+      margin-top: 1vh;
+      margin-left: 25vw;
+    }
 </style>

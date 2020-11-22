@@ -1,17 +1,17 @@
 <template>
-  <div>
+  <div >
     <question
       ref="Question"
       :key="item.id"
       v-for="item in myQuestion"
       :zawartoscPytania="item"
     />
-    <button class="btn btn-primary" @click="click">Wybierz</button>
+    <button class="btn btn-primary button" @click="click">Wybierz</button>
     <select v-model="dzial" dzial id="">
       <option value="1">1</option>
       <option value="2">2</option>
     </select>
-    <button class="btn btn-primary" @click="getQuestion(dzial)">Następne pytanie</button>
+    <button class="btn btn-primary button" @click="getQuestion(dzial)">Następne pytanie</button>
   </div>
 </template>
 <script>
@@ -48,3 +48,10 @@ export default {
   },
 };
 </script>
+<style scoped>
+  .button {
+      margin-left: auto;
+      margin-right: auto;
+      margin-left: 15rem;
+  }
+</style>

@@ -11,6 +11,8 @@ body {
 .my-content {
     margin-top: 60px;
     background: rgb(25, 25, 25);
+    min-height: 90vh;;
+    
 }
 
 .links ul {
@@ -26,7 +28,7 @@ body {
     color: black;
     margin: 0;
     list-style-type: none;
-    width: 160px;
+    width: 200px;
 }
 
 .links>ul>span>li>ul {
@@ -197,7 +199,7 @@ body {
     rgba(255, 255, 255, 0.1);
 }
 
-#footer {
+.footer {
     clear: both;
     color: #fcfcfc;
     display: block;
