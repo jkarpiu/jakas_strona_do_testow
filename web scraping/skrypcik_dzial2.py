@@ -27,8 +27,8 @@ for g in range(6):
     options.add_argument("--start-maximized")
     driver = webdriver.Chrome(chrome_options=options, executable_path='C:\Python39\chromedriver.exe')
     print("Łącze się z oknem przeglądarki")
-    driver.get("https://egzamin-informatyk.pl/testy-inf02-ee08-sprzet-systemy-sieci/")
-    time.sleep(7.5)
+    driver.get("https://egzamin-informatyk.pl/testy-inf03-ee09-programowanie-bazy-danych/")
+    time.sleep(5)
     driver.execute_script("top.window.onbeforeunload = null;")
     driver.find_element_by_id("hcks").click()
     driver.find_element_by_id("sprawdz").click()
@@ -54,7 +54,7 @@ for g in range(6):
 
         elif i.get_attribute("class")=="obrazek" and not repeat:
             photo = i.find_element_by_class_name("img-responsive").get_attribute("src")
-            filename = 'images\pytanie' + str(id_pytanie - 1) + '.jpg'
+            filename = 'images_dzial2\pytanie' + str(id_pytanie - 1) + '.jpg'
             print("Pobieram obrazek: " + filename)
             all_pytania[-1]['image'] = filename.replace('\\', '/')
             urllib.request.urlretrieve(photo, filename)
@@ -77,11 +77,11 @@ for g in range(6):
     driver.quit()
     print("\n Zapisywanie plików... \n ")
     #zapisywanie pytan do zapis.txt
-    f1 = open("zapis_pytan.json", "w")
+    f1 = open("zapis_pytan_dzial2.json", "w")
     json.dump (all_pytania, f1, ensure_ascii=False, sort_keys=True, indent=4)
     f1.close()
     #zapisywanie odpowiedzi do odpowiedzi.txt
-    f2 = open("zapis_odpowiedzi.json", "w")
+    f2 = open("zapis_odpowiedzi_dzial2.json", "w")
     json.dump(all_odpowiedzi, f2, ensure_ascii=False, sort_keys=True, indent=4)
     f2.close()
     print("\n-----------------------------------------")
@@ -90,3 +90,4 @@ for g in range(6):
     print("Ilość odpowiedzi: " + str(len(all_odpowiedzi)))
     print("Powtórek: " + str(g + 1))
     print("-----------------------------------------\n") 
+
