@@ -17,10 +17,10 @@
     <p v-if="!answered  ">
 
     </p>
-    <p v-else-if="answered.poprawna == 0">
+    <p v-else-if="answered.zaznaczana.poprawna == 0">
       Źle
     </p>
-    <p v-else-if="answered.poprawna == 1">
+    <p v-else-if="answered.zaznaczana.poprawna == 1">
       Dobrze
     </p>
     <p v-else>

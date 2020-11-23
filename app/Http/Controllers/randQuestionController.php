@@ -52,7 +52,6 @@ class randQuestionController extends Controller
 
     public function json_odpowiadanie(Request $request)
     {
-        return response()->json(Carbon::now());
         $testSession = activeTests::where('id', $request['session']['id'])->get()->first();
         if ($request['session']['token'] == $testSession['token'] && Carbon::parse($testSession['deadLine'])->diffInMinutes(Carbon::now()) > 0 && $testSession['sent'] == false) {
             $valid = [];

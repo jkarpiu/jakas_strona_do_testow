@@ -2027,7 +2027,8 @@ __webpack_require__.r(__webpack_exports__);
     oneAnswer: function oneAnswer(check) {
       this.answers.push(check);
 
-      if (this.myQuestion.size == this.answers.size) {
+      if (this.myQuestion.questions.length == this.answers.length) {
+        console.log("test");
         this.sendAnswers();
       }
     },
@@ -38672,9 +38673,9 @@ var render = function() {
       _vm._v(" "),
       !_vm.answered
         ? _c("p")
-        : _vm.answered.poprawna == 0
+        : _vm.answered.zaznaczana.poprawna == 0
         ? _c("p", [_vm._v("\n    Źle\n  ")])
-        : _vm.answered.poprawna == 1
+        : _vm.answered.zaznaczana.poprawna == 1
         ? _c("p", [_vm._v("\n    Dobrze\n  ")])
         : _c("p")
     ],
@@ -51360,8 +51361,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\jakas_strona_do_testow\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\jakas_strona_do_testow\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/karp/Dokumenty/jaks_strona_do_testow/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/karp/Dokumenty/jaks_strona_do_testow/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

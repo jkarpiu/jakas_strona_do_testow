@@ -44,7 +44,8 @@ export default {
     },
     oneAnswer: function (check) {
       this.answers.push(check);
-      if (this.myQuestion.size == this.answers.size) {
+      if (this.myQuestion.questions.length == this.answers.length ) {
+        console.log("test");  
         this.sendAnswers();
       }
     },
@@ -53,7 +54,7 @@ export default {
         .post(
           "/api/sendAnswers",
           {
-            answers: this.answers.zaznaczana,
+            answers: this.answers,
             session: this.myQuestion["session"],
           },
           {
