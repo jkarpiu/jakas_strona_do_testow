@@ -63,7 +63,7 @@ class randQuestionController extends Controller
         if ($request['session']['token'] == $testSession['token'] && Carbon::parse($testSession['deadLine'])->diffInMinutes(Carbon::now()) > 0 && $testSession['sent'] == false) {
             $valid = [];
             foreach ($request['answers'] as $odpowiedz) {
-                array_push($valid, Odpowiedzi::select('poprawna', 'id')->where('id', $odpowiedz)->get()->first());
+                array_push($valid, Odpowiedzi::select('poprawna')->where('id', $odpowiedz)->get()->first());
             }
             $testSession['sent'] = true;
             $testSession->save();
