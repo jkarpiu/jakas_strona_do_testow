@@ -69,7 +69,7 @@
                                     @endif
                                 </div>
                                     <a href="{{ url('google_login') }}" class="btn btn-lg btn-danger btn-block">
-                                        <strong>Zaloguj się z Google</strong>
+                                        <strong>Zaloguj się z Google</strong></a>
                             </div>
                         </form>
                     </div>
