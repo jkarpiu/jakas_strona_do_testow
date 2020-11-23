@@ -14,7 +14,7 @@ class ee08_seeder extends Seeder
      */
     public function run()
     {
-        $jsonFile = Storage::disk('local')->get('data/zapis_pytan.json');
+        $jsonFile = Storage::disk('local')->get('data/zapis_pytan_dzial1.json');
         $jsonData = json_decode($jsonFile);
         foreach ($jsonData as $question) {
             Pytania::create([
@@ -23,7 +23,7 @@ class ee08_seeder extends Seeder
                 'id_dzial' => 1
             ]);
         }
-        $jsonFile = Storage::disk('local')->get('data/zapis_odpowiedzi.json');
+        $jsonFile = Storage::disk('local')->get('data/zapis_odpowiedzi_dzial1.json');
         $jsonData = json_decode($jsonFile);
         foreach ($jsonData as $answer) {
             Odpowiedzi::create([

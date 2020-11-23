@@ -6623,7 +6623,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.questionH[data-v-0fecee51]{\n    text-align: center;\n    margin-left: auto;\n    margin-right: auto;\n    font-size: 1.5rem ;\n}\ninput[data-v-0fecee51] {\n    margin-top: 2vh;\n    margin-left: 25vw;\n}\n", ""]);
+exports.push([module.i, "\n.questionH[data-v-0fecee51]{\n    text-align: center;\n    margin-left: auto;\n    margin-right: auto;\n}\ninput[data-v-0fecee51] {\n    margin-top: 1vh;\n    margin-left: 25vw;\n}\n", ""]);
 
 // exports
 
@@ -51359,8 +51359,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/lucas/jakas_strona_do_testow/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/lucas/jakas_strona_do_testow/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/karp/Dokumenty/jaks_strona_do_testow/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/karp/Dokumenty/jaks_strona_do_testow/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

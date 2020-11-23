@@ -22,12 +22,12 @@ def sprawdzanko(tresc):
     return False
 
 #otwieranie stronki
-for g in range(6):
+for g in range(10000):
     options = Options()
     options.add_argument("--start-maximized")
     driver = webdriver.Chrome(chrome_options=options, executable_path='C:\Python39\chromedriver.exe')
     print("Łącze się z oknem przeglądarki")
-    driver.get("https://egzamin-informatyk.pl/testy-inf03-ee09-programowanie-bazy-danych/")
+    driver.get("https://egzamin-informatyk.pl/testy-inf02-ee08-sprzet-systemy-sieci/")
     time.sleep(5)
     driver.execute_script("top.window.onbeforeunload = null;")
     driver.find_element_by_id("hcks").click()
@@ -77,11 +77,11 @@ for g in range(6):
     driver.quit()
     print("\n Zapisywanie plików... \n ")
     #zapisywanie pytan do zapis.txt
-    f1 = open("zapis_pytan_dzial2.json", "w")
+    f1 = open("zapis_pytan_dzial1.json", "w")
     json.dump (all_pytania, f1, ensure_ascii=False, sort_keys=True, indent=4)
     f1.close()
     #zapisywanie odpowiedzi do odpowiedzi.txt
-    f2 = open("zapis_odpowiedzi_dzial2.json", "w")
+    f2 = open("zapis_odpowiedzi_dzial1.json", "w")
     json.dump(all_odpowiedzi, f2, ensure_ascii=False, sort_keys=True, indent=4)
     f2.close()
     print("\n-----------------------------------------")
