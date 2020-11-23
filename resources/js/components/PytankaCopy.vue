@@ -8,7 +8,7 @@
       :answered="answered[index]"
       @answer="oneAnswer"
     />
-    <button class="btn btn-primary" :disabled="answered.length > 0" @click="click">Wybierz</button>
+    <button class="btn btn-primary" :disabled="answered.length > 0" @click="click">Sprawdź</button>
     <select v-model="dzial" dzial id="">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -39,6 +39,7 @@ export default {
         .then((res) => {
           console.log(res);
           this.myQuestion = res.data;
+          this.answered = []
         });
     },
     oneAnswer: function (check) {

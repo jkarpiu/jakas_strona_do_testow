@@ -2021,6 +2021,7 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {}).then(function (res) {
         console.log(res);
         _this.myQuestion = res.data;
+        _this.answered = [];
       });
     },
     oneAnswer: function oneAnswer(check) {
@@ -38559,7 +38560,7 @@ var render = function() {
           attrs: { disabled: _vm.answered.length > 0 },
           on: { click: _vm.click }
         },
-        [_vm._v("Wybierz")]
+        [_vm._v("Sprawdź")]
       ),
       _vm._v(" "),
       _c(
