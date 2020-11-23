@@ -33,3 +33,6 @@ Route::get('/losowanie1', 'randQuestionController@onequestion')->name('losowanie
 Route::post('/dodaj_pytanie', 'addQuestionController@addQuestion');
 
 Route::post('/odp', 'randQuestionController@odpowiadanie');
+
+Route::get('/google_login', 'Auth\LoginController@redirectToProvider');
+Route::get('/callback', 'Auth\LoginController@handleProviderCallback');
