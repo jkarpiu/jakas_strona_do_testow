@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>'ipies'</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -27,7 +27,7 @@
     <nav id="nav">
 
         <div class="top-left">
-            <a href="">ipies</a>
+            <a href="/">ipies</a>
         </div>
         <div class="top-right links">
             <ul>
