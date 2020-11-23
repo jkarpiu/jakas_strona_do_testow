@@ -53,7 +53,7 @@ export default {
         .post(
           "/api/sendAnswers",
           {
-            answers: this.answers,
+            answers: this.answers.zaznaczana,
             session: this.myQuestion["session"],
           },
           {

@@ -47,23 +47,27 @@ class randQuestionController extends Controller
 
     public function odpowiadanie(Request $request)
     {
-        $odpowiedz = Odpowiedzi::where('id', $request['odpowiedz'])->get()->first();
-        if ($odpowiedz['poprawna'] == false) {
-            Session::flash('sprawdzanie', 'zła odpowiedź');
-            return view('random', ['pytanie' => [$odpowiedz->pytanie]]);
-        } else {
-            Session::flash('sprawdzanie', 'DOBRA ODPOWIEDZ!Q!!');
-            return view('random', ['pytanie' => [$odpowiedz->pytanie]]);
-        }
+        return view('random');
     }
 
     public function json_odpowiadanie(Request $request)
     {
+        return response()->json(Carbon::now());
         $testSession = activeTests::where('id', $request['session']['id'])->get()->first();
         if ($request['session']['token'] == $testSession['token'] && Carbon::parse($testSession['deadLine'])->diffInMinutes(Carbon::now()) > 0 && $testSession['sent'] == false) {
             $valid = [];
-            foreach ($request['answers'] as $odpowiedz) {
-                array_push($valid, Odpowiedzi::select('poprawna')->where('id', $odpowiedz)->get()->first());
+            foreach ($request['answers'] as $key => $odpowiedz) {
+                array_push(
+                    $valid,
+                    [
+                        'zaznaczana' => Odpowiedzi::select('poprawna', 'id', 'id_pytanie')->where('id', $odpowiedz)->get()->first(),
+                        'poprawna' => null
+                    ]
+                );
+                $valid[$key]['poprawna'] = $valid[$key]['zaznaczana']->poprawna ? $valid[$key]['zaznaczana']
+                    : Odpowiedzi::select('id', 'poprawna')
+                    ->where('id_pytanie', $valid[$key]['zaznaczana']->id_pytanie)
+                    ->where('poprawna', true)->get()->first();
             }
             $testSession['sent'] = true;
             $testSession->save();
