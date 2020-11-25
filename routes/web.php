@@ -35,4 +35,13 @@ Route::post('/dodaj_pytanie', 'addQuestionController@addQuestion');
 Route::post('/odp', 'randQuestionController@odpowiadanie');
 
 Route::get('/google_login', 'Auth\LoginController@redirectToProvider');
+
 Route::get('/callback', 'Auth\LoginController@handleProviderCallback');
+
+Route::get('teacher', function () {
+    return view('teacherPanel');
+}) -> name('teacherPanel');
+
+Route::group(['prefix' => 'auth_api', 'middleware' => 'auth'], function () {
+    Route::get('classrooms', 'groupsController@list_groups');
+});

@@ -22,6 +22,9 @@ Route::get('randQuestion', 'randQuestionController@json_onequestion');
 
 Route::group(['prefix' => 'basic'], function () {
     Route::get('dzialy', 'basicServicesController@dzialy');
+    Route::get('typy_szkol', 'basicServicesController@typy_szkol');
+    Route::get('wojewodztwa', 'basicServicesController@wojewodztwa');
+    Route::get('miasta', 'basicServicesController@miasta');
 });
 
 Route::post('sendAnswers', 'randQuestionController@json_odpowiadanie');

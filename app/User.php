@@ -5,6 +5,8 @@ namespace App;
 use App\klasy;
 use App\wyniki;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\groupsModel;
+use App\schoolsModel;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -40,11 +42,23 @@ class User extends Authenticatable
     ];
 
 
-    public function klasa() {
+    public function klasa()
+    {
         return $this->belongsTo('App\klasy', 'id_klasy');
     }
 
-    public function wyniki() {
-        return $this -> hasMany('App\Wyniki');
+    public function wyniki()
+    {
+        return $this->hasMany('App\Wyniki');
+    }
+
+    public function groups()
+    {
+        return $this->hasMany('App\groupsModel', 'teacher_id');
+    }
+
+    public function categories()
+    {
+        return $this->belongsToMany(schoolsModel::class);
     }
 }
