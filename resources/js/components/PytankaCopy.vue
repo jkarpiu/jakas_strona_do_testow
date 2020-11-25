@@ -13,7 +13,7 @@
       <option value="1">1</option>
       <option value="2">2</option>
     </select>
-    <button class="btn btn-primary" @click="getQuestion(dzial)">
+    <button class="btn btn-primary button" @click="getQuestion(dzial)">
       Następne pytanie
     </button>
   </div>
@@ -22,6 +22,7 @@
 import Question from "./Question-copy";
 import axios from "axios";
 export default {
+  props: ["ilosc"],
   methods: {
     click: function () {
       if (this.answered.length  == 0) {
@@ -34,7 +35,7 @@ export default {
     },
     getQuestion: function () {
       axios
-        .get("/api/randQuestion", { params: { dzial: this.dzial, amount: 2 } })
+        .get("/api/randQuestion", { params: { dzial: this.dzial, amount: this.ilosc } })
         .catch((error) => {})
         .then((res) => {
           console.log(res);
@@ -89,3 +90,10 @@ export default {
   },
 };
 </script>
+<style scoped>
+    .button {
+      margin-left: auto;
+      margin-right: auto;
+      margin-left: 15rem;
+  }
+</style>

@@ -2,6 +2,6 @@
 
 @section('content')
     <div id="app">
-        <pytanka-copy ilosc="2"/>
+        <pytanka-copy ilosc="40"/>
     </div>
 @endsection

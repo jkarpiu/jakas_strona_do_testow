@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ zawartoscPytania.tresc }}</h1>
+    <h1 class="questionH">{{ zawartoscPytania.tresc }}</h1>
     <img :src="zawartoscPytania.image" alt="">
     <div
       v-bind:key="odpowiedz.id"
@@ -44,4 +44,13 @@ export default {
 };
 </script>
 <style scoped>
+    .questionH{
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+  }
+    input {
+      margin-top: 1vh;
+      margin-left: 25vw;
+    }
 </style>
