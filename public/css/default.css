@@ -169,13 +169,13 @@ body {
 }
 
 .card {
-    background: rgb(25,25,25);
+    background: rgb(39,39,39);
     color: #fcfcfc;
 }
 
 .card-header {
     border: none;
-    background: rgb(25, 25, 25);
+    background: rgb(39, 39, 39);
 }
 
 .btn-primary { 
@@ -193,6 +193,10 @@ body {
     line-height: 1.75rem;
 }
 
+.red-btn  {
+    background: darkred;
+    
+}
 .btn-karp:hover {
     background: rgb(110, 110, 110);
     box-shadow: inset 0 0 100px 100px 
