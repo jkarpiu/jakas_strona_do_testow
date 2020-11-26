@@ -25,6 +25,7 @@ Route::group(['prefix' => 'basic'], function () {
     Route::get('typy_szkol', 'basicServicesController@typy_szkol');
     Route::get('wojewodztwa', 'basicServicesController@wojewodztwa');
     Route::get('miasta', 'basicServicesController@miasta');
+    Route::get('szkoly', 'basicServicesController@szkoly');
 });
 
 Route::post('sendAnswers', 'randQuestionController@json_odpowiadanie');

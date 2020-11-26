@@ -1,16 +1,22 @@
 <template>
   <div>
-    <home v-if="state == 0" />
+    <home @page-change="pageChange" v-if="state == 0" />
+    <classrooms v-if="state == 1" />
   </div>
 </template>
 
 <script lang="ts">
 import Home from "./TeacherPanel/Home.vue";
+import Classrooms from "./TeacherPanel/Classrooms.vue";
 import axios from "axios";
 export default {
-  components: { Home },
+  components: { Home, Classrooms },
 
-  methods: {},
+  methods: {
+    pageChange: function(state:Number) {
+      this.state = state
+    }
+  },
   data() {
     return {
       state: 0,

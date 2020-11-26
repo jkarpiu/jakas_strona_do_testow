@@ -17,7 +17,6 @@ class CreatePrzedmiotiesTable extends Migration
             $table->id();
             $table->string('nazwa');
             $table->timestamps();
-            $table->integer ('id_dzial');
         });
     }
 

@@ -1,7 +1,8 @@
 <template>
   <div id="main">
       <div class="classes">
-          <h1>Klasy:</h1>
+          <h1>Zajęcia:</h1>
+          <p @click="$emit('page-change', 1)">Przejdź do wszstkich zajęć...</p>
       </div>
       <div class="tests">
           <h1>Testy:</h1>
@@ -9,7 +10,9 @@
   </div>
 </template>
 <script lang="ts">
-export default {};
+export default {
+
+};
 </script>
 <style scoped>
 #main {

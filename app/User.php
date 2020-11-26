@@ -57,7 +57,7 @@ class User extends Authenticatable
         return $this->hasMany('App\groupsModel', 'teacher_id');
     }
 
-    public function categories()
+    public function schools()
     {
         return $this->belongsToMany(schoolsModel::class);
     }

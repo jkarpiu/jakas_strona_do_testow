@@ -17,4 +17,7 @@ class schoolsModel extends Model
     {
         return $this->belongsToMany(User::class);
     }
+    public function city() {
+        return $this-> belongsTo(citiesModel::class, 'id_city');
+    }
 }

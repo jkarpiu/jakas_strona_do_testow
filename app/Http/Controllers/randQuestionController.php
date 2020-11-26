@@ -16,17 +16,7 @@ class randQuestionController extends Controller
 {
     function getQuestion($amount, $dzial)
     {
-        $finalpytania = [];
-        for ($i = 0; $i < $amount; $i++) {
-            $wszystkiePytania = Pytania::where('id_dzial', (int)$dzial)->get(['id']);
-            $pytanieSamoId = $wszystkiePytania[rand(1, sizeof($wszystkiePytania)) - 1];
-            $pytanie = Pytania::where('id', $pytanieSamoId->id)->with('odpowiedzi:id,tresc,id_pytanie')->get()->first();
-            if (in_array($pytanie, $finalpytania)) {
-                $i--;
-            } else
-                $finalpytania[$i] = $pytanie;
-        }
-        return $finalpytania;
+        return Pytania::where('id_dzial', $dzial)->inRandomOrder() ->with('odpowiedzi')->limit($amount)->get();
     }
     public function onequestion()
     {

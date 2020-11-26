@@ -17,7 +17,7 @@ class CreateGroupsModelsTable extends Migration
             $table->id();
             $table->string('teacher_id');
             $table->string('name');
-            $table->integer('school_id');
+            $table->integer('school_id') -> nullable();
             $table->timestamps();
         });
     }

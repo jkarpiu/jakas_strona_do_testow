@@ -13,10 +13,10 @@ class CreateSchoolsModelsUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('schools_models_users', function (Blueprint $table) {
+        Schema::create('schools_model_user', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-            $table->integer('schools_models_id');
+            $table->integer('schools_model_id');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateSchoolsModelsUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('schools_models_users');
+        Schema::dropIfExists('schools_model_user');
     }
 }

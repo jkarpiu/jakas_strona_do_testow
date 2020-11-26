@@ -14,6 +14,7 @@
         </select>
       </div>
     </div>
+
     <div v-if="type != null" class="form-group row">
       <div class="col-md-6">
         <select
@@ -28,15 +29,30 @@
         </select>
       </div>
     </div>
+
     <div v-if="region != null" class="form-group row">
       <div class="col-md-6">
         <select
           name="city"
-          @change="getCities()"
+          @change="getSchools()"
           v-model="city"
           class="form-control"
         >
           <option :key="option.id" v-for="option in cities" :value="option.id">
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <div v-if="city != null" class="form-group row">
+      <div class="col-md-6">
+        <select
+          name="school"
+          v-model="school"
+          class="form-control"
+        >
+          <option :key="option.id" v-for="option in schools" :value="option.id">
             {{ option.name }}
           </option>
         </select>
@@ -53,9 +69,11 @@ export default {
       types: [],
       regions: [],
       cities: [],
+      schools: [],
       type: null,
       region: null,
-      city: null
+      city: null,
+      school: null
     };
   },
   methods: {
@@ -63,7 +81,7 @@ export default {
       return axios
         .get(adress, { params: { id: attr } })
         .catch((err) => {
-          console.log(err.body);
+          console.log(err.response);
         })
         .then((res: any) => {
           return res.data;
@@ -78,8 +96,14 @@ export default {
       }
     },
     getCities: async () => {
-      if (ctx.region!= null) {
-        ctx.cities= await ctx.getData("/api/basic/miasta", ctx.region);
+      if (ctx.region != null) {
+        ctx.cities = await ctx.getData("/api/basic/miasta", ctx.region);
+      }
+    },
+    getSchools: async () => {
+      if (ctx.city != null) {
+        console.log(ctx.city);
+        ctx.schools = await ctx.getData("/api/basic/szkoly", ctx.city);
       }
     },
   },
