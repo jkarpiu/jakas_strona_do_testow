@@ -28,7 +28,11 @@ Route::get('/add', function () {
     ]);
 });
 
-Route::get('/losowanie1', 'randQuestionController@onequestion')->name('losowanie1');
+Route::get('/losowanie1', 'randQuestionController@onequestion')->name('losowanie1'); 
+
+Route::get('/losowanie40', function(){
+    return view("random40");
+})->name('losowanie40');
 
 Route::post('/dodaj_pytanie', 'addQuestionController@addQuestion');
 

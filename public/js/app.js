@@ -1930,7 +1930,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2031,18 +2030,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2051,8 +2038,26 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: ["zawartoscPytania", 'answered'],
   methods: {
+    selectAnswer: function selectAnswer(id) {
+      this.check = id;
+    },
     sprawdzanie: function sprawdzanie() {
       this.$emit('answer', this.check != " " ? this.check : 1);
+    },
+    calculateColor: function calculateColor(id) {
+      if (this.answered == null) {
+        if (this.check == id) {
+          return "background-color: #0061c9;";
+        }
+
+        return " ";
+      } else if (this.answered.zaznaczana.id == 1 && id == this.answered.poprawna.id) {
+        return "background-color: #007c02;";
+      } else if (this.answered.poprawna.id == id) {
+        return "background-color: #007c02;";
+      } else if (!this.answered.zaznaczana.poprawna && id == this.answered.zaznaczana.id) {
+        return "background-color: darkred;";
+      }
     }
   }
 });
@@ -6499,7 +6504,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.button[data-v-22b3d648] {\n    margin-left: auto;\n    margin-right: auto;\n    margin-left: 15rem;\n}\n", ""]);
+exports.push([module.i, "\n.button[data-v-22b3d648] {\n      margin-left: auto;\n      margin-right: auto;\n      display: flex;\n      justify-content: center;\n}\n", ""]);
 
 // exports
 
@@ -6518,7 +6523,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.questionH[data-v-415552a1]{\n    text-align: center;\n    margin-left: auto;\n    margin-right: auto;\n}\ninput[data-v-415552a1] {\n    margin-top: 1vh;\n    margin-left: 25vw;\n}\n", ""]);
+exports.push([module.i, "\n.quiz[data-v-415552a1] {\n      max-width: 60%;\n      margin-left: auto;\n      margin-right: auto;\n      color: rgb(230, 230, 230);\n      background-color: rgb(39, 39, 39);\n      padding: 15px;\n      padding-bottom: 1.5rem;\n}\n.questionH[data-v-415552a1] {\n      font-size: 28px;\n      max-width: 60vw;\n      padding-left: 1vw; \n      padding-top: 1vh;\n}\n.image[data-v-415552a1] {\n      margin-left: auto;\n      margin-right: auto;\n      display: block;\n      margin-bottom: 1vh;\n      max-width: 80%;\n}\n.ans[data-v-415552a1] {\n      margin-top: 1.3rem;\n      padding: 5px;\n      font-size: 16px;\n      padding-top: 0.8rem;\n      padding-bottom: 0.7rem;\n      padding-left: 2rem;\n      border: solid 1px rgb(33, 33, 33);\n      background: rgb(33, 33, 33);\n      cursor: pointer;\n      vertical-align: middle;\n}\n.ans >li[data-v-415552a1] {\n      padding: 0;\n      margin: 0;\n}\n.ans[data-v-415552a1]:hover {\n      background:rgb(29, 29, 29);\n      color: rgb(148, 148, 148);\n      border: solid 1px #0061c9;\n}\n\n  /* input {\n    margin-top: 0.5vh;\n    margin-left: 1vw;\n    margin-bottom: 2vh;\n} */\n.watermark[data-v-415552a1]  {\n    text-align: center;\n    padding-top: 1rem;\n    color: rgb(77, 77, 77);\n}\n", ""]);
 
 // exports
 
@@ -38600,9 +38605,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
+  return _c("div", [
+    _c(
+      "ol",
       _vm._l(_vm.myQuestion["questions"], function(item, index) {
         return _c("question", {
           key: item.id,
@@ -38612,7 +38617,10 @@ var render = function() {
           on: { answer: _vm.oneAnswer }
         })
       }),
-      _vm._v(" "),
+      1
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "button" }, [
       _c(
         "button",
         {
@@ -38623,56 +38631,22 @@ var render = function() {
         [_vm._v("Sprawdź")]
       ),
       _vm._v(" "),
-      _c(
-        "select",
-        {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.dzial,
-              expression: "dzial"
-            }
-          ],
-          attrs: { dzial: "", id: "" },
-          on: {
-            change: function($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function(o) {
-                  return o.selected
-                })
-                .map(function(o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.dzial = $event.target.multiple
-                ? $$selectedVal
-                : $$selectedVal[0]
-            }
-          }
-        },
-        [
-          _c("option", { attrs: { value: "1" } }, [_vm._v("1")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "2" } }, [_vm._v("2")])
-        ]
-      ),
+      _c("span", { staticStyle: { width: "20px" } }),
       _vm._v(" "),
       _c(
         "button",
         {
-          staticClass: "btn btn-primary button",
+          staticClass: "btn btn-primary",
           on: {
             click: function($event) {
               return _vm.getQuestion(_vm.dzial)
             }
           }
         },
-        [_vm._v("\n    Następne pytanie\n  ")]
+        [_vm._v("Następne pytanie")]
       )
-    ],
-    2
-  )
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -38696,54 +38670,74 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
+  return _c("div", [
+    _c("div", { staticClass: "quiz" }, [
       _c("h1", { staticClass: "questionH" }, [
-        _vm._v(_vm._s(_vm.zawartoscPytania.tresc))
+        _c("li", { staticStyle: { "margin-left": "1rem" } }, [
+          _vm._v(_vm._s(_vm.zawartoscPytania.tresc))
+        ])
       ]),
       _vm._v(" "),
-      _c("img", { attrs: { src: _vm.zawartoscPytania.image, alt: "" } }),
-      _vm._v(" "),
-      _vm._l(_vm.zawartoscPytania.odpowiedzi, function(odpowiedz) {
-        return _c("div", { key: odpowiedz.id }, [
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.check,
-                expression: "check"
-              }
-            ],
-            attrs: { name: _vm.zawartoscPytania.id, type: "radio" },
-            domProps: {
-              value: odpowiedz.id,
-              checked: _vm._q(_vm.check, odpowiedz.id)
-            },
-            on: {
-              change: function($event) {
-                _vm.check = odpowiedz.id
-              }
-            }
-          }),
-          _vm._v(" "),
-          _c("label", [_vm._v(_vm._s(odpowiedz.tresc))])
-        ])
+      _c("img", {
+        staticClass: "image",
+        attrs: { src: _vm.zawartoscPytania.image, alt: "" }
       }),
       _vm._v(" "),
-      !_vm.answered
-        ? _c("p")
-        : _vm.answered.zaznaczana.poprawna == 0
-        ? _c("p", [_vm._v("\n    Źle\n  ")])
-        : _vm.answered.zaznaczana.poprawna == 1
-        ? _c("p", [_vm._v("\n    Dobrze\n  ")])
-        : _c("p")
-    ],
-    2
-  )
+      _c(
+        "ol",
+        {
+          staticStyle: {
+            "list-style-type": "upper-latin",
+            margin: "0",
+            padding: "0"
+          }
+        },
+        _vm._l(_vm.zawartoscPytania.odpowiedzi, function(odpowiedz) {
+          return _c("div", { key: odpowiedz.id }, [
+            _c(
+              "div",
+              {
+                staticClass: "ans",
+                style: _vm.calculateColor(odpowiedz.id),
+                on: {
+                  click: function($event) {
+                    return _vm.selectAnswer(odpowiedz.id)
+                  }
+                }
+              },
+              [
+                _c("li", [
+                  _c(
+                    "p",
+                    {
+                      staticStyle: {
+                        margin: "0",
+                        padding: "0",
+                        "margin-left": "5px"
+                      }
+                    },
+                    [_vm._v(_vm._s(odpowiedz.tresc))]
+                  )
+                ])
+              ]
+            )
+          ])
+        }),
+        0
+      )
+    ]),
+    _vm._v(" "),
+    _vm._m(0)
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "watermark" }, [_c("p", [_vm._v("ipies")])])
+  }
+]
 render._withStripped = true
 
 
@@ -51857,8 +51851,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/karp/Dokumenty/jakas_strona_do_testow/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/karp/Dokumenty/jakas_strona_do_testow/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/lucas/jakas_strona_do_testow/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/lucas/jakas_strona_do_testow/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

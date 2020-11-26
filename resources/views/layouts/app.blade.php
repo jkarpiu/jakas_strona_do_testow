@@ -39,7 +39,7 @@
                             <li> <a class="dropdown-item panel" href="">Panel nauczyciela</a> </li>
                         @endif
                     @endif
-                    <li><a class="dropdown-item" href="">Losuj 40 pytań</a></li>
+                    <li><a class="dropdown-item" href="{{ route('losowanie40') }}">Losuj 40 pytań</a></li>
                     <li><a class="dropdown-item" href="{{ route('losowanie1') }}">Losuj 1 pytanie</a></li>
                     @guest
                         <li><a class="dropdown-item" href="{{ route('login') }}">Zaloguj się</a></li>
