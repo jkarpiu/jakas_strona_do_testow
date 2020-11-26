@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>'ipies'</title>
+    <title>ipies</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -33,10 +33,10 @@
             <ul>
                 <span class="dropdown-display">     
                     @if (Auth::user())
-                        @if (Auth::user()->role == 1)
+                        @if (Auth::user()->role == 0)
                             <li> <a class="dropdown-item panel" href="">Panel ucznia</a> </li>
                         @else
-                            <li> <a class="dropdown-item panel" href="">Panel nauczyciela</a> </li>
+                <li> <a class="dropdown-item panel" href="{{route('teacherPanel')}}">Panel nauczyciela</a> </li>
                         @endif
                     @endif
                     <li><a class="dropdown-item" href="{{ route('losowanie40') }}">Losuj 40 pytań</a></li>
