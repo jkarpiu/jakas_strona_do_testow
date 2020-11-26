@@ -1,21 +1,20 @@
 <template>
   <div>
-    <question
-      ref="Question"
-      :key="item.id"
-      v-for="(item, index) in myQuestion['questions']"
-      :zawartoscPytania="item"
-      :answered="answered[index]"
-      @answer="oneAnswer"
-    />
-    <button class="btn btn-primary" :disabled="answered.length > 0" @click="click">Sprawdź</button>
-    <select v-model="dzial" dzial id="">
-      <option value="1">1</option>
-      <option value="2">2</option>
-    </select>
-    <button class="btn btn-primary button" @click="getQuestion(dzial)">
-      Następne pytanie
-    </button>
+    <ol>
+      <question
+        ref="Question"
+        :key="item.id"
+        v-for="(item, index) in myQuestion['questions']"
+        :zawartoscPytania="item"
+        :answered="answered[index]"
+        @answer="oneAnswer"
+      />
+    </ol>  
+    <div class="button">
+        <button class="btn btn-primary" :disabled="answered.length > 0" @click="click">Sprawdź</button>
+        <span style="width: 20px;"></span>
+        <button class="btn btn-primary" @click="getQuestion(dzial)">Następne pytanie</button>
+    </div>
   </div>
 </template>
 <script>
@@ -92,8 +91,9 @@ export default {
 </script>
 <style scoped>
     .button {
-      margin-left: auto;
-      margin-right: auto;
-      margin-left: 15rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
   }
 </style>
