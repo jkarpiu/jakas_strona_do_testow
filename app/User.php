@@ -49,7 +49,7 @@ class User extends Authenticatable
 
     public function wyniki()
     {
-        return $this->hasMany('App\Wyniki');
+        return $this->hasMany('App\Wyniki', 'id_user');
     }
 
     public function groups()
