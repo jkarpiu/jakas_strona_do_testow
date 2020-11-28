@@ -13,7 +13,7 @@
             ><small> Pozostało: </small></span
           >
           <h2>
-            <countdown :transform="transform" :time="deadline - 1000" @end="click">
+            <countdown :transform="transform" ref="countdown" :time="deadline - 2000" @end="click">
               <template slot-scope="props"
                 >{{ props.hours }}:{{ props.minutes }}:{{
                   props.seconds
@@ -105,7 +105,7 @@ export default {
           console.log(err.response);
         })
         .then((res) => {
-          console.log(res.data);
+          this.$refs.countdown.abort()
           this.answered = res.data;
         });
     },

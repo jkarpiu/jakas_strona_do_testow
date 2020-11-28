@@ -2461,7 +2461,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       })["catch"](function (err) {
         console.log(err.response);
       }).then(function (res) {
-        console.log(res.data);
+        _this2.$refs.countdown.abort();
+
         _this2.answered = res.data;
       });
     },
@@ -39153,9 +39154,10 @@ var render = function() {
                     "h2",
                     [
                       _c("countdown", {
+                        ref: "countdown",
                         attrs: {
                           transform: _vm.transform,
-                          time: _vm.deadline - 1000
+                          time: _vm.deadline - 2000
                         },
                         on: { end: _vm.click },
                         scopedSlots: _vm._u(
