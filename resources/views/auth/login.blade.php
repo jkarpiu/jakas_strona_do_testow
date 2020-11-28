@@ -67,9 +67,12 @@
                                             {{ __('Zapomniałeś hasła?') }}
                                         </a>
                                     @endif
-                                </div>
-                                    <a href="{{ url('google_login') }}" class="btn red-btn">
-                                        <strong>Zaloguj się z Google</strong></a>
+                                
+                                <a href="{{ url('google_login') }}" class="btn-google" style="text-decoration: none;">
+                                <div class="google-icon-box"><img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/></div>
+                                <div class="google-text">Zaloguj się z Google</div>
+                                </a>
+                            </div>
                             </div>
                         </form>
                     </div>
