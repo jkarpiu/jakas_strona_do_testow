@@ -18,6 +18,7 @@ class CreateActiveTestsTable extends Migration
             $table->id();
             $table->dateTime('deadLine') ->nullable();
             $table->string('token');
+            $table->integer('dzial_id') -> nullable();
             $table->boolean('sent') -> default(0);
             $table->timestamps();
         });

@@ -30,13 +30,13 @@ class basicServicesController extends Controller
     public function miasta(Request $request)
     {
         return response()->json(
-            regionsModel::where('id', $request['id'])->with('cities')->get()->first()->cities
+            regionsModel::with('cities')->find($request['id'])->cities
         );
     }
     public function szkoly(Request $request)
     {
         return response()->json(
-            citiesModel::where('id', $request['id'])->with('schools')->get()->first()->schools
+            citiesModel::with('schools')->find($request['id'])->schools
         );
     }
 }

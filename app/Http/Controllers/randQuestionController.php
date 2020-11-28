@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\Dzialy;
 use Illuminate\Support\Str;
 use App\Pytania;
 use App\Odpowiedzi;
 use App\activeTests;
-use DateTime;
 use Carbon\Carbon;
 
 class randQuestionController extends Controller
@@ -26,11 +24,12 @@ class randQuestionController extends Controller
     public function json_onequestion(Request $request)
     {
         $response = [
-            'questions' =>  $this->getQuestion($request['amount'], $request['dzial']),
+            'questions' =>  $this->getQuestion($request['amount'], (int)$request['dzial']),
             'session' => activeTests::create([
                 'token' => Str::random(32),
-                'deadline' => Carbon::now()->addMinutes(60)
-            ])
+                'deadline' => Carbon::now()->addMinutes(1),
+                'dzial_id' => (int)$request['dzial']
+            ])->load('dzial'),
         ];
         return response()->json($response);
     }
@@ -45,24 +44,25 @@ class randQuestionController extends Controller
         $testSession = activeTests::where('id', $request['session']['id'])->get()->first();
         if ($request['session']['token'] == $testSession['token'] && Carbon::parse($testSession['deadLine'])->diffInMinutes(Carbon::now()) > 0 && $testSession['sent'] == false) {
             $valid = [];
-            foreach ($request['answers'] as $key => $odpowiedz) {
+            foreach ($request['answers'] as $key => $item) {
                 array_push(
                     $valid,
                     [
-                        'zaznaczana' => Odpowiedzi::select('poprawna', 'id', 'id_pytanie')->where('id', $odpowiedz)->get()->first(),
-                        'poprawna' => null
+                        'zaznaczana' => Odpowiedzi::select('poprawna', 'id', 'id_pytanie')->where('id', $item['answer']) -> get()->first(),
+                        'poprawna' => null,
+                        'wyniki' => null
                     ]
                 );
                 $valid[$key]['poprawna'] = $valid[$key]['zaznaczana']->poprawna ? $valid[$key]['zaznaczana']
                     : Odpowiedzi::select('id', 'poprawna')
-                    ->where('id_pytanie', $valid[$key]['zaznaczana']->id_pytanie)
+                    ->where('id_pytanie', $item['question'])
                     ->where('poprawna', true)->get()->first();
             }
             $testSession['sent'] = true;
             $testSession->save();
             return response()->json($valid);
         } else {
-            return response()->json(['messenge' => 'Twój czas minął'], 401);
+            return response()->json($request, 401);
         }
     }
 }

@@ -86,6 +86,438 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/@chenfengyuan/vue-countdown/dist/vue-countdown.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@chenfengyuan/vue-countdown/dist/vue-countdown.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*!
+ * vue-countdown v1.1.5
+ * https://fengyuanchen.github.io/vue-countdown
+ *
+ * Copyright 2018-present Chen Fengyuan
+ * Released under the MIT license
+ *
+ * Date: 2020-02-25T01:19:32.769Z
+ */
+
+(function (global, factory) {
+   true ? module.exports = factory() :
+  undefined;
+}(this, (function () { 'use strict';
+
+  var MILLISECONDS_SECOND = 1000;
+  var MILLISECONDS_MINUTE = 60 * MILLISECONDS_SECOND;
+  var MILLISECONDS_HOUR = 60 * MILLISECONDS_MINUTE;
+  var MILLISECONDS_DAY = 24 * MILLISECONDS_HOUR;
+  var EVENT_VISIBILITY_CHANGE = 'visibilitychange';
+  var index = {
+    name: 'countdown',
+    data: function data() {
+      return {
+        /**
+         * It is counting down.
+         * @type {boolean}
+         */
+        counting: false,
+
+        /**
+         * The absolute end time.
+         * @type {number}
+         */
+        endTime: 0,
+
+        /**
+         * The remaining milliseconds.
+         * @type {number}
+         */
+        totalMilliseconds: 0
+      };
+    },
+    props: {
+      /**
+       * Starts the countdown automatically when initialized.
+       */
+      autoStart: {
+        type: Boolean,
+        default: true
+      },
+
+      /**
+       * Emits the countdown events.
+       */
+      emitEvents: {
+        type: Boolean,
+        default: true
+      },
+
+      /**
+       * The interval time (in milliseconds) of the countdown progress.
+       */
+      interval: {
+        type: Number,
+        default: 1000,
+        validator: function validator(value) {
+          return value >= 0;
+        }
+      },
+
+      /**
+       * Generate the current time of a specific time zone.
+       */
+      now: {
+        type: Function,
+        default: function _default() {
+          return Date.now();
+        }
+      },
+
+      /**
+       * The tag name of the component's root element.
+       */
+      tag: {
+        type: String,
+        default: 'span'
+      },
+
+      /**
+       * The time (in milliseconds) to count down from.
+       */
+      time: {
+        type: Number,
+        default: 0,
+        validator: function validator(value) {
+          return value >= 0;
+        }
+      },
+
+      /**
+       * Transforms the output props before render.
+       */
+      transform: {
+        type: Function,
+        default: function _default(props) {
+          return props;
+        }
+      }
+    },
+    computed: {
+      /**
+       * Remaining days.
+       * @returns {number} The computed value.
+       */
+      days: function days() {
+        return Math.floor(this.totalMilliseconds / MILLISECONDS_DAY);
+      },
+
+      /**
+       * Remaining hours.
+       * @returns {number} The computed value.
+       */
+      hours: function hours() {
+        return Math.floor(this.totalMilliseconds % MILLISECONDS_DAY / MILLISECONDS_HOUR);
+      },
+
+      /**
+       * Remaining minutes.
+       * @returns {number} The computed value.
+       */
+      minutes: function minutes() {
+        return Math.floor(this.totalMilliseconds % MILLISECONDS_HOUR / MILLISECONDS_MINUTE);
+      },
+
+      /**
+       * Remaining seconds.
+       * @returns {number} The computed value.
+       */
+      seconds: function seconds() {
+        return Math.floor(this.totalMilliseconds % MILLISECONDS_MINUTE / MILLISECONDS_SECOND);
+      },
+
+      /**
+       * Remaining milliseconds.
+       * @returns {number} The computed value.
+       */
+      milliseconds: function milliseconds() {
+        return Math.floor(this.totalMilliseconds % MILLISECONDS_SECOND);
+      },
+
+      /**
+       * Total remaining days.
+       * @returns {number} The computed value.
+       */
+      totalDays: function totalDays() {
+        return this.days;
+      },
+
+      /**
+       * Total remaining hours.
+       * @returns {number} The computed value.
+       */
+      totalHours: function totalHours() {
+        return Math.floor(this.totalMilliseconds / MILLISECONDS_HOUR);
+      },
+
+      /**
+       * Total remaining minutes.
+       * @returns {number} The computed value.
+       */
+      totalMinutes: function totalMinutes() {
+        return Math.floor(this.totalMilliseconds / MILLISECONDS_MINUTE);
+      },
+
+      /**
+       * Total remaining seconds.
+       * @returns {number} The computed value.
+       */
+      totalSeconds: function totalSeconds() {
+        return Math.floor(this.totalMilliseconds / MILLISECONDS_SECOND);
+      }
+    },
+    render: function render(createElement) {
+      return createElement(this.tag, this.$scopedSlots.default ? [this.$scopedSlots.default(this.transform({
+        days: this.days,
+        hours: this.hours,
+        minutes: this.minutes,
+        seconds: this.seconds,
+        milliseconds: this.milliseconds,
+        totalDays: this.totalDays,
+        totalHours: this.totalHours,
+        totalMinutes: this.totalMinutes,
+        totalSeconds: this.totalSeconds,
+        totalMilliseconds: this.totalMilliseconds
+      }))] : this.$slots.default);
+    },
+    watch: {
+      $props: {
+        deep: true,
+        immediate: true,
+
+        /**
+         * Update the countdown when props changed.
+         */
+        handler: function handler() {
+          this.totalMilliseconds = this.time;
+          this.endTime = this.now() + this.time;
+
+          if (this.autoStart) {
+            this.start();
+          }
+        }
+      }
+    },
+    methods: {
+      /**
+       * Starts to countdown.
+       * @public
+       * @emits Countdown#start
+       */
+      start: function start() {
+        if (this.counting) {
+          return;
+        }
+
+        this.counting = true;
+
+        if (this.emitEvents) {
+          /**
+           * Countdown start event.
+           * @event Countdown#start
+           */
+          this.$emit('start');
+        }
+
+        if (document.visibilityState === 'visible') {
+          this.continue();
+        }
+      },
+
+      /**
+       * Continues the countdown.
+       * @private
+       */
+      continue: function _continue() {
+        var _this = this;
+
+        if (!this.counting) {
+          return;
+        }
+
+        var delay = Math.min(this.totalMilliseconds, this.interval);
+
+        if (delay > 0) {
+          if (window.requestAnimationFrame) {
+            var init;
+            var prev;
+
+            var step = function step(now) {
+              if (!init) {
+                init = now;
+              }
+
+              if (!prev) {
+                prev = now;
+              }
+
+              var range = now - init;
+
+              if (range >= delay // Avoid losing time about one second per minute (now - prev ≈ 16ms) (#43)
+              || range + (now - prev) / 2 >= delay) {
+                _this.progress();
+              } else {
+                _this.requestId = requestAnimationFrame(step);
+              }
+
+              prev = now;
+            };
+
+            this.requestId = requestAnimationFrame(step);
+          } else {
+            this.timeoutId = setTimeout(function () {
+              _this.progress();
+            }, delay);
+          }
+        } else {
+          this.end();
+        }
+      },
+
+      /**
+       * Pauses the countdown.
+       * @private
+       */
+      pause: function pause() {
+        if (window.requestAnimationFrame) {
+          cancelAnimationFrame(this.requestId);
+        } else {
+          clearTimeout(this.timeoutId);
+        }
+      },
+
+      /**
+       * Progresses to countdown.
+       * @private
+       * @emits Countdown#progress
+       */
+      progress: function progress() {
+        if (!this.counting) {
+          return;
+        }
+
+        this.totalMilliseconds -= this.interval;
+
+        if (this.emitEvents && this.totalMilliseconds > 0) {
+          /**
+           * Countdown progress event.
+           * @event Countdown#progress
+           */
+          this.$emit('progress', {
+            days: this.days,
+            hours: this.hours,
+            minutes: this.minutes,
+            seconds: this.seconds,
+            milliseconds: this.milliseconds,
+            totalDays: this.totalDays,
+            totalHours: this.totalHours,
+            totalMinutes: this.totalMinutes,
+            totalSeconds: this.totalSeconds,
+            totalMilliseconds: this.totalMilliseconds
+          });
+        }
+
+        this.continue();
+      },
+
+      /**
+       * Aborts the countdown.
+       * @public
+       * @emits Countdown#abort
+       */
+      abort: function abort() {
+        if (!this.counting) {
+          return;
+        }
+
+        this.pause();
+        this.counting = false;
+
+        if (this.emitEvents) {
+          /**
+           * Countdown abort event.
+           * @event Countdown#abort
+           */
+          this.$emit('abort');
+        }
+      },
+
+      /**
+       * Ends the countdown.
+       * @public
+       * @emits Countdown#end
+       */
+      end: function end() {
+        if (!this.counting) {
+          return;
+        }
+
+        this.pause();
+        this.totalMilliseconds = 0;
+        this.counting = false;
+
+        if (this.emitEvents) {
+          /**
+           * Countdown end event.
+           * @event Countdown#end
+           */
+          this.$emit('end');
+        }
+      },
+
+      /**
+       * Updates the count.
+       * @private
+       */
+      update: function update() {
+        if (this.counting) {
+          this.totalMilliseconds = Math.max(0, this.endTime - this.now());
+        }
+      },
+
+      /**
+       * visibility change event handler.
+       * @private
+       */
+      handleVisibilityChange: function handleVisibilityChange() {
+        switch (document.visibilityState) {
+          case 'visible':
+            this.update();
+            this.continue();
+            break;
+
+          case 'hidden':
+            this.pause();
+            break;
+        }
+      }
+    },
+    mounted: function mounted() {
+      document.addEventListener(EVENT_VISIBILITY_CHANGE, this.handleVisibilityChange);
+    },
+    beforeDestroy: function beforeDestroy() {
+      document.removeEventListener(EVENT_VISIBILITY_CHANGE, this.handleVisibilityChange);
+      this.pause();
+    }
+  };
+
+  return index;
+
+})));
+
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -1911,6 +2343,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Question_copy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Question-copy */ "./resources/js/components/Question-copy.vue");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _chenfengyuan_vue_countdown__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @chenfengyuan/vue-countdown */ "./node_modules/@chenfengyuan/vue-countdown/dist/vue-countdown.js");
+/* harmony import */ var _chenfengyuan_vue_countdown__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_chenfengyuan_vue_countdown__WEBPACK_IMPORTED_MODULE_2__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 //
 //
 //
@@ -1930,6 +2376,40 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1937,7 +2417,6 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     click: function click() {
       if (this.answered.length == 0) {
-        console.log(this.answered);
         this.answers = [];
         this.$refs.Question.forEach(function (element) {
           element.sprawdzanie();
@@ -1953,16 +2432,18 @@ __webpack_require__.r(__webpack_exports__);
           amount: this.ilosc
         }
       })["catch"](function (error) {}).then(function (res) {
-        console.log(res);
+        console.log(_this.dzial);
+        console.log(res.data);
         _this.myQuestion = res.data;
         _this.answered = [];
+        var deadline = new Date(_this.myQuestion.session.deadline);
+        _this.deadline = deadline - new Date();
       });
     },
     oneAnswer: function oneAnswer(check) {
       this.answers.push(check);
 
       if (this.myQuestion.questions.length == this.answers.length) {
-        console.log("test");
         this.sendAnswers();
       }
     },
@@ -1983,17 +2464,33 @@ __webpack_require__.r(__webpack_exports__);
         console.log(res.data);
         _this2.answered = res.data;
       });
+    },
+    transform: function transform(props) {
+      Object.entries(props).forEach(function (_ref) {
+        var _ref2 = _slicedToArray(_ref, 2),
+            key = _ref2[0],
+            value = _ref2[1];
+
+        // Adds leading zero
+        var digits = value < 10 ? "0".concat(value) : value; // uses singular form when the value is less than 2
+
+        var word = value < 2 ? key.replace(/s$/, "") : key;
+        props[key] = "".concat(digits);
+      });
+      return props;
     }
   },
   components: {
-    question: _Question_copy__WEBPACK_IMPORTED_MODULE_0__["default"]
+    question: _Question_copy__WEBPACK_IMPORTED_MODULE_0__["default"],
+    countdown: _chenfengyuan_vue_countdown__WEBPACK_IMPORTED_MODULE_2___default.a
   },
   data: function data() {
     return {
       myQuestion: [],
       dzial: 1,
       answers: [],
-      answered: []
+      answered: [],
+      deadline: null
     };
   },
   created: function created() {
@@ -2030,19 +2527,39 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       check: " "
     };
   },
-  props: ["zawartoscPytania", 'answered'],
+  props: ["zawartoscPytania", "answered"],
   methods: {
     selectAnswer: function selectAnswer(id) {
       this.check = id;
     },
     sprawdzanie: function sprawdzanie() {
-      this.$emit('answer', this.check != " " ? this.check : 1);
+      this.$emit("data", {
+        question: this.zawartoscPytania.id,
+        answer: this.check != " " ? this.check : 1
+      });
     },
     calculateColor: function calculateColor(id) {
       if (this.answered == null) {
@@ -6504,7 +7021,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.button[data-v-22b3d648] {\n      margin-left: auto;\n      margin-right: auto;\n      display: flex;\n      justify-content: center;\n}\n", ""]);
+exports.push([module.i, "\n.button[data-v-22b3d648] {\n  margin-left: auto;\n  margin-right: auto;\n  display: flex;\n  justify-content: center;\n}\n#main[data-v-22b3d648] {\n  margin-left: auto;\n  margin-right: auto;\n}\n.testHeader[data-v-22b3d648] {\n  padding: 15px;\n  width: 60vw;\n  margin-bottom: 0;\n  margin-left: auto;\n  margin-right: auto;\n  background-color: rgb(39, 39, 39);\n  display: flex;\n  justify-content: space-between;\n  box-shadow: -2px 5px 24px 11px rgba(0,0,0,0.4);\n-webkit-box-shadow: -2px 5px 24px 11px rgba(0,0,0,0.4);\n-moz-box-shadow: -2px 5px 24px 11px rgba(0,0,0,0.4);\n}\n.watermark[data-v-22b3d648] {\n  text-align: center;\n  padding-top: 1rem;\n  color: rgb(77, 77, 77);\n}\n", ""]);
 
 // exports
 
@@ -6523,7 +7040,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.quiz[data-v-415552a1] {\n      max-width: 60%;\n      margin-left: auto;\n      margin-right: auto;\n      color: rgb(230, 230, 230);\n      background-color: rgb(39, 39, 39);\n      padding: 15px;\n      padding-bottom: 1.5rem;\n}\n.questionH[data-v-415552a1] {\n      font-size: 28px;\n      max-width: 60vw;\n      padding-left: 1vw; \n      padding-top: 1vh;\n}\n.image[data-v-415552a1] {\n      margin-left: auto;\n      margin-right: auto;\n      display: block;\n      margin-bottom: 1vh;\n      max-width: 80%;\n}\n.ans[data-v-415552a1] {\n      margin-top: 1.3rem;\n      padding: 5px;\n      font-size: 16px;\n      padding-top: 0.8rem;\n      padding-bottom: 0.7rem;\n      padding-left: 2rem;\n      border: solid 1px rgb(33, 33, 33);\n      background: rgb(33, 33, 33);\n      cursor: pointer;\n      vertical-align: middle;\n}\n.ans >li[data-v-415552a1] {\n      padding: 0;\n      margin: 0;\n}\n.ans[data-v-415552a1]:hover {\n      background:rgb(29, 29, 29);\n      color: rgb(148, 148, 148);\n      border: solid 1px #0061c9;\n}\n\n  /* input {\n    margin-top: 0.5vh;\n    margin-left: 1vw;\n    margin-bottom: 2vh;\n} */\n.watermark[data-v-415552a1]  {\n    text-align: center;\n    padding-top: 1rem;\n    color: rgb(77, 77, 77);\n}\n", ""]);
+exports.push([module.i, "\n.quiz[data-v-415552a1] {\n  max-width: 60%;\n  margin-left: auto;\n  margin-right: auto;\n  color: rgb(230, 230, 230);\n  background-color: rgb(39, 39, 39);\n  padding: 15px;\n  padding-bottom: 1.5rem;\n}\n.questionH[data-v-415552a1] {\n  font-size: 28px;\n  max-width: 60vw;\n  padding-left: 1vw;\n  padding-top: 1vh;\n}\n.image[data-v-415552a1] {\n  margin-left: auto;\n  margin-right: auto;\n  display: block;\n  margin-bottom: 1vh;\n  max-width: 80%;\n}\n.ans[data-v-415552a1] {\n  margin-top: 1.3rem;\n  padding: 5px;\n  font-size: 16px;\n  padding-top: 0.8rem;\n  padding-bottom: 0.7rem;\n  padding-left: 2rem;\n  border: solid 1px rgb(33, 33, 33);\n  background: rgb(33, 33, 33);\n  cursor: pointer;\n  vertical-align: middle;\n}\n.ans > li[data-v-415552a1] {\n  padding: 0;\n  margin: 0;\n}\n.ans[data-v-415552a1]:hover {\n  background: rgb(29, 29, 29);\n  color: rgb(148, 148, 148);\n  border: solid 1px #0061c9;\n}\n\n/* input {\n      margin-top: 0.5vh;\n      margin-left: 1vw;\n      margin-bottom: 2vh;\n  } */\n.watermark[data-v-415552a1] {\n  text-align: center;\n  padding-top: 1rem;\n  color: rgb(77, 77, 77);\n}\n.nothing-checked[data-v-415552a1] {\n  margin-top: 1.3rem;\n  color: rgb(231, 231, 231);\n  background-color: #0061c9;\n  padding: 1rem;\n  margin-left: auto;\n  margin-right: auto;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bold;\n  font-size: 1.3rem;\n}\n.nothing-checked > p[data-v-415552a1] {\n  padding: 0;\n  margin: 0;\n}\n", ""]);
 
 // exports
 
@@ -38605,19 +39122,91 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { attrs: { id: "main" } }, [
+    _vm.myQuestion.session
+      ? _c(
+          "div",
+          { staticStyle: { position: "sticky", top: "0", "z-index": "1" } },
+          [
+            _c("div", { staticClass: "testHeader" }, [
+              _c("span", [
+                _c("small", [_vm._v("Test z zakresu: ")]),
+                _vm._v(" "),
+                _c("h2", { staticStyle: { "margin-bottom": "0" } }, [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.myQuestion.session.dzial.nazwa) +
+                      "\n        "
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticStyle: { display: "flex", "flex-direction": "column" }
+                },
+                [
+                  _vm._m(0),
+                  _vm._v(" "),
+                  _c(
+                    "h2",
+                    [
+                      _c("countdown", {
+                        attrs: {
+                          transform: _vm.transform,
+                          time: _vm.deadline - 1000
+                        },
+                        on: { end: _vm.click },
+                        scopedSlots: _vm._u(
+                          [
+                            {
+                              key: "default",
+                              fn: function(props) {
+                                return [
+                                  _vm._v(
+                                    _vm._s(props.hours) +
+                                      ":" +
+                                      _vm._s(props.minutes) +
+                                      ":" +
+                                      _vm._s(props.seconds)
+                                  )
+                                ]
+                              }
+                            }
+                          ],
+                          null,
+                          false,
+                          2938114484
+                        )
+                      })
+                    ],
+                    1
+                  )
+                ]
+              )
+            ])
+          ]
+        )
+      : _vm._e(),
+    _vm._v(" "),
     _c(
       "ol",
-      _vm._l(_vm.myQuestion["questions"], function(item, index) {
-        return _c("question", {
-          key: item.id,
-          ref: "Question",
-          refInFor: true,
-          attrs: { zawartoscPytania: item, answered: _vm.answered[index] },
-          on: { answer: _vm.oneAnswer }
+      { staticStyle: { margin: "0", padding: "0" } },
+      [
+        _vm._m(1),
+        _vm._v(" "),
+        _vm._l(_vm.myQuestion["questions"], function(item, index) {
+          return _c("question", {
+            key: item.id,
+            ref: "Question",
+            refInFor: true,
+            attrs: { zawartoscPytania: item, answered: _vm.answered[index] },
+            on: { data: _vm.oneAnswer }
+          })
         })
-      }),
-      1
+      ],
+      2
     ),
     _vm._v(" "),
     _c("div", { staticClass: "button" }, [
@@ -38628,7 +39217,7 @@ var render = function() {
           attrs: { disabled: _vm.answered.length > 0 },
           on: { click: _vm.click }
         },
-        [_vm._v("Sprawdź")]
+        [_vm._v("\n      Sprawdź\n    ")]
       ),
       _vm._v(" "),
       _c("span", { staticStyle: { width: "20px" } }),
@@ -38643,12 +39232,29 @@ var render = function() {
             }
           }
         },
-        [_vm._v("Następne pytanie")]
+        [_vm._v("\n      Następne pytanie\n    ")]
       )
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      { staticStyle: { display: "flex", "justify-content": "flex-end" } },
+      [_c("small", [_vm._v(" Pozostało: ")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "watermark" }, [_c("p", [_vm._v("ipies")])])
+  }
+]
 render._withStripped = true
 
 
@@ -38673,7 +39279,7 @@ var render = function() {
   return _c("div", [
     _c("div", { staticClass: "quiz" }, [
       _c("h1", { staticClass: "questionH" }, [
-        _c("li", { staticStyle: { "margin-left": "1rem" } }, [
+        _c("li", { staticStyle: { padding: "0", "margin-left": "1rem" } }, [
           _vm._v(_vm._s(_vm.zawartoscPytania.tresc))
         ])
       ]),
@@ -38683,11 +39289,17 @@ var render = function() {
         attrs: { src: _vm.zawartoscPytania.image, alt: "" }
       }),
       _vm._v(" "),
+      this.answered != null && this.answered.zaznaczana.id == 1
+        ? _c("div", { staticClass: "nothing-checked" }, [
+            _c("p", [_vm._v("Nie zaznaczono żadnej odpowiedzi!")])
+          ])
+        : _vm._e(),
+      _vm._v(" "),
       _c(
         "ol",
         {
           staticStyle: {
-            "list-style-type": "upper-latin",
+            "list-style-type": "inside",
             margin: "0",
             padding: "0"
           }
@@ -38716,7 +39328,13 @@ var render = function() {
                         "margin-left": "5px"
                       }
                     },
-                    [_vm._v(_vm._s(odpowiedz.tresc))]
+                    [
+                      _vm._v(
+                        "\n              " +
+                          _vm._s(odpowiedz.tresc) +
+                          "\n            "
+                      )
+                    ]
                   )
                 ])
               ]

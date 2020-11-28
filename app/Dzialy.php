@@ -20,4 +20,7 @@ class Dzialy extends Model
     public function wyniki() {
         return $this -> hasMany('App\Wyniki', 'id_dzial');
     }
+    public function testy() {
+        return $this->hasMany(activeTests::class, 'dzial_id');
+    }
 }
