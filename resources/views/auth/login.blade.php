@@ -58,21 +58,23 @@
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-primary btn-login-page">
                                         {{ __('Zaloguj') }}
                                     </button>
 
                                     @if (Route::has('password.request'))
-                                        <a class="btn btn-primary btn-karp" href="{{ route('password.request') }}">
+                                        <a class="btn btn-primary btn-karp btn-login-page" href="{{ route('password.request') }}">
                                             {{ __('Zapomniałeś hasła?') }}
                                         </a>
                                     @endif
-                                
-                                <a href="{{ url('google_login') }}" class="btn-google" style="text-decoration: none;">
-                                <div class="google-icon-box"><img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/></div>
-                                <div class="google-text">Zaloguj się z Google</div>
-                                </a>
-                            </div>
+
+                                    <a href="{{ url('google_login') }}" class="btn-google" style="text-decoration: none;">
+                                        <div class="google-icon-box"><img class="google-icon"
+                                                src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
+                                        </div>
+                                        <div class="google-text">Zaloguj się z Google</div>
+                                    </a>
+                                </div>
                             </div>
                         </form>
                     </div>
