@@ -20,6 +20,7 @@ class CreateWynikisTable extends Migration
             $table->integer('active_test_id');  
             $table->integer('max_points');
             $table->integer('points');
+            $table->boolean('passed');
             $table->timestamps();
         });
     }

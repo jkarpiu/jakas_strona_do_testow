@@ -9,12 +9,14 @@ use App\Pytania;
 use App\Odpowiedzi;
 use App\activeTests;
 use Carbon\Carbon;
+use App\wyniki;
+use Illuminate\Support\Facades\Auth;
 
 class randQuestionController extends Controller
 {
     function getQuestion($amount, $dzial)
     {
-        return Pytania::where('id_dzial', $dzial)->inRandomOrder() ->with('odpowiedzi')->limit($amount)->get();
+        return Pytania::where('id_dzial', $dzial)->inRandomOrder()->with('odpowiedzi')->limit($amount)->get();
     }
     public function onequestion()
     {
@@ -41,25 +43,49 @@ class randQuestionController extends Controller
 
     public function json_odpowiadanie(Request $request)
     {
-        $testSession = activeTests::where('id', $request['session']['id'])->get()->first();
+        Auth::shouldUse('api');
+        $testSession = activeTests::find($request['session']['id']);
         if ($request['session']['token'] == $testSession['token'] && Carbon::parse($testSession['deadLine'])->diffInMilliseconds(Carbon::now()) > 0 && $testSession['sent'] == false) {
-            $valid = [];
+            $valid = [
+                'answers' => [],
+                'results' =>  null
+            ];
+            $rightAnswers = 0;
             foreach ($request['answers'] as $key => $item) {
                 array_push(
-                    $valid,
+                    $valid['answers'],
                     [
-                        'zaznaczana' => Odpowiedzi::select('poprawna', 'id', 'id_pytanie')->where('id', $item['answer']) -> get()->first(),
+                        'zaznaczana' => Odpowiedzi::select('poprawna', 'id', 'id_pytanie')->where('id', $item['answer'])->get()->first(),
                         'poprawna' => null,
-                        'wyniki' => null
                     ]
                 );
-                $valid[$key]['poprawna'] = $valid[$key]['zaznaczana']->poprawna ? $valid[$key]['zaznaczana']
-                    : Odpowiedzi::select('id', 'poprawna')
-                    ->where('id_pytanie', $item['question'])
-                    ->where('poprawna', true)->get()->first();
+                if ($valid['answers'][$key]['zaznaczana']->poprawna) {
+                    $valid['answers'][$key]['poprawna'] =  $valid['answers'][$key]['zaznaczana'];
+                    $rightAnswers++;
+                } else {
+                    $valid['answers'][$key]['poprawna']  = Odpowiedzi::select('id', 'poprawna')
+                        ->where('id_pytanie', $item['question'])
+                        ->where('poprawna', true)->get()->first();
+                }
             }
             $testSession['sent'] = true;
             $testSession->save();
+            $valid['results'] = [
+                'points' => $rightAnswers,
+                'max_points' => sizeof($request['answers']),
+                'percentage' => (($rightAnswers / sizeof($request['answers'])) * 100) ,
+                'passed' => (($rightAnswers / sizeof($request['answers'])) * 100) >= Dzialy::find($request['session']['dzial_id'])['prog']
+            ];
+            if (Auth::user()) {
+                wyniki::create([
+                    'id_user' => Auth::id(),
+                    'id_dzial' => $request['session']['dzial_id'],
+                    'active_test_id' => $testSession['id'],
+                    'max_points' => $valid['results']['max_points'],
+                    'points' => $rightAnswers,
+                    'passed' => $valid['results']['passed']
+                ]);
+            }
             return response()->json($valid);
         } else {
             return response()->json($request, 401);
