@@ -14,6 +14,8 @@ use App\Dzialy;
 |
 */
 
+Route::get('/{any}', 'SpaController@index')->where('any', '.*');
+
 Route::get('/', function () {
     return view('welcome');
 });
