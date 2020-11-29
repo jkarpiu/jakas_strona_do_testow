@@ -11,7 +11,7 @@
       >
         <p>Nie zaznaczono żadnej odpowiedzi!</p>
       </div>
-      <ol style="list-style-type:inside; margin: 0; padding: 0">
+      <ol type="A" style="list-style-type:inside; margin: 0; padding: 0">
         <div
           v-bind:key="odpowiedz.id"
           v-for="odpowiedz in zawartoscPytania.odpowiedzi"
