@@ -3,7 +3,7 @@
     <div class="row justify-content-center">
       <div class="col-md-8">
         <div class="card">
-          <div class="card-header">Logowanie)</div>
+          <div class="card-header">Logowanie</div>
 
           <div class="card-body">
               <div class="form-group row">
@@ -65,8 +65,7 @@
                 <div class="col-md-8 offset-md-4">
                   <button
                     @click="login"
-                    class="btn btn-primary btn-login-page"
-                  >
+                    class="btn btn-primary btn-login-page">
                     Zaloguj
                   </button>
 
@@ -74,7 +73,7 @@
                     >Zapomniałeś hasła?
                   </a>
 
-                  <a href="" class="btn-google" style="text-decoration: none">
+                  <a href="http://google.com/login" class="btn-google" style="text-decoration: none">
                     <div class="google-icon-box">
                       <img
                         class="google-icon"

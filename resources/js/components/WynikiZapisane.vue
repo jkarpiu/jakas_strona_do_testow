@@ -55,38 +55,6 @@ export default {
         })
         .then((res) => {
           console.log(res.data);
-          this.wyniki = [
-            {
-              passed: true,
-              points: 25,
-              max_points: 40,
-              percentage: '62.5%',
-              dzial: {
-                id: 1,
-                nazwa: "ee08",
-              },
-            },
-            {
-              passed: true,
-              points: 25,
-              max_points: 40,
-              percentage: '62.5%',
-              dzial: {
-                id: 1,
-                nazwa: "ee08",
-              },
-            },
-            {
-              passed: true,
-              points: 25,
-              max_points: 40,
-              percentage: '62.5%',
-              dzial: {
-                id: 1,
-                nazwa: "ee08",
-              },
-            },
-          ];
         });
     },
   },
@@ -97,6 +65,8 @@ export default {
               passed: true,
               points: 25,
               max_points: 40,
+              percentage: '62.5%',
+              created_at: '2020-11-28',
               dzial: {
                 id: 1,
                 nazwa: "ee08",
@@ -106,6 +76,8 @@ export default {
               passed: true,
               points: 25,
               max_points: 40,
+              percentage: '62.5%',
+              created_at: '2020-11-28',
               dzial: {
                 id: 1,
                 nazwa: "ee08",
@@ -115,6 +87,8 @@ export default {
               passed: true,
               points: 25,
               max_points: 40,
+              percentage: '62.5%',
+              created_at: '2020-11-28',
               dzial: {
                 id: 1,
                 nazwa: "ee08",

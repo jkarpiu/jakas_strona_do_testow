@@ -194,6 +194,7 @@ body {
 }
 
 .btn-google {
+   
     width: 20.6rem;
     padding: 0.6rem;
     border: none;
@@ -203,9 +204,9 @@ body {
     font-size: 17px;
     background-color: white;
     color: gray;
-    margin-bottom: 30px;
-    
+    margin-bottom: 30px;  
 }
+
 .google-icon-box {
     position: absolute;
     padding: 1px;
@@ -220,7 +221,8 @@ body {
     height: 20px;
 }
 .google-text{
-    margin-left:2rem;
+    
+    margin-left:5.5rem;
     font-size: 14px;
     letter-spacing: 0.2px;
     font-family: "Roboto";

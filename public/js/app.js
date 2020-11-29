@@ -2454,7 +2454,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
 
 var ctx;
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2852,41 +2851,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   methods: {
     getWyniki: function getWyniki() {
-      var _this = this;
-
       console.log("test");
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/wyniki")["catch"](function (err) {
         console.log(err);
       }).then(function (res) {
         console.log(res.data);
-        _this.wyniki = [{
-          passed: true,
-          points: 25,
-          max_points: 40,
-          percentage: '62.5%',
-          dzial: {
-            id: 1,
-            nazwa: "ee08"
-          }
-        }, {
-          passed: true,
-          points: 25,
-          max_points: 40,
-          percentage: '62.5%',
-          dzial: {
-            id: 1,
-            nazwa: "ee08"
-          }
-        }, {
-          passed: true,
-          points: 25,
-          max_points: 40,
-          percentage: '62.5%',
-          dzial: {
-            id: 1,
-            nazwa: "ee08"
-          }
-        }];
       });
     }
   },
@@ -2896,6 +2865,8 @@ __webpack_require__.r(__webpack_exports__);
         passed: true,
         points: 25,
         max_points: 40,
+        percentage: '62.5%',
+        created_at: '2020-11-28',
         dzial: {
           id: 1,
           nazwa: "ee08"
@@ -2904,6 +2875,8 @@ __webpack_require__.r(__webpack_exports__);
         passed: true,
         points: 25,
         max_points: 40,
+        percentage: '62.5%',
+        created_at: '2020-11-28',
         dzial: {
           id: 1,
           nazwa: "ee08"
@@ -2912,6 +2885,8 @@ __webpack_require__.r(__webpack_exports__);
         passed: true,
         points: 25,
         max_points: 40,
+        percentage: '62.5%',
+        created_at: '2020-11-28',
         dzial: {
           id: 1,
           nazwa: "ee08"
@@ -40294,7 +40269,7 @@ var render = function() {
     _c("div", { staticClass: "row justify-content-center" }, [
       _c("div", { staticClass: "col-md-8" }, [
         _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [_vm._v("Logowanie)")]),
+          _c("div", { staticClass: "card-header" }, [_vm._v("Logowanie")]),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
             _c("div", { staticClass: "form-group row" }, [
@@ -40445,7 +40420,7 @@ var staticRenderFns = [
       {
         staticClass: "btn-google",
         staticStyle: { "text-decoration": "none" },
-        attrs: { href: "" }
+        attrs: { href: "http://google.com/login" }
       },
       [
         _c("div", { staticClass: "google-icon-box" }, [
