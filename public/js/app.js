@@ -7364,7 +7364,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.quiz[data-v-00d63354] {\n  max-width: 60%;\n  margin-left: auto;\n  margin-right: auto;\n  color: rgb(230, 230, 230);\n  background-color: rgb(39, 39, 39);\n  padding: 15px;\n  padding-bottom: 1.5rem;\n}\n.questionH[data-v-00d63354] {\n  font-size: 28px;\n  max-width: 60vw;\n  padding-left: 0.5vw;\n  padding-top: 1vh;\n}\n.image[data-v-00d63354] {\n  margin-left: auto;\n  margin-right: auto;\n  display: block;\n  margin-bottom: 1vh;\n  max-width: 80%;\n}\n.ans[data-v-00d63354] {\n  margin-top: 1.3rem;\n  padding: 5px;\n  font-size: 16px;\n  padding-top: 0.8rem;\n  padding-bottom: 0.7rem;\n  padding-left: 2rem;\n  border: solid 1px rgb(33, 33, 33);\n  background: rgb(33, 33, 33);\n  cursor: pointer;\n  vertical-align: middle;\n}\n.ans > li[data-v-00d63354] {\n  padding: 0;\n  margin: 0;\n}\n.ans[data-v-00d63354]:hover {\n  background: rgb(29, 29, 29);\n  color: rgb(148, 148, 148);\n  border: solid 1px #0061c9;\n}\n\n/* input {\n      margin-top: 0.5vh;\n      margin-left: 1vw;\n      margin-bottom: 2vh;\n  } */\n.watermark[data-v-00d63354] {\n  text-align: center;\n  padding-top: 1rem;\n  color: rgb(77, 77, 77);\n}\n.nothing-checked[data-v-00d63354] {\n  margin-top: 1.3rem;\n  color: rgb(231, 231, 231);\n  background-color: #0061c9;\n  padding: 1rem;\n  margin-left: auto;\n  margin-right: auto;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bold;\n  font-size: 1.3rem;\n}\n.nothing-checked > p[data-v-00d63354] {\n  padding: 0;\n  margin: 0;\n}\n", ""]);
+exports.push([module.i, "\n.quiz[data-v-00d63354] {\r\n  max-width: 60%;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  color: rgb(230, 230, 230);\r\n  background-color: rgb(39, 39, 39);\r\n  padding: 15px;\r\n  padding-bottom: 1.5rem;\n}\n.questionH[data-v-00d63354] {\r\n  font-size: 28px;\r\n  max-width: 60vw;\r\n  padding-left: 0.5vw;\r\n  padding-top: 1vh;\n}\n.image[data-v-00d63354] {\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  display: block;\r\n  margin-bottom: 1vh;\r\n  max-width: 80%;\n}\n.ans[data-v-00d63354] {\r\n  margin-top: 1.3rem;\r\n  padding: 5px;\r\n  font-size: 16px;\r\n  padding-top: 0.8rem;\r\n  padding-bottom: 0.7rem;\r\n  padding-left: 2rem;\r\n  border: solid 1px rgb(33, 33, 33);\r\n  background: rgb(33, 33, 33);\r\n  cursor: pointer;\r\n  vertical-align: middle;\n}\n.ans > li[data-v-00d63354] {\r\n  padding: 0;\r\n  margin: 0;\n}\n.ans[data-v-00d63354]:hover {\r\n  background: rgb(29, 29, 29);\r\n  color: rgb(148, 148, 148);\r\n  border: solid 1px #0061c9;\n}\r\n\r\n/* input {\r\n      margin-top: 0.5vh;\r\n      margin-left: 1vw;\r\n      margin-bottom: 2vh;\r\n  } */\n.watermark[data-v-00d63354] {\r\n  text-align: center;\r\n  padding-top: 1rem;\r\n  color: rgb(77, 77, 77);\n}\n.nothing-checked[data-v-00d63354] {\r\n  margin-top: 1.3rem;\r\n  color: rgb(231, 231, 231);\r\n  background-color: #0061c9;\r\n  padding: 1rem;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  font-weight: bold;\r\n  font-size: 1.3rem;\n}\n.nothing-checked > p[data-v-00d63354] {\r\n  padding: 0;\r\n  margin: 0;\n}\r\n", ""]);
 
 // exports
 
@@ -7402,7 +7402,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.button[data-v-22b3d648] {\n  margin-left: auto;\n  margin-right: auto;\n  display: flex;\n  justify-content: center;\n}\n#main[data-v-22b3d648] {\n  margin-left: auto;\n  margin-right: auto;\n}\n.testHeader[data-v-22b3d648] {\n  padding: 15px;\n  width: 60vw;\n  margin-bottom: 0;\n  margin-left: auto;\n  margin-right: auto;\n  background-color: rgb(39, 39, 39);\n  display: flex;\n  justify-content: space-between;\n  box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\n  -webkit-box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\n  -moz-box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\n}\n.watermark[data-v-22b3d648] {\n  text-align: center;\n  padding-top: 1rem;\n  color: rgb(77, 77, 77);\n}\n.loading[data-v-22b3d648] {\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 30vh;\n  display: flex;\n  justify-content: center;\n}\n", ""]);
+exports.push([module.i, "\n.button[data-v-22b3d648] {\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  display: flex;\r\n  justify-content: center;\n}\n#main[data-v-22b3d648] {\r\n  margin-left: auto;\r\n  margin-right: auto;\n}\n.testHeader[data-v-22b3d648] {\r\n  padding: 15px;\r\n  width: 60vw;\r\n  margin-bottom: 0;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  background-color: rgb(39, 39, 39);\r\n  display: flex;\r\n  justify-content: space-between;\r\n  box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\r\n  -webkit-box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\r\n  -moz-box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\n}\n.watermark[data-v-22b3d648] {\r\n  text-align: center;\r\n  padding-top: 1rem;\r\n  color: rgb(77, 77, 77);\n}\n.loading[data-v-22b3d648] {\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  margin-top: 30vh;\r\n  display: flex;\r\n  justify-content: center;\n}\r\n", ""]);
 
 // exports
 
@@ -7421,7 +7421,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n#main[data-v-3649c25e] {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: baseline;\n  align-content: stretch;\n}\n", ""]);
+exports.push([module.i, "\n#main[data-v-3649c25e] {\r\n  display: flex;\r\n  flex-direction: row;\r\n  flex-wrap: nowrap;\r\n  justify-content: space-around;\r\n  align-items: baseline;\r\n  align-content: stretch;\n}\r\n", ""]);
 
 // exports
 
@@ -7440,7 +7440,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.wyniki_table table{\n  margin-top:2vh;\n  box-shadow: -2px 1px 24px 2px rgba(0, 0, 0, 0.4);\n  margin-left: auto;\n  margin-right: auto;\n  border: 5px solid rgb(39, 39, 39);\n  background-color: rgb(39, 39, 39);\n  width:798px;\n  position: static;\n  text-align: center;\n  border-collapse: collapse;\n}\n.wyniki_table td, .wyniki_table th {\n  white-space: pre;\n  border: 3px solid rgb(39, 39, 39);\n  padding: 0.4rem 40px;\n}\n.wyniki_table thead{\nbackground-color: #0061c9;\n}\n", ""]);
+exports.push([module.i, "\n.wyniki_table table{\r\n  margin-top:2vh;\r\n  box-shadow: -2px 1px 24px 2px rgba(0, 0, 0, 0.4);\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  border: 5px solid rgb(39, 39, 39);\r\n  background-color: rgb(39, 39, 39);\r\n  width:798px;\r\n  position: static;\r\n  text-align: center;\r\n  border-collapse: collapse;\n}\n.wyniki_table td, .wyniki_table th {\r\n  white-space: pre;\r\n  border: 3px solid rgb(39, 39, 39);\r\n  padding: 0.4rem 40px;\n}\n.wyniki_table thead{\r\nbackground-color: #0061c9;\n}\r\n", ""]);
 
 // exports
 
@@ -59079,8 +59079,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/lucas/jakas_strona_do_testow/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/lucas/jakas_strona_do_testow/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\jakas_strona_do_testow\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\jakas_strona_do_testow\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
