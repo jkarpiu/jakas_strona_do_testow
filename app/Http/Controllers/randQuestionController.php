@@ -86,6 +86,7 @@ class randQuestionController extends Controller
                     'passed' => $valid['results']['passed']
                 ]);
             }
+            return response()->json(Auth::user());
             return response()->json($valid);
         } else {
             return response()->json($request, 401);
