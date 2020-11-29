@@ -20,14 +20,14 @@
   </div>
 </template>
 <style>
-.wyniki_table {
+.wyniki_table table{
   margin-top:2vh;
   box-shadow: -2px 1px 24px 2px rgba(0, 0, 0, 0.4);
   margin-left: auto;
   margin-right: auto;
-  border: 4px solid rgb(39, 39, 39);
+  border: 5px solid rgb(39, 39, 39);
   background-color: rgb(39, 39, 39);
-  width:800px;
+  width:798px;
   position: static;
   text-align: center;
   border-collapse: collapse;

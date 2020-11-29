@@ -7421,7 +7421,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.wyniki_table {\r\n  margin-top:2vh;\r\n  box-shadow: -2px 1px 24px 2px rgba(0, 0, 0, 0.4);\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  border: 4px solid rgb(39, 39, 39);\r\n  background-color: rgb(39, 39, 39);\r\n  width:800px;\r\n  position: static;\r\n  text-align: center;\r\n  border-collapse: collapse;\n}\n.wyniki_table td, .wyniki_table th {\r\n  white-space: pre;\r\n  border: 3px solid rgb(39, 39, 39);\r\n  padding: 0.4rem 40px;\n}\n.wyniki_table thead{\r\nbackground-color: #0061c9;\n}\r\n", ""]);
+exports.push([module.i, "\n.wyniki_table table{\r\n  margin-top:2vh;\r\n  box-shadow: -2px 1px 24px 2px rgba(0, 0, 0, 0.4);\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  border: 5px solid rgb(39, 39, 39);\r\n  background-color: rgb(39, 39, 39);\r\n  width:798px;\r\n  position: static;\r\n  text-align: center;\r\n  border-collapse: collapse;\n}\n.wyniki_table td, .wyniki_table th {\r\n  white-space: pre;\r\n  border: 3px solid rgb(39, 39, 39);\r\n  padding: 0.4rem 40px;\n}\n.wyniki_table thead{\r\nbackground-color: #0061c9;\n}\r\n", ""]);
 
 // exports
 
