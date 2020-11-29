@@ -2678,8 +2678,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 //
 //
 //
-//
-//
 
 
 
@@ -40575,55 +40573,45 @@ var render = function() {
                         ])
                       ]),
                       _vm._v(" "),
-                      _c(
-                        "span",
-                        {
-                          staticStyle: {
-                            display: "flex",
-                            "padding-top": "0.3rem",
-                            "flex-direction": "column"
-                          }
-                        },
-                        [
-                          _vm._m(0),
-                          _vm._v(" "),
-                          _c(
-                            "h2",
-                            [
-                              _c("countdown", {
-                                ref: "countdown",
-                                attrs: {
-                                  transform: _vm.transform,
-                                  time: _vm.deadline - 2000
-                                },
-                                on: { end: _vm.click },
-                                scopedSlots: _vm._u(
-                                  [
-                                    {
-                                      key: "default",
-                                      fn: function(props) {
-                                        return [
-                                          _vm._v(
-                                            _vm._s(props.hours) +
-                                              ":" +
-                                              _vm._s(props.minutes) +
-                                              ":" +
-                                              _vm._s(props.seconds)
-                                          )
-                                        ]
-                                      }
+                      _c("span", [
+                        _c("small", [_vm._v(" Pozostało: ")]),
+                        _vm._v(" "),
+                        _c(
+                          "h2",
+                          [
+                            _c("countdown", {
+                              ref: "countdown",
+                              attrs: {
+                                transform: _vm.transform,
+                                time: _vm.deadline - 2000
+                              },
+                              on: { end: _vm.click },
+                              scopedSlots: _vm._u(
+                                [
+                                  {
+                                    key: "default",
+                                    fn: function(props) {
+                                      return [
+                                        _vm._v(
+                                          _vm._s(props.hours) +
+                                            ":" +
+                                            _vm._s(props.minutes) +
+                                            ":" +
+                                            _vm._s(props.seconds)
+                                        )
+                                      ]
                                     }
-                                  ],
-                                  null,
-                                  false,
-                                  2938114484
-                                )
-                              })
-                            ],
-                            1
-                          )
-                        ]
-                      )
+                                  }
+                                ],
+                                null,
+                                false,
+                                2938114484
+                              )
+                            })
+                          ],
+                          1
+                        )
+                      ])
                     ])
                   ]
                 )
@@ -40637,7 +40625,7 @@ var render = function() {
               "ol",
               { staticStyle: { margin: "0", padding: "0" } },
               [
-                _vm._m(1),
+                _vm._m(0),
                 _vm._v(" "),
                 _vm._l(_vm.myQuestion["questions"], function(item, index) {
                   return _c("question", {
@@ -40684,16 +40672,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      { staticStyle: { display: "flex", "justify-content": "flex-end" } },
-      [_c("small", [_vm._v(" Pozostało: ")])]
-    )
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

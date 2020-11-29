@@ -15,10 +15,8 @@
               {{ myQuestion.session.dzial.nazwa }}
             </h2>
           </span>
-          <span style="display: flex; padding-top: 0.3rem;  flex-direction: column"
-            ><span style="display: flex; justify-content: flex-end"
-              ><small> Pozostało: </small></span
-            >
+          <span>
+              <small> Pozostało: </small>
             <h2>
               <countdown
                 :transform="transform"
