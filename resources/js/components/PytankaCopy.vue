@@ -91,6 +91,11 @@ export default {
           console.log(this.dzial);
           console.log(res.data);
           this.myQuestion = res.data;
+          this.myQuestion.questions.forEach((item)=>{
+            console.log(item.odpowiedzi)
+            item.odpowiedzi=this.shuffle(item.odpowiedzi)
+            console.log(item.odpowiedzi)
+          });
           this.answered = [];
           this.results = null;
           let deadline = new Date(this.myQuestion.session.deadline);
@@ -141,6 +146,14 @@ export default {
       return props;
     },
 
+    shuffle: function(array) { // XD
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array
+    }
+
     
   },
   computed: {
@@ -179,6 +192,7 @@ export default {
   created() {
     this.getQuestion(this.dzial);
   },
+  
 };
 </script>
 <style scoped>

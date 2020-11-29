@@ -2,7 +2,7 @@
   <div>
     <div class="quiz">
       <h1 class="questionH">
-        <li style="padding: 0; margin-left: 1rem">{{ zawartoscPytania.tresc }}</li>
+        <li style="padding: 0; list-style-position: inside; ">{{ zawartoscPytania.tresc }}</li>
       </h1>
       <img class="image" :src="zawartoscPytania.image" alt="" />
       <div
@@ -73,6 +73,7 @@ export default {
       }
     },
   },
+
 };
 </script>
 <style scoped>
@@ -89,7 +90,7 @@ export default {
 .questionH {
   font-size: 28px;
   max-width: 60vw;
-  padding-left: 1vw;
+  padding-left: 0.5vw;
   padding-top: 1vh;
 }
 
