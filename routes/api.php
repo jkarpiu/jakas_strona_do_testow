@@ -30,9 +30,8 @@ Route::group(['prefix' => 'basic'], function () {
 
 Route::post('login', 'AuthController@login');
 
-        Route::post('sendAnswers', 'randQuestionController@json_odpowiadanie');
-Route::group(['middleware' => 'auth.api'], function() {
+Route::post('sendAnswers', 'randQuestionController@json_odpowiadanie');
+Route::group(['middleware' => 'auth.api'], function () {
     Route::get('logout', 'AuthController@logout');
     Route::get('wyniki', 'userController@wyniki');
 });
-

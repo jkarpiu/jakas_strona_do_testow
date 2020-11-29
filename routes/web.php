@@ -34,6 +34,12 @@ Route::get('/losowanie40', function(){
     return view("random40");
 })->name('losowanie40');
 
+Route::get('/wyniki', function() {
+    return view('wyniki');
+});
+
+
+
 Route::post('/dodaj_pytanie', 'addQuestionController@addQuestion');
 
 Route::post('/odp', 'randQuestionController@odpowiadanie');
