@@ -2856,7 +2856,31 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      wyniki: []
+      wyniki: [{
+        passed: true,
+        points: 25,
+        max_points: 40,
+        dzial: {
+          id: 1,
+          nazwa: "ee08"
+        }
+      }, {
+        passed: true,
+        points: 25,
+        max_points: 40,
+        dzial: {
+          id: 1,
+          nazwa: "ee08"
+        }
+      }, {
+        passed: true,
+        points: 25,
+        max_points: 40,
+        dzial: {
+          id: 1,
+          nazwa: "ee08"
+        }
+      }]
     };
   },
   created: function created() {}
