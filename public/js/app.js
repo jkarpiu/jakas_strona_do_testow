@@ -2679,6 +2679,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 //
 //
 //
+//
 
 
 
@@ -2749,9 +2750,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
             key = _ref2[0],
             value = _ref2[1];
 
-        // Adds leading zero
-        var digits = value < 10 ? "0".concat(value) : value; // uses singular form when the value is less than 2
-
+        var digits = value < 10 ? "0".concat(value) : value;
         var word = value < 2 ? key.replace(/s$/, "") : key;
         props[key] = "".concat(digits);
       });
@@ -40333,7 +40332,8 @@ var render = function() {
             "list-style-type": "inside",
             margin: "0",
             padding: "0"
-          }
+          },
+          attrs: { type: "A" }
         },
         _vm._l(_vm.zawartoscPytania.odpowiedzi, function(odpowiedz) {
           return _c("div", { key: odpowiedz.id }, [
@@ -40486,6 +40486,7 @@ var render = function() {
                         {
                           staticStyle: {
                             display: "flex",
+                            "padding-top": "0.3rem",
                             "flex-direction": "column"
                           }
                         },
@@ -40534,6 +40535,10 @@ var render = function() {
                 )
               : _vm._e(),
             _vm._v(" "),
+            _vm.results
+              ? _c("results", { attrs: { data: _vm.results } })
+              : _vm._e(),
+            _vm._v(" "),
             _c(
               "ol",
               { staticStyle: { margin: "0", padding: "0" } },
@@ -40578,11 +40583,7 @@ var render = function() {
                 },
                 [_vm._v("\n        " + _vm._s(_vm.nextState) + "\n      ")]
               )
-            ]),
-            _vm._v(" "),
-            _vm.results
-              ? _c("results", { attrs: { data: _vm.results } })
-              : _vm._e()
+            ])
           ],
           1
         )
