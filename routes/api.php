@@ -28,4 +28,10 @@ Route::group(['prefix' => 'basic'], function () {
     Route::get('szkoly', 'basicServicesController@szkoly');
 });
 
-Route::post('sendAnswers', 'randQuestionController@json_odpowiadanie');
+Route::post('login', 'AuthController@login');
+
+        Route::post('sendAnswers', 'randQuestionController@json_odpowiadanie');
+Route::group(['middleware' => 'auth.api'], function() {
+    Route::get('logout', 'AuthController@logout');
+});
+

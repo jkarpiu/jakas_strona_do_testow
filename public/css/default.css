@@ -203,6 +203,7 @@ body {
     font-size: 17px;
     background-color: white;
     color: gray;
+    margin-bottom: 30px;
     
 }
 .google-icon-box {
@@ -239,4 +240,8 @@ body {
     margin-top: 1vh;
     text-align: center;
     text-transform: uppercase;
+}
+
+.btn-login-page{
+    margin-bottom: 5px;
 }
