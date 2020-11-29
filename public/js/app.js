@@ -2859,9 +2859,7 @@ __webpack_require__.r(__webpack_exports__);
       wyniki: []
     };
   },
-  created: function created() {
-    this.getWyniki();
-  }
+  created: function created() {}
 });
 
 /***/ }),
