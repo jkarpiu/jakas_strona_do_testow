@@ -2718,6 +2718,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
         _this.results = null;
         var deadline = new Date(_this.myQuestion.session.deadline);
         _this.deadline = deadline - new Date();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
       });
     },
     oneAnswer: function oneAnswer(check) {
@@ -2746,7 +2750,12 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
         _this2.answered = res.data.answers;
         _this2.results = res.data.results;
         _this2.sending = false;
-        console.log(_this2.results);
+        console.log(_this2.results); // document.querySelector("").scrollIntoView();
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
       });
     },
     transform: function transform(props) {
@@ -7399,7 +7408,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n#main[data-v-9b4cd732]   {\n    margin-top: 2rem;\n}\n.center[data-v-9b4cd732]{\n    text-align: center;\n}\n", ""]);
+exports.push([module.i, "\n#results[data-v-9b4cd732]   {\n    margin-top: 2rem;\n}\n.center[data-v-9b4cd732]{\n    text-align: center;\n}\n.result[data-v-9b4cd732] {\n    color: #0061C9;\n}\n", ""]);
 
 // exports
 
@@ -40553,13 +40562,22 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", { staticClass: "quiz" }, [
-      _c("h1", { staticClass: "questionH" }, [
-        _c(
-          "li",
-          { staticStyle: { padding: "0", "list-style-position": "inside" } },
-          [_vm._v(_vm._s(_vm.zawartoscPytania.tresc))]
-        )
-      ]),
+      _c(
+        "li",
+        {
+          staticStyle: {
+            "margin-left": "3rem",
+            "list-style-position": "outside",
+            "list-style-type": "decimal-leading-zero",
+            "font-size": "28px"
+          }
+        },
+        [
+          _c("h1", { staticClass: "questionH" }, [
+            _vm._v(_vm._s(_vm.zawartoscPytania.tresc))
+          ])
+        ]
+      ),
       _vm._v(" "),
       _c("img", {
         staticClass: "image",
@@ -40655,22 +40673,19 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "main" } }, [
-    _c("h1", { staticClass: "center" }, [
-      _vm._v("Zdane: " + _vm._s(_vm.data.passed))
-    ]),
-    _vm._v(" "),
-    _c("h3", { staticClass: "center" }, [
-      _vm._v("Procenty: " + _vm._s(_vm.data.percentage))
-    ]),
-    _vm._v(" "),
-    _c("p", { staticClass: "center" }, [
-      _vm._v(
-        " Wynik: " +
-          _vm._s(_vm.data.points) +
-          " / " +
-          _vm._s(_vm.data.max_points)
-      )
+  return _c("div", { attrs: { id: "results" } }, [
+    _c("h2", { staticClass: "center" }, [
+      _vm._v("Uzyskano wynik: "),
+      _c("span", { staticClass: "result" }, [
+        _vm._v(
+          _vm._s(_vm.data.percentage) +
+            "% (" +
+            _vm._s(_vm.data.points) +
+            "/" +
+            _vm._s(_vm.data.max_points) +
+            ")"
+        )
+      ])
     ])
   ])
 }
@@ -40704,130 +40719,128 @@ var render = function() {
           [_c("FacebookLoader", { attrs: { color: "#0061c9" } })],
           1
         )
-      : _c(
-          "div",
-          { staticClass: "loaded" },
-          [
-            _vm.myQuestion.session
-              ? _c(
-                  "div",
-                  {
-                    staticStyle: {
-                      position: "sticky",
-                      top: "0",
-                      "z-index": "1"
-                    }
-                  },
-                  [
-                    _c("div", { staticClass: "testHeader" }, [
-                      _c("span", [
-                        _c("small", [_vm._v("Test z zakresu: ")]),
-                        _vm._v(" "),
-                        _c("h2", { staticStyle: { "margin-bottom": "0" } }, [
-                          _vm._v(
-                            "\n            " +
-                              _vm._s(_vm.myQuestion.session.dzial.nazwa) +
-                              "\n          "
-                          )
-                        ])
-                      ]),
+      : _c("div", { staticClass: "loaded" }, [
+          _vm.myQuestion.session
+            ? _c(
+                "div",
+                {
+                  staticStyle: { position: "sticky", top: "0", "z-index": "1" }
+                },
+                [
+                  _c("div", { staticClass: "testHeader" }, [
+                    _c("span", [
+                      _c("small", [_vm._v("Test z zakresu: ")]),
                       _vm._v(" "),
-                      _c("span", [
-                        _c("small", [_vm._v(" Pozostało: ")]),
-                        _vm._v(" "),
-                        _c(
-                          "h2",
-                          [
-                            _c("countdown", {
-                              ref: "countdown",
-                              attrs: {
-                                transform: _vm.transform,
-                                time: _vm.deadline - 2000
-                              },
-                              on: { end: _vm.click },
-                              scopedSlots: _vm._u(
-                                [
-                                  {
-                                    key: "default",
-                                    fn: function(props) {
-                                      return [
-                                        _vm._v(
-                                          _vm._s(props.hours) +
-                                            ":" +
-                                            _vm._s(props.minutes) +
-                                            ":" +
-                                            _vm._s(props.seconds)
-                                        )
-                                      ]
-                                    }
-                                  }
-                                ],
-                                null,
-                                false,
-                                2938114484
-                              )
-                            })
-                          ],
-                          1
+                      _c("h2", { staticStyle: { "margin-bottom": "0" } }, [
+                        _vm._v(
+                          "\n            " +
+                            _vm._s(_vm.myQuestion.session.dzial.nazwa) +
+                            "\n          "
                         )
                       ])
+                    ]),
+                    _vm._v(" "),
+                    _c("span", [
+                      _c("small", [_vm._v(" Pozostało: ")]),
+                      _vm._v(" "),
+                      _c(
+                        "h2",
+                        [
+                          _c("countdown", {
+                            ref: "countdown",
+                            attrs: {
+                              transform: _vm.transform,
+                              time: _vm.deadline - 2000
+                            },
+                            on: { end: _vm.click },
+                            scopedSlots: _vm._u(
+                              [
+                                {
+                                  key: "default",
+                                  fn: function(props) {
+                                    return [
+                                      _vm._v(
+                                        _vm._s(props.hours) +
+                                          ":" +
+                                          _vm._s(props.minutes) +
+                                          ":" +
+                                          _vm._s(props.seconds)
+                                      )
+                                    ]
+                                  }
+                                }
+                              ],
+                              null,
+                              false,
+                              2938114484
+                            )
+                          })
+                        ],
+                        1
+                      )
                     ])
-                  ]
-                )
-              : _vm._e(),
+                  ])
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _c(
+            "div",
+            { attrs: { id: "resulting" } },
+            [
+              _vm.results && _vm.ilosc > 1
+                ? _c("results", { attrs: { data: _vm.results } })
+                : _vm._e()
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "ol",
+            { staticStyle: { margin: "0", padding: "0" } },
+            [
+              _vm._m(0),
+              _vm._v(" "),
+              _vm._l(_vm.myQuestion["questions"], function(item, index) {
+                return _c("question", {
+                  key: item.id,
+                  ref: "Question",
+                  refInFor: true,
+                  attrs: {
+                    zawartoscPytania: item,
+                    answered: _vm.answered[index]
+                  },
+                  on: { data: _vm.oneAnswer }
+                })
+              })
+            ],
+            2
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "button" }, [
+            _c("button", {
+              staticClass: "btn btn-primary",
+              attrs: { disabled: _vm.answered.length > 0 },
+              domProps: { innerHTML: _vm._s(_vm.buttonState) },
+              on: { click: _vm.click }
+            }),
             _vm._v(" "),
-            _vm.results
-              ? _c("results", { attrs: { data: _vm.results } })
-              : _vm._e(),
+            _c("span", { staticStyle: { width: "20px" } }),
             _vm._v(" "),
             _c(
-              "ol",
-              { staticStyle: { margin: "0", padding: "0" } },
-              [
-                _vm._m(0),
-                _vm._v(" "),
-                _vm._l(_vm.myQuestion["questions"], function(item, index) {
-                  return _c("question", {
-                    key: item.id,
-                    ref: "Question",
-                    refInFor: true,
-                    attrs: {
-                      zawartoscPytania: item,
-                      answered: _vm.answered[index]
-                    },
-                    on: { data: _vm.oneAnswer }
-                  })
-                })
-              ],
-              2
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "button" }, [
-              _c("button", {
+              "button",
+              {
                 staticClass: "btn btn-primary",
-                attrs: { disabled: _vm.answered.length > 0 },
-                domProps: { innerHTML: _vm._s(_vm.buttonState) },
-                on: { click: _vm.click }
-              }),
-              _vm._v(" "),
-              _c("span", { staticStyle: { width: "20px" } }),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-primary",
-                  on: {
-                    click: function($event) {
-                      return _vm.getQuestion(_vm.dzial)
-                    }
+                on: {
+                  click: function($event) {
+                    return _vm.getQuestion(_vm.dzial)
                   }
-                },
-                [_vm._v("\n        " + _vm._s(_vm.nextState) + "\n      ")]
-              )
-            ])
-          ],
-          1
-        )
+                }
+              },
+              [_vm._v("\n        " + _vm._s(_vm.nextState) + "\n      ")]
+            )
+          ])
+        ])
   ])
 }
 var staticRenderFns = [

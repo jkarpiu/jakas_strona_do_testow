@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="quiz">
-      <h1 class="questionH">
-        <li style="padding: 0; list-style-position: inside; ">{{ zawartoscPytania.tresc }}</li>
-      </h1>
+      <li style=" margin-left: 3rem;  list-style-position: outside; list-style-type: decimal-leading-zero; font-size: 28px; ">
+        <h1 class="questionH">{{ zawartoscPytania.tresc }}</h1>
+      </li>
       <img class="image" :src="zawartoscPytania.image" alt="" />
       <div
         class="nothing-checked"

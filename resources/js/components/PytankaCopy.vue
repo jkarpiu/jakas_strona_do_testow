@@ -34,7 +34,7 @@
           </span>
         </div>
       </div>
-      <results v-if="results" :data="results"/>
+      <div id="resulting"><results v-if="results && ilosc>1" :data="results"/></div>
       <ol style="margin: 0; padding: 0">
         <div class="watermark"><p>ipies</p></div>
         <question
@@ -100,6 +100,7 @@ export default {
           this.results = null;
           let deadline = new Date(this.myQuestion.session.deadline);
           this.deadline = deadline - new Date();
+          window.scrollTo({top:0,behavior:"smooth"});
         });
     },
     oneAnswer: function (check) {
@@ -132,6 +133,8 @@ export default {
           this.results = res.data.results;
           this.sending = false;
           console.log(this.results);
+          // document.querySelector("").scrollIntoView();
+          window.scrollTo({top:0,behavior:"smooth"});
         });
     },
     transform(props) {
