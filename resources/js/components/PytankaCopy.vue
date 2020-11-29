@@ -15,7 +15,7 @@
               {{ myQuestion.session.dzial.nazwa }}
             </h2>
           </span>
-          <span style="display: flex; flex-direction: column"
+          <span style="display: flex; padding-top: 0.3rem;  flex-direction: column"
             ><span style="display: flex; justify-content: flex-end"
               ><small> Pozostało: </small></span
             >
@@ -36,6 +36,7 @@
           </span>
         </div>
       </div>
+      <results v-if="results" :data="results"/>
       <ol style="margin: 0; padding: 0">
         <div class="watermark"><p>ipies</p></div>
         <question
@@ -60,7 +61,7 @@
           {{ nextState}}
         </button>
       </div>
-      <results v-if="results" :data="results"/>
+      
     </div>
   </div>
 </template>
@@ -132,10 +133,8 @@ export default {
     },
     transform(props) {
       Object.entries(props).forEach(([key, value]) => {
-        // Adds leading zero
         const digits = value < 10 ? `0${value}` : value;
 
-        // uses singular form when the value is less than 2
         const word = value < 2 ? key.replace(/s$/, "") : key;
 
         props[key] = `${digits}`;
