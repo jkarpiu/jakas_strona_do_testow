@@ -109,7 +109,7 @@
                                     <button type="submit" class="btn btn-primary" style="width: 20.6rem; margin-bottom:5px;">
                                         {{ __('Zarejestruj się') }}
                                     </button> 
-                                    <a href="http://google.com/login" class="btn-google" style="text-decoration: none">
+                                    <a href="/google_login" class="btn-google" style="text-decoration: none">
                                         <div class="google-icon-box">
                                           <img
                                             class="google-icon"

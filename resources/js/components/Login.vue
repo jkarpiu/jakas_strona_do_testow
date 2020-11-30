@@ -72,8 +72,8 @@
                   <a class="btn btn-primary btn-karp btn-login-page" href=""
                     >Zapomniałeś hasła?
                   </a>
-
-                  <a href="http://google.com/login" class="btn-google" style="text-decoration: none">
+ 
+                  <a href="/google_login" class="btn-google" style="text-decoration: none">
                     <div class="google-icon-box">
                       <img
                         class="google-icon"
