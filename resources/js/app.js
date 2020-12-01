@@ -9,7 +9,11 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 import VueRouter from 'vue-router'
-import { component } from 'vue/types/umd';
+
+import Login from './components/Login'
+import Pytanka from './components/PytankaCopy'
+import Welcome from './components/Welcome'
+import App from './components/App'
 
 Vue.use(VueRouter)
 /**
@@ -20,14 +24,22 @@ Vue.use(VueRouter)
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-const files = require.context('./', true, /\.vue$/i)
-files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+// const files = require.context('./', true, /\.vue$/i)
+// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 const routes = [
-    { path: 'login', component: Login},
-    { path: '/', component: StoryList},
+    {
+        path: '/',
+        name: 'welcome',
+        component: Welcome
+    },
+    {
+        path: '/login',
+        name: 'login',
+        component: Login
+    },
 ];
-    
+
 const router = new VueRouter({
     routes
 });
