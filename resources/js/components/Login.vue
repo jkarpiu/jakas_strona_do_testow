@@ -110,9 +110,10 @@ export default {
           password: ctx.password
         })
         .catch((err) => {
-          console.log(err);
+          console.log(err.response);
         }).then(() => {
-            window.location.href ="/";
+            ctx.$emit('get-user')
+            ctx.$router.push('/')
         });
     },
   },

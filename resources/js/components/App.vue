@@ -18,51 +18,60 @@
                             <a class="dropdown-item panel">Panel nauczyciela</a>
                         </li>
                         @endif @endif -->
-                        <span class="dropdown-display">
-                        <li><a class="dropdown-item">Losuj 40 pytań</a></li>
-                        <li><a class="dropdown-item">Losuj 1 pytanie</a></li>
-
-
-                        <li>
-                            <a
-                                id="navbarDropdown"
-                                class="nav-link dropdown-toggle"
-                                href="#"
-                                role="button"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                                v-pre
-                            >
-                            </a>
-
-                            <ul>
-                                <a
-                                    class="dropdown-item"
-                                    onclick="event.preventDefault();
-                                                                    document.getElementById('logout-form').submit();"
-                                >
-                                    Wyloguj się
-                                </a>
-                            </ul>
-
-                            <form
-                                id="logout-form"
-                                action=""
-                                method="POST"
-                                class="d-none"
-                            >
-                            </form>
-                        </li>
+                    <span class="dropdown-display">
+                        <router-link to="/losowanie40">
+                            <li>
+                                <a class="dropdown-item">Losuj 40 pytań</a>
+                            </li></router-link
+                        >
+                        <router-link to="/losowanie1">
+                            <li>
+                                <a class="dropdown-item">Losuj 1 pytanie</a>
+                            </li></router-link
+                        >
+                        <user-menu :user="user" @get-user="getUser" />
                     </span>
                 </ul>
             </div>
-
         </nav>
         <div class="my-content">
-        <router-view></router-view></div>
+            <router-view @get-user="getUser"></router-view>
+        </div>
     </div>
 </template>
 <script>
-export default {};
+import axios from "axios";
+
+import UserMenu from "./UserMenu";
+
+export default {
+    data() {
+        return {
+            user: null
+        };
+    },
+    components: { UserMenu },
+    mounted() {
+        this.getUser();
+    },
+    methods: {
+        getUser: function() {
+            axios
+                .get("/api/user", {
+                    headers: {
+                        Accept: "application/json",
+                        "Content-type": "application/json"
+                    }
+                })
+                .catch(err => {
+                    console.log(err.response);
+                    this.user = null
+                })
+                .then(res => {
+                    console.log(res);
+                    this.user = res.data;
+                });
+        }
+    }
+};
 </script>

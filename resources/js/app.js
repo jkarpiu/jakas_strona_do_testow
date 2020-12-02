@@ -14,8 +14,11 @@ import Login from './components/Login'
 import Pytanka from './components/PytankaCopy'
 import Welcome from './components/Welcome'
 import App from './components/App'
+import Register from './components/Register';
+import * as VueSpinnersCss from "vue-spinners-css";
 
 Vue.use(VueRouter)
+Vue.use(VueSpinnersCss);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -38,9 +41,28 @@ const routes = [
         name: 'login',
         component: Login
     },
+    {
+        path: '/register',
+        name: 'register',
+        component: Register
+    },
+    {
+        path: '/losowanie40',
+        name: 'losowanie40',
+        component: Pytanka,
+        props: {ilosc: 40}
+    },
+    {
+        path: '/losowanie1',
+        name: 'losowanie1',
+        component: Pytanka,
+        props: {ilosc: 1}
+    },
+
 ];
 
 const router = new VueRouter({
+    mode: 'history',
     routes
 });
 

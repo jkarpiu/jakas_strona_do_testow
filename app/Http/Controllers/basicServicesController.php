@@ -39,4 +39,8 @@ class basicServicesController extends Controller
             citiesModel::with('schools')->find($request['id'])->schools
         );
     }
+    public function user(Request $request)
+    {
+        return response() -> json($request->user());
+    }
 }

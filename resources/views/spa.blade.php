@@ -21,6 +21,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/default.css') }}" rel="stylesheet">
 </head>
+
 <body>
     <div id="app">
         <app></app>
@@ -28,4 +29,5 @@
 
     <script src="{{ mix('js/app.js') }}"></script>
 </body>
+
 </html>
