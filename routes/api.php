@@ -29,9 +29,11 @@ Route::group(['prefix' => 'basic'], function () {
 });
 
 Route::post('login', 'AuthController@login');
+Route::post('register', 'AuthController@register');
 
 Route::post('sendAnswers', 'randQuestionController@json_odpowiadanie');
 Route::group(['middleware' => 'auth.api'], function () {
     Route::get('logout', 'AuthController@logout');
+    Route::get('user', 'basicServicesController@user');
     Route::get('wyniki', 'userController@wyniki');
 });

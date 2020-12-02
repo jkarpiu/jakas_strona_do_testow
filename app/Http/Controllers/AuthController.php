@@ -7,6 +7,9 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Auth;
 use Cookie;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Hash;
+use App\User;
 
 class AuthController extends Controller
 {
@@ -60,5 +63,22 @@ class AuthController extends Controller
         return response()->json([
             'message' => 'successful-logout'
         ])->withCookie($cookie);
+    }
+    public function register(Request $request)
+    {
+        $data = $request -> validate([
+            'fname' => ['required', 'string', 'max:255'],
+            'lname' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'role' => ['required', 'integer', 'min:1', 'max:2'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+        return response() -> json(User::create([
+            'fname' => $data['fname'],
+            'lname' => $data['lname'],
+            'email' => $data['email'],
+            'role' => $data['role'],
+            'password' => Hash::make($data['password']),
+        ]));
     }
 }
