@@ -33,6 +33,6 @@ Route::post('register', 'AuthController@register');
 
 Route::post('sendAnswers', 'randQuestionController@json_odpowiadanie');
 Route::group(['middleware' => 'auth.api'], function () {
-    Route::get('user', 'basicServicesController@user');
     Route::get('logout', 'AuthController@logout');
+    Route::get('wyniki', 'userController@wyniki');
 });

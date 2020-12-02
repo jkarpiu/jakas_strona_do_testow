@@ -16,7 +16,7 @@ class randQuestionController extends Controller
 {
     function getQuestion($amount, $dzial)
     {
-        return Pytania::where('id_dzial', $dzial)->inRandomOrder()->with('odpowiedzi')->limit($amount)->get();
+        return Pytania::where('id_dzial', $dzial)->inRandomOrder()->with(['odpowiedzi'=>function($n){$n ->inRandomOrder();}])->limit($amount)->get();
     }
     public function onequestion()
     {
@@ -29,7 +29,7 @@ class randQuestionController extends Controller
             'questions' =>  $this->getQuestion($request['amount'], (int)$request['dzial']),
             'session' => activeTests::create([
                 'token' => Str::random(32),
-                'deadline' => Carbon::now()->addMinutes(1),
+                'deadline' => Carbon::now()->addMinutes(60),
                 'dzial_id' => (int)$request['dzial']
             ])->load('dzial'),
         ];

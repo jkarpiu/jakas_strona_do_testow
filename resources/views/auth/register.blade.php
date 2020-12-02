@@ -106,9 +106,18 @@
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-primary" style="width: 20.6rem; margin-bottom:5px;">
                                         {{ __('Zarejestruj się') }}
-                                    </button>
+                                    </button> 
+                                    <a href="/google_login" class="btn-google" style="text-decoration: none">
+                                        <div class="google-icon-box">
+                                          <img
+                                            class="google-icon"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                                          />
+                                        </div>
+                                        <div class="google-text">Zaloguj się z Google</div>
+                                      </a>
                                 </div>
                             </div>
                         </form>

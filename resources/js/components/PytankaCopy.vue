@@ -15,10 +15,8 @@
               {{ myQuestion.session.dzial.nazwa }}
             </h2>
           </span>
-          <span style="display: flex; flex-direction: column"
-            ><span style="display: flex; justify-content: flex-end"
-              ><small> Pozostało: </small></span
-            >
+          <span>
+              <small> Pozostało: </small>
             <h2>
               <countdown
                 :transform="transform"
@@ -36,6 +34,7 @@
           </span>
         </div>
       </div>
+      <div id="resulting"><results v-if="results && ilosc>1" :data="results"/></div>
       <ol style="margin: 0; padding: 0">
         <div class="watermark"><p>ipies</p></div>
         <question
@@ -60,7 +59,7 @@
           {{ nextState}}
         </button>
       </div>
-      <results v-if="results" :data="results"/>
+      
     </div>
   </div>
 </template>
@@ -92,10 +91,16 @@ export default {
           console.log(this.dzial);
           console.log(res.data);
           this.myQuestion = res.data;
+          this.myQuestion.questions.forEach((item)=>{
+            console.log(item.odpowiedzi)
+            item.odpowiedzi=this.shuffle(item.odpowiedzi)
+            console.log(item.odpowiedzi)
+          });
           this.answered = [];
           this.results = null;
           let deadline = new Date(this.myQuestion.session.deadline);
           this.deadline = deadline - new Date();
+          window.scrollTo({top:0,behavior:"smooth"});
         });
     },
     oneAnswer: function (check) {
@@ -128,14 +133,14 @@ export default {
           this.results = res.data.results;
           this.sending = false;
           console.log(this.results);
+          // document.querySelector("").scrollIntoView();
+          window.scrollTo({top:0,behavior:"smooth"});
         });
     },
     transform(props) {
       Object.entries(props).forEach(([key, value]) => {
-        // Adds leading zero
         const digits = value < 10 ? `0${value}` : value;
 
-        // uses singular form when the value is less than 2
         const word = value < 2 ? key.replace(/s$/, "") : key;
 
         props[key] = `${digits}`;
@@ -143,6 +148,14 @@ export default {
 
       return props;
     },
+
+    shuffle: function(array) { // XD
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array
+    }
 
     
   },
@@ -182,6 +195,7 @@ export default {
   created() {
     this.getQuestion(this.dzial);
   },
+  
 };
 </script>
 <style scoped>
