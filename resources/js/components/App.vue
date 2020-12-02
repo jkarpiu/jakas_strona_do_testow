@@ -65,7 +65,7 @@ export default {
                 })
                 .catch(err => {
                     console.log(err.response);
-                    this.user = null
+                    this.user = null;
                 })
                 .then(res => {
                     console.log(res);

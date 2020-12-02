@@ -32,10 +32,7 @@
                 </a>
 
                 <ul>
-                    <a
-                        class="dropdown-item"
-                        @click="logout"
-                    >
+                    <a class="dropdown-item" @click="logout">
                         Wyloguj się
                     </a>
                 </ul>
@@ -46,14 +43,19 @@
     </span>
 </template>
 <script>
-    import axios from 'axios';
+import axios from "axios";
 export default {
     props: ["user"],
     methods: {
-        logout: function (){
-            axios.get('/api/logout').catch((err)=>{console.log(err)}).then((res)=>{
-                this.$emit('get-user');
-            })
+        logout: function() {
+            axios
+                .get("/api/logout")
+                .catch(err => {
+                    console.log(err);
+                })
+                .then(res => {
+                    this.$emit("get-user");
+                });
         }
     }
 };

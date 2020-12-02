@@ -2543,6 +2543,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 var ctx;
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2566,8 +2580,8 @@ var ctx;
                 })["catch"](function (err) {
                   console.log(err.response);
                 }).then(function () {
-                  ctx.$emit('get-user');
-                  ctx.$router.push('/');
+                  ctx.$emit("get-user");
+                  ctx.$router.push("/");
                 });
 
               case 2:
@@ -2787,6 +2801,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     getQuestion: function getQuestion() {
       var _this = this;
 
+      this.loading = true;
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/api/randQuestion", {
         params: {
           dzial: this.dzial,
@@ -2807,6 +2822,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
         _this.results = null;
         var deadline = new Date(_this.myQuestion.session.deadline);
         _this.deadline = deadline - new Date();
+        _this.loading = false;
         window.scrollTo({
           top: 0,
           behavior: "smooth"
@@ -2897,11 +2913,17 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       answered: [],
       results: null,
       deadline: null,
-      sending: false
+      sending: false,
+      loading: true
     };
   },
   created: function created() {
     this.getQuestion(this.dzial);
+  },
+  watch: {
+    ilosc: function ilosc() {
+      this.getQuestion(this.dzial);
+    }
   }
 });
 
@@ -3200,9 +3222,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["user"],
@@ -3210,10 +3229,10 @@ __webpack_require__.r(__webpack_exports__);
     logout: function logout() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/logout')["catch"](function (err) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/logout")["catch"](function (err) {
         console.log(err);
       }).then(function (res) {
-        _this.$emit('get-user');
+        _this.$emit("get-user");
       });
     }
   }
@@ -7699,7 +7718,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.button[data-v-22b3d648] {\n  margin-left: auto;\n  margin-right: auto;\n  display: flex;\n  justify-content: center;\n}\n#main[data-v-22b3d648] {\n  margin-left: auto;\n  margin-right: auto;\n}\n.testHeader[data-v-22b3d648] {\n  padding: 15px;\n  width: 60vw;\n  margin-bottom: 0;\n  margin-left: auto;\n  margin-right: auto;\n  background-color: rgb(39, 39, 39);\n  display: flex;\n  justify-content: space-between;\n  box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\n  -webkit-box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\n  -moz-box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\n}\n.watermark[data-v-22b3d648] {\n  text-align: center;\n  padding-top: 1rem;\n  color: rgb(77, 77, 77);\n}\n.loading[data-v-22b3d648] {\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 30vh;\n  display: flex;\n  justify-content: center;\n}\n", ""]);
+exports.push([module.i, "\n.button[data-v-22b3d648] {\n    margin-left: auto;\n    margin-right: auto;\n    display: flex;\n    justify-content: center;\n}\n#main[data-v-22b3d648] {\n    margin-left: auto;\n    margin-right: auto;\n}\n.testHeader[data-v-22b3d648] {\n    padding: 15px;\n    width: 60vw;\n    margin-bottom: 0;\n    margin-left: auto;\n    margin-right: auto;\n    background-color: rgb(39, 39, 39);\n    display: flex;\n    justify-content: space-between;\n    box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\n    -webkit-box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\n    -moz-box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\n}\n.watermark[data-v-22b3d648] {\n    text-align: center;\n    padding-top: 1rem;\n    color: rgb(77, 77, 77);\n}\n.loading[data-v-22b3d648] {\n    margin-left: auto;\n    margin-right: auto;\n    padding-top: 30vh;\n    display: flex;\n    justify-content: center;\n}\n", ""]);
 
 // exports
 
@@ -40464,7 +40483,7 @@ var render = function() {
                   staticClass: "col-md-4 col-form-label text-md-right",
                   attrs: { for: "password" }
                 },
-                [_vm._v("Hasło\n              ")]
+                [_vm._v("Hasło\n                        ")]
               ),
               _vm._v(" "),
               _c("div", { staticClass: "col-md-6" }, [
@@ -40509,7 +40528,11 @@ var render = function() {
                     staticClass: "btn btn-primary btn-login-page",
                     on: { click: _vm.login }
                   },
-                  [_vm._v("\n                  Zaloguj\n                ")]
+                  [
+                    _vm._v(
+                      "\n                                Zaloguj\n                            "
+                    )
+                  ]
                 ),
                 _vm._v(" "),
                 _c(
@@ -40518,7 +40541,7 @@ var render = function() {
                     staticClass: "btn btn-primary btn-karp btn-login-page",
                     attrs: { href: "" }
                   },
-                  [_vm._v("Zapomniałeś hasła?\n                ")]
+                  [_vm._v("Zapomniałeś hasła?\n                            ")]
                 ),
                 _vm._v(" "),
                 _vm._m(1)
@@ -40546,7 +40569,11 @@ var staticRenderFns = [
           _c(
             "label",
             { staticClass: "form-check-label", attrs: { for: "remember" } },
-            [_vm._v("\n                    Zapamiętaj\n                  ")]
+            [
+              _vm._v(
+                "\n                                    Zapamiętaj\n                                "
+              )
+            ]
           )
         ])
       ])
@@ -40575,7 +40602,9 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "google-text" }, [
-          _vm._v("Zaloguj się z Google")
+          _vm._v(
+            "\n                                    Zaloguj się z Google\n                                "
+          )
         ])
       ]
     )
@@ -40754,7 +40783,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { attrs: { id: "main" } }, [
-    !_vm.myQuestion.session
+    _vm.loading
       ? _c(
           "div",
           { staticClass: "loading" },
@@ -40775,9 +40804,9 @@ var render = function() {
                       _vm._v(" "),
                       _c("h2", { staticStyle: { "margin-bottom": "0" } }, [
                         _vm._v(
-                          "\n            " +
+                          "\n                        " +
                             _vm._s(_vm.myQuestion.session.dzial.nazwa) +
-                            "\n          "
+                            "\n                    "
                         )
                       ])
                     ]),
@@ -40879,7 +40908,13 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("\n        " + _vm._s(_vm.nextState) + "\n      ")]
+              [
+                _vm._v(
+                  "\n                " +
+                    _vm._s(_vm.nextState) +
+                    "\n            "
+                )
+              ]
             )
           ])
         ])
