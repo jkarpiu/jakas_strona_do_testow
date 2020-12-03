@@ -9,10 +9,10 @@
                     @endif -->
 
         <span v-if="!user">
-            <router-link to="login">
+            <router-link to="/login">
                 <li><a class="dropdown-item">Zaloguj się</a></li></router-link
             >
-            <router-link to="register">
+            <router-link to="/register">
                 <li>
                     <a class="dropdown-item">Zarejestruj się</a>
                 </li></router-link
@@ -37,10 +37,9 @@
                     {{ user.fname }}
                 </a>
 
-                <ul>
+                <ul v-if="$store.state.user.role == 1">
                     <a
                         class="dropdown-item"
-                        v-if="$store.state.user.role == 1"
                         @click="$router.push('/user/wyniki')"
                         style="cursor: pointer;"
                     >
@@ -85,3 +84,52 @@ export default {
     }
 };
 </script>
+<style scoped>
+ul {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+li {
+    line-height: 2.5rem;
+    float: left;
+    text-align: center;
+    color: black;
+    margin: 0;
+    list-style-type: none;
+    width: 200px;
+}
+
+span>li>ul {
+    display: none;
+}
+
+ a {
+    color: #fcfcfc;
+    padding: 0 15px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* wyloguj */
+span>li:hover>ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    background: #0061c9;
+    position: relative;
+    height: 2.5rem;
+    z-index: 2;
+}
+
+span>li>ul:hover>a {
+    opacity: 0.3;
+}
+</style>

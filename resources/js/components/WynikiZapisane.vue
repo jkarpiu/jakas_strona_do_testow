@@ -75,18 +75,18 @@ export default {
         sensownyCzas: function(sqlTime) {
             let date = new Date(sqlTime);
             let miesiace = [
-                "Stycznia",
-                "Lutego",
-                "Marca",
-                "Kwietnia",
-                "Maja",
-                "Czerwca",
-                "Lipca",
-                "Sierpnia",
-                "Września",
-                "Października",
-                "Listopada",
-                "Grudnia"
+                "stycznia",
+                "lutego",
+                "marca",
+                "kwietnia",
+                "maja",
+                "czerwca",
+                "lipca",
+                "sierpnia",
+                "września",
+                "października",
+                "listopada",
+                "grudnia"
             ];
             return (
                 date.getDate().toString() +

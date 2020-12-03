@@ -33,9 +33,12 @@
                     </span>
                 </ul>
             </div>
-        </nav>
+        </nav>    
         <div class="my-content">
             <router-view @get-user="getUser"></router-view>
+        </div>
+        <div class="page-footer footer">
+            <p>Stroneczka egzaminki no copyrights</p>
         </div>
     </div>
 </template>
@@ -77,6 +80,15 @@ export default {
 };
 </script>
 <style>
+.footer {
+    clear: both;
+    color: #fcfcfc;
+    display: block;
+    height: 0.5vh;
+    margin-top: 1vh;
+    text-align: center;
+    text-transform: uppercase;
+}
     router-link {
         cursor: pointer;
     }
