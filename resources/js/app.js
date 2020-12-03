@@ -82,6 +82,8 @@ const routes = [
         beforeEnter: (to, from, next) => {
             if (!store.state.user) {
                 next('/login')
+            }else {
+                next()
             }
         }
 
