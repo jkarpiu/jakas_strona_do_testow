@@ -112,7 +112,7 @@ export default {
         sendAnswers: function() {
             axios
                 .post(
-                    this.$store.state.user.id != "" ? "/api/saveAnswers" : "/api/sendAnswers",
+                    this.$store.state.user ? "/api/saveAnswers" : "/api/sendAnswers",
                     {
                         answers: this.answers,
                         session: this.myQuestion["session"]

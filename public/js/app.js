@@ -12966,7 +12966,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     sendAnswers: function sendAnswers() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post(this.$store.state.user.id != "" ? "/api/saveAnswers" : "/api/sendAnswers", {
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post(this.$store.state.user ? "/api/saveAnswers" : "/api/sendAnswers", {
         answers: this.answers,
         session: this.myQuestion["session"]
       }, {
