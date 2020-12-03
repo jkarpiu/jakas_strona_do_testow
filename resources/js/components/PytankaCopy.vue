@@ -112,9 +112,11 @@ export default {
             }
         },
         sendAnswers: function() {
+            this.userID = document.querySelector('#userID').value;
+            console.log(this.userID);
             axios
                 .post(
-                    "/api/sendAnswers",
+                   this.userID!= '' ?'/api/saveAnswers'  : "/api/sendAnswers",
                     {
                         answers: this.answers,
                         session: this.myQuestion["session"]
@@ -158,6 +160,15 @@ export default {
                 [array[i], array[j]] = [array[j], array[i]];
             }
             return array;
+        },
+        getCookie: function(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2)
+                return parts
+                    .pop()
+                    .split(";")
+                    .shift();
         }
     },
     computed: {
@@ -188,11 +199,15 @@ export default {
             results: null,
             deadline: null,
             sending: false,
-            loading: true
+            loading: true,
+            userID: null
         };
     },
     created() {
         this.getQuestion(this.dzial);
+    },
+    mounted() {
+        this.userID = document.querySelector('#userID').value
     },
     watch: {
         ilosc: function() {

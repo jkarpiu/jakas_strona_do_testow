@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 class wyniki extends Model
 {
 
-    protected $fillable = ['id_user', 'id_dzial', 'active_test_id', 'max_points', 'points'];
+    protected $fillable = ['id_user', 'id_dzial', 'active_test_id', 'max_points', 'points', 'passed'];
     public function user() {
         return $this->belongsTo('App\User', 'id_user');
     }

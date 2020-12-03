@@ -15,8 +15,11 @@ import Pytanka from './components/PytankaCopy'
 import Welcome from './components/Welcome'
 import App from './components/App'
 import Register from './components/Register';
+import Wyniki from './components/ZapisaneWyniki';
 import * as VueSpinnersCss from "vue-spinners-css";
+import VueCookies from 'vue-cookies'
 
+Vue.use(VueCookies)
 Vue.use(VueRouter)
 Vue.use(VueSpinnersCss);
 /**
@@ -58,6 +61,12 @@ const routes = [
         component: Pytanka,
         props: {ilosc: 1}
     },
+    {
+        path: "/user/wyniki",
+        name: "wynikiUcznia",
+        component: Wyniki
+
+    }
 
 ];
 

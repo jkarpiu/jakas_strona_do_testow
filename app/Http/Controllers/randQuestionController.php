@@ -16,7 +16,9 @@ class randQuestionController extends Controller
 {
     function getQuestion($amount, $dzial)
     {
-        return Pytania::where('id_dzial', $dzial)->inRandomOrder()->with(['odpowiedzi'=>function($n){$n ->inRandomOrder();}])->limit($amount)->get();
+        return Pytania::where('id_dzial', $dzial)->inRandomOrder()->with(['odpowiedzi' => function ($n) {
+            $n->inRandomOrder();
+        }])->limit($amount)->get();
     }
     public function onequestion()
     {
@@ -36,19 +38,15 @@ class randQuestionController extends Controller
         return response()->json($response);
     }
 
-    public function odpowiadanie(Request $request)
-    {
-        return view('random');
-    }
 
-    public function json_odpowiadanie(Request $request)
+    protected function odpowiadanie(Request $request)
     {
-        Auth::shouldUse('api');
         $testSession = activeTests::find($request['session']['id']);
         if ($request['session']['token'] == $testSession['token'] && Carbon::parse($testSession['deadLine'])->diffInMilliseconds(Carbon::now()) > 0 && $testSession['sent'] == false) {
             $valid = [
                 'answers' => [],
-                'results' =>  null
+                'results' =>  null,
+                'id_session' => $testSession['id']
             ];
             $rightAnswers = 0;
             foreach ($request['answers'] as $key => $item) {
@@ -73,22 +71,33 @@ class randQuestionController extends Controller
             $valid['results'] = [
                 'points' => $rightAnswers,
                 'max_points' => sizeof($request['answers']),
-                'percentage' => (($rightAnswers / sizeof($request['answers'])) * 100) ,
+                'percentage' => (($rightAnswers / sizeof($request['answers'])) * 100),
                 'passed' => (($rightAnswers / sizeof($request['answers'])) * 100) >= Dzialy::find($request['session']['dzial_id'])['prog']
             ];
-            if (Auth::user()) {
-                wyniki::create([
-                    'id_user' => Auth::id(),
-                    'id_dzial' => $request['session']['dzial_id'],
-                    'active_test_id' => $testSession['id'],
-                    'max_points' => $valid['results']['max_points'],
-                    'points' => $rightAnswers,
-                    'passed' => $valid['results']['passed']
-                ]);
-            }
-            return response()->json($valid);
+            return $valid;
         } else {
-            return response()->json($request, 401);
+            return 401;
         }
+    }
+
+    public function json_odpowiadanie_anon(Request $request)
+    {
+        return response()->json($this->odpowiadanie($request));
+    }
+    public function json_odpowiadanie_zalogowany(Request $request)
+    {
+        $results = $this->odpowiadanie($request);
+        if ($results != 401 && $results != null) {
+            wyniki::create([
+                'id_user' => Auth::id(),
+                'id_dzial' => $request['session']['dzial_id'],
+                'active_test_id' => $results['id_session'],
+                'max_points' => $results['results']['max_points'],
+                'points' => $results['results']['points'],
+                'passed' => $results['results']['passed']
+            ]);
+            return response()->json($results);
+        } else
+            return 401;
     }
 }

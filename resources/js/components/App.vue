@@ -1,5 +1,6 @@
 <template>
     <div>
+        <input type="hidden" id="userID" :value="user ? user.id : null">
         <nav id="nav">
             <div class="top-left">
                 <a href="/">ipies</a>
