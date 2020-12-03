@@ -32,6 +32,11 @@
                 </a>
 
                 <ul>
+                    <a class="dropdown-item" v-if="$store.state.user.role == 1 " @click="$router.push('/user/wyniki')">
+                        Moje Wyniki
+                    </a>
+                </ul>
+                <ul>
                     <a class="dropdown-item" @click="logout">
                         Wyloguj się
                     </a>
@@ -55,6 +60,7 @@ export default {
                 })
                 .then(res => {
                     this.$emit("get-user");
+                    $router.push('/');
                 });
         }
     }

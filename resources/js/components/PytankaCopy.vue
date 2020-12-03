@@ -1,8 +1,6 @@
 <template>
     <div id="main">
-        <div class="loading" v-if="loading">
-            <FacebookLoader color="#0061c9" />
-        </div>
+        <loading v-if="isLoading" />
         <div class="loaded" v-else>
             <div
                 style="position: sticky; top: 0; z-index: 1"
@@ -68,7 +66,7 @@ import Question from "./Pytanka/JednoPytanie";
 import Results from "./Pytanka/Wyniki";
 import axios from "axios";
 import VueCountdown from "@chenfengyuan/vue-countdown";
-import { FacebookLoader } from "vue-spinners-css";
+import Loading from "./Loading";
 export default {
     props: ["ilosc"],
     methods: {
@@ -82,7 +80,7 @@ export default {
             }
         },
         getQuestion: function() {
-            this.loading = true;
+            this.isLoading = true;
             axios
                 .get("/api/randQuestion", {
                     params: { dzial: this.dzial, amount: this.ilosc }
@@ -101,7 +99,7 @@ export default {
                     this.results = null;
                     let deadline = new Date(this.myQuestion.session.deadline);
                     this.deadline = deadline - new Date();
-                    this.loading = false;
+                    this.isLoading = false;
                     window.scrollTo({ top: 0, behavior: "smooth" });
                 });
         },
@@ -112,11 +110,11 @@ export default {
             }
         },
         sendAnswers: function() {
-            this.userID = document.querySelector('#userID').value;
+            this.userID = document.querySelector("#userID").value;
             console.log(this.userID);
             axios
                 .post(
-                   this.userID!= '' ?'/api/saveAnswers'  : "/api/sendAnswers",
+                    this.userID != "" ? "/api/saveAnswers" : "/api/sendAnswers",
                     {
                         answers: this.answers,
                         session: this.myQuestion["session"]
@@ -187,8 +185,8 @@ export default {
     components: {
         question: Question,
         countdown: VueCountdown,
-        loading: FacebookLoader,
-        results: Results
+        results: Results,
+        Loading: Loading
     },
     data() {
         return {
@@ -199,7 +197,7 @@ export default {
             results: null,
             deadline: null,
             sending: false,
-            loading: true,
+            isLoading: true,
             userID: null
         };
     },
@@ -207,7 +205,7 @@ export default {
         this.getQuestion(this.dzial);
     },
     mounted() {
-        this.userID = document.querySelector('#userID').value
+        this.userID = document.querySelector("#userID").value;
     },
     watch: {
         ilosc: function() {
@@ -245,13 +243,5 @@ export default {
     text-align: center;
     padding-top: 1rem;
     color: rgb(77, 77, 77);
-}
-
-.loading {
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 30vh;
-    display: flex;
-    justify-content: center;
 }
 </style>

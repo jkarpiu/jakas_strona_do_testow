@@ -8,20 +8,24 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import * as VueSpinnersCss from "vue-spinners-css";
+import VueCookies from 'vue-cookies'
 import VueRouter from 'vue-router'
+import Vuex from 'vuex';
+import axios from 'axios';
 
 import Login from './components/Login'
 import Pytanka from './components/PytankaCopy'
 import Welcome from './components/Welcome'
 import App from './components/App'
 import Register from './components/Register';
-import Wyniki from './components/ZapisaneWyniki';
-import * as VueSpinnersCss from "vue-spinners-css";
-import VueCookies from 'vue-cookies'
+import Wyniki from './components/WynikiZapisane';
+import PageNotFound from './components/PageNotFound';
 
 Vue.use(VueCookies)
 Vue.use(VueRouter)
 Vue.use(VueSpinnersCss);
+Vue.use(Vuex);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -32,6 +36,16 @@ Vue.use(VueSpinnersCss);
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+const store = new Vuex.Store({
+    state: {
+        user: null
+    },
+    mutations: {
+        setUser(state, user) {
+            state.user = user;
+        }
+    }
+})
 
 const routes = [
     {
@@ -53,26 +67,34 @@ const routes = [
         path: '/losowanie40',
         name: 'losowanie40',
         component: Pytanka,
-        props: {ilosc: 40}
+        props: { ilosc: 40 }
     },
     {
         path: '/losowanie1',
         name: 'losowanie1',
         component: Pytanka,
-        props: {ilosc: 1}
+        props: { ilosc: 1 }
     },
     {
         path: "/user/wyniki",
         name: "wynikiUcznia",
-        component: Wyniki
+        component: Wyniki,
+        beforeEnter: (to, from, next) => {
+            if (!store.state.user) {
+                next('/login')
+            }
+        }
 
+    },
+    {
+        path: "*",
+        component: PageNotFound
     }
 
 ];
-
 const router = new VueRouter({
     mode: 'history',
-    routes
+    routes,
 });
 
 /**
@@ -84,5 +106,8 @@ const router = new VueRouter({
 const app = new Vue({
     el: '#app',
     components: { App },
+    store,
     router
 });
+
+

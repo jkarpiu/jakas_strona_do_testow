@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input type="hidden" id="userID" :value="user ? user.id : null">
+        <input type="hidden" id="userID" :value="$store.state.user ? $store.state.user.id : null">
         <nav id="nav">
             <div class="top-left">
                 <a href="/">ipies</a>
@@ -30,7 +30,7 @@
                                 <a class="dropdown-item">Losuj 1 pytanie</a>
                             </li></router-link
                         >
-                        <user-menu :user="user" @get-user="getUser" />
+                        <user-menu :user="$store.state.user" @get-user="getUser" />
                     </span>
                 </ul>
             </div>
@@ -52,7 +52,7 @@ export default {
         };
     },
     components: { UserMenu },
-    mounted() {
+    created() {
         this.getUser();
     },
     methods: {
@@ -66,11 +66,12 @@ export default {
                 })
                 .catch(err => {
                     console.log(err.response);
-                    this.user = null;
+                    this.$store.commit('setUser', null);
                 })
                 .then(res => {
                     console.log(res);
-                    this.user = res.data;
+                    let userData = res.data
+                    this.$store.commit('setUser', userData);
                 });
         }
     }
