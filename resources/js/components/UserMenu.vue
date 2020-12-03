@@ -7,6 +7,7 @@
                 <li> <a class="dropdown-item panel" href="{{route('teacherPanel')}}">Panel nauczyciela</a> </li>
                         @endif
                     @endif -->
+
         <span v-if="!user">
             <router-link to="login">
                 <li><a class="dropdown-item">Zaloguj się</a></li></router-link
@@ -18,6 +19,11 @@
             >
         </span>
         <span v-else>
+            <router-link to="/teacher" v-if="user.role == 2">
+                <li>
+                    <a class="dropdown-item panel">Panel nauczyciela</a>
+                </li></router-link
+            >
             <li>
                 <a
                     id="navbarDropdown"
@@ -32,12 +38,21 @@
                 </a>
 
                 <ul>
-                    <a class="dropdown-item" v-if="$store.state.user.role == 1 " @click="$router.push('/user/wyniki')">
+                    <a
+                        class="dropdown-item"
+                        v-if="$store.state.user.role == 1"
+                        @click="$router.push('/user/wyniki')"
+                        style="cursor: pointer;"
+                    >
                         Moje Wyniki
                     </a>
                 </ul>
                 <ul>
-                    <a class="dropdown-item" @click="logout">
+                    <a
+                        class="dropdown-item"
+                        @click="logout"
+                        style="cursor: pointer;"
+                    >
                         Wyloguj się
                     </a>
                 </ul>
@@ -50,7 +65,11 @@
 <script>
 import axios from "axios";
 export default {
-    props: ["user"],
+    computed: {
+        user: function() {
+            return this.$store.state.user;
+        }
+    },
     methods: {
         logout: function() {
             axios
@@ -60,7 +79,7 @@ export default {
                 })
                 .then(res => {
                     this.$emit("get-user");
-                    $router.push('/');
+                    $router.push("/");
                 });
         }
     }

@@ -12,7 +12,10 @@ import * as VueSpinnersCss from "vue-spinners-css";
 import VueCookies from 'vue-cookies'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex';
-import axios from 'axios';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faPlus} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import vmodal from 'vue-js-modal'
 
 import Login from './components/Login'
 import Pytanka from './components/PytankaCopy'
@@ -21,11 +24,21 @@ import App from './components/App'
 import Register from './components/Register';
 import Wyniki from './components/WynikiZapisane';
 import PageNotFound from './components/PageNotFound';
+import TeacherPanel from './components/TeacherPanel.vue';
+
+import TeacherHome from './components/TeacherPanel/Home';
+import TecherGroups from './components/TeacherPanel/Classrooms';
+
+
+library.add(faPlus)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(VueCookies)
 Vue.use(VueRouter)
 Vue.use(VueSpinnersCss);
 Vue.use(Vuex);
+Vue.use(vmodal);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -76,13 +89,32 @@ const routes = [
         props: { ilosc: 1 }
     },
     {
+        path: '/teacher',
+        name: 'nauczyciel',
+        component: TeacherPanel,
+        children: [
+            {
+                path: '/teacher/home',
+                name: 'TeacherHome',
+                component: TeacherHome
+            },
+            {
+                path: '/teacher/groups',
+                name: 'TeacherGroups',
+                component: TecherGroups
+            }
+        ]
+   },
+
+
+    {
         path: "/user/wyniki",
         name: "wynikiUcznia",
         component: Wyniki,
         beforeEnter: (to, from, next) => {
             if (!store.state.user) {
                 next('/login')
-            }else {
+            } else {
                 next()
             }
         }

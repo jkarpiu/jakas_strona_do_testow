@@ -110,11 +110,9 @@ export default {
             }
         },
         sendAnswers: function() {
-            this.userID = document.querySelector("#userID").value;
-            console.log(this.userID);
             axios
                 .post(
-                    this.userID != "" ? "/api/saveAnswers" : "/api/sendAnswers",
+                    this.$store.state.user.id != "" ? "/api/saveAnswers" : "/api/sendAnswers",
                     {
                         answers: this.answers,
                         session: this.myQuestion["session"]
@@ -198,14 +196,10 @@ export default {
             deadline: null,
             sending: false,
             isLoading: true,
-            userID: null
         };
     },
     created() {
         this.getQuestion(this.dzial);
-    },
-    mounted() {
-        this.userID = document.querySelector("#userID").value;
     },
     watch: {
         ilosc: function() {

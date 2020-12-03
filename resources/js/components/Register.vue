@@ -41,10 +41,6 @@
                                     </span>
                                 </div>
                             </div>
-                            <div id="app">
-                                <school-selector />
-                            </div>
-
                             <div class="form-group row">
                                 <label
                                     for="fname"

@@ -30,7 +30,7 @@ Route::get('/add', function () {
     ]);
 });
 
-Route::get('/losowanie1', 'randQuestionController@onequestion')->name('losowanie1'); 
+Route::get('/losowanie1', 'randQuestionController@onequestion')->name('losowanie1');
 
 Route::get('/losowanie40', function(){
     return view("random40");
@@ -54,6 +54,3 @@ Route::get('teacher', function () {
     return view('teacherPanel');
 }) -> name('teacherPanel');
 
-Route::group(['prefix' => 'auth_api', 'middleware' => 'auth'], function () {
-    Route::get('classrooms', 'groupsController@list_groups');
-});
