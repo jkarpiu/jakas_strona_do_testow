@@ -14,6 +14,7 @@ import VueRouter from 'vue-router'
 import Vuex from 'vuex';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlus} from '@fortawesome/free-solid-svg-icons'
+import { faLink} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import vmodal from 'vue-js-modal'
 
@@ -30,7 +31,8 @@ import TeacherHome from './components/TeacherPanel/Home';
 import TecherGroups from './components/TeacherPanel/Classrooms';
 
 
-library.add(faPlus)
+library.add(faPlus);
+library.add(faLink);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

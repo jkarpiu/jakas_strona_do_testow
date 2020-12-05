@@ -12918,6 +12918,32 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["ilosc"],
+  data: function data() {
+    return {
+      myQuestion: [],
+      dzial: 1,
+      answers: [],
+      answered: [],
+      results: null,
+      deadline: null,
+      sending: false,
+      isLoading: true
+    };
+  },
+  components: {
+    question: _Pytanka_JednoPytanie__WEBPACK_IMPORTED_MODULE_0__["default"],
+    countdown: _chenfengyuan_vue_countdown__WEBPACK_IMPORTED_MODULE_3___default.a,
+    results: _Pytanka_Wyniki__WEBPACK_IMPORTED_MODULE_1__["default"],
+    Loading: _Loading__WEBPACK_IMPORTED_MODULE_4__["default"]
+  },
+  created: function created() {
+    this.getQuestion(this.dzial);
+  },
+  watch: {
+    ilosc: function ilosc() {
+      this.getQuestion(this.dzial);
+    }
+  },
   methods: {
     click: function click() {
       if (this.answered.length == 0) {
@@ -13032,32 +13058,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     },
     nextState: function nextState() {
       if (this.ilosc <= 1) return "Następne pytanie";else return "Jeszcze raz";
-    }
-  },
-  components: {
-    question: _Pytanka_JednoPytanie__WEBPACK_IMPORTED_MODULE_0__["default"],
-    countdown: _chenfengyuan_vue_countdown__WEBPACK_IMPORTED_MODULE_3___default.a,
-    results: _Pytanka_Wyniki__WEBPACK_IMPORTED_MODULE_1__["default"],
-    Loading: _Loading__WEBPACK_IMPORTED_MODULE_4__["default"]
-  },
-  data: function data() {
-    return {
-      myQuestion: [],
-      dzial: 1,
-      answers: [],
-      answered: [],
-      results: null,
-      deadline: null,
-      sending: false,
-      isLoading: true
-    };
-  },
-  created: function created() {
-    this.getQuestion(this.dzial);
-  },
-  watch: {
-    ilosc: function ilosc() {
-      this.getQuestion(this.dzial);
     }
   }
 });
@@ -17937,7 +17937,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.footer {\r\n    clear: both;\r\n    color: #fcfcfc;\r\n    display: block;\r\n    height: 0.5vh;\r\n    margin-top: 1vh;\r\n    text-align: center;\r\n    text-transform: uppercase;\n}\nrouter-link {\r\n        cursor: pointer;\n}\r\n", ""]);
+exports.push([module.i, "\n.footer {\n    clear: both;\n    color: #fcfcfc;\n    display: block;\n    height: 0.5vh;\n    margin-top: 1vh;\n    text-align: center;\n    text-transform: uppercase;\n}\nrouter-link {\n        cursor: pointer;\n}\n", ""]);
 
 // exports
 
@@ -17956,7 +17956,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.loading[data-v-6ca9e6be] {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    padding-top: 30vh;\r\n    display: flex;\r\n    justify-content: center;\n}\r\n", ""]);
+exports.push([module.i, "\n.loading[data-v-6ca9e6be] {\n    margin-left: auto;\n    margin-right: auto;\n    padding-top: 30vh;\n    display: flex;\n    justify-content: center;\n}\n", ""]);
 
 // exports
 
@@ -17975,7 +17975,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.quiz[data-v-00d63354] {\r\n  max-width: 60%;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  color: rgb(230, 230, 230);\r\n  background-color: rgb(39, 39, 39);\r\n  padding: 15px;\r\n  padding-bottom: 1.5rem;\n}\n.questionH[data-v-00d63354] {\r\n  font-size: 28px;\r\n  max-width: 60vw;\r\n  padding-left: 0.5vw;\r\n  padding-top: 1vh;\n}\n.image[data-v-00d63354] {\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  display: block;\r\n  margin-bottom: 1vh;\r\n  max-width: 80%;\n}\n.ans[data-v-00d63354] {\r\n  margin-top: 1.3rem;\r\n  padding: 5px;\r\n  font-size: 16px;\r\n  padding-top: 0.8rem;\r\n  padding-bottom: 0.7rem;\r\n  padding-left: 2rem;\r\n  border: solid 1px rgb(33, 33, 33);\r\n  background: rgb(33, 33, 33);\r\n  cursor: pointer;\r\n  vertical-align: middle;\n}\n.ans > li[data-v-00d63354] {\r\n  padding: 0;\r\n  margin: 0;\n}\n.ans[data-v-00d63354]:hover {\r\n  background: rgb(29, 29, 29);\r\n  color: rgb(148, 148, 148);\r\n  border: solid 1px #0061c9;\n}\r\n\r\n/* input {\r\n      margin-top: 0.5vh;\r\n      margin-left: 1vw;\r\n      margin-bottom: 2vh;\r\n  } */\n.watermark[data-v-00d63354] {\r\n  text-align: center;\r\n  padding-top: 1rem;\r\n  color: rgb(77, 77, 77);\n}\n.nothing-checked[data-v-00d63354] {\r\n  margin-top: 1.3rem;\r\n  color: rgb(231, 231, 231);\r\n  background-color: #0061c9;\r\n  padding: 1rem;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  font-weight: bold;\r\n  font-size: 1.3rem;\n}\n.nothing-checked > p[data-v-00d63354] {\r\n  padding: 0;\r\n  margin: 0;\n}\r\n", ""]);
+exports.push([module.i, "\n.quiz[data-v-00d63354] {\n  max-width: 60%;\n  margin-left: auto;\n  margin-right: auto;\n  color: rgb(230, 230, 230);\n  background-color: rgb(39, 39, 39);\n  padding: 15px;\n  padding-bottom: 1.5rem;\n}\n.questionH[data-v-00d63354] {\n  font-size: 28px;\n  max-width: 60vw;\n  padding-left: 0.5vw;\n  padding-top: 1vh;\n}\n.image[data-v-00d63354] {\n  margin-left: auto;\n  margin-right: auto;\n  display: block;\n  margin-bottom: 1vh;\n  max-width: 80%;\n}\n.ans[data-v-00d63354] {\n  margin-top: 1.3rem;\n  padding: 5px;\n  font-size: 16px;\n  padding-top: 0.8rem;\n  padding-bottom: 0.7rem;\n  padding-left: 2rem;\n  border: solid 1px rgb(33, 33, 33);\n  background: rgb(33, 33, 33);\n  cursor: pointer;\n  vertical-align: middle;\n}\n.ans > li[data-v-00d63354] {\n  padding: 0;\n  margin: 0;\n}\n.ans[data-v-00d63354]:hover {\n  background: rgb(29, 29, 29);\n  color: rgb(148, 148, 148);\n  border: solid 1px #0061c9;\n}\n\n/* input {\n      margin-top: 0.5vh;\n      margin-left: 1vw;\n      margin-bottom: 2vh;\n  } */\n.watermark[data-v-00d63354] {\n  text-align: center;\n  padding-top: 1rem;\n  color: rgb(77, 77, 77);\n}\n.nothing-checked[data-v-00d63354] {\n  margin-top: 1.3rem;\n  color: rgb(231, 231, 231);\n  background-color: #0061c9;\n  padding: 1rem;\n  margin-left: auto;\n  margin-right: auto;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bold;\n  font-size: 1.3rem;\n}\n.nothing-checked > p[data-v-00d63354] {\n  padding: 0;\n  margin: 0;\n}\n", ""]);
 
 // exports
 
@@ -18013,7 +18013,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.button[data-v-22b3d648] {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    display: flex;\r\n    justify-content: center;\n}\n#main[data-v-22b3d648] {\r\n    margin-left: auto;\r\n    margin-right: auto;\n}\n.testHeader[data-v-22b3d648] {\r\n    padding: 15px;\r\n    width: 60vw;\r\n    margin-bottom: 0;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    background-color: rgb(39, 39, 39);\r\n    display: flex;\r\n    justify-content: space-between;\r\n    box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\r\n    -webkit-box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\r\n    -moz-box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\n}\n.watermark[data-v-22b3d648] {\r\n    text-align: center;\r\n    padding-top: 1rem;\r\n    color: rgb(77, 77, 77);\n}\r\n", ""]);
+exports.push([module.i, "\n.button[data-v-22b3d648] {\n    margin-left: auto;\n    margin-right: auto;\n    display: flex;\n    justify-content: center;\n}\n#main[data-v-22b3d648] {\n    margin-left: auto;\n    margin-right: auto;\n}\n.testHeader[data-v-22b3d648] {\n    padding: 15px;\n    width: 60vw;\n    margin-bottom: 0;\n    margin-left: auto;\n    margin-right: auto;\n    background-color: rgb(39, 39, 39);\n    display: flex;\n    justify-content: space-between;\n    box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\n    -webkit-box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\n    -moz-box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\n}\n.watermark[data-v-22b3d648] {\n    text-align: center;\n    padding-top: 1rem;\n    color: rgb(77, 77, 77);\n}\n", ""]);
 
 // exports
 
@@ -18032,7 +18032,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#mainTeacherPanel {\r\n    color: aliceblue;\r\n    display: grid;\r\n    grid-template-rows: 1fr;\r\n    grid-template-columns: 0.5fr 1.5fr;\n}\r\n", ""]);
+exports.push([module.i, "\n#mainTeacherPanel {\n    color: aliceblue;\n    display: grid;\n    grid-template-rows: 1fr;\n    grid-template-columns: 0.5fr 1.5fr;\n}\n", ""]);
 
 // exports
 
@@ -18051,7 +18051,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n#classroomsView[data-v-3baf8272] {\r\n    display: grid;\r\n    grid-template-rows: 1fr;\r\n    grid-template-columns: 1fr 1fr;\n}\n.toolbox[data-v-3baf8272] {\r\n    display: flex;\r\n    justify-content: flex-end;\n}\r\n", ""]);
+exports.push([module.i, "\n#classroomsView[data-v-3baf8272] {\n    display: grid;\n    grid-template-rows: 1fr 1fr;\n    grid-template-columns: 1fr;\n}\n.toolbox[data-v-3baf8272] {\n    display: flex;\n    justify-content: flex-end;\n}\n", ""]);
 
 // exports
 
@@ -18070,7 +18070,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n#main[data-v-3649c25e] {\r\n  display: flex;\r\n  flex-direction: row;\r\n  flex-wrap: nowrap;\r\n  justify-content: space-around;\r\n  align-items: baseline;\r\n  align-content: stretch;\n}\r\n", ""]);
+exports.push([module.i, "\n#main[data-v-3649c25e] {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: space-around;\n  align-items: baseline;\n  align-content: stretch;\n}\n", ""]);
 
 // exports
 
@@ -18089,7 +18089,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nul[data-v-6f268f96] {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    padding: 0;\n}\nli[data-v-6f268f96] {\r\n    line-height: 2.5rem;\r\n    float: left;\r\n    text-align: center;\r\n    color: black;\r\n    margin: 0;\r\n    list-style-type: none;\r\n    width: 200px;\n}\nspan>li>ul[data-v-6f268f96] {\r\n    display: none;\n}\na[data-v-6f268f96] {\r\n    color: #fcfcfc;\r\n    padding: 0 15px;\r\n    font-size: 13px;\r\n    font-weight: 500;\r\n    letter-spacing: .1rem;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\n}\r\n\r\n/* wyloguj */\nspan>li:hover>ul[data-v-6f268f96] {\r\n    display: flex;\r\n    flex-direction: column;\r\n    flex-wrap: nowrap;\r\n    justify-content: flex-start;\r\n    align-items: stretch;\r\n    align-content: stretch;\r\n    background: #0061c9;\r\n    position: relative;\r\n    height: 2.5rem;\r\n    z-index: 2;\n}\nspan>li>ul:hover>a[data-v-6f268f96] {\r\n    opacity: 0.3;\n}\r\n", ""]);
+exports.push([module.i, "\nul[data-v-6f268f96] {\n    margin-left: auto;\n    margin-right: auto;\n    padding: 0;\n}\nli[data-v-6f268f96] {\n    line-height: 2.5rem;\n    float: left;\n    text-align: center;\n    color: black;\n    margin: 0;\n    list-style-type: none;\n    width: 200px;\n}\nspan>li>ul[data-v-6f268f96] {\n    display: none;\n}\na[data-v-6f268f96] {\n    color: #fcfcfc;\n    padding: 0 15px;\n    font-size: 13px;\n    font-weight: 500;\n    letter-spacing: .1rem;\n    text-decoration: none;\n    text-transform: uppercase;\n}\n\n/* wyloguj */\nspan>li:hover>ul[data-v-6f268f96] {\n    display: flex;\n    flex-direction: column;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    align-items: stretch;\n    align-content: stretch;\n    background: #0061c9;\n    position: relative;\n    height: 2.5rem;\n    z-index: 2;\n}\nspan>li>ul:hover>a[data-v-6f268f96] {\n    opacity: 0.3;\n}\n", ""]);
 
 // exports
 
@@ -18108,7 +18108,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.wyniki_table table {\r\n    margin-top: 2vh;\r\n    box-shadow: -2px 1px 24px 2px rgba(0, 0, 0, 0.4);\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    border: 5px solid rgb(39, 39, 39);\r\n    background-color: rgb(39, 39, 39);\r\n    width: 798px;\r\n    position: static;\r\n    text-align: center;\r\n    border-collapse: collapse;\n}\n.wyniki_table td,\r\n.wyniki_table th {\r\n    white-space: pre;\r\n    border: 3px solid rgb(39, 39, 39);\r\n    padding: 0.4rem 40px;\n}\n.wyniki_table thead {\r\n    background-color: #0061c9;\n}\r\n", ""]);
+exports.push([module.i, "\n.wyniki_table table {\n    margin-top: 2vh;\n    box-shadow: -2px 1px 24px 2px rgba(0, 0, 0, 0.4);\n    margin-left: auto;\n    margin-right: auto;\n    border: 5px solid rgb(39, 39, 39);\n    background-color: rgb(39, 39, 39);\n    width: 798px;\n    position: static;\n    text-align: center;\n    border-collapse: collapse;\n}\n.wyniki_table td,\n.wyniki_table th {\n    white-space: pre;\n    border: 3px solid rgb(39, 39, 39);\n    padding: 0.4rem 40px;\n}\n.wyniki_table thead {\n    background-color: #0061c9;\n}\n", ""]);
 
 // exports
 
@@ -51031,12 +51031,39 @@ exports.default = {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 exports.default = {
     methods: {
-        createGroup: function async() { }
+        createGroup: function async() {
+            var _this = this;
+            axios_1.default
+                .post("/api/add_group", { name: this.new_group_name })
+                .catch(function (err) {
+                console.log(err.response);
+            })
+                .then(function (res) {
+                _this.$modal.hide("add-classroom");
+                _this.getGroups();
+            });
+        },
+        getGroups: function async() {
+            var _this = this;
+            axios_1.default
+                .get("/api/groups")
+                .catch(function (err) { return console.log(err.response); })
+                .then(function (res) {
+                _this.list = res.data;
+            });
+        }
     },
     data: function () {
-        return {};
+        return {
+            new_group_name: "",
+            list: []
+        };
+    },
+    created: function () {
+        this.getGroups();
     }
 };
 
@@ -52316,7 +52343,32 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "classrooms" }),
+      _c("div", { staticClass: "classrooms" }, [
+        _c("table", [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "tbody",
+            _vm._l(_vm.list, function(group) {
+              return _c("tr", { key: group.id }, [
+                _c("td", [_vm._v(_vm._s(group.name))]),
+                _vm._v(" "),
+                _c("td", [_vm._v("12")]),
+                _vm._v(" "),
+                _c("td", [
+                  _c(
+                    "button",
+                    { staticClass: "btn btn-primary" },
+                    [_c("font-awesome-icon", { attrs: { icon: "link" } })],
+                    1
+                  )
+                ])
+              ])
+            }),
+            0
+          )
+        ])
+      ]),
       _vm._v(" "),
       _c(
         "modal",
@@ -52324,18 +52376,42 @@ var render = function() {
           attrs: {
             name: "add-classroom",
             styles: "background-color: #191919; padding: 25px;",
-            adaptive: "true"
+            adaptive: ""
           }
         },
         [
           _c("p", [
             _vm._v("\n            Nazwa:\n            "),
             _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.new_group_name,
+                  expression: "new_group_name"
+                }
+              ],
               staticClass: "form-control",
-              attrs: { type: "text", name: "", id: "" }
+              attrs: { type: "text", name: "", id: "" },
+              domProps: { value: _vm.new_group_name },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.new_group_name = $event.target.value
+                }
+              }
             }),
             _vm._v(" "),
-            _c("button", { staticClass: "btn btn-primary" }, [_vm._v("Dodaj")])
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-primary",
+                on: { click: _vm.createGroup }
+              },
+              [_vm._v("\n                Dodaj\n            ")]
+            )
           ])
         ]
       )
@@ -52343,7 +52419,22 @@ var render = function() {
     1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Nazwa")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Ilość osób")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Zaproszenia")])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -74019,7 +74110,9 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 
 
+
 _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_4__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faPlus"]);
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_4__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faLink"]);
 Vue.component('font-awesome-icon', _fortawesome_vue_fontawesome__WEBPACK_IMPORTED_MODULE_6__["FontAwesomeIcon"]);
 Vue.use(vue_cookies__WEBPACK_IMPORTED_MODULE_1___default.a);
 Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_2__["default"]);
@@ -75328,8 +75421,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\jakas_strona_do_testow\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\jakas_strona_do_testow\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/karp/Dokumenty/jakas_strona_do_testow/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/karp/Dokumenty/jakas_strona_do_testow/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

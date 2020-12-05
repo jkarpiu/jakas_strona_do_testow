@@ -66,14 +66,14 @@ class AuthController extends Controller
     }
     public function register(Request $request)
     {
-        $data = $request -> validate([
+        $data = $request->validate([
             'fname' => ['required', 'string', 'max:255'],
             'lname' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'role' => ['required', 'integer', 'min:1', 'max:2'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
-        return response() -> json(User::create([
+        return response()->json(User::create([
             'fname' => $data['fname'],
             'lname' => $data['lname'],
             'email' => $data['email'],

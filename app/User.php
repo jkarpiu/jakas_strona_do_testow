@@ -53,7 +53,7 @@ class User extends Authenticatable
         return $this->hasMany('App\Wyniki', 'id_user');
     }
 
-    public function groups()
+    public function teacherGroups()
     {
         return $this->hasMany('App\groupsModel', 'teacher_id');
     }
@@ -61,5 +61,9 @@ class User extends Authenticatable
     public function schools()
     {
         return $this->belongsToMany(schoolsModel::class);
+    }
+
+    public function studentGroups() {
+        return $this->belongsToMany(groupsModel::class);
     }
 }

@@ -69,6 +69,33 @@ import VueCountdown from "@chenfengyuan/vue-countdown";
 import Loading from "./Loading";
 export default {
     props: ["ilosc"],
+    data() {
+        return {
+            myQuestion: [],
+            dzial: 1,
+            answers: [],
+            answered: [],
+            results: null,
+            deadline: null,
+            sending: false,
+            isLoading: true,
+        };
+    },
+    components: {
+        question: Question,
+        countdown: VueCountdown,
+        results: Results,
+        Loading: Loading
+    },
+
+    created() {
+        this.getQuestion(this.dzial);
+    },
+    watch: {
+        ilosc: function() {
+            this.getQuestion(this.dzial);
+        }
+    },
     methods: {
         click: function() {
             if (this.answered.length == 0) {
@@ -180,32 +207,7 @@ export default {
             else return "Jeszcze raz";
         }
     },
-    components: {
-        question: Question,
-        countdown: VueCountdown,
-        results: Results,
-        Loading: Loading
-    },
-    data() {
-        return {
-            myQuestion: [],
-            dzial: 1,
-            answers: [],
-            answered: [],
-            results: null,
-            deadline: null,
-            sending: false,
-            isLoading: true,
-        };
-    },
-    created() {
-        this.getQuestion(this.dzial);
-    },
-    watch: {
-        ilosc: function() {
-            this.getQuestion(this.dzial);
-        }
-    }
+
 };
 </script>
 <style scoped>

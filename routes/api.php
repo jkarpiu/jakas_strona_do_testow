@@ -38,4 +38,5 @@ Route::group(['middleware' => 'auth.api'], function () {
     Route::get('wyniki', 'userController@wyniki');
     Route::post('saveAnswers','randQuestionController@json_odpowiadanie_zalogowany' );
     Route::get('groups', 'groupsController@list_groups');
+    Route::post('add_group','groupsController@add_group' );
 });
