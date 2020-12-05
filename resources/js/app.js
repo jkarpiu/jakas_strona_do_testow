@@ -13,8 +13,8 @@ import VueCookies from 'vue-cookies'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faPlus} from '@fortawesome/free-solid-svg-icons'
-import { faLink} from '@fortawesome/free-solid-svg-icons'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faLink } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import vmodal from 'vue-js-modal'
 
@@ -25,10 +25,9 @@ import App from './components/App'
 import Register from './components/Register';
 import Wyniki from './components/WynikiZapisane';
 import PageNotFound from './components/PageNotFound';
-import TeacherPanel from './components/TeacherPanel.vue';
-
-import TeacherHome from './components/TeacherPanel/Home';
-import TecherGroups from './components/TeacherPanel/Classrooms';
+import OneGroup from './components/Groups/OneClassroom'
+import ListGroups from './components/Groups/Classrooms';
+import GroupsMain from './components/GroupsMain';
 
 
 library.add(faPlus);
@@ -91,22 +90,25 @@ const routes = [
         props: { ilosc: 1 }
     },
     {
-        path: '/teacher',
-        name: 'nauczyciel',
-        component: TeacherPanel,
+        path: '/groups',
+        name: 'TeacherGroups',
+        component: GroupsMain,
+        redirect: '/groups/home',
+
         children: [
             {
-                path: '/teacher/home',
-                name: 'TeacherHome',
-                component: TeacherHome
+                path: "/groups/home",
+                name: 'GroupsHome',
+                component: ListGroups,
             },
             {
-                path: '/teacher/groups',
-                name: 'TeacherGroups',
-                component: TecherGroups
-            }
+                path: "/groups/id/:id",
+                props: true,
+                component: OneGroup,
+            },
         ]
-   },
+
+    },
 
 
     {

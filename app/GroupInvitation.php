@@ -8,6 +8,6 @@ class GroupInvitation extends Model
 {
     protected $fillable = ['code', 'groups_model_id', 'expire_date'];
     public function group(){
-        return $this->belongsTo(groupsModel::class);
+        return $this->belongsTo(groupsModel::class, 'groups_model_id');
     }
 }

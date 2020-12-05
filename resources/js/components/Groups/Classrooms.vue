@@ -4,27 +4,20 @@
             <button
                 class="btn btn-primary"
                 @click="$modal.show('add-classroom')"
+                v-if="$store.state.user != null && $store.state.user.role == 2"
             >
                 <font-awesome-icon icon="plus" /> Utwórz grupe
             </button>
+            <button
+                class="btn btn-primary"
+                @click="$modal.show('join-classroom')"
+                v-if="$store.state.user != null && $store.state.user.role == 1"
+            >
+                <font-awesome-icon icon="plus" /> Dołącz do grupy
+            </button>
         </div>
         <div class="mainView">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nazwa</th>
-                        <th>Ilość osób</th>
-                        <th>Zaproszenia</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr :key="group.id" v-for="group in list">
-                        <td>{{ group.name }}</td>
-                        <td>12</td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
+            <groups :list="list" />
         </div>
         <modal
             name="add-classroom"
@@ -45,11 +38,32 @@
                 </button>
             </p>
         </modal>
+        <modal
+            name="join-classroom"
+            styles="background-color: #191919; padding: 25px;"
+            adaptive
+        >
+            <p>
+                <input
+                    placeholder="Kod zaproszenia"
+                    type="text"
+                    v-model="inv_code"
+                    name=""
+                    id=""
+                    class="form-control"
+                />
+                <button @click="joinGroup" class="btn btn-primary">
+                    Dołącz
+                </button>
+            </p>
+        </modal>
     </div>
 </template>
-<script lang="ts">
+<script>
 import axios from "axios";
+import Groups from "./Groups";
 export default {
+    components: { Groups },
     methods: {
         createGroup: function async() {
             axios
@@ -62,11 +76,20 @@ export default {
                     this.getGroups();
                 });
         },
+        joinGroup: function() {
+            axios
+                .post("/api/join_group", {code: this.inv_code})
+                .catch(err => console.log(err.response))
+                .then(res => {
+                    console.log(res)
+                });
+        },
         getGroups: function async() {
             axios
                 .get("/api/groups")
                 .catch(err => console.log(err.response))
-                .then((res: any) => {
+                .then(res => {
+                    console.log("test");
                     this.list = res.data;
                 });
         }
@@ -74,11 +97,12 @@ export default {
     data() {
         return {
             new_group_name: "",
-            list: []
+            list: [],
+            inv_code: ''
         };
     },
     created() {
-        this.getGroups()
+        this.getGroups();
     }
 };
 </script>

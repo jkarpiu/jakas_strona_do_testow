@@ -66,4 +66,8 @@ class User extends Authenticatable
     public function studentGroups() {
         return $this->belongsToMany(groupsModel::class);
     }
+
+    public function posts() {
+        return $this->hasMany(groupPost::class, 'author_id');
+    }
 }

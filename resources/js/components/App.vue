@@ -6,18 +6,6 @@
             </div>
             <div class="top-right links">
                 <ul>
-                    <!-- <span class="dropdown-display">
-                        @if (Auth::user()) @if (Auth::user()->role == 0)
-                        <li>
-                            <a class="dropdown-item panel" href=""
-                                >Panel ucznia</a
-                            >
-                        </li>
-                        @else
-                        <li>
-                            <a class="dropdown-item panel">Panel nauczyciela</a>
-                        </li>
-                        @endif @endif -->
                     <span class="dropdown-display">
                         <router-link to="/losowanie40">
                             <li>
@@ -33,7 +21,7 @@
                     </span>
                 </ul>
             </div>
-        </nav>    
+        </nav>
         <div class="my-content">
             <router-view @get-user="getUser"></router-view>
         </div>

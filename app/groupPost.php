@@ -11,4 +11,8 @@ class groupPost extends Model
     public function group () {
         return $this -> belongsTo(groupsModel::class );
     }
+
+    public function author() {
+        return $this -> belongsTo (User::class, 'author_id');
+    }
 }

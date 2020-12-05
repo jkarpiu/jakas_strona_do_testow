@@ -19,9 +19,14 @@
             >
         </span>
         <span v-else>
-            <router-link to="/teacher" v-if="user.role == 2">
+            <router-link to="/groups" v-if="user.role == 2">
                 <li>
                     <a class="dropdown-item panel">Panel nauczyciela</a>
+                </li></router-link
+            >
+            <router-link to="/groups" v-else-if="user.role == 1">
+                <li>
+                    <a class="dropdown-item panel">Moje klasrumy</a>
                 </li></router-link
             >
             <li>
@@ -78,7 +83,7 @@ export default {
                 })
                 .then(res => {
                     this.$emit("get-user");
-                    $router.push("/");
+                    this.$router.push("/");
                 });
         }
     }
