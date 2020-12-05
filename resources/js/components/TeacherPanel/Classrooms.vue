@@ -8,7 +8,7 @@
                 <font-awesome-icon icon="plus" /> Utwórz grupe
             </button>
         </div>
-        <div class="classrooms">
+        <div class="mainView">
             <table>
                 <thead>
                     <tr>
@@ -21,7 +21,7 @@
                     <tr :key="group.id" v-for="group in list">
                         <td>{{ group.name }}</td>
                         <td>12</td>
-                        <td><button class="btn btn-primary"><font-awesome-icon icon="link" /> </button></td>
+                        <td></td>
                     </tr>
                 </tbody>
             </table>

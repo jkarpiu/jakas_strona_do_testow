@@ -24,4 +24,8 @@ class groupsModel extends Model
     public function invitations() {
         return $this->hasMany(GroupInvitation::class);
     }
+
+    public function posts() {
+        return $this-> hasMany(groupPost::class) ;
+    }
 }

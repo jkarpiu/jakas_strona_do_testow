@@ -52343,7 +52343,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "classrooms" }, [
+      _c("div", { staticClass: "mainView" }, [
         _c("table", [
           _vm._m(0),
           _vm._v(" "),
@@ -52355,14 +52355,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("td", [_vm._v("12")]),
                 _vm._v(" "),
-                _c("td", [
-                  _c(
-                    "button",
-                    { staticClass: "btn btn-primary" },
-                    [_c("font-awesome-icon", { attrs: { icon: "link" } })],
-                    1
-                  )
-                ])
+                _c("td")
               ])
             }),
             0
