@@ -7,16 +7,16 @@
                         <div class="card-body">
                             <div>Rejestracja</div>
                             <div class="form-group row">
-                                <div class="col-md-6">
+                                <div>
                                     <span class="form-check">
-                                        <input
+                                        <div
                                             class="form-check-input"
-                                            type="radio"
-                                            v-model="register.role"
+                                            @click="setRole(1)"                                                                              
                                             id="role1"
                                             value="1"
-                                            checked
-                                        />
+                                            
+                                        >  
+                                        </div>
                                         <label
                                             class="form-check-label"
                                             for="role1"
@@ -25,36 +25,26 @@
                                         </label>
                                     </span>
                                     <span class="form-check">
-                                        <input
-                                            class="form-check-input"
-                                            type="radio"
-                                            v-model="register.role"
-                                            id="role2"
-                                            value="2"
-                                        />
-                                        <label
-                                            class="form-check-label"
-                                            for="role2"
-                                        >
+                                        <div                                                                                                                 
+                                            @click="setRole(2)"
+                                            id="role2"                                           
+                                        > 
                                             Nauczyciel
-                                        </label>
+                                        </div>
+                                            
+                                        
                                     </span>
                                 </div>
-                            </div>
-                            <div class="form-group row">
-                                <label
-                                    for="fname"
-                                    class="col-md-4 col-form-label text-md-right"
-                                    >Imię</label
-                                >
-
-                                <div class="col-md-6">
+                            </div>    
+                            <div class="form-group row">                               
+                                <div>
                                     <input
                                         id="fname"
                                         type="text"
                                         class="form-control @error('fname') is-invalid @enderror"
                                         v-model="register.fname"
                                         required
+                                        placeholder="Podaj imię"
                                         autocomplete="fname"
                                         autofocus
                                     />
@@ -69,20 +59,15 @@
                                         @enderror -->
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label
-                                    for="lname"
-                                    class="col-md-4 col-form-label text-md-right"
-                                    >Nazwisko</label
-                                >
-
-                                <div class="col-md-6">
+                            <div class="form-group row">                            
+                                <div>
                                     <input
                                         id="lname"
                                         type="text"
                                         class="form-control @error('lname') is-invalid @enderror"
                                         v-model="register.lname"
                                         required
+                                        placeholder="Podaj nazwisko"
                                         autocomplete="lname"
                                         autofocus
                                     />
@@ -99,19 +84,14 @@
                             </div>
 
                             <div class="form-group row">
-                                <label
-                                    for="email"
-                                    class="col-md-4 col-form-label text-md-right"
-                                    >Adres e-mail</label
-                                >
-
-                                <div class="col-md-6">
+                                <div>
                                     <input
                                         id="email"
                                         type="email"
                                         class="form-control @error('email') is-invalid @enderror"
                                         v-model="register.email"
                                         required
+                                        placeholder="Podaj adres e-mail"
                                         autocomplete="email"
                                     />
 
@@ -127,19 +107,14 @@
                             </div>
 
                             <div class="form-group row">
-                                <label
-                                    for="password"
-                                    class="col-md-4 col-form-label text-md-right"
-                                    >Hasło</label
-                                >
-
-                                <div class="col-md-6">
+                                <div>
                                     <input
                                         id="password"
                                         v-model="register.password"
                                         type="password"
                                         class="form-control @error('password') is-invalid @enderror"
                                         required
+                                        placeholder="Podaj hasło"
                                         autocomplete="new-password"
                                     />
 
@@ -154,27 +129,22 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row">
-                                <label
-                                    for="password-confirm"
-                                    class="col-md-4 col-form-label text-md-right"
-                                    >Potwierdź hasło</label
-                                >
-
-                                <div class="col-md-6">
+                            <div class="form-group row">       
+                                <div>
                                     <input
                                         id="password-confirm"
                                         type="password"
                                         class="form-control"
                                         v-model="register.password_confirmation"
                                         required
+                                        placeholder="Powtórz hasło"
                                         autocomplete="new-password"
                                     />
                                 </div>
                             </div>
-
+                        
                             <div class="form-group row mb-0">
-                                <div class="col-md-6 offset-md-4">
+                                <div class="offset-md-4">
                                     <button
                                         class="btn btn-primary"
                                         @click="send"
@@ -213,7 +183,30 @@ export default {
                 console.log(res.data);
                 this.$router.push('/login');
             });
+        },
+
+        setRole: function(role) {
+            this.register.role=role;
         }
     }
 };
 </script>
+<style scoped>
+    .form-check {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    input {
+        width: 60%;
+    }
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+  
+</style>
