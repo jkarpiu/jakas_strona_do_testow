@@ -171,11 +171,7 @@ body {
 .card {
     background: rgb(39,39,39);
     color: #fcfcfc;
-}
-
-.card-header {
-    border: none;
-    background: rgb(39, 39, 39);
+    margin-top: 2rem;
 }
 
 .btn-primary {
