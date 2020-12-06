@@ -32,8 +32,11 @@
     },
     "dependencies": {
         "@chenfengyuan/vue-countdown": "^1.1.5",
+        "luxon": "^1.25.0",
         "vue-cookies": "^1.7.4",
+        "vue-datetime": "^1.0.0-beta.14",
         "vue-spinners-css": "^1.1.5",
-        "vuex": "^3.6.0"
+        "vuex": "^3.6.0",
+        "weekstart": "^1.0.1"
     }
 }

@@ -17,6 +17,8 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import vmodal from 'vue-js-modal'
+import { Datetime } from 'vue-datetime';
+import 'vue-datetime/dist/vue-datetime.css';
 
 import Login from './components/Login'
 import Pytanka from './components/PytankaCopy'
@@ -40,6 +42,7 @@ Vue.use(VueRouter)
 Vue.use(VueSpinnersCss);
 Vue.use(Vuex);
 Vue.use(vmodal);
+Vue.use(Datetime);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

@@ -48,12 +48,14 @@ class groupsController extends Controller
         if (Auth::user()->role == 1) {
             $invitation = GroupInvitation::where('code', $request['code'])->with(['group' => function ($n) {
                 $n->with('students');
-            }])->get()->first();
-            if (Carbon::parse($invitation['expire_date']) > Carbon::now()) {
-                $invitation->group->students()->attach(Auth::id());
-                return response()->json(Auth::user()->studentGroups);
+            }])->get();
+            if (!empty($invitation) && Carbon::parse($invitation[0]['expire_date']) > Carbon::now()) {
+                if (!in_array(Auth::id(), $invitation[0]->group->students->all())) {
+                    $invitation[0]->group->students()->attach(Auth::id());
+                    return response()->json(Auth::user()->studentGroups);
+                }
             } else {
-                return response()->json('Po terminie', 401);
+                return response()->json('Niepoprawny kod', 401);
             }
         }
     }
@@ -61,14 +63,13 @@ class groupsController extends Controller
     {
         $group = groupsModel::find($request['id']);
         if ($group->teacher->id == Auth::id()) {
-            return response() -> json (groupPost::create([
+            return response()->json(groupPost::create([
                 'author_id' => Auth::id(),
                 'groups_model_id' => $group['id'],
                 'content' => $request['content']
             ]));
-        }else
-            return response() -> json(401);
-
+        } else
+            return response()->json(401);
     }
     public function list_posts(Request $request)
     {

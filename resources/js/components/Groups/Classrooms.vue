@@ -25,11 +25,11 @@
             adaptive
         >
             <p>
-                Nazwa:
                 <input
                     type="text"
                     v-model="new_group_name"
                     name=""
+                    placeholder="Nazwij swoją klase"
                     id=""
                     class="form-control"
                 />
@@ -82,6 +82,8 @@ export default {
                 .catch(err => console.log(err.response))
                 .then(res => {
                     console.log(res)
+                    this.$modal.hide('join-classroom')
+                    this.list = res.data;
                 });
         },
         getGroups: function async() {

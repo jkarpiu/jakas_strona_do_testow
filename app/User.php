@@ -58,6 +58,10 @@ class User extends Authenticatable
         return $this->hasMany('App\groupsModel', 'teacher_id');
     }
 
+    public function teacherTests() {
+        return $this -> hasMany(User::class, 'teacher_id');
+    }
+
     public function schools()
     {
         return $this->belongsToMany(schoolsModel::class);
@@ -70,4 +74,9 @@ class User extends Authenticatable
     public function posts() {
         return $this->hasMany(groupPost::class, 'author_id');
     }
+
+    public function studentTests() {
+        return $this -> belongsToMany(teacherTest::class);
+    }
+
 }

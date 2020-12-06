@@ -36,11 +36,13 @@ Route::group(['middleware' => 'auth.api'], function () {
     Route::get('logout', 'AuthController@logout');
     Route::get('user', 'basicServicesController@user');
     Route::get('wyniki', 'userController@wyniki');
-    Route::post('saveAnswers','randQuestionController@json_odpowiadanie_zalogowany' );
+    Route::post('saveAnswers', 'randQuestionController@json_odpowiadanie_zalogowany');
     Route::get('groups', 'groupsController@list_groups');
-    Route::post('add_group','groupsController@add_group' );
-    Route::post('invitation','groupsController@create_invitation' );
+    Route::post('add_group', 'groupsController@add_group');
+    Route::post('invitation', 'groupsController@create_invitation');
     Route::post('join_group',  'groupsController@join_group');
     Route::post('add_post',  'groupsController@add_post');
     Route::post('list_posts',  'groupsController@list_posts');
+    Route::post('add_test', 'testsController@list');
+    Route::post('list_tests', 'testsController@create');
 });
