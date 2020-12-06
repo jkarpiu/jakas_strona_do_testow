@@ -4,13 +4,12 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Logowanie</div>
-
                     <div class="card-body">
                         <div class="form-group row">
                             <label
                                 for="email"
                                 class="col-md-4 col-form-label text-md-right"
-                                >"Adres e-mail"</label
+                                >Adres e-mail</label
                             >
 
                             <div class="col-md-6">

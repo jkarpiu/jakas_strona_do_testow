@@ -12948,7 +12948,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
 
 var ctx;
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -13334,19 +13333,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -18345,7 +18331,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.form-check[data-v-97358ae4] {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n}\ninput[data-v-97358ae4] {\n    width: 60%;\n}\n.form-group[data-v-97358ae4] {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n}\n\n\n\n", ""]);
+exports.push([module.i, "\ninput[data-v-97358ae4] {\n        width: 60%;\n        margin-bottom: 1.5rem;\n        margin-left: auto;\n        margin-right: auto;\n}\n.head-name[data-v-97358ae4]  {\n        font-size: 23px;\n}\n.btn-center[data-v-97358ae4] {\n        display: block;\n        margin-left: auto;\n        margin-right: auto;\n        margin-top: 0;\n}\n#role1[data-v-97358ae4], #role2[data-v-97358ae4]  {\n        padding: 6px;\n        width: 7rem;\n        text-align: center;\n        vertical-align: middle;\n        font-size: 14px;\n        background: rgb(25, 25, 25);\n}\n#role1[data-v-97358ae4]:hover {\n        background: rgb(29, 29, 29);\n        color: rgb(148, 148, 148);\n}\n#role2[data-v-97358ae4]:hover {\n        background: rgb(29, 29, 29);\n        color: rgb(148, 148, 148);\n}\n", ""]);
 
 // exports
 
@@ -61271,7 +61257,7 @@ var render = function() {
                     staticClass: "col-md-4 col-form-label text-md-right",
                     attrs: { for: "email" }
                   },
-                  [_vm._v('"Adres e-mail"')]
+                  [_vm._v("Adres e-mail")]
                 ),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-md-6" }, [
@@ -61822,91 +61808,81 @@ var render = function() {
         _c("div", { staticClass: "col-md-8" }, [
           _c("div", { staticClass: "card" }, [
             _c("div", { staticClass: "card-body" }, [
-              _c("div", [_vm._v("Rejestracja")]),
+              _c("div", { staticClass: "head-name" }, [_vm._v("Rejestracja")]),
               _vm._v(" "),
               _c("div", { staticClass: "form-group row" }, [
-                _c("div", [
-                  _c("span", { staticClass: "form-check" }, [
-                    _c("div", {
-                      staticClass: "form-check-input",
-                      attrs: { id: "role1", value: "1" },
+                _c("span", { staticClass: "form-check" }, [
+                  _c(
+                    "div",
+                    {
+                      attrs: { id: "role1" },
                       on: {
                         click: function($event) {
                           return _vm.setRole(1)
                         }
                       }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "label",
-                      {
-                        staticClass: "form-check-label",
-                        attrs: { for: "role1" }
-                      },
-                      [
-                        _vm._v(
-                          "\n                                        Uczeń\n                                    "
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "form-check" }, [
-                    _c(
-                      "div",
-                      {
-                        attrs: { id: "role2" },
-                        on: {
-                          click: function($event) {
-                            return _vm.setRole(2)
-                          }
-                        }
-                      },
-                      [
-                        _vm._v(
-                          " \n                                        Nauczyciel\n                                    "
-                        )
-                      ]
-                    )
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group row" }, [
-                _c("div", [
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.register.fname,
-                        expression: "register.fname"
-                      }
-                    ],
-                    staticClass:
-                      "form-control @error('fname') is-invalid @enderror",
-                    attrs: {
-                      id: "fname",
-                      type: "text",
-                      required: "",
-                      placeholder: "Podaj imię",
-                      autocomplete: "fname",
-                      autofocus: ""
                     },
-                    domProps: { value: _vm.register.fname },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
+                    [
+                      _vm._v(
+                        " \n                                                Uczeń\n                                            "
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "form-check" }, [
+                  _c(
+                    "div",
+                    {
+                      attrs: { id: "role2" },
+                      on: {
+                        click: function($event) {
+                          return _vm.setRole(2)
                         }
-                        _vm.$set(_vm.register, "fname", $event.target.value)
                       }
-                    }
-                  })
+                    },
+                    [
+                      _vm._v(
+                        " \n                                                Nauczyciel\n                                            "
+                      )
+                    ]
+                  )
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "form-group row" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.register.fname,
+                      expression: "register.fname"
+                    }
+                  ],
+                  staticClass:
+                    "form-control @error('fname') is-invalid @enderror",
+                  attrs: {
+                    id: "fname",
+                    type: "text",
+                    required: "",
+                    placeholder: "Podaj imię",
+                    autocomplete: "fname",
+                    autofocus: ""
+                  },
+                  domProps: { value: _vm.register.fname },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.register, "fname", $event.target.value)
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group" }, [
                 _c("div", [
                   _c("input", {
                     directives: [
@@ -61940,7 +61916,7 @@ var render = function() {
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "form-group row" }, [
+              _c("div", { staticClass: "form-group" }, [
                 _c("div", [
                   _c("input", {
                     directives: [
@@ -61973,7 +61949,7 @@ var render = function() {
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "form-group row" }, [
+              _c("div", { staticClass: "form-group" }, [
                 _c("div", [
                   _c("input", {
                     directives: [
@@ -62006,7 +61982,7 @@ var render = function() {
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "form-group row" }, [
+              _c("div", { staticClass: "form-group" }, [
                 _c("div", [
                   _c("input", {
                     directives: [
@@ -62040,21 +62016,22 @@ var render = function() {
                     }
                   })
                 ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group row mb-0" }, [
-                _c("div", { staticClass: "offset-md-4" }, [
-                  _c(
-                    "button",
-                    { staticClass: "btn btn-primary", on: { click: _vm.send } },
-                    [
-                      _vm._v(
-                        "\n                                    Zarejestruj się\n                                "
-                      )
-                    ]
-                  )
-                ])
               ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-center btn-primary",
+                  on: { click: _vm.send }
+                },
+                [
+                  _vm._v(
+                    "\n                                            Zarejestruj się\n                                        "
+                  )
+                ]
+              )
             ])
           ])
         ])
@@ -84065,10 +84042,10 @@ var regionDayMap = {
 /*!*********************************************!*\
   !*** ./node_modules/weekstart/package.json ***!
   \*********************************************/
-/*! exports provided: _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _shasum, _spec, _where, author, bugs, bundleDependencies, deprecated, description, devDependencies, homepage, keywords, license, main, module, name, repository, scripts, types, umd:main, version, default */
+/*! exports provided: _args, _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _spec, _where, author, bugs, description, devDependencies, homepage, keywords, license, main, module, name, repository, scripts, types, umd:main, version, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_from\":\"weekstart\",\"_id\":\"weekstart@1.0.1\",\"_inBundle\":false,\"_integrity\":\"sha512-h6B1HSJxg7sZEXqIpDqAtwiDBp3x5y2jY8WYcUSBhLTcTCy7laQzBmamqMuQM5fpvo1pgpma0OCRpE2W8xrA9A==\",\"_location\":\"/weekstart\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"tag\",\"registry\":true,\"raw\":\"weekstart\",\"name\":\"weekstart\",\"escapedName\":\"weekstart\",\"rawSpec\":\"\",\"saveSpec\":null,\"fetchSpec\":\"latest\"},\"_requiredBy\":[\"#USER\",\"/\"],\"_resolved\":\"https://registry.npmjs.org/weekstart/-/weekstart-1.0.1.tgz\",\"_shasum\":\"950970b48e5797e06fc1a762f3d0f013312321e1\",\"_spec\":\"weekstart\",\"_where\":\"/home/karp/Dokumenty/jakas_strona_do_testow\",\"author\":{\"name\":\"Denis Sikuler\"},\"bugs\":{\"url\":\"https://github.com/gamtiq/weekstart/issues\"},\"bundleDependencies\":false,\"deprecated\":false,\"description\":\"Library to get first day of week.\",\"devDependencies\":{\"@babel/preset-env\":\"7.6.3\",\"eslint\":\"6.5.1\",\"eslint-config-guard\":\"1.0.3\",\"ink-docstrap\":\"1.3.2\",\"jest\":\"24.9.0\",\"jsdoc\":\"3.6.3\",\"microbundle\":\"0.4.4\",\"version-bump-prompt\":\"5.0.5\"},\"homepage\":\"https://github.com/gamtiq/weekstart\",\"keywords\":[\"week\",\"start\",\"first\",\"day\",\"locale\",\"country\",\"region\"],\"license\":\"MIT\",\"main\":\"dist/commonjs/main.js\",\"module\":\"dist/es-module/main.js\",\"name\":\"weekstart\",\"repository\":{\"type\":\"git\",\"url\":\"git://github.com/gamtiq/weekstart.git\"},\"scripts\":{\"all\":\"npm run check-all && npm run doc && npm run build\",\"build\":\"npm run build-umd && npm run build-commonjs && npm run build-esm && npm run build-umd-min\",\"build-commonjs\":\"microbundle build \\\"src/!(*.test).js\\\" --output dist/commonjs --format cjs --strict --no-compress\",\"build-esm\":\"microbundle build \\\"src/!(*.test).js\\\" --output dist/es-module --format es --no-compress\",\"build-umd\":\"microbundle build src/main.js src/full.js --output dist --format umd --strict --no-compress\",\"build-umd-min\":\"microbundle build src/main.js src/full.js --output dist/min --format umd --strict\",\"check\":\"npm run lint && npm test\",\"check-all\":\"npm run lint-all && npm test\",\"doc\":\"jsdoc -c jsdoc-conf.json\",\"lint\":\"eslint --cache --max-warnings 0 \\\"**/*.js\\\"\",\"lint-all\":\"eslint --max-warnings 0 \\\"**/*.js\\\"\",\"lint-all-error\":\"eslint \\\"**/*.js\\\"\",\"lint-error\":\"eslint --cache \\\"**/*.js\\\"\",\"release\":\"bump patch --commit --tag --all --push package.json package-lock.json bower.json component.json\",\"release-major\":\"bump major --commit --tag --all --push package.json package-lock.json bower.json component.json\",\"release-minor\":\"bump minor --commit --tag --all --push package.json package-lock.json bower.json component.json\",\"test\":\"jest\"},\"types\":\"./index.d.ts\",\"umd:main\":\"dist/main.js\",\"version\":\"1.0.1\"}");
+module.exports = JSON.parse("{\"_args\":[[\"weekstart@1.0.1\",\"/home/lucas/jakas_strona_do_testow\"]],\"_from\":\"weekstart@1.0.1\",\"_id\":\"weekstart@1.0.1\",\"_inBundle\":false,\"_integrity\":\"sha512-h6B1HSJxg7sZEXqIpDqAtwiDBp3x5y2jY8WYcUSBhLTcTCy7laQzBmamqMuQM5fpvo1pgpma0OCRpE2W8xrA9A==\",\"_location\":\"/weekstart\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"weekstart@1.0.1\",\"name\":\"weekstart\",\"escapedName\":\"weekstart\",\"rawSpec\":\"1.0.1\",\"saveSpec\":null,\"fetchSpec\":\"1.0.1\"},\"_requiredBy\":[\"/\"],\"_resolved\":\"https://registry.npmjs.org/weekstart/-/weekstart-1.0.1.tgz\",\"_spec\":\"1.0.1\",\"_where\":\"/home/lucas/jakas_strona_do_testow\",\"author\":{\"name\":\"Denis Sikuler\"},\"bugs\":{\"url\":\"https://github.com/gamtiq/weekstart/issues\"},\"description\":\"Library to get first day of week.\",\"devDependencies\":{\"@babel/preset-env\":\"7.6.3\",\"eslint\":\"6.5.1\",\"eslint-config-guard\":\"1.0.3\",\"ink-docstrap\":\"1.3.2\",\"jest\":\"24.9.0\",\"jsdoc\":\"3.6.3\",\"microbundle\":\"0.4.4\",\"version-bump-prompt\":\"5.0.5\"},\"homepage\":\"https://github.com/gamtiq/weekstart\",\"keywords\":[\"week\",\"start\",\"first\",\"day\",\"locale\",\"country\",\"region\"],\"license\":\"MIT\",\"main\":\"dist/commonjs/main.js\",\"module\":\"dist/es-module/main.js\",\"name\":\"weekstart\",\"repository\":{\"type\":\"git\",\"url\":\"git://github.com/gamtiq/weekstart.git\"},\"scripts\":{\"all\":\"npm run check-all && npm run doc && npm run build\",\"build\":\"npm run build-umd && npm run build-commonjs && npm run build-esm && npm run build-umd-min\",\"build-commonjs\":\"microbundle build \\\"src/!(*.test).js\\\" --output dist/commonjs --format cjs --strict --no-compress\",\"build-esm\":\"microbundle build \\\"src/!(*.test).js\\\" --output dist/es-module --format es --no-compress\",\"build-umd\":\"microbundle build src/main.js src/full.js --output dist --format umd --strict --no-compress\",\"build-umd-min\":\"microbundle build src/main.js src/full.js --output dist/min --format umd --strict\",\"check\":\"npm run lint && npm test\",\"check-all\":\"npm run lint-all && npm test\",\"doc\":\"jsdoc -c jsdoc-conf.json\",\"lint\":\"eslint --cache --max-warnings 0 \\\"**/*.js\\\"\",\"lint-all\":\"eslint --max-warnings 0 \\\"**/*.js\\\"\",\"lint-all-error\":\"eslint \\\"**/*.js\\\"\",\"lint-error\":\"eslint --cache \\\"**/*.js\\\"\",\"release\":\"bump patch --commit --tag --all --push package.json package-lock.json bower.json component.json\",\"release-major\":\"bump major --commit --tag --all --push package.json package-lock.json bower.json component.json\",\"release-minor\":\"bump minor --commit --tag --all --push package.json package-lock.json bower.json component.json\",\"test\":\"jest\"},\"types\":\"./index.d.ts\",\"umd:main\":\"dist/main.js\",\"version\":\"1.0.1\"}");
 
 /***/ }),
 
@@ -85528,8 +85505,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/karp/Dokumenty/jakas_strona_do_testow/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/karp/Dokumenty/jakas_strona_do_testow/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/lucas/jakas_strona_do_testow/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/lucas/jakas_strona_do_testow/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
