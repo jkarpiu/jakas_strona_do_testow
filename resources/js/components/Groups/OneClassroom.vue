@@ -29,7 +29,6 @@
               style="width: 45vw"
             ></textarea>
             <label>Tytuł</label>
-
             <textarea
               class="tekst form-control"
               rows="3"
