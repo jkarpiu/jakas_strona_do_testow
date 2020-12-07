@@ -18,6 +18,8 @@ class CreateDzialiesTable extends Migration
             $table->string('nazwa');
             $table->float('prog', 5, 2) -> max(100.00) ->default(50);
             $table->integer('ilosc_pytan') -> max(500) -> default(40);
+            $table->integer('owner_id') -> nullable();
+            $table->boolean('public') -> default(false);
             $table->timestamps();
         });
     }
