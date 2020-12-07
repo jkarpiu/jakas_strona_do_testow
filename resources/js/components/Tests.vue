@@ -10,7 +10,7 @@
             </button>
         </div>
         <div class="mainView">
-            <p :key="test.id" v-for="test in testy">{{ test.name }}</p>
+            <tests-lists :testy="testy" />
         </div>
         <modal
             name="add-test"
@@ -111,11 +111,13 @@
 <script>
 import { Datetime } from "vue-datetime";
 import "vue-datetime/dist/vue-datetime.css";
+import TestsLists from "./TestsLists";
 import axios from "axios";
 let ctx;
 export default {
     components: {
-        Datetime: Datetime
+        Datetime: Datetime,
+        TestsLists : TestsLists
     },
     data() {
         return {
