@@ -2,14 +2,14 @@
     <div id="classroomsView">
         <div class="toolbox">
             <button
-                class="btn btn-primary"
+                class="btn btn-primary btn-left"
                 @click="$modal.show('add-classroom')"
                 v-if="$store.state.user != null && $store.state.user.role == 2"
             >
                 <font-awesome-icon icon="plus" /> Utwórz grupe
             </button>
             <button
-                class="btn btn-primary"
+                class="btn btn-primary "
                 @click="$modal.show('join-classroom')"
                 v-if="$store.state.user != null && $store.state.user.role == 1"
             >
@@ -33,7 +33,7 @@
                     id=""
                     class="form-control"
                 />
-                <button @click="createGroup" class="btn btn-primary">
+                <button @click="createGroup" class="btn btn-primary ">
                     Dodaj
                 </button>
             </p>
@@ -52,7 +52,7 @@
                     id=""
                     class="form-control"
                 />
-                <button @click="joinGroup" class="btn btn-primary">
+                <button @click="joinGroup" class="btn btn-primary ">
                     Dołącz
                 </button>
             </p>
@@ -111,11 +111,14 @@ export default {
 <style scoped>
 #classroomsView {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.15fr 1.75fr;
     grid-template-columns: 1fr;
 }
 .toolbox {
     display: flex;
     justify-content: flex-end;
+}
+.btn-left {
+    margin-right: 2rem;
 }
 </style>

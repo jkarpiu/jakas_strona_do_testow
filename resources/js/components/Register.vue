@@ -6,31 +6,30 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="head-name">Rejestracja</div>                             
-                                    <div class="form-group row">
-                                            <span class="form-check">
+                                    <div class="form-group roles2 row">
                                                 <div                                           
-                                                    @click="setRole(1)"                                                                              
+                                                    @click="setRole(1)"
+                                                    :style="setColor(1)"
+                                                    class="form-check roles"                                                                           
                                                     id="role1"                                                                                                     
                                                 > 
                                                     Uczeń
-                                                </div>                                               
-                                                                                                   
-                                            </span>
-                                            <span class="form-check">
+                                                </div>                                                                                                                                                                                                                                  
                                                 <div                                                                                                                 
                                                     @click="setRole(2)"
+                                                    :style="setColor(2)"
+                                                    class="form-check roles"
                                                     id="role2"                                           
                                                 > 
                                                     Nauczyciel
                                                 </div>                           
-                                            </span>
-                                        
                                     </div>                                      
                                 <div class="form-group">
+                                    <div class="head">
                                             <input
                                                     id="fname"
                                                     type="text"
-                                                    class="form-control @error('fname') is-invalid @enderror"
+                                                    class="form-control head-form @error('fname') is-invalid @enderror"
                                                     v-model="register.fname"
                                                     required
                                                     placeholder="Podaj imię"
@@ -46,20 +45,18 @@
                                                         <strong>{{ $message }}</strong>
                                                     </span>
                                                     @enderror -->
-                                                </div>
+                                                
                                             
-                                            <div class="form-group">                            
-                                                <div>
-                                                    <input
-                                                        id="lname"
-                                                        type="text"
-                                                        class="form-control @error('lname') is-invalid @enderror"
-                                                        v-model="register.lname"
-                                                        required
-                                                        placeholder="Podaj nazwisko"
-                                                        autocomplete="lname"
-                                                        autofocus
-                                                    />
+                                            <input
+                                                    id="lname"
+                                                    type="text"
+                                                    class="form-control head-form @error('lname') is-invalid @enderror"
+                                                    v-model="register.lname"
+                                                    required
+                                                    placeholder="Podaj nazwisko"
+                                                    autocomplete="lname"
+                                                    autofocus
+                                            />
 
                                                     <!-- @error('l name')
                                                         <span
@@ -68,9 +65,9 @@
                                                         >
                                                             <strong>{{ $message }}</strong>
                                                         </span>
-                                                        @enderror -->
-                                                </div>
-                                            </div>
+                                                        @enderror -->                                             
+                                    </div>
+                                </div>        
                                     <div class="form-group">
                                         <div>
                                             <input
@@ -139,13 +136,12 @@
                                                 Zarejestruj się
                                             </button>                                       
                                     </div>  
-                                                    
+                                                  
                             </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </template>
 <script>
 import axios from "axios";
@@ -174,7 +170,15 @@ export default {
 
         setRole: function(role) {
             this.register.role=role;
-        }
+        },
+
+        setColor: function(roles) {
+            if(this.register.role==roles) {
+                return "background: #0061c9";
+            }
+            else 
+                return "";    
+        },
     }
 };
 </script>
@@ -182,9 +186,24 @@ export default {
 
     input {
         width: 60%;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.1rem;
         margin-left: auto;
         margin-right: auto;
+    }
+
+ 
+    .head  {
+        display: grid;
+        width: 60%;
+        grid-template-columns: 1fr 1fr; 
+        grid-gap: 1.1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .head-form {
+        width: 100%;
+        margin-bottom: 0;
     }
 
     .head-name  {
@@ -198,24 +217,26 @@ export default {
         margin-top: 0;
     }
 
-    #role1, #role2  {
+    .roles {
         padding: 6px;
         width: 7rem;
         text-align: center;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
         vertical-align: middle;
         font-size: 14px;
+        cursor: pointer;
         background: rgb(25, 25, 25);
     }
 
-    #role1:hover {
-        background: rgb(29, 29, 29);
-        color: rgb(148, 148, 148);
-        
+    .roles2 {
+        display: flex;
+        justify-content: center;
     }
 
-    #role2:hover {
+    .roles:hover {
         background: rgb(29, 29, 29);
-        color: rgb(148, 148, 148);
-        
-}
+
+    }
+    
 </style>

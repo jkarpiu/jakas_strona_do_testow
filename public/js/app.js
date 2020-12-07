@@ -13478,10 +13478,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -13510,6 +13506,11 @@ __webpack_require__.r(__webpack_exports__);
     },
     setRole: function setRole(role) {
       this.register.role = role;
+    },
+    setColor: function setColor(roles) {
+      if (this.register.role == roles) {
+        return "background: #0061c9";
+      } else return "";
     }
   }
 });
@@ -18198,7 +18199,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n#classroomsView[data-v-4496bb60] {\n    display: grid;\n    grid-template-rows: 1fr 1fr;\n    grid-template-columns: 1fr;\n}\n.toolbox[data-v-4496bb60] {\n    display: flex;\n    justify-content: flex-end;\n}\n", ""]);
+exports.push([module.i, "\n#classroomsView[data-v-4496bb60] {\n    display: grid;\n    grid-template-rows: 0.15fr 1.75fr;\n    grid-template-columns: 1fr;\n}\n.toolbox[data-v-4496bb60] {\n    display: flex;\n    justify-content: flex-end;\n}\n.btn-left[data-v-4496bb60] {\n    margin-right: 2rem;\n}\n", ""]);
 
 // exports
 
@@ -18217,7 +18218,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n#groupList[data-v-1e39da98] {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    grid-gap: 24px;\n    padding: 24px;\n}\n#groupList > div[data-v-1e39da98] {\n    background: #0061c9 ;\n    padding: 5px;\n    cursor: pointer;\n}\n#groupList > div[data-v-1e39da98]:hover {\n    background: #01438a ;\n}\n", ""]);
+exports.push([module.i, "\n#groupList[data-v-1e39da98] {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    grid-gap: 24px;\n    margin-left: auto;\n    margin-right: auto;\n    max-width: 80%;\n    padding: 24px;\n}\n#groupList > div[data-v-1e39da98] {\n    background: rgb(33, 118, 187) ;\n    border-radius: 8px;\n    border: 1px none;\n    cursor: pointer;\n}\n#groupList > div[data-v-1e39da98]:hover {\n    background: #01438a ;\n}\n.group-down[data-v-1e39da98] {\n    height: 8rem; \n    background-color: rgb(231, 231, 231);\n    border-bottom-left-radius: 8px;\n    border-bottom-right-radius: 8px; \n    border-bottom: 1px none;\n}\n.name[data-v-1e39da98]  {\n    padding-top: 0.7rem;\n    padding-left: 1.7rem;\n    font-size: 1.7rem;\n}\n.author[data-v-1e39da98] {\n    color: rgb(231, 231, 231);\n}\n", ""]);
 
 // exports
 
@@ -18331,7 +18332,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\ninput[data-v-97358ae4] {\n        width: 60%;\n        margin-bottom: 1.5rem;\n        margin-left: auto;\n        margin-right: auto;\n}\n.head-name[data-v-97358ae4]  {\n        font-size: 23px;\n}\n.btn-center[data-v-97358ae4] {\n        display: block;\n        margin-left: auto;\n        margin-right: auto;\n        margin-top: 0;\n}\n#role1[data-v-97358ae4], #role2[data-v-97358ae4]  {\n        padding: 6px;\n        width: 7rem;\n        text-align: center;\n        vertical-align: middle;\n        font-size: 14px;\n        background: rgb(25, 25, 25);\n}\n#role1[data-v-97358ae4]:hover {\n        background: rgb(29, 29, 29);\n        color: rgb(148, 148, 148);\n}\n#role2[data-v-97358ae4]:hover {\n        background: rgb(29, 29, 29);\n        color: rgb(148, 148, 148);\n}\n", ""]);
+exports.push([module.i, "\ninput[data-v-97358ae4] {\n    width: 60%;\n    margin-bottom: 1.1rem;\n    margin-left: auto;\n    margin-right: auto;\n}\n.head[data-v-97358ae4]  {\n    display: grid;\n    width: 60%;\n    grid-template-columns: 1fr 1fr; \n    grid-gap: 1.1rem;\n    margin-left: auto;\n    margin-right: auto;\n}\n.head-form[data-v-97358ae4] {\n    width: 100%;\n    margin-bottom: 0;\n}\n.head-name[data-v-97358ae4]  {\n    font-size: 23px;\n}\n.btn-center[data-v-97358ae4] {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    margin-top: 0;\n}\n.roles[data-v-97358ae4] {\n    padding: 6px;\n    width: 7rem;\n    text-align: center;\n    margin-left: 0.5rem;\n    margin-right: 0.5rem;\n    vertical-align: middle;\n    font-size: 14px;\n    cursor: pointer;\n    background: rgb(25, 25, 25);\n}\n.roles2[data-v-97358ae4] {\n    display: flex;\n    justify-content: center;\n}\n.roles[data-v-97358ae4]:hover {\n    background: rgb(29, 29, 29);\n}\n\n", ""]);
 
 // exports
 
@@ -60833,7 +60834,7 @@ var render = function() {
           ? _c(
               "button",
               {
-                staticClass: "btn btn-primary",
+                staticClass: "btn btn-primary btn-left",
                 on: {
                   click: function($event) {
                     return _vm.$modal.show("add-classroom")
@@ -60852,7 +60853,7 @@ var render = function() {
           ? _c(
               "button",
               {
-                staticClass: "btn btn-primary",
+                staticClass: "btn btn-primary ",
                 on: {
                   click: function($event) {
                     return _vm.$modal.show("join-classroom")
@@ -60916,7 +60917,7 @@ var render = function() {
             _c(
               "button",
               {
-                staticClass: "btn btn-primary",
+                staticClass: "btn btn-primary ",
                 on: { click: _vm.createGroup }
               },
               [_vm._v("\n                Dodaj\n            ")]
@@ -60965,7 +60966,7 @@ var render = function() {
             _vm._v(" "),
             _c(
               "button",
-              { staticClass: "btn btn-primary", on: { click: _vm.joinGroup } },
+              { staticClass: "btn btn-primary ", on: { click: _vm.joinGroup } },
               [_vm._v("\n                Dołącz\n            ")]
             )
           ])
@@ -61012,11 +61013,13 @@ var render = function() {
           }
         },
         [
-          _vm._v(
-            "\n        Nazwa: " +
-              _vm._s(group.name) +
-              "\n        Ilość osób: 12\n    "
-          )
+          _c("div", { staticStyle: { height: "4rem" } }, [
+            _c("p", { staticClass: "name" }, [_vm._v(_vm._s(group.name))]),
+            _vm._v(" "),
+            _c("p", { staticClass: "author" }, [_vm._v("autor classroomu")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "group-down" })
         ]
       )
     }),
@@ -61810,80 +61813,78 @@ var render = function() {
             _c("div", { staticClass: "card-body" }, [
               _c("div", { staticClass: "head-name" }, [_vm._v("Rejestracja")]),
               _vm._v(" "),
-              _c("div", { staticClass: "form-group row" }, [
-                _c("span", { staticClass: "form-check" }, [
-                  _c(
-                    "div",
-                    {
-                      attrs: { id: "role1" },
-                      on: {
-                        click: function($event) {
-                          return _vm.setRole(1)
-                        }
+              _c("div", { staticClass: "form-group roles2 row" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-check roles",
+                    style: _vm.setColor(1),
+                    attrs: { id: "role1" },
+                    on: {
+                      click: function($event) {
+                        return _vm.setRole(1)
                       }
-                    },
-                    [
-                      _vm._v(
-                        " \n                                                Uczeń\n                                            "
-                      )
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("span", { staticClass: "form-check" }, [
-                  _c(
-                    "div",
-                    {
-                      attrs: { id: "role2" },
-                      on: {
-                        click: function($event) {
-                          return _vm.setRole(2)
-                        }
-                      }
-                    },
-                    [
-                      _vm._v(
-                        " \n                                                Nauczyciel\n                                            "
-                      )
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.register.fname,
-                      expression: "register.fname"
                     }
-                  ],
-                  staticClass:
-                    "form-control @error('fname') is-invalid @enderror",
-                  attrs: {
-                    id: "fname",
-                    type: "text",
-                    required: "",
-                    placeholder: "Podaj imię",
-                    autocomplete: "fname",
-                    autofocus: ""
                   },
-                  domProps: { value: _vm.register.fname },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
+                  [
+                    _vm._v(
+                      " \n                                                Uczeń\n                                            "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-check roles",
+                    style: _vm.setColor(2),
+                    attrs: { id: "role2" },
+                    on: {
+                      click: function($event) {
+                        return _vm.setRole(2)
                       }
-                      _vm.$set(_vm.register, "fname", $event.target.value)
                     }
-                  }
-                })
+                  },
+                  [
+                    _vm._v(
+                      " \n                                                Nauczyciel\n                                            "
+                    )
+                  ]
+                )
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "form-group" }, [
-                _c("div", [
+                _c("div", { staticClass: "head" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.register.fname,
+                        expression: "register.fname"
+                      }
+                    ],
+                    staticClass:
+                      "form-control head-form @error('fname') is-invalid @enderror",
+                    attrs: {
+                      id: "fname",
+                      type: "text",
+                      required: "",
+                      placeholder: "Podaj imię",
+                      autocomplete: "fname",
+                      autofocus: ""
+                    },
+                    domProps: { value: _vm.register.fname },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.register, "fname", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
                   _c("input", {
                     directives: [
                       {
@@ -61894,7 +61895,7 @@ var render = function() {
                       }
                     ],
                     staticClass:
-                      "form-control @error('lname') is-invalid @enderror",
+                      "form-control head-form @error('lname') is-invalid @enderror",
                     attrs: {
                       id: "lname",
                       type: "text",
