@@ -29,7 +29,7 @@
                     type="text"
                     v-model="new_group_name"
                     name=""
-                    placeholder="Nazwij swoją klase"
+                    placeholder="Nazwij swoje zajęcia"
                     id=""
                     class="form-control"
                 />
@@ -121,7 +121,5 @@ export default {
 .btn-left {
     margin-right: 2rem;
 }
-.vm--modal{
 
-}
 </style>

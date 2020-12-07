@@ -13,8 +13,7 @@ import VueCookies from 'vue-cookies'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import { faLink } from '@fortawesome/free-solid-svg-icons'
+import { faPlus, faLink,  faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import vmodal from 'vue-js-modal'
 import { Datetime } from 'vue-datetime';
@@ -22,6 +21,7 @@ import 'vue-datetime/dist/vue-datetime.css';
 
 import Login from './components/Login'
 import Pytanka from './components/PytankaCopy'
+import SetTest from './components/SetTest'
 import Welcome from './components/Welcome'
 import App from './components/App'
 import Register from './components/Register';
@@ -35,6 +35,7 @@ import Tests from './components/Tests.vue'
 
 library.add(faPlus);
 library.add(faLink);
+library.add(faUser)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
@@ -129,6 +130,11 @@ const routes = [
             }
         }
 
+    },
+    {
+        path: "/test/:id",
+        props: true,
+        component: SetTest
     },
     {
         path: "*",

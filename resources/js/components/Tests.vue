@@ -2,7 +2,7 @@
     <div id="testsView">
         <div class="toolbox">
             <button
-                class="btn btn-primary"
+                class="btn btn-primary btn-left"
                 @click="$modal.show('add-test')"
                 v-if="$store.state.user != null && $store.state.user.role == 2"
             >
@@ -10,7 +10,7 @@
             </button>
         </div>
         <div class="mainView">
-            <p :key="test.id" v-for="test in testy">{{ test.name }}</p>
+            <tests-lists :testy="testy" />
         </div>
         <modal
             name="add-test"
@@ -26,36 +26,38 @@
                     placeholder="Nazwij swój test"
                     name=""
                     id=""
-                    class="form-control"
+                    class="form-control margin"
                 />
                 <datetime
                     :min-datetime="new Date().toISOString()"
                     type="datetime"
                     :phrases="{ ok: 'Ok', cancel: 'Anuluj' }"
                     v-model="test.start"
-                    input-class="form-control"
+                    placeholder="Data i godzina"
+                    :input-class="['form-control', 'margin']"
                 ></datetime>
 
                 <input
                     type="number"
-                    placeholder="Próg zdania"
+                    placeholder="Próg zdania (%)"
                     min="0"
+                    style="margin-top: 1rem;"
                     max="100"
-                    class="form-control"
+                    class="form-control margin"
                     v-model="test.threshold"
                     id=""
                 />
                 <input
                     type="number"
-                    placeholder="Czas na rozwiązanie testu"
+                    placeholder="Czas na rozwiązanie testu (min)"
                     min="1"
                     max="240"
-                    class="form-control"
+                    class="form-control margin"
                     v-model="test.duration"
                     id=""
                 />
-                <select class="form-control" v-model="dzial"
-                    ><option value="" disabled selected hidden
+                <select class="form-control margin" v-model="dzial"
+                    ><option value="null" disabled selected hidden
                         >Wybierz dział</option
                     >
                     <option value="-1">Dodaj dzial</option>
@@ -67,7 +69,7 @@
                     >
                 </select>
                 <select
-                    class="form-control"
+                    class="form-control margin"
                     v-model="grupa"
                     @change="getStudents"
                 >
@@ -100,7 +102,7 @@
                     {{ uczen.fname + " " + uczen.lname }}
                 </p>
             </div>
-            <button @click="createTest" class="btn btn-primary">
+            <button @click="createTest" class="btn btn-primary ">
                 Dodaj test
             </button>
         </modal>
@@ -109,11 +111,13 @@
 <script>
 import { Datetime } from "vue-datetime";
 import "vue-datetime/dist/vue-datetime.css";
+import TestsLists from "./TestsLists";
 import axios from "axios";
 let ctx;
 export default {
     components: {
-        Datetime: Datetime
+        Datetime: Datetime,
+        TestsLists : TestsLists
     },
     data() {
         return {
@@ -206,5 +210,13 @@ export default {
 .toolbox {
     display: flex;
     justify-content: flex-end;
+}
+
+.margin {
+    margin-bottom: 1rem;
+}
+
+.btn-left   {
+    margin-right: 2rem;
 }
 </style>
