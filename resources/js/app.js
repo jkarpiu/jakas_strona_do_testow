@@ -13,8 +13,7 @@ import VueCookies from 'vue-cookies'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import { faLink } from '@fortawesome/free-solid-svg-icons'
+import { faPlus, faLink,  faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import vmodal from 'vue-js-modal'
 import { Datetime } from 'vue-datetime';
@@ -35,6 +34,7 @@ import Tests from './components/Tests.vue'
 
 library.add(faPlus);
 library.add(faLink);
+library.add(faUser)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
