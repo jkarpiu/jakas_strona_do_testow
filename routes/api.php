@@ -45,4 +45,5 @@ Route::group(['middleware' => 'auth.api'], function () {
     Route::post('list_posts',  'groupsController@list_posts');
     Route::post('add_test', 'testsController@list');
     Route::post('list_tests', 'testsController@create');
+    Route::post('add_comment', 'CommentsController@addcomment');
 });

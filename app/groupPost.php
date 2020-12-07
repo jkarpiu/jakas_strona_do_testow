@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class groupPost extends Model
 {
-    protected $fillable = ['author_id', 'groups_model_id', 'content'];
+    protected $fillable = ['author_id', 'groups_model_id', 'content', 'title'];
 
     public function group () {
         return $this -> belongsTo(groupsModel::class );
@@ -14,5 +14,9 @@ class groupPost extends Model
 
     public function author() {
         return $this -> belongsTo (User::class, 'author_id');
+    }
+
+    public function comments(){
+        return $this->hasMany(comments::class);
     }
 }

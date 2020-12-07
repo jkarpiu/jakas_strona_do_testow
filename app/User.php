@@ -79,4 +79,8 @@ class User extends Authenticatable
         return $this -> belongsToMany(teacherTest::class);
     }
 
+    public function comments(){
+        return $this->hasMany(comments::class);
+    }
+
 }

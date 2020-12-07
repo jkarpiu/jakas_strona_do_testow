@@ -121,4 +121,7 @@ export default {
 .btn-left {
     margin-right: 2rem;
 }
+.vm--modal{
+
+}
 </style>

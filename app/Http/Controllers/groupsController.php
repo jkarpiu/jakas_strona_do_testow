@@ -66,7 +66,8 @@ class groupsController extends Controller
             return response()->json(groupPost::create([
                 'author_id' => Auth::id(),
                 'groups_model_id' => $group['id'],
-                'content' => $request['content']
+                'content' => $request['content'],
+                'title' => $request['title']
             ]));
         } else
             return response()->json(401);
@@ -75,7 +76,7 @@ class groupsController extends Controller
     {
         $group = groupsModel::find($request['id']);
         if ($group->students->contains(Auth::id()) || $group->teacher->id == Auth::id()) {
-            return response()->json($group->posts->load('author'));
+            return response()->json($group->posts->load('author', 'comments'));
         }
     }
 }
