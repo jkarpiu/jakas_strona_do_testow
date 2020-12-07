@@ -12770,6 +12770,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["id"],
@@ -12780,7 +12788,7 @@ __webpack_require__.r(__webpack_exports__);
       newPost: "",
       title: "",
       posts: [],
-      comment: ""
+      comment: []
     };
   },
   created: function created() {
@@ -12791,7 +12799,7 @@ __webpack_require__.r(__webpack_exports__);
     sensownyCzas: function sensownyCzas(sqlTime) {
       var date = new Date(sqlTime);
       var miesiace = ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia"];
-      return date.getDate().toString() + " " + miesiace[parseInt(date.getMonth())] + " " + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes();
+      return date.getDate().toString() + " " + miesiace[parseInt(date.getMonth())] + " " + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes();
     },
     listPosts: function listPosts() {
       var _this = this;
@@ -12824,7 +12832,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this3 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/add_comment", {
-        tresc: this.comment,
+        tresc: this.comment[id],
         post_id: id
       })["catch"](function (err) {
         return console.log(err.response);
@@ -18470,7 +18478,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.footer {\n    clear: both;\n    color: #fcfcfc;\n    display: block;\n    height: 0.5vh;\n    margin-top: 1vh;\n    text-align: center;\n    text-transform: uppercase;\n}\nrouter-link {\n        cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "\n.footer {\r\n    clear: both;\r\n    color: #fcfcfc;\r\n    display: block;\r\n    height: 0.5vh;\r\n    margin-top: 1vh;\r\n    text-align: center;\r\n    text-transform: uppercase;\n}\nrouter-link {\r\n        cursor: pointer;\n}\r\n", ""]);
 
 // exports
 
@@ -18489,7 +18497,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n#classroomsView[data-v-4496bb60] {\n    display: grid;\n    grid-template-rows: 0.15fr 1.75fr;\n    grid-template-columns: 1fr;\n}\n.toolbox[data-v-4496bb60] {\n    display: flex;\n    justify-content: flex-end;\n}\n.btn-left[data-v-4496bb60] {\n    margin-right: 2rem;\n}\n.vm--modal[data-v-4496bb60]{\n}\n", ""]);
+exports.push([module.i, "\n#classroomsView[data-v-4496bb60] {\r\n    display: grid;\r\n    grid-template-rows: 0.15fr 1.75fr;\r\n    grid-template-columns: 1fr;\n}\n.toolbox[data-v-4496bb60] {\r\n    display: flex;\r\n    justify-content: flex-end;\n}\n.btn-left[data-v-4496bb60] {\r\n    margin-right: 2rem;\n}\n.vm--modal[data-v-4496bb60]{\n}\r\n", ""]);
 
 // exports
 
@@ -18508,7 +18516,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n#groupList[data-v-1e39da98] {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    grid-gap: 24px;\n    margin-left: auto;\n    margin-right: auto;\n    max-width: 80%;\n    padding: 24px;\n}\n#groupList > div[data-v-1e39da98] {\n    background: rgb(33, 118, 187) ;\n    border-radius: 8px;\n    border: 1px none;\n    cursor: pointer;\n}\n#groupList > div[data-v-1e39da98]:hover {\n    background: #01438a ;\n}\n.group-down[data-v-1e39da98] {\n    height: 8rem; \n    background-color: rgb(231, 231, 231);\n    border-bottom-left-radius: 8px;\n    border-bottom-right-radius: 8px; \n    border-bottom: 1px none;\n}\n.name[data-v-1e39da98]  {\n    padding-top: 0.7rem;\n    padding-left: 1.7rem;\n    font-size: 1.7rem;\n}\n.author[data-v-1e39da98] {\n    color: rgb(231, 231, 231);\n}\n", ""]);
+exports.push([module.i, "\n#groupList[data-v-1e39da98] {\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    grid-gap: 24px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    max-width: 80%;\r\n    padding: 24px;\n}\n#groupList > div[data-v-1e39da98] {\r\n    background: rgb(33, 118, 187) ;\r\n    border-radius: 8px;\r\n    border: 1px none;\r\n    cursor: pointer;\n}\n#groupList > div[data-v-1e39da98]:hover {\r\n    background: #01438a ;\n}\n.group-down[data-v-1e39da98] {\r\n    height: 8rem; \r\n    background-color: rgb(231, 231, 231);\r\n    border-bottom-left-radius: 8px;\r\n    border-bottom-right-radius: 8px; \r\n    border-bottom: 1px none;\n}\n.name[data-v-1e39da98]  {\r\n    padding-top: 0.7rem;\r\n    padding-left: 1.7rem;\r\n    font-size: 1.7rem;\n}\n.author[data-v-1e39da98] {\r\n    color: rgb(231, 231, 231);\n}\r\n", ""]);
 
 // exports
 
@@ -18527,7 +18535,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n#classroomView[data-v-3a8dd0ed] {\n  display: grid;\n  grid-template-rows: 0.1fr 1fr;\n  grid-template-columns: 1fr;\n}\n.toolbox[data-v-3a8dd0ed] {\n  display: flex;\n  justify-content: flex-end;\n  height: 10vh;\n}\n#mainView[data-v-3a8dd0ed] {\n  display: flex;\n  flex-direction: column;\n}\n.post[data-v-3a8dd0ed] {\n  padding: 1.5px 0.5vw 1vw 0.7vw;\n  margin-left: 10vw;\n  width: 50vw;\n  background: rgb(39, 39, 39);\n  margin-bottom: 3rem;\n  box-shadow: 5px 3px 16px 0px rgba(0, 0, 0, 0.5);\n}\n.przycisk[data-v-3a8dd0ed] {\n  margin-left: 10vw;\n}\n.addpost[data-v-3a8dd0ed] {\n  padding-bottom: 1rem;\n  padding-top: 2rem;\n  background: rgb(39, 39, 39);\n  margin-left: 10vw;\n  width: 50vw;\n  box-shadow: 10px 6px 24px 0px rgba(0, 0, 0, 0.5);\n}\n.komentarze[data-v-3a8dd0ed] {\n  background: rgb(212, 87, 185);\n  width: 30vw;\n}\ntextarea[data-v-3a8dd0ed] {\n  resize: none;\n}\n.dodawanie textarea.tekst[data-v-3a8dd0ed]:focus:not([readonly]) {\n  border-bottom: 2px solid #509df0;\n  box-shadow: 0 1px 0 0 #81a7cf;\n}\n.active-dodawanie.form label.active[data-v-3a8dd0ed] {\n  color: #81a7cf;\n}\n.active-dodawanie.form textarea.tekst:focus:not([readonly]) + label[data-v-3a8dd0ed] {\n  color: #81a7cf;\n}\n.post_tytul[data-v-3a8dd0ed] {\n  border-bottom: 1px dotted white;\n  font-size: 1.3rem;\n  color: #81a7cf;\n}\n", ""]);
+exports.push([module.i, "\n#classroomView[data-v-3a8dd0ed] {\r\n  display: grid;\r\n  grid-template-rows: 0.1fr 1fr;\r\n  grid-template-columns: 1fr;\n}\n.toolbox[data-v-3a8dd0ed] {\r\n  display: flex;\r\n  justify-content: flex-end;\r\n  height: 10vh;\n}\n#mainView[data-v-3a8dd0ed] {\r\n  display: flex;\r\n  flex-direction: column;\n}\n.post[data-v-3a8dd0ed] {\r\n  padding: 0.4vw 0.7vw 0.7vw 0.7vw;\r\n  margin-left: 10vw;\r\n  width: 50vw;\r\n  background: rgb(39, 39, 39);\r\n  margin-bottom: 3rem;\r\n  box-shadow: 5px 3px 16px 0px rgba(0, 0, 0, 0.5);\n}\n.przycisk[data-v-3a8dd0ed] {\r\n  margin-left: 10vw;\n}\n.addpost[data-v-3a8dd0ed] {\r\n  padding-bottom: 1rem;\r\n  padding-top: 2rem;\r\n  background: rgb(39, 39, 39);\r\n  margin-left: 10vw;\r\n  width: 50vw;\r\n  box-shadow: 10px 6px 24px 0px rgba(0, 0, 0, 0.5);\n}\n.komentarze[data-v-3a8dd0ed] {\r\n  background: rgb(66, 66, 66);\r\n  width: 30vw;\r\n  max-width:30vw;\r\n  padding: 5px 5px 2px 5px;\r\n  word-wrap: break-word;\r\n  min-height: 2rem;\r\n  margin-bottom: 2vh;\n}\ntextarea[data-v-3a8dd0ed] {\r\n  resize: none;\n}\n.dodawanie textarea.tekst[data-v-3a8dd0ed]:focus:not([readonly]) {\r\n  border-bottom: 2px solid #509df0;\r\n  box-shadow: 0 1px 0 0 #81a7cf;\n}\n.active-dodawanie.form label.active[data-v-3a8dd0ed] {\r\n  color: #81a7cf;\n}\n.active-dodawanie.form textarea.tekst:focus:not([readonly]) + label[data-v-3a8dd0ed] {\r\n  color: #81a7cf;\n}\n.post_tytul[data-v-3a8dd0ed] {\r\n  border-bottom: 1px dotted white;\r\n  font-size: 1.3rem;\r\n  color: #81a7cf;\n}\r\n", ""]);
 
 // exports
 
@@ -18546,7 +18554,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.loading[data-v-6ca9e6be] {\n    margin-left: auto;\n    margin-right: auto;\n    padding-top: 30vh;\n    display: flex;\n    justify-content: center;\n}\n", ""]);
+exports.push([module.i, "\n.loading[data-v-6ca9e6be] {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    padding-top: 30vh;\r\n    display: flex;\r\n    justify-content: center;\n}\r\n", ""]);
 
 // exports
 
@@ -18565,7 +18573,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.quiz[data-v-00d63354] {\n  max-width: 60%;\n  margin-left: auto;\n  margin-right: auto;\n  color: rgb(230, 230, 230);\n  background-color: rgb(39, 39, 39);\n  padding: 15px;\n  padding-bottom: 1.5rem;\n}\n.questionH[data-v-00d63354] {\n  font-size: 28px;\n  max-width: 60vw;\n  padding-left: 0.5vw;\n  padding-top: 1vh;\n}\n.image[data-v-00d63354] {\n  margin-left: auto;\n  margin-right: auto;\n  display: block;\n  margin-bottom: 1vh;\n  max-width: 80%;\n}\n.ans[data-v-00d63354] {\n  margin-top: 1.3rem;\n  padding: 5px;\n  font-size: 16px;\n  padding-top: 0.8rem;\n  padding-bottom: 0.7rem;\n  padding-left: 2rem;\n  border: solid 1px rgb(33, 33, 33);\n  background: rgb(33, 33, 33);\n  cursor: pointer;\n  vertical-align: middle;\n}\n.ans > li[data-v-00d63354] {\n  padding: 0;\n  margin: 0;\n}\n.ans[data-v-00d63354]:hover {\n  background: rgb(29, 29, 29);\n  color: rgb(148, 148, 148);\n  border: solid 1px #0061c9;\n}\n\n/* input {\n      margin-top: 0.5vh;\n      margin-left: 1vw;\n      margin-bottom: 2vh;\n  } */\n.watermark[data-v-00d63354] {\n  text-align: center;\n  padding-top: 1rem;\n  color: rgb(77, 77, 77);\n}\n.nothing-checked[data-v-00d63354] {\n  margin-top: 1.3rem;\n  color: rgb(231, 231, 231);\n  background-color: #0061c9;\n  padding: 1rem;\n  margin-left: auto;\n  margin-right: auto;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bold;\n  font-size: 1.3rem;\n}\n.nothing-checked > p[data-v-00d63354] {\n  padding: 0;\n  margin: 0;\n}\n", ""]);
+exports.push([module.i, "\n.quiz[data-v-00d63354] {\r\n  max-width: 60%;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  color: rgb(230, 230, 230);\r\n  background-color: rgb(39, 39, 39);\r\n  padding: 15px;\r\n  padding-bottom: 1.5rem;\n}\n.questionH[data-v-00d63354] {\r\n  font-size: 28px;\r\n  max-width: 60vw;\r\n  padding-left: 0.5vw;\r\n  padding-top: 1vh;\n}\n.image[data-v-00d63354] {\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  display: block;\r\n  margin-bottom: 1vh;\r\n  max-width: 80%;\n}\n.ans[data-v-00d63354] {\r\n  margin-top: 1.3rem;\r\n  padding: 5px;\r\n  font-size: 16px;\r\n  padding-top: 0.8rem;\r\n  padding-bottom: 0.7rem;\r\n  padding-left: 2rem;\r\n  border: solid 1px rgb(33, 33, 33);\r\n  background: rgb(33, 33, 33);\r\n  cursor: pointer;\r\n  vertical-align: middle;\n}\n.ans > li[data-v-00d63354] {\r\n  padding: 0;\r\n  margin: 0;\n}\n.ans[data-v-00d63354]:hover {\r\n  background: rgb(29, 29, 29);\r\n  color: rgb(148, 148, 148);\r\n  border: solid 1px #0061c9;\n}\r\n\r\n/* input {\r\n      margin-top: 0.5vh;\r\n      margin-left: 1vw;\r\n      margin-bottom: 2vh;\r\n  } */\n.watermark[data-v-00d63354] {\r\n  text-align: center;\r\n  padding-top: 1rem;\r\n  color: rgb(77, 77, 77);\n}\n.nothing-checked[data-v-00d63354] {\r\n  margin-top: 1.3rem;\r\n  color: rgb(231, 231, 231);\r\n  background-color: #0061c9;\r\n  padding: 1rem;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  font-weight: bold;\r\n  font-size: 1.3rem;\n}\n.nothing-checked > p[data-v-00d63354] {\r\n  padding: 0;\r\n  margin: 0;\n}\r\n", ""]);
 
 // exports
 
@@ -18603,7 +18611,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.button[data-v-22b3d648] {\n    margin-left: auto;\n    margin-right: auto;\n    display: flex;\n    justify-content: center;\n}\n#main[data-v-22b3d648] {\n    margin-left: auto;\n    margin-right: auto;\n}\n.testHeader[data-v-22b3d648] {\n    padding: 15px;\n    width: 60vw;\n    margin-bottom: 0;\n    margin-left: auto;\n    margin-right: auto;\n    background-color: rgb(39, 39, 39);\n    display: flex;\n    justify-content: space-between;\n    box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\n    -webkit-box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\n    -moz-box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\n}\n.watermark[data-v-22b3d648] {\n    text-align: center;\n    padding-top: 1rem;\n    color: rgb(77, 77, 77);\n}\n", ""]);
+exports.push([module.i, "\n.button[data-v-22b3d648] {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    display: flex;\r\n    justify-content: center;\n}\n#main[data-v-22b3d648] {\r\n    margin-left: auto;\r\n    margin-right: auto;\n}\n.testHeader[data-v-22b3d648] {\r\n    padding: 15px;\r\n    width: 60vw;\r\n    margin-bottom: 0;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    background-color: rgb(39, 39, 39);\r\n    display: flex;\r\n    justify-content: space-between;\r\n    box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\r\n    -webkit-box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\r\n    -moz-box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);\n}\n.watermark[data-v-22b3d648] {\r\n    text-align: center;\r\n    padding-top: 1rem;\r\n    color: rgb(77, 77, 77);\n}\r\n", ""]);
 
 // exports
 
@@ -18641,7 +18649,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#testsView[data-v-e5ea6374]{\n    display: grid;\n    grid-template-rows: 0.15fr 1.75fr;\n    grid-template-columns: 1fr;\n}\n.toolbox[data-v-e5ea6374] {\n    display: flex;\n    justify-content: flex-end;\n}\n", ""]);
+exports.push([module.i, "\n#testsView[data-v-e5ea6374]{\r\n    display: grid;\r\n    grid-template-rows: 0.15fr 1.75fr;\r\n    grid-template-columns: 1fr;\n}\n.toolbox[data-v-e5ea6374] {\r\n    display: flex;\r\n    justify-content: flex-end;\n}\r\n", ""]);
 
 // exports
 
@@ -18660,7 +18668,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nul[data-v-6f268f96] {\n    margin-left: auto;\n    margin-right: auto;\n    padding: 0;\n}\nli[data-v-6f268f96] {\n    line-height: 2.5rem;\n    float: left;\n    text-align: center;\n    color: black;\n    margin: 0;\n    list-style-type: none;\n    width: 200px;\n}\nspan>li>ul[data-v-6f268f96] {\n    display: none;\n}\na[data-v-6f268f96] {\n    color: #fcfcfc;\n    padding: 0 15px;\n    font-size: 13px;\n    font-weight: 500;\n    letter-spacing: .1rem;\n    text-decoration: none;\n    text-transform: uppercase;\n}\n\n/* wyloguj */\nspan>li:hover>ul[data-v-6f268f96] {\n    display: flex;\n    flex-direction: column;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    align-items: stretch;\n    align-content: stretch;\n    background: #0061c9;\n    position: relative;\n    height: 2.5rem;\n    z-index: 2;\n}\nspan>li>ul:hover>a[data-v-6f268f96] {\n    opacity: 0.3;\n}\n", ""]);
+exports.push([module.i, "\nul[data-v-6f268f96] {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    padding: 0;\n}\nli[data-v-6f268f96] {\r\n    line-height: 2.5rem;\r\n    float: left;\r\n    text-align: center;\r\n    color: black;\r\n    margin: 0;\r\n    list-style-type: none;\r\n    width: 200px;\n}\nspan>li>ul[data-v-6f268f96] {\r\n    display: none;\n}\na[data-v-6f268f96] {\r\n    color: #fcfcfc;\r\n    padding: 0 15px;\r\n    font-size: 13px;\r\n    font-weight: 500;\r\n    letter-spacing: .1rem;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\n}\r\n\r\n/* wyloguj */\nspan>li:hover>ul[data-v-6f268f96] {\r\n    display: flex;\r\n    flex-direction: column;\r\n    flex-wrap: nowrap;\r\n    justify-content: flex-start;\r\n    align-items: stretch;\r\n    align-content: stretch;\r\n    background: #0061c9;\r\n    position: relative;\r\n    height: 2.5rem;\r\n    z-index: 2;\n}\nspan>li>ul:hover>a[data-v-6f268f96] {\r\n    opacity: 0.3;\n}\r\n", ""]);
 
 // exports
 
@@ -18679,7 +18687,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.wyniki_table table {\n    margin-top: 2vh;\n    box-shadow: -2px 1px 24px 2px rgba(0, 0, 0, 0.4);\n    margin-left: auto;\n    margin-right: auto;\n    border: 5px solid rgb(39, 39, 39);\n    background-color: rgb(39, 39, 39);\n    width: 798px;\n    position: static;\n    text-align: center;\n    border-collapse: collapse;\n}\n.wyniki_table td,\n.wyniki_table th {\n    white-space: pre;\n    border: 3px solid rgb(39, 39, 39);\n    padding: 0.4rem 40px;\n}\n.wyniki_table thead {\n    background-color: #0061c9;\n}\n", ""]);
+exports.push([module.i, "\n.wyniki_table table {\r\n    margin-top: 2vh;\r\n    box-shadow: -2px 1px 24px 2px rgba(0, 0, 0, 0.4);\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    border: 5px solid rgb(39, 39, 39);\r\n    background-color: rgb(39, 39, 39);\r\n    width: 798px;\r\n    position: static;\r\n    text-align: center;\r\n    border-collapse: collapse;\n}\n.wyniki_table td,\r\n.wyniki_table th {\r\n    white-space: pre;\r\n    border: 3px solid rgb(39, 39, 39);\r\n    padding: 0.4rem 40px;\n}\n.wyniki_table thead {\r\n    background-color: #0061c9;\n}\r\n", ""]);
 
 // exports
 
@@ -61508,7 +61516,22 @@ var render = function() {
                   _vm._v(_vm._s(post.title))
                 ]),
                 _vm._v(" "),
-                _c("p", [_vm._v(_vm._s(post.content))]),
+                _c("p", { staticStyle: { "margin-bottom": "3rem" } }, [
+                  _vm._v(_vm._s(post.content))
+                ]),
+                _vm._v(" "),
+                _c("i", [
+                  _c(
+                    "p",
+                    {
+                      staticStyle: {
+                        "text-align": "right",
+                        "font-size": "0.7rem"
+                      }
+                    },
+                    [_vm._v(_vm._s(_vm.sensownyCzas(post.created_at)))]
+                  )
+                ]),
                 _vm._v(" "),
                 _vm._l(post.comments, function(comment) {
                   return _c(
@@ -61516,9 +61539,48 @@ var render = function() {
                     {
                       key: comment.id,
                       staticClass: "komentarze",
-                      staticStyle: { "margin-left": "1vw" }
+                      staticStyle: { "margin-left": "2vw" }
                     },
-                    [_c("p", [_vm._v(_vm._s(comment.tresc))])]
+                    [
+                      _c("img", {
+                        staticStyle: {
+                          width: "2rem",
+                          "margin-right": "0.5vw",
+                          display: "inline-block"
+                        },
+                        attrs: {
+                          src:
+                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStixxgmXCRq9V0b8G85MJ0cTj1pT1AYOuoKg&usqp=CAU"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("p", { staticStyle: { display: "inline-block" } }, [
+                        _vm._v("AUTOR")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        {
+                          staticStyle: {
+                            display: "inline-block",
+                            float: "right",
+                            "font-size": "0.6rem"
+                          }
+                        },
+                        [_vm._v("2020-21-37")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        {
+                          staticStyle: {
+                            "margin-left": "5px",
+                            "margin-right": "5px"
+                          }
+                        },
+                        [_vm._v(_vm._s(comment.tresc))]
+                      )
+                    ]
                   )
                 }),
                 _vm._v(" "),
@@ -61530,53 +61592,49 @@ var render = function() {
                   },
                   [
                     _c("div", { staticClass: "form active-dodawanie" }, [
-                      _c("div", [
-                        _c("textarea", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.comment,
-                              expression: "comment"
-                            }
-                          ],
-                          staticClass: "tekst form-control",
-                          staticStyle: { width: "20vw" },
-                          attrs: { rows: "1", name: "", id: "" },
-                          domProps: { value: _vm.comment },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.comment = $event.target.value
-                            }
+                      _c("textarea", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.comment[post.id],
+                            expression: "comment[post.id]"
                           }
-                        }),
-                        _vm._v(" "),
-                        _c("label", [_vm._v("Komentarz")])
-                      ]),
+                        ],
+                        staticClass: "tekst form-control",
+                        staticStyle: { width: "20vw", display: "inline-block" },
+                        attrs: { rows: "1", name: "", id: "" },
+                        domProps: { value: _vm.comment[post.id] },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.comment, post.id, $event.target.value)
+                          }
+                        }
+                      }),
                       _vm._v(" "),
                       _c(
                         "button",
                         {
                           staticClass: "btn btn-primary",
-                          staticStyle: { margin: "0 !important" },
+                          staticStyle: {
+                            margin: "0 !important",
+                            width: "2vw",
+                            display: "inline-block"
+                          },
                           on: {
                             click: function($event) {
                               return _vm.addComment(post.id)
                             }
                           }
                         },
-                        [_vm._v("\n            Dodaj komentarz\n          ")]
+                        [_vm._v("\n            >\n          ")]
                       )
                     ])
                   ]
-                ),
-                _vm._v(" "),
-                _c("div", { staticStyle: { "text-align": "right" } }, [
-                  _c("p", [_vm._v(_vm._s(_vm.sensownyCzas(post.created_at)))])
-                ])
+                )
               ],
               2
             )
@@ -84860,10 +84918,10 @@ var regionDayMap = {
 /*!*********************************************!*\
   !*** ./node_modules/weekstart/package.json ***!
   \*********************************************/
-/*! exports provided: _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _shasum, _spec, _where, author, bugs, bundleDependencies, deprecated, description, devDependencies, homepage, keywords, license, main, module, name, repository, scripts, types, umd:main, version, default */
+/*! exports provided: _args, _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _spec, _where, author, bugs, description, devDependencies, homepage, keywords, license, main, module, name, repository, scripts, types, umd:main, version, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_from\":\"weekstart\",\"_id\":\"weekstart@1.0.1\",\"_inBundle\":false,\"_integrity\":\"sha512-h6B1HSJxg7sZEXqIpDqAtwiDBp3x5y2jY8WYcUSBhLTcTCy7laQzBmamqMuQM5fpvo1pgpma0OCRpE2W8xrA9A==\",\"_location\":\"/weekstart\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"tag\",\"registry\":true,\"raw\":\"weekstart\",\"name\":\"weekstart\",\"escapedName\":\"weekstart\",\"rawSpec\":\"\",\"saveSpec\":null,\"fetchSpec\":\"latest\"},\"_requiredBy\":[\"#USER\",\"/\"],\"_resolved\":\"https://registry.npmjs.org/weekstart/-/weekstart-1.0.1.tgz\",\"_shasum\":\"950970b48e5797e06fc1a762f3d0f013312321e1\",\"_spec\":\"weekstart\",\"_where\":\"/home/karp/Dokumenty/jakas_strona_do_testow\",\"author\":{\"name\":\"Denis Sikuler\"},\"bugs\":{\"url\":\"https://github.com/gamtiq/weekstart/issues\"},\"bundleDependencies\":false,\"deprecated\":false,\"description\":\"Library to get first day of week.\",\"devDependencies\":{\"@babel/preset-env\":\"7.6.3\",\"eslint\":\"6.5.1\",\"eslint-config-guard\":\"1.0.3\",\"ink-docstrap\":\"1.3.2\",\"jest\":\"24.9.0\",\"jsdoc\":\"3.6.3\",\"microbundle\":\"0.4.4\",\"version-bump-prompt\":\"5.0.5\"},\"homepage\":\"https://github.com/gamtiq/weekstart\",\"keywords\":[\"week\",\"start\",\"first\",\"day\",\"locale\",\"country\",\"region\"],\"license\":\"MIT\",\"main\":\"dist/commonjs/main.js\",\"module\":\"dist/es-module/main.js\",\"name\":\"weekstart\",\"repository\":{\"type\":\"git\",\"url\":\"git://github.com/gamtiq/weekstart.git\"},\"scripts\":{\"all\":\"npm run check-all && npm run doc && npm run build\",\"build\":\"npm run build-umd && npm run build-commonjs && npm run build-esm && npm run build-umd-min\",\"build-commonjs\":\"microbundle build \\\"src/!(*.test).js\\\" --output dist/commonjs --format cjs --strict --no-compress\",\"build-esm\":\"microbundle build \\\"src/!(*.test).js\\\" --output dist/es-module --format es --no-compress\",\"build-umd\":\"microbundle build src/main.js src/full.js --output dist --format umd --strict --no-compress\",\"build-umd-min\":\"microbundle build src/main.js src/full.js --output dist/min --format umd --strict\",\"check\":\"npm run lint && npm test\",\"check-all\":\"npm run lint-all && npm test\",\"doc\":\"jsdoc -c jsdoc-conf.json\",\"lint\":\"eslint --cache --max-warnings 0 \\\"**/*.js\\\"\",\"lint-all\":\"eslint --max-warnings 0 \\\"**/*.js\\\"\",\"lint-all-error\":\"eslint \\\"**/*.js\\\"\",\"lint-error\":\"eslint --cache \\\"**/*.js\\\"\",\"release\":\"bump patch --commit --tag --all --push package.json package-lock.json bower.json component.json\",\"release-major\":\"bump major --commit --tag --all --push package.json package-lock.json bower.json component.json\",\"release-minor\":\"bump minor --commit --tag --all --push package.json package-lock.json bower.json component.json\",\"test\":\"jest\"},\"types\":\"./index.d.ts\",\"umd:main\":\"dist/main.js\",\"version\":\"1.0.1\"}");
+module.exports = JSON.parse("{\"_args\":[[\"weekstart@1.0.1\",\"C:\\\\xampp\\\\htdocs\\\\jakas_strona_do_testow\"]],\"_from\":\"weekstart@1.0.1\",\"_id\":\"weekstart@1.0.1\",\"_inBundle\":false,\"_integrity\":\"sha512-h6B1HSJxg7sZEXqIpDqAtwiDBp3x5y2jY8WYcUSBhLTcTCy7laQzBmamqMuQM5fpvo1pgpma0OCRpE2W8xrA9A==\",\"_location\":\"/weekstart\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"weekstart@1.0.1\",\"name\":\"weekstart\",\"escapedName\":\"weekstart\",\"rawSpec\":\"1.0.1\",\"saveSpec\":null,\"fetchSpec\":\"1.0.1\"},\"_requiredBy\":[\"/\"],\"_resolved\":\"https://registry.npmjs.org/weekstart/-/weekstart-1.0.1.tgz\",\"_spec\":\"1.0.1\",\"_where\":\"C:\\\\xampp\\\\htdocs\\\\jakas_strona_do_testow\",\"author\":{\"name\":\"Denis Sikuler\"},\"bugs\":{\"url\":\"https://github.com/gamtiq/weekstart/issues\"},\"description\":\"Library to get first day of week.\",\"devDependencies\":{\"@babel/preset-env\":\"7.6.3\",\"eslint\":\"6.5.1\",\"eslint-config-guard\":\"1.0.3\",\"ink-docstrap\":\"1.3.2\",\"jest\":\"24.9.0\",\"jsdoc\":\"3.6.3\",\"microbundle\":\"0.4.4\",\"version-bump-prompt\":\"5.0.5\"},\"homepage\":\"https://github.com/gamtiq/weekstart\",\"keywords\":[\"week\",\"start\",\"first\",\"day\",\"locale\",\"country\",\"region\"],\"license\":\"MIT\",\"main\":\"dist/commonjs/main.js\",\"module\":\"dist/es-module/main.js\",\"name\":\"weekstart\",\"repository\":{\"type\":\"git\",\"url\":\"git://github.com/gamtiq/weekstart.git\"},\"scripts\":{\"all\":\"npm run check-all && npm run doc && npm run build\",\"build\":\"npm run build-umd && npm run build-commonjs && npm run build-esm && npm run build-umd-min\",\"build-commonjs\":\"microbundle build \\\"src/!(*.test).js\\\" --output dist/commonjs --format cjs --strict --no-compress\",\"build-esm\":\"microbundle build \\\"src/!(*.test).js\\\" --output dist/es-module --format es --no-compress\",\"build-umd\":\"microbundle build src/main.js src/full.js --output dist --format umd --strict --no-compress\",\"build-umd-min\":\"microbundle build src/main.js src/full.js --output dist/min --format umd --strict\",\"check\":\"npm run lint && npm test\",\"check-all\":\"npm run lint-all && npm test\",\"doc\":\"jsdoc -c jsdoc-conf.json\",\"lint\":\"eslint --cache --max-warnings 0 \\\"**/*.js\\\"\",\"lint-all\":\"eslint --max-warnings 0 \\\"**/*.js\\\"\",\"lint-all-error\":\"eslint \\\"**/*.js\\\"\",\"lint-error\":\"eslint --cache \\\"**/*.js\\\"\",\"release\":\"bump patch --commit --tag --all --push package.json package-lock.json bower.json component.json\",\"release-major\":\"bump major --commit --tag --all --push package.json package-lock.json bower.json component.json\",\"release-minor\":\"bump minor --commit --tag --all --push package.json package-lock.json bower.json component.json\",\"test\":\"jest\"},\"types\":\"./index.d.ts\",\"umd:main\":\"dist/main.js\",\"version\":\"1.0.1\"}");
 
 /***/ }),
 
@@ -86415,8 +86473,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/karp/Dokumenty/jakas_strona_do_testow/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/karp/Dokumenty/jakas_strona_do_testow/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\jakas_strona_do_testow\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\jakas_strona_do_testow\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
