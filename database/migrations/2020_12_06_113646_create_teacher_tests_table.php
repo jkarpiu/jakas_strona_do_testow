@@ -16,7 +16,7 @@ class CreateTeacherTestsTable extends Migration
         Schema::create('teacher_tests', function (Blueprint $table) {
             $table->id();
             $table->dateTime("start");
-            $table->dateTime("duration");
+            $table->integer("duration");
             $table->integer('threshold')->max(100) -> min(0);
             $table->string('name');
             $table->integer("dzialy_id");

@@ -76,7 +76,7 @@ class User extends Authenticatable
     }
 
     public function studentTests() {
-        return $this -> belongsToMany(teacherTest::class);
+        return $this -> belongsToMany(teacherTest::class, 'user_teacher_test');
     }
 
     public function comments(){

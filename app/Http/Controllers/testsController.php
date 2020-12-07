@@ -14,7 +14,7 @@ class testsController extends Controller
     {
         if (Auth::user()->role == 2) {
             $test = teacherTest::create([
-                'start' =>$this -> parseTime($request['start']),
+                'start' => $this -> parseTime($request['start']),
                 'duration' => $request['duration'],
                 'threshold' => $request['threshold'],
                 'name' => $request['name'],
@@ -35,6 +35,6 @@ class testsController extends Controller
 
     private function parseTime($timestring)
     {
-        return (String)Carbon::parse($timestring);
+        return Carbon::parse($timestring);
     }
 }

@@ -9,7 +9,9 @@
                 <font-awesome-icon icon="plus" /> Utwórz Test
             </button>
         </div>
-        <div class="mainView"></div>
+        <div class="mainView">
+            <p :key="test.id" v-for="test in testy">{{ test.name }}</p>
+        </div>
         <modal
             name="add-test"
             styles="background-color: #191919; padding: 25px;"
@@ -52,7 +54,7 @@
                     v-model="test.duration"
                     id=""
                 />
-                <select class="form-control"
+                <select class="form-control" v-model="dzial"
                     ><option value="" disabled selected hidden
                         >Wybierz dział</option
                     >
@@ -82,7 +84,11 @@
             </p>
 
             <div style="display: flex; flex-wrap: wrap;">
-                <p :key="uczen.id" v-for="uczen in uczniowie" style="padding-right: 10px;">
+                <p
+                    :key="uczen.id"
+                    v-for="uczen in uczniowie"
+                    style="padding-right: 10px;"
+                >
                     <input
                         type="checkbox"
                         name=""
@@ -90,7 +96,6 @@
                         :value="uczen.id"
                         id=""
                         :true-value="uczen.id"
-
                     />
                     {{ uczen.fname + " " + uczen.lname }}
                 </p>
@@ -122,17 +127,45 @@ export default {
             dzialy: [],
             grupy: [],
             uczniowie: [],
-            grupa: null
+            testy: [],
+            grupa: null,
+            dzial: null
         };
     },
     created() {
         this.getDzialy();
         this.getGrupy();
+        this.getTests();
         ctx = this;
     },
     methods: {
         createTest: function() {
-            axios.post("/api/add_test", this.test).catch((err)=> console.log(err.response)).then((res) => console.log(res.data));
+
+            axios
+                .post("/api/add_test", {
+                    name: this.test.name,
+                    start: new Date(this.test.start).toISOString(),
+                    threshold: this.test.threshold,
+                    dzialy_id: this.dzial,
+                    duration: this.test.duration,
+                    students: this.test.students
+                })
+                .catch(err => console.log(err.response))
+                .then(res => {
+                    console.log(res.data);
+                    this.getTests();
+                });
+        },
+        getTests: function() {
+            axios
+                .get("/api/list_tests")
+                .catch(err => {
+                    console.log(err.response);
+                })
+                .then(res => {
+                    console.log(res.data);
+                    this.testy = res.data
+                });
         },
         getDzialy: function() {
             axios
@@ -164,3 +197,14 @@ export default {
     }
 };
 </script>
+<style scoped>
+#testsView{
+    display: grid;
+    grid-template-rows: 0.15fr 1.75fr;
+    grid-template-columns: 1fr;
+}
+.toolbox {
+    display: flex;
+    justify-content: flex-end;
+}
+</style>
