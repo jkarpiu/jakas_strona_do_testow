@@ -12720,6 +12720,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["id"],
@@ -18237,7 +18255,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n#classroomView[data-v-3a8dd0ed] {\n    display: grid;\n    grid-template-rows: 1fr 1fr;\n    grid-template-columns: 1fr;\n}\n.toolbox[data-v-3a8dd0ed] {\n    display: flex;\n    justify-content: flex-end;\n    height: 10vh;\n}\n#mainView[data-v-3a8dd0ed] {\n    display: flex;\n    flex-direction: column;\n}\n", ""]);
+exports.push([module.i, "\n#classroomView[data-v-3a8dd0ed] {\n    display: grid;\n    grid-template-rows: 0.10fr 1fr;\n    grid-template-columns: 1fr;\n}\n.toolbox[data-v-3a8dd0ed] {\n    display: flex;\n    justify-content: flex-end;\n    height: 10vh;\n}\n#mainView[data-v-3a8dd0ed] {\n    display: flex;\n    flex-direction: column;\n}\n.post[data-v-3a8dd0ed] {\n    padding: 1.5px 0.5vw 1vw 0.7vw;\n    margin-left:10vw;\n    width:50vw;\n    background: rgb(39, 39, 39);\n    margin-bottom: 3rem;\n    box-shadow: 5px 3px 16px 0px rgba(0,0,0,0.5);\n}\n.przycisk[data-v-3a8dd0ed]{\n    margin-left:10vw;\n}\n.addpost[data-v-3a8dd0ed] {\n    padding-bottom:1rem;\n    padding-top:2rem;\n    background: rgb(39, 39, 39);\n    margin-left:10vw;\n    width:50vw;\n    box-shadow: 10px 6px 24px 0px rgba(0,0,0,0.5);\n}\ntextarea[data-v-3a8dd0ed]{\n    resize: none;\n}\n.dodawanie textarea.tekst[data-v-3a8dd0ed]:focus:not([readonly]) {\n  border-bottom: 2px solid #509df0;\n  box-shadow: 0 1px 0 0 #81a7cf;\n}\n.active-dodawanie.form label.active[data-v-3a8dd0ed] {\n  color: #81a7cf;\n}\n.active-dodawanie.form textarea.tekst:focus:not([readonly])+label[data-v-3a8dd0ed] {\n  color: #81a7cf;\n}\n.post_tytul[data-v-3a8dd0ed]{\n    border-bottom: 1px dotted white;\n    font-size: 1.3rem;\n    color: #81a7cf;\n}\n\n", ""]);
 
 // exports
 
@@ -61084,44 +61102,87 @@ var render = function() {
             ? _c(
                 "div",
                 {
+                  staticClass: "addpost",
                   staticStyle: { display: "flex", "flex-direction": "column" }
                 },
                 [
-                  _c("textarea", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.newPost,
-                        expression: "newPost"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    staticStyle: { width: "70vw" },
-                    attrs: { name: "", id: "", rows: "10" },
-                    domProps: { value: _vm.newPost },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.newPost = $event.target.value
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
                   _c(
-                    "button",
-                    { staticClass: "btn btn-blue", on: { click: _vm.addPost } },
-                    [_vm._v("\n                Dodaj post\n            ")]
+                    "div",
+                    {
+                      staticClass: "dodawanie",
+                      staticStyle: { "margin-left": "2.5vw" }
+                    },
+                    [
+                      _c("div", { staticClass: "form active-dodawanie" }, [
+                        _c("textarea", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.newTitle,
+                              expression: "newTitle"
+                            }
+                          ],
+                          staticClass: "tekst form-control",
+                          staticStyle: { width: "45vw" },
+                          attrs: { rows: "1", name: "", id: "" },
+                          domProps: { value: _vm.newTitle },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.newTitle = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("label", [_vm._v("Tytuł")]),
+                        _vm._v(" "),
+                        _c("textarea", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.newPost,
+                              expression: "newPost"
+                            }
+                          ],
+                          staticClass: "tekst form-control",
+                          staticStyle: { width: "45vw" },
+                          attrs: { rows: "3", name: "", id: "" },
+                          domProps: { value: _vm.newPost },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.newPost = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("label", [_vm._v("Treść")])
+                      ])
+                    ]
                   )
                 ]
               )
             : _vm._e(),
           _vm._v(" "),
+          _c("div", { staticClass: "przycisk" }, [
+            _c(
+              "button",
+              { staticClass: "btn btn-primary", on: { click: _vm.addPost } },
+              [_vm._v("\n                Dodaj post\n            ")]
+            )
+          ]),
+          _vm._v(" "),
           _vm._l(_vm.posts, function(post) {
-            return _c("div", { key: post.id }, [
-              _c("p", [_vm._v("Autor: " + _vm._s(post.author.fname))]),
+            return _c("div", { key: post.id, staticClass: "post" }, [
+              _c("p", { staticClass: "post_tytul" }, [
+                _vm._v("Tytuł: " + _vm._s(post.author.fname))
+              ]),
               _vm._v(" "),
               _c("p", [_vm._v(_vm._s(post.content))])
             ])
