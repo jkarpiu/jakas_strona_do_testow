@@ -21,7 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('randQuestion', 'randQuestionController@json_onequestion');
 
 Route::group(['prefix' => 'basic'], function () {
-    Route::get('dzialy', 'basicServicesController@dzialy');
+    Route::middleware('auth.api')->get('dzialy', 'basicServicesController@dzialy');
     Route::get('typy_szkol', 'basicServicesController@typy_szkol');
     Route::get('wojewodztwa', 'basicServicesController@wojewodztwa');
     Route::get('miasta', 'basicServicesController@miasta');
@@ -41,8 +41,9 @@ Route::group(['middleware' => 'auth.api'], function () {
     Route::post('add_group', 'groupsController@add_group');
     Route::post('invitation', 'groupsController@create_invitation');
     Route::post('join_group',  'groupsController@join_group');
+    Route::post('list_students',  'groupsController@list_group_students');
     Route::post('add_post',  'groupsController@add_post');
     Route::post('list_posts',  'groupsController@list_posts');
-    Route::post('add_test', 'testsController@list');
-    Route::post('list_tests', 'testsController@create');
+    Route::post('add_test', 'testsController@createTest');
+    Route::post('list_tests', 'testsController@list');
 });

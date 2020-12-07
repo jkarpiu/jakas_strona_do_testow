@@ -23,4 +23,8 @@ class Dzialy extends Model
     public function testy() {
         return $this->hasMany(activeTests::class, 'dzial_id');
     }
+
+    public function owner(){
+        return $this -> belongsTo(User::class, 'owner_id');
+    }
 }

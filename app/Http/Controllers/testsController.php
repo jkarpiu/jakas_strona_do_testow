@@ -10,27 +10,31 @@ use App\teacherTest;
 
 class testsController extends Controller
 {
-    public function create(Request $request)
+    public function createTest(Request $request)
     {
         if (Auth::user()->role == 2) {
             $test = teacherTest::create([
-                'start' => $this -> parseTime($request['time']),
-                'end' => $this -> parseTime($request['time']) -> addMinutes($request['duration']),
+                'start' =>$this -> parseTime($request['start']),
+                'duration' => $request['duration'],
+                'threshold' => $request['threshold'],
+                'name' => $request['name'],
                 'dzialy_id' => $request['dzialy_id'],
                 'teacher_id' => Auth::id()
             ]);
-            $test -> students() -> attach($request['students']);
+            $test->students()->attach($request['students']);
+            return response()->json($test);
         }
     }
 
-    public function list() {
-        if (Auth::user() -> role == 2 ) {
-            return response() -> json(Auth::user() -> teacherTests);
+    public function list()
+    {
+        if (Auth::user()->role == 2) {
+            return response()->json(Auth::user()->teacherTests);
         }
     }
 
     private function parseTime($timestring)
     {
-        return Carbon::parse(date_create_from_format('D M d Y H:i:s e+', $timestring));
+        return (String)Carbon::parse($timestring);
     }
 }

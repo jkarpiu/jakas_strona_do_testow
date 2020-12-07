@@ -21,6 +21,10 @@ class groupsController extends Controller
             return response()->json(Auth::user()->teacherGroups);
     }
 
+    public function list_group_students(Request $request) {
+        return response() -> json(groupsModel::find($request['id'])->students);
+    }
+
     public function add_group(Request $request)
     {
         if ($request->user()->role == 2) {

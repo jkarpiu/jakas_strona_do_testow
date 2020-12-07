@@ -59,7 +59,7 @@ class User extends Authenticatable
     }
 
     public function teacherTests() {
-        return $this -> hasMany(User::class, 'teacher_id');
+        return $this -> hasMany(teacherTest::class, 'teacher_id');
     }
 
     public function schools()
@@ -79,4 +79,7 @@ class User extends Authenticatable
         return $this -> belongsToMany(teacherTest::class);
     }
 
+    public function Dzialy() {
+        return $this -> hasMany(Dzialy::class, 'owner_id');
+    }
 }

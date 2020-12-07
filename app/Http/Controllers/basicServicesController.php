@@ -7,13 +7,14 @@ use App\schoolType;
 use App\regionsModel;
 use App\citiesModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class basicServicesController extends Controller
 {
     public function dzialy()
     {
         return response()->json(
-            Dzialy::get()
+            Dzialy::where('owner_id', Auth::id())->orWhere('public', true)->get()
         );
     }
 
@@ -41,6 +42,6 @@ class basicServicesController extends Controller
     }
     public function user(Request $request)
     {
-        return response() -> json($request->user());
+        return response()->json($request->user());
     }
 }

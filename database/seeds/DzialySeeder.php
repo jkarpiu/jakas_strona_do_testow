@@ -18,11 +18,13 @@ class DzialySeeder extends Seeder
         Dzialy::create(
             [
                 'nazwa' => 'EE.09',
-                'prog' => 50
+                'prog' => 50,
+                'public' => true
             ]
         );
         Dzialy::create([
-            'nazwa' => 'EE.09'
+            'nazwa' => 'EE.09',
+            'public' => true
         ]);
         Dzialy::create([
             'id' => 0,
@@ -41,8 +43,5 @@ class DzialySeeder extends Seeder
             'poprawna' => false,
             'id_pytanie' => 0
         ]);
-
-
-        
     }
 }

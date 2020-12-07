@@ -30,6 +30,7 @@ import PageNotFound from './components/PageNotFound';
 import OneGroup from './components/Groups/OneClassroom'
 import ListGroups from './components/Groups/Classrooms';
 import GroupsMain from './components/GroupsMain';
+import Tests from './components/Tests.vue'
 
 
 library.add(faPlus);
@@ -112,8 +113,10 @@ const routes = [
         ]
 
     },
-
-
+    {
+        path: '/tests',
+        component: Tests
+    },
     {
         path: "/user/wyniki",
         name: "wynikiUcznia",
