@@ -47,37 +47,45 @@
 
       <div class="post" :key="post.id" v-for="post in posts">
         <p class="post_tytul">{{ post.title }}</p>
-        <p>{{ post.content }}</p>
+        <p style="margin-bottom:3rem;">{{ post.content }}</p>
+        <i><p style="text-align: right; font-size:0.7rem;">{{ sensownyCzas(post.created_at) }}</p></i>
         <div
           class="komentarze"
-          style="margin-left:1vw;"
+          style="margin-left: 2vw;"
           :key="comment.id"
           v-for="comment in post.comments"
         >
-          <p>{{ comment.tresc }}</p>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStixxgmXCRq9V0b8G85MJ0cTj1pT1AYOuoKg&usqp=CAU" style="width:2rem; margin-right:0.5vw; display:inline-block;">
+          <p style="display:inline-block;">AUTOR</p> 
+          <p style="display:inline-block; float: right; font-size:0.6rem;">2020-21-37</p>
+          <p style="margin-left:5px; margin-right:5px;">{{ comment.tresc }}</p>
+          
         </div>
-
-        <div class="dodawanie" style="margin-left: 2.5vw">
+        <div class="dodawanie" style="margin-left: 2.5vw;">
           <div class="form active-dodawanie">
-            <div>
+            
               <textarea
                 class="tekst form-control"
                 rows="1"
                 name=""
                 id=""
-                v-model="comment"
-                style="width: 20vw"
+                v-model="comment[post.id]"
+                style="width: 20vw; display:inline-block;"
               ></textarea>
-              <label>Komentarz</label>
-            </div>
-            <button class="btn btn-primary" style="margin:0 !important;" @click="addComment(post.id)">
-              Dodaj komentarz
+              
+            
+            <button
+              class="btn btn-primary"
+              style="margin: 0 !important; width: 2vw; display:inline-block;"
+              @click="addComment(post.id)"
+            >
+              >
             </button>
           </div>
         </div>
-        <div style="text-align:right">
-            <p>{{ sensownyCzas(post.created_at) }}</p>
-        </div>
+        
+          
+        
       </div>
     </div>
     <modal
@@ -104,7 +112,7 @@ export default {
       newPost: "",
       title: "",
       posts: [],
-      comment: "",
+      comment: [],
     };
   },
   created() {
@@ -112,32 +120,34 @@ export default {
     this.listPosts();
   },
   methods: {
-              sensownyCzas: function(sqlTime) {
-            let date = new Date(sqlTime);
-            let miesiace = [
-                "stycznia",
-                "lutego",
-                "marca",
-                "kwietnia",
-                "maja",
-                "czerwca",
-                "lipca",
-                "sierpnia",
-                "września",
-                "października",
-                "listopada",
-                "grudnia"
-            ];
-            return (
-                date.getDate().toString() +
-                " " +
-                miesiace[parseInt(date.getMonth())] +
-                " " +
-                date.getFullYear() +
-                ' ' +
-                date.getHours() + ':' + date.getMinutes()
-            );
-        },
+    sensownyCzas: function (sqlTime) {
+      let date = new Date(sqlTime);
+      let miesiace = [
+        "stycznia",
+        "lutego",
+        "marca",
+        "kwietnia",
+        "maja",
+        "czerwca",
+        "lipca",
+        "sierpnia",
+        "września",
+        "października",
+        "listopada",
+        "grudnia",
+      ];
+      return (
+        date.getDate().toString() +
+        " " +
+        miesiace[parseInt(date.getMonth())] +
+        " " +
+        date.getFullYear() +
+        " " +
+        date.getHours() +
+        ":" +
+        date.getMinutes()
+      );
+    },
     listPosts: function () {
       axios
         .post("/api/list_posts", { id: this.id })
@@ -164,7 +174,7 @@ export default {
     },
     addComment: function (id) {
       axios
-        .post("/api/add_comment", { tresc: this.comment, post_id: id })
+        .post("/api/add_comment", { tresc: this.comment[id], post_id: id })
         .catch((err) => console.log(err.response))
         .then((res) => {
           console.log(res.data);
@@ -204,7 +214,7 @@ export default {
   flex-direction: column;
 }
 .post {
-  padding: 1.5px 0.5vw 1vw 0.7vw;
+  padding: 0.4vw 0.7vw 0.7vw 0.7vw;
   margin-left: 10vw;
   width: 50vw;
   background: rgb(39, 39, 39);
@@ -223,8 +233,14 @@ export default {
   box-shadow: 10px 6px 24px 0px rgba(0, 0, 0, 0.5);
 }
 .komentarze {
-  background: rgb(212, 87, 185);
+  background: rgb(66, 66, 66);
   width: 30vw;
+  max-width:30vw;
+  padding: 5px 5px 2px 5px;
+  word-wrap: break-word;
+  min-height: 2rem;
+  margin-bottom: 2vh;
+  
 }
 textarea {
   resize: none;

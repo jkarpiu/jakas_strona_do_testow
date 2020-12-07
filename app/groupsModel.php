@@ -26,6 +26,6 @@ class groupsModel extends Model
     }
 
     public function posts() {
-        return $this-> hasMany(groupPost::class) ;
+        return $this-> hasMany(groupPost::class)->orderBy('id', 'desc') ;
     }
 }

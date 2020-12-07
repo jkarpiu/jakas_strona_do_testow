@@ -21,6 +21,7 @@ import 'vue-datetime/dist/vue-datetime.css';
 
 import Login from './components/Login'
 import Pytanka from './components/PytankaCopy'
+import SetTest from './components/SetTest'
 import Welcome from './components/Welcome'
 import App from './components/App'
 import Register from './components/Register';
@@ -129,6 +130,11 @@ const routes = [
             }
         }
 
+    },
+    {
+        path: "/test/:id",
+        props: true,
+        component: SetTest
     },
     {
         path: "*",

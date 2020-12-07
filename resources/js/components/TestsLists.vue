@@ -17,7 +17,6 @@
                         <th>{{ test.name }}</th>
                         <th>{{  }}</th>
                         <th>{{ test.start }}</th>
-                       
                         <th>{{ }}</th>
                         
                     </tr>
