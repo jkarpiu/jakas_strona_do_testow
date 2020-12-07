@@ -35,6 +35,7 @@
         "luxon": "^1.25.0",
         "moment": "^2.29.1",
         "tiptap": "^1.30.0",
+        "tiptap-extensions": "^1.33.2",
         "vue-cookies": "^1.7.4",
         "vue-datetime": "^1.0.0-beta.14",
         "vue-spinners-css": "^1.1.5",
