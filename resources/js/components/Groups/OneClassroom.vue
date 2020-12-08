@@ -49,7 +49,7 @@
           :class="{ 'is-active': isActive.bold() }"
           @click="commands.bold"
         >
-          bold
+        <font-awesome-icon icon="bold" />
         </button>
 
         <button
@@ -57,7 +57,7 @@
           :class="{ 'is-active': isActive.italic() }"
           @click="commands.italic"
         >
-          italic
+        <font-awesome-icon icon="italic" />
         </button>
 
         <button
@@ -65,7 +65,7 @@
           :class="{ 'is-active': isActive.strike() }"
           @click="commands.strike"
         >
-          strike
+        <font-awesome-icon icon="strikethrough" />
         </button>
 
         <button
@@ -73,7 +73,7 @@
           :class="{ 'is-active': isActive.underline() }"
           @click="commands.underline"
         >
-          underline
+        <font-awesome-icon icon="underline" />
         </button>
 
         <button
@@ -81,7 +81,7 @@
           :class="{ 'is-active': isActive.code() }"
           @click="commands.code"
         >
-          code
+        <font-awesome-icon icon="code" />
         </button>
 
         <button
@@ -113,7 +113,8 @@
           :class="{ 'is-active': isActive.bullet_list() }"
           @click="commands.bullet_list"
         >
-          ul
+
+        <font-awesome-icon icon="list-ul" />
         </button>
 
         <button
@@ -121,7 +122,7 @@
           :class="{ 'is-active': isActive.ordered_list() }"
           @click="commands.ordered_list"
         >
-          ol
+        <font-awesome-icon icon="list-ol" />
         </button>
 
 
@@ -130,22 +131,22 @@
           :class="{ 'is-active': isActive.code_block() }"
           @click="commands.code_block"
         >
-          code
+        <font-awesome-icon icon="code" />
         </button>
 
 
         <button
-          class="menubar__button"
+          class="menubar__button history_button"
           @click="commands.undo"
         >
-          undo
+        <font-awesome-icon icon="undo" />
         </button>
 
         <button
-          class="menubar__button"
+          class="menubar__button history_button"
           @click="commands.redo"
         >
-          redo
+        <font-awesome-icon icon="redo" />
         </button>
 
       </div>
@@ -169,14 +170,14 @@
           v-for="comment in post.comments"
         >
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStixxgmXCRq9V0b8G85MJ0cTj1pT1AYOuoKg&usqp=CAU" style="width:2rem; margin-right:0.5vw; display:inline-block;">
-          <p style="display:inline-block;">AUTOR</p> 
+          <p style="display:inline-block;">AUTOR</p>
           <p style="display:inline-block; float: right; font-size:0.6rem;">2020-21-37</p>
           <p style="margin-left:5px; margin-right:5px;">{{ comment.tresc }}</p>
-          
+
         </div>
         <div class="dodawanie" style="margin-left: 2.5vw;">
           <div class="form active-dodawanie">
-            
+
               <textarea
                 class="tekst form-control"
                 rows="1"
@@ -185,8 +186,8 @@
                 v-model="comment[post.id]"
                 style="width: 20vw; display:inline-block;"
               ></textarea>
-              
-            
+
+
             <button
               class="btn btn-primary"
               style="margin: 0 !important; width: 2vw; display:inline-block;"
@@ -196,9 +197,9 @@
             </button>
           </div>
         </div>
-        
-          
-        
+
+
+
       </div>
     </div>
     <modal
@@ -222,7 +223,7 @@ import {
 } from "tiptap";
 import {
           BulletList,
-          CodeBlock,         
+          CodeBlock,
           Heading,
           ListItem,
           OrderedList,
@@ -247,9 +248,9 @@ export default {
       posts: [],
       comment: [],
       editor: new Editor({
-        extensions: [         
+        extensions: [
           new BulletList(),
-          new CodeBlock(),         
+          new CodeBlock(),
           new Heading({ levels: [1, 2, 3] }),
           new ListItem(),
           new OrderedList(),
@@ -351,7 +352,8 @@ export default {
   },
 };
 </script>
-<style scoped >
+<style scoped>
+
 #classroomView {
   display: grid;
   grid-template-rows: 0.1fr 1fr;
@@ -393,7 +395,7 @@ export default {
   word-wrap: break-word;
   min-height: 2rem;
   margin-bottom: 2vh;
-  
+
 }
 textarea {
   resize: none;
@@ -415,138 +417,34 @@ textarea {
   font-size: 1.3rem;
   color: #81a7cf;
 }
-/* .editor {
+.editor {
   position: relative;
   width: 45vw;
   margin: 0 auto 5rem auto;
   color:black;
   background: white;
 }
+
+.editor__content {
+    padding: 5px;
+}
 .menubar {
   margin-right:auto;
   margin-left:auto;
-} */
-.editor {
-  position: relative;
-  max-width: 30rem;
-  margin: 0 auto 5rem auto;
-
-  &__content {
-
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-word;
-
-    * {
-      caret-color: currentColor;
-    }
-
-    pre {
-      padding: 0.7rem 1rem;
-      border-radius: 5px;
-      background: $color-black;
-      color: $color-white;
-      font-size: 0.8rem;
-      overflow-x: auto;
-
-      code {
-        display: block;
-      }
-    }
-
-    p code {
-      padding: 0.2rem 0.4rem;
-      border-radius: 5px;
-      font-size: 0.8rem;
-      font-weight: bold;
-      background: rgba($color-black, 0.1);
-      color: rgba($color-black, 0.8);
-    }
-
-    ul,
-    ol {
-      padding-left: 1rem;
-    }
-
-    li > p,
-    li > ol,
-    li > ul {
-      margin: 0;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    blockquote {
-      border-left: 3px solid rgba($color-black, 0.1);
-      color: rgba($color-black, 0.8);
-      padding-left: 0.8rem;
-      font-style: italic;
-
-      p {
-        margin: 0;
-      }
-    }
-
-    img {
-      max-width: 100%;
-      border-radius: 3px;
-    }
-
-    table {
-      border-collapse: collapse;
-      table-layout: fixed;
-      width: 100%;
-      margin: 0;
-      overflow: hidden;
-
-      td, th {
-        min-width: 1em;
-        border: 2px solid $color-grey;
-        padding: 3px 5px;
-        vertical-align: top;
-        box-sizing: border-box;
-        position: relative;
-        > * {
-          margin-bottom: 0;
-        }
-      }
-
-      th {
-        font-weight: bold;
-        text-align: left;
-      }
-
-      .selectedCell:after {
-        z-index: 2;
-        position: absolute;
-        content: "";
-        left: 0; right: 0; top: 0; bottom: 0;
-        background: rgba(200, 200, 255, 0.4);
-        pointer-events: none;
-      }
-
-      .column-resize-handle {
-        position: absolute;
-        right: -2px; top: 0; bottom: 0;
-        width: 4px;
-        z-index: 20;
-        background-color: #adf;
-        pointer-events: none;
-      }
-    }
-
-    .tableWrapper {
-      margin: 1em 0;
-      overflow-x: auto;
-    }
-
-    .resize-cursor {
-      cursor: ew-resize;
-      cursor: col-resize;
-    }
-
-  }
+  background: rgb(224, 224, 224);
+  padding: 5px;
 }
+
+.menubar__button {
+    border: hidden;
+    border-radius: 5px;
+    box-shadow: none;
+  background: rgb(224, 224, 224);
+}
+
+.is-active {
+    background: #0061c9;
+}
+
+
 </style>
