@@ -15,7 +15,7 @@
                     </thead>
                     <tr :key="test.id" v-for="test in testy" @click="$router.push('/test/' + test.id)">
                         <th>{{ test.name }}</th>
-                        <th>{{  }}</th>
+                        <th>{{ test.dzial.nazwa }}</th>
                         <th>{{ test.start }}</th>
                         <th>{{ }}</th>
                         

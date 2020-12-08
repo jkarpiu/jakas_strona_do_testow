@@ -84743,7 +84743,7 @@ var render = function() {
               [
                 _c("th", [_vm._v(_vm._s(test.name))]),
                 _vm._v(" "),
-                _c("th", [_vm._v(_vm._s())]),
+                _c("th", [_vm._v(_vm._s(test.dzial.nazwa))]),
                 _vm._v(" "),
                 _c("th", [_vm._v(_vm._s(test.start))]),
                 _vm._v(" "),

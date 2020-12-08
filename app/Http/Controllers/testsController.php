@@ -30,10 +30,10 @@ class testsController extends Controller
     public function list()
     {
         if(Auth::user()->role == 1){
-            return response()->json(Auth::user()->studentTests);
+            return response()->json(Auth::user()->studentTests -> load("dzial", "teacher"));
         }
         else if (Auth::user()->role == 2) {
-            return response()->json(Auth::user()->teacherTests);
+            return response()->json(Auth::user()->teacherTests -> load("dzial", "teacher"));
         }
     }
 
