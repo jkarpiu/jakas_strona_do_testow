@@ -144,7 +144,6 @@ export default {
     },
     methods: {
         createTest: function() {
-
             axios
                 .post("/api/add_test", {
                     name: this.test.name,
@@ -156,7 +155,7 @@ export default {
                 })
                 .catch(err => console.log(err.response))
                 .then(res => {
-                    console.log(res.data);
+                    console.log(res);
                     this.getTests();
                 });
         },

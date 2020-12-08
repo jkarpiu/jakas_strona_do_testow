@@ -1,15 +1,15 @@
 <template>
     <div id="groupList">
         <div  :key="group.id" v-for="group in list" @click="$router.push('/groups/id/'+group.id)">
-            <div style="height: 4rem; ">             
+            <div style="height: 4rem; ">
                     <p class="name">{{ group.name }}</p>
-                    <p class="author">autor classroomu</p>    
-            </div> 
+                    <p class="author">autor classroomu</p>
+            </div>
             <div class=group-down>
-                
+
             </div>
         </div>
-    </div>    
+    </div>
 </template>
 <script lang="ts">
 export default {
@@ -39,10 +39,10 @@ export default {
 }
 
 .group-down {
-    height: 8rem; 
+    height: 8rem;
     background-color: rgb(231, 231, 231);
     border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px; 
+    border-bottom-right-radius: 8px;
     border-bottom: 1px none;
 }
 .name  {

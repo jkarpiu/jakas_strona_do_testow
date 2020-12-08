@@ -48,15 +48,15 @@ export default {
                 .then(res => {
                     this.testInfo = res.data;
                     this.isLoading = false;
-                    let currentTime = new Date();
+                    let currentTime = new Date().UTC;
                     console.log(currentTime);
-                    let startTime = new Date(this.testInfo.start);
+                    let startTime = (new Date(this.testInfo.start)).UTC;
                     this.canTestStart =
                         currentTime >= startTime &&
                         currentTime <=
                             moment(startTime)
                                 .add(this.testInfo.duration, "m")
-                                .toDate();
+                                .toISODate();
                     console.log(res.data);
                 });
         }
