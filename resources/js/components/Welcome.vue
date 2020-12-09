@@ -7,16 +7,26 @@
                         Znajduja sie tu testy ze wszystkiego w sumie i nauczyciele ębeda was tym tepic a my sie bedziemy smiac</p>
                 </div>        
             </div>
-            <div id="background-image">
+            <div id="background-image2">
+                <div class="top-bar">
+                    <p class="text">To jest nasza zajebista strona na której będziecie mogli rozwiazywac testy na doktora. 
+                        Znajduja sie tu testy ze wszystkiego w sumie i nauczyciele ębeda was tym tepic a my sie bedziemy smiac</p>
+                </div>        
+            </div>
+            <div id="background-image3">
+                <div class="top-bar">
+                    <p class="text">To jest nasza zajebista strona na której będziecie mogli rozwiazywac testy na doktora. 
+                        Znajduja sie tu testy ze wszystkiego w sumie i nauczyciele ębeda was tym tepic a my sie bedziemy smiac</p>
+                </div>        
+            </div>
+            <div id="background-image4">
                 <div class="top-bar">
                     <p class="text">To jest nasza zajebista strona na której będziecie mogli rozwiazywac testy na doktora. 
                         Znajduja sie tu testy ze wszystkiego w sumie i nauczyciele ębeda was tym tepic a my sie bedziemy smiac</p>
                 </div>        
             </div>
         </vue-slick-carousel>
-        <div class="dots"></div>
-        <div class="down-bar">
-        </div>        
+         
     </div>
 </template>
 <script>
@@ -28,7 +38,7 @@ export default {
         return{
             settings:{
                 "autoplay": true,
-                "autoplaySpeed": 3000,
+                "autoplaySpeed": 6000,
                 "pauseOnHover": false,
                 "lazyLoad": "progressive",
             }
@@ -44,14 +54,41 @@ export default {
 </script>
 <style scoped>
     #background-image   {
-        background: url("../../images/serwerownia.jpg") no-repeat center center ;
         height: 90vh;
+        background: url("../../images/serwerownia.jpg") no-repeat center center ;
         background-repeat: no-repeat;
         background-size: cover;
         display: block;
         position: relative;   
     }
 
+    #background-image2   {
+        height: 90vh;
+        background: url("../../images/server.jpg") no-repeat center center ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        position: relative;   
+    }
+
+    #background-image3   {
+        height: 90vh;
+        background: url("../../images/room.jpg") no-repeat center center ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        position: relative;   
+    }
+
+    #background-image4   {
+        height: 90vh;
+        background: url("../../images/kod.jpg") no-repeat center center ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        position: relative;   
+    }
+ 
     .top-bar {
         padding-top: 2rem;
 
@@ -64,8 +101,8 @@ export default {
         font-size: 2rem; 
         width: 99.5vw;
         padding: 1rem;
-        padding-left:25vw;
-        padding-right:25vw;
+        padding-left:20vw;
+        padding-right:20vw;
         margin-top: 2rem;
     }
     

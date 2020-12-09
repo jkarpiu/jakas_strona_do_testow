@@ -26,7 +26,7 @@
             >
             <router-link to="/groups" v-else-if="user.role == 1">
                 <li>
-                    <a class="dropdown-item panel">Moje klasrumy</a>
+                    <a class="dropdown-item panel">Moje klasy</a>
                 </li></router-link
             >
             <li>
