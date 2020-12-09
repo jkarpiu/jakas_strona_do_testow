@@ -3,6 +3,7 @@
         <div class="toolbox">
             <button
                 class="btn btn-primary btn-left"
+                style= "margin:2vh;"
                 @click="$modal.show('add-classroom')"
                 v-if="$store.state.user != null && $store.state.user.role == 2"
             >
@@ -10,6 +11,7 @@
             </button>
             <button
                 class="btn btn-primary "
+                style= "margin:2vh;"
                 @click="$modal.show('join-classroom')"
                 v-if="$store.state.user != null && $store.state.user.role == 1"
             >

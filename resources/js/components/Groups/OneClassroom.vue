@@ -4,6 +4,7 @@
             <button
                 v-if="$store.state.user != null && $store.state.user.role == 2"
                 class="btn btn-primary"
+                style= "margin:2vh;"
                 @click="getInvitation"
             >
                 <span v-if="!isInvitationLoading"
@@ -188,7 +189,9 @@
                     </div>
                 </div>
                 <div class="przycisk">
-                    <button class="btn btn-primary" @click="addPost">
+                    <button class="btn btn-primary" 
+                    style= "margin-top:1vh; margin-bottom:4vh;"
+                    @click="addPost">
                         Dodaj post
                     </button>
                 </div>
@@ -258,7 +261,7 @@
 
                         <button
                             class="btn btn-primary"
-                            style="margin: 0 !important; width: 2vw; display: inline-block"
+                            style="margin: 0 !important; min-width: 2vw; display: inline-block"
                             @click="addComment(post.id)"
                         >
                             >
