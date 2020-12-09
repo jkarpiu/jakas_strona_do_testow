@@ -8,7 +8,7 @@
 </template>
 <style scoped>
     #background-image   {
-        background: url("../../img/serwerownia.jpg") no-repeat center center ;
+        background: url("../../images/serwerownia.jpg") no-repeat center center ;
         height: 90vh;
         background-repeat: no-repeat;
         background-size: cover;
