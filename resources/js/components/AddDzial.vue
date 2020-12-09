@@ -103,6 +103,138 @@
         <button type="submit" @click="send" class="btn btn-primary">
             Wyślij
         </button>
+         <section class="card-list">
+ 
+      <article class="card">
+        <header class="card-header">
+          <p>Sep 11th 2020</p>
+          <h2>Pytanie</h2>
+        </header> 
+        <div class="odpowiedzi">
+            <ol type="A">
+                <header class="answers card-header" style="margin-top:2vh;">
+                <li>ODPOWIEDZ1</li>
+                </header>
+                <header class="answers card-header" style="margin-top:2vh;">
+                <li>ODPOWIEDZ1</li>
+                </header>
+                <header class="answers card-header" style="margin-top:2vh;">
+                <li>ODPOWIEDZ1</li>
+                </header>
+                <header class="answers card-header" style="margin-top:2vh;">
+                <li>ODPOWIEDZ1</li>
+                </header>
+            </ol> 
+        </div>
+        <div class="card-author">
+            <font-awesome-icon
+                icon="user"
+                style="font-size:2rem;"
+            />
+          <div class="author-name">
+            <div class="author-name-prefix">Autor</div>
+            Jeff Delaney
+          </div>
+        </div>
+      </article>
+            <article class="card">
+        <header class="card-header">
+          <p>Sep 11th 2020</p>
+          <h2>Pytanie</h2>
+        </header> 
+        <div class="odpowiedzi">
+            <ol type="A">
+                <header class="answers card-header" style="margin-top:2vh;">
+                <li>ODPOWIEDZ1</li>
+                </header>
+                <header class="answers card-header" style="margin-top:2vh;">
+                <li>ODPOWIEDZ1</li>
+                </header>
+                <header class="answers card-header" style="margin-top:2vh;">
+                <li>ODPOWIEDZ1</li>
+                </header>
+                <header class="answers card-header" style="margin-top:2vh;">
+                <li>ODPOWIEDZ1</li>
+                </header>
+            </ol> 
+        </div>
+        <div class="card-author">
+            <font-awesome-icon
+                icon="user"
+                style="font-size:2rem;"
+            />
+          <div class="author-name">
+            <div class="author-name-prefix">Autor</div>
+            Jeff Delaney
+          </div>
+        </div>
+      </article>
+            <article class="card">
+        <header class="card-header">
+          <p>Sep 11th 2020</p>
+          <h2>Pytanie</h2>
+        </header> 
+        <div class="odpowiedzi">
+            <ol type="A">
+                <header class="answers card-header" style="margin-top:2vh;">
+                <li>ODPOWIEDZ1</li>
+                </header>
+                <header class="answers card-header" style="margin-top:2vh;">
+                <li>ODPOWIEDZ1</li>
+                </header>
+                <header class="answers card-header" style="margin-top:2vh;">
+                <li>ODPOWIEDZ1</li>
+                </header>
+                <header class="answers card-header" style="margin-top:2vh;">
+                <li>ODPOWIEDZ1</li>
+                </header>
+            </ol> 
+        </div>
+        <div class="card-author">
+            <font-awesome-icon
+                icon="user"
+                style="font-size:2rem;"
+            />
+          <div class="author-name">
+            <div class="author-name-prefix">Autor</div>
+            Jeff Delaney
+          </div>
+        </div>
+      </article>
+            <article class="card">
+        <header class="card-header">
+          <p>Sep 11th 2020</p>
+          <h2>Pytanie</h2>
+        </header> 
+        <div class="odpowiedzi">
+            <ol type="A">
+                <header class="answers card-header" style="margin-top:2vh;">
+                <li>ODPOWIEDZ1</li>
+                </header>
+                <header class="answers card-header" style="margin-top:2vh;">
+                <li>ODPOWIEDZ1</li>
+                </header>
+                <header class="answers card-header" style="margin-top:2vh;">
+                <li>ODPOWIEDZ1</li>
+                </header>
+                <header class="answers card-header" style="margin-top:2vh;">
+                <li>ODPOWIEDZ1</li>
+                </header>
+            </ol> 
+        </div>
+        <div class="card-author">
+            <font-awesome-icon
+                icon="user"
+                style="font-size:2rem;"
+            />
+          <div class="author-name">
+            <div class="author-name-prefix">Autor</div>
+            Jeff Delaney
+          </div>
+        </div>
+      </article>
+
+ </section>
     </div>
 </template>
 <script>
@@ -179,6 +311,76 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+
+
+
+.card-list {
+    display: flex;
+    padding: 3rem;
+    overflow-x: scroll;
+}
+
+
+.card-list::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.card-list::-webkit-scrollbar-thumb {
+    background: #201c29;
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 1px hsla(0,0%,100%,.25), inset -1px -1px 1px rgba(0,0,0,.25);
+}
+
+.card-list::-webkit-scrollbar-track {
+    background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+}
+
+.card:hover~.card {
+    transform: translateX(130px);
+}
+
+.card-header{
+    border: 1px solid rgba(0, 0, 0, 0.281);
+}
+
+.answers li{
+    margin-left:1vw;
+    
+}
+
+
+.card:not(:first-child) {
+    margin-left: -130px;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 500px;
+    width: 400px;
+    min-width: 300px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    transition: .2s;
+    box-shadow: -1rem 0 2rem #000;
+}
+.odpowiedzi {
+    vertical-align: middle;
+
+}
+.card-author {
+    position: relative;
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    align-items: center;
+    margin: 1rem 0 0;
+}
 .oneCard {
     width: 80vw;
 }
