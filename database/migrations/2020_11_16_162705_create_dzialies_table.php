@@ -16,8 +16,8 @@ class CreateDzialiesTable extends Migration
         Schema::create('dzialies', function (Blueprint $table) {
             $table->id();
             $table->string('nazwa');
-            $table->float('prog', 5, 2) -> max(100.00) ->default(50);
-            $table->integer('ilosc_pytan') -> max(500) -> default(40);
+            $table->float('prog', 5, 2) -> max(100.00) ->default(50) -> nullable();
+            $table->integer('ilosc_pytan') -> max(500) -> default(40) -> nullable();
             $table->integer('owner_id') -> nullable();
             $table->boolean('public') -> default(false);
             $table->timestamps();
