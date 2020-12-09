@@ -1,5 +1,5 @@
 <template>
-    <div id="testsView">
+    <div id="testsView" @focus="getDzialy">
         <div class="toolbox">
             <button
                 class="btn btn-primary btn-left"
@@ -65,7 +65,7 @@
                     v-model="test.duration"
                     id=""
                 />
-                <select class="form-control margin" v-model="dzial"
+                <select @click="getDzialy" class="form-control margin" v-model="dzial"
                     ><option value="null" disabled selected hidden
                         >Wybierz dział</option
                     >
@@ -188,6 +188,7 @@ export default {
                 .get("/api/basic/dzialy")
                 .catch(err => console.log(err.response))
                 .then(res => {
+                    console.log("focu");
                     console.log(res.data);
                     this.dzialy = res.data;
                 });
@@ -209,7 +210,8 @@ export default {
                     console.log(res.data);
                     ctx.uczniowie = res.data;
                 });
-        }
+        },
+        mounted() {}
     }
 };
 </script>
