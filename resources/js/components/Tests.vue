@@ -113,6 +113,7 @@ import { Datetime } from "vue-datetime";
 import "vue-datetime/dist/vue-datetime.css";
 import TestsLists from "./TestsLists";
 import axios from "axios";
+import moment from 'moment';
 let ctx;
 export default {
     components: {
@@ -144,10 +145,11 @@ export default {
     },
     methods: {
         createTest: function() {
+            console.log(new Date(this.test.start))
             axios
                 .post("/api/add_test", {
                     name: this.test.name,
-                    start: new Date(this.test.start).toISOString(),
+                    start: moment(this.test.start).toISOString(),
                     threshold: this.test.threshold,
                     dzialy_id: this.dzial,
                     duration: this.test.duration,
