@@ -14,9 +14,7 @@
                 </div>        
             </div>
         </vue-slick-carousel>
-        <div class="dots"></div>
-        <div class="down-bar">
-        </div>        
+         
     </div>
 </template>
 <script>
@@ -28,7 +26,7 @@ export default {
         return{
             settings:{
                 "autoplay": true,
-                "autoplaySpeed": 3000,
+                // "autoplaySpeed": 3000,
                 "pauseOnHover": false,
                 "lazyLoad": "progressive",
             }
