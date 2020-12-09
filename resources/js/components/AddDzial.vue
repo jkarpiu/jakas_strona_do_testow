@@ -1,64 +1,76 @@
 <template>
     <div>
         <div class="questions">
-            <div v-for="question in questions" :key="question.id">
-                <h1 class="header1">Dodaj pytanie</h1>
-                <input
-                    class="form-control question-input"
-                    placeholder="Pytanie"
-                    type="text"
-                    name="pytanie"
-                />
-                <br />
-                <h1 class="header2">Dodaj odpowiedzi</h1>
+            <vue-slick-carousel
+                class="allCards"
+                :arrows="true"
+                :dots="true"
+                :dotsClass="'dotsAddDzial'"
+            >
                 <div
-                    id="head-answer-all"
-                    :key="answer.id"
-                    v-for="answer in question.answers"
+                    v-for="question in questions"
+                    class="oneCard"
+                    :key="question.id"
                 >
-                    <div id="answer-all">
-                        <p class="check-valid">
-                            Poprawna:
+                    <h1 class="header1">Dodaj pytanie</h1>
+                    <input
+                        class="form-control question-input"
+                        placeholder="Podaj treść pytania"
+                        type="text"
+                        name="pytanie"
+                    />
+                    <br />
+                    <h1 class="header2">Dodaj odpowiedzi</h1>
+                    <div
+                        id="head-answer-all"
+                        :key="answer.id"
+                        v-for="answer in question.answers"
+                    >
+                        <div id="answer-all">
+                            <p class="check-valid">
+                                Poprawna:
+                                <input
+                                    type="radio"
+                                    v-model="answer.poprawna"
+                                    name="valid"
+                                    true-value="true"
+                                />
+                            </p>
                             <input
-                                type="radio"
-                                v-model="answer.poprawna"
-                                name="valid"
-                                true-value="true"
+                                class="form-control answer-input"
+                                placeholder="Odpowiedź"
+                                v-model="answer.tresc"
+                                type="text"
                             />
-                        </p>
-                        <input
-                            class="form-control answer-input"
-                            placeholder="Odpowiedź"
-                            v-model="answer.tresc"
-                            type="text"
-                        />
-                        <button
-                            class="btn btn-danger"
-                            style="height: 2.3rem; width: 2.3rem; margin-left: 20px;"
-                            @click="
-                                question.answers = question.answers.filter(
-                                    function(value, index, arr) {
-                                        return value != answer;
-                                    }
-                                )
-                            "
-                        >
-                            <font-awesome-icon icon="trash" />
-                        </button>
-                    </div>
-                </div>
-                <button
-                    class="btn btn-success"
-                    @click="
-                        question.answers.push(defaultAnswer());
-                        question.answers[question.answers.length - 1].id =
-                            question.answers.length;
-                    "
-                >
-                    Dodaj odpowiedź
-                </button>
-                <center></center>
-            </div>
+                            <div>
+                                <button
+                                    class="btn btn-danger"
+                                    style=""
+                                    @click="
+                                        question.answers = question.answers.filter(
+                                            function(value, index, arr) {
+                                                return value != answer;
+                                            }
+                                        )
+                                    "
+                                >
+                                    <font-awesome-icon icon="trash" />
+                                </button>
+                            </div>
+                        </div>
+                    </div> <button
+                        class="btn btn-success"
+                        @click="
+                            question.answers.push(defaultAnswer());
+                            question.answers[question.answers.length - 1].id =
+                                question.answers.length;
+                        "
+                    >
+                        Dodaj odpowiedź
+                    </button>
+
+                    </div
+            ></vue-slick-carousel>
         </div>
         <input
             type="text"
@@ -72,6 +84,9 @@
     </div>
 </template>
 <script>
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 export default {
     data() {
         return {
@@ -84,6 +99,9 @@ export default {
                 };
             }
         };
+    },
+    components: {
+        VueSlickCarousel: VueSlickCarousel
     },
     methods: {
         addQuestion: function() {
@@ -110,14 +128,14 @@ export default {
     }
 };
 </script>
-<style scoped>
-.questions {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    height: 80vh;
+
+<style>
+.oneCard {
+    width: 80vw;
 }
-.question {
-    flex: 0 0 auto;
+.allCards {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 </style>
