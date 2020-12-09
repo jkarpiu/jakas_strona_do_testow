@@ -72,6 +72,7 @@ body {
     position: absolute;
     top: 11px;
     right: 20px;
+    
 }
 
 /* ipies */
@@ -190,6 +191,10 @@ body {
     line-height: 1.75rem;
 }
 
+.slick-dots{
+    top: 60vh;
+    font-size: 50px;
+}
 .btn-google {
 
     width: 20.6rem;
@@ -246,7 +251,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 0.5vw;
 }
 
 ::-webkit-scrollbar-track {
