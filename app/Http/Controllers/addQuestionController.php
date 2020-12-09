@@ -16,14 +16,22 @@ class addQuestionController extends Controller
     {
         if (Auth::user()->role == 2) {
             $dzial = Dzialy::create([
-                'nazwa' => $request['title']
+                'nazwa' => $request['title'],
+                'owner_id' => Auth::id()
             ]);
             foreach($request['questions'] as $q){
-                Pytania::create([
+                $pytanie = Pytania::create([
                     'tresc' => $q['tresc'],
                     'id_dzial' => $dzial -> id,
                     'image' => ''
                 ]);
+                foreach($q['answers'] as $a){
+                    Odpowiedzi::create([
+                        'tresc' => $a['tresc'],
+                        'poprawna' => $a['poprawna'] ? true : false,
+                        'id_pytanie' => $pytanie -> id
+                    ]);
+                }
             }
             return response()->json($request);
         }
