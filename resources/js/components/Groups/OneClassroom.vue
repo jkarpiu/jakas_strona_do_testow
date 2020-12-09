@@ -13,12 +13,13 @@
       </button>
     </div>
     <div id="mainView">
+      <h2 style="margin-left:10vw;">Tworzenie posta</h2>
       <div
         class="addpost"
         v-if="$store.state.user && $store.state.user.role == 2"
         style="display: flex; flex-direction: column"
       >
-        <div class="dodawanie" style="margin-left: 2.5vw">
+        <div class="dodawanie" style="margin-left: 1.25vw;">
           <div class="form active-dodawanie">
             <textarea
               class="tekst form-control"
@@ -26,180 +27,171 @@
               name=""
               id=""
               v-model="title"
-              style="width: 45vw"
+              style="width: 47.5vw"
             ></textarea>
             <label>Tytuł</label>
-            <textarea
-              class="tekst form-control"
-              rows="3"
-              name=""
-              id=""
-              v-model="newPost"
-              style="width: 45vw"
-            ></textarea>
-            <label>Treść</label>
+            <div class="editor">
+              <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
+                <div class="menubar">
+                  <button
+                    class="menubar__button"
+                    :class="{ 'is-active': isActive.bold() }"
+                    @click="commands.bold"
+                  >
+                    <font-awesome-icon icon="bold" />
+                  </button>
+
+                  <button
+                    class="menubar__button"
+                    :class="{ 'is-active': isActive.italic() }"
+                    @click="commands.italic"
+                  >
+                    <font-awesome-icon icon="italic" />
+                  </button>
+
+                  <button
+                    class="menubar__button"
+                    :class="{ 'is-active': isActive.strike() }"
+                    @click="commands.strike"
+                  >
+                    <font-awesome-icon icon="strikethrough" />
+                  </button>
+
+                  <button
+                    class="menubar__button"
+                    :class="{ 'is-active': isActive.underline() }"
+                    @click="commands.underline"
+                  >
+                    <font-awesome-icon icon="underline" />
+                  </button>
+
+                  <button
+                    class="menubar__button"
+                    :class="{ 'is-active': isActive.code() }"
+                    @click="commands.code"
+                  >
+                    <font-awesome-icon icon="code" />
+                  </button>
+
+                  <button
+                    class="menubar__button"
+                    :class="{ 'is-active': isActive.heading({ level: 1 }) }"
+                    @click="commands.heading({ level: 1 })"
+                  >
+                    H1
+                  </button>
+
+                  <button
+                    class="menubar__button"
+                    :class="{ 'is-active': isActive.heading({ level: 2 }) }"
+                    @click="commands.heading({ level: 2 })"
+                  >
+                    H2
+                  </button>
+
+                  <button
+                    class="menubar__button"
+                    :class="{ 'is-active': isActive.heading({ level: 3 }) }"
+                    @click="commands.heading({ level: 3 })"
+                  >
+                    H3
+                  </button>
+
+                  <button
+                    class="menubar__button"
+                    :class="{ 'is-active': isActive.bullet_list() }"
+                    @click="commands.bullet_list"
+                  >
+                    <font-awesome-icon icon="list-ul" />
+                  </button>
+
+                  <button
+                    class="menubar__button"
+                    :class="{ 'is-active': isActive.ordered_list() }"
+                    @click="commands.ordered_list"
+                  >
+                    <font-awesome-icon icon="list-ol" />
+                  </button>
+
+                  <button
+                    class="menubar__button"
+                    :class="{ 'is-active': isActive.code_block() }"
+                    @click="commands.code_block"
+                  >
+                    <font-awesome-icon icon="code" />
+                  </button>
+
+                  <button
+                    class="menubar__button history_button"
+                    @click="commands.undo"
+                  >
+                    <font-awesome-icon icon="undo" />
+                  </button>
+
+                  <button
+                    class="menubar__button history_button"
+                    @click="commands.redo"
+                  >
+                    <font-awesome-icon icon="redo" />
+                  </button>
+                </div>
+              </editor-menu-bar>
+
+              <editor-content class="editor__content" :editor="editor" />
+            </div>
           </div>
         </div>
-  <div class="editor">
-    <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
-      <div class="menubar">
-
-        <button
-          class="menubar__button"
-          :class="{ 'is-active': isActive.bold() }"
-          @click="commands.bold"
-        >
-        <font-awesome-icon icon="bold" />
-        </button>
-
-        <button
-          class="menubar__button"
-          :class="{ 'is-active': isActive.italic() }"
-          @click="commands.italic"
-        >
-        <font-awesome-icon icon="italic" />
-        </button>
-
-        <button
-          class="menubar__button"
-          :class="{ 'is-active': isActive.strike() }"
-          @click="commands.strike"
-        >
-        <font-awesome-icon icon="strikethrough" />
-        </button>
-
-        <button
-          class="menubar__button"
-          :class="{ 'is-active': isActive.underline() }"
-          @click="commands.underline"
-        >
-        <font-awesome-icon icon="underline" />
-        </button>
-
-        <button
-          class="menubar__button"
-          :class="{ 'is-active': isActive.code() }"
-          @click="commands.code"
-        >
-        <font-awesome-icon icon="code" />
-        </button>
-
-        <button
-          class="menubar__button"
-          :class="{ 'is-active': isActive.heading({ level: 1 }) }"
-          @click="commands.heading({ level: 1 })"
-        >
-          H1
-        </button>
-
-        <button
-          class="menubar__button"
-          :class="{ 'is-active': isActive.heading({ level: 2 }) }"
-          @click="commands.heading({ level: 2 })"
-        >
-          H2
-        </button>
-
-        <button
-          class="menubar__button"
-          :class="{ 'is-active': isActive.heading({ level: 3 }) }"
-          @click="commands.heading({ level: 3 })"
-        >
-          H3
-        </button>
-
-        <button
-          class="menubar__button"
-          :class="{ 'is-active': isActive.bullet_list() }"
-          @click="commands.bullet_list"
-        >
-
-        <font-awesome-icon icon="list-ul" />
-        </button>
-
-        <button
-          class="menubar__button"
-          :class="{ 'is-active': isActive.ordered_list() }"
-          @click="commands.ordered_list"
-        >
-        <font-awesome-icon icon="list-ol" />
-        </button>
-
-
-        <button
-          class="menubar__button"
-          :class="{ 'is-active': isActive.code_block() }"
-          @click="commands.code_block"
-        >
-        <font-awesome-icon icon="code" />
-        </button>
-
-
-        <button
-          class="menubar__button history_button"
-          @click="commands.undo"
-        >
-        <font-awesome-icon icon="undo" />
-        </button>
-
-        <button
-          class="menubar__button history_button"
-          @click="commands.redo"
-        >
-        <font-awesome-icon icon="redo" />
-        </button>
-
-      </div>
-    </editor-menu-bar>
-
-    <editor-content class="editor__content" :editor="editor" />
-  </div>
       </div>
       <div class="przycisk">
         <button class="btn btn-primary" @click="addPost">Dodaj post</button>
       </div>
-
+    <h2 style="margin-left:10vw;">Posty</h2>  
       <div class="post" :key="post.id" v-for="post in posts">
         <p class="post_tytul">{{ post.title }}</p>
-        <p style="margin-bottom:3rem;">{{ post.content }}</p>
-        <i><p style="text-align: right; font-size:0.7rem;">{{ sensownyCzas(post.created_at) }}</p></i>
+        <div class="post_tresc">
+          <p style="margin-bottom: 3rem" v-html="post.content"></p>
+          <i><p style="text-align: right; font-size: 0.7rem">
+            {{ sensownyCzas(post.created_at) }}
+            </p></i>
+        </div>
         <div
           class="komentarze"
-          style="margin-left: 2vw;"
+          style="margin-left: 2vw"
           :key="comment.id"
           v-for="comment in post.comments"
         >
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStixxgmXCRq9V0b8G85MJ0cTj1pT1AYOuoKg&usqp=CAU" style="width:2rem; margin-right:0.5vw; display:inline-block;">
-          <p style="display:inline-block;">AUTOR</p>
-          <p style="display:inline-block; float: right; font-size:0.6rem;">2020-21-37</p>
-          <p style="margin-left:5px; margin-right:5px;">{{ comment.tresc }}</p>
-
+            <div style="display:inline-block; align-items: center; margin-right:0.5vh;">
+              <font-awesome-icon icon="user" style="font-size:1.5rem;"/>
+            </div> 
+          <p style="display: inline-block; padding:1px; margin-bottom:0; margin-bottom:0; color:cadetblue;">AUTOR</p>
+          <p style="display: inline-block; float: right; font-size: 0.6rem">
+            2020-21-37
+          </p>
+          <p style="margin-left: 5px; margin-right: 5px; margin-bottom:0;">{{ comment.tresc }}</p>
         </div>
-        <div class="dodawanie" style="margin-left: 2.5vw;">
-          <div class="form active-dodawanie">
-
-              <textarea
-                class="tekst form-control"
-                rows="1"
-                name=""
-                id=""
-                v-model="comment[post.id]"
-                style="width: 20vw; display:inline-block;"
-              ></textarea>
-
+        <div class="dodawanie" style="margin-left: 0.2vw;">
+          <div class="form active-dodawanie" style="display:flex; margin-top:4vh; padding-bottom:0.7vh;">
+            <div style="display:flex; justify-content:center; align-items: center; margin-right:0.7vh;">
+              <font-awesome-icon icon="user" style="font-size:2rem;"/>
+            </div>   
+            <textarea
+              class="tekst form-control"
+              rows="1"
+              name=""
+              id=""
+              v-model="comment[post.id]"
+              style="width: 27.7vw; margin-right:0.5vh;"
+            ></textarea>
 
             <button
               class="btn btn-primary"
-              style="margin: 0 !important; width: 2vw; display:inline-block;"
+              style="margin: 0 !important; width: 2vw; display: inline-block"
               @click="addComment(post.id)"
             >
               >
             </button>
           </div>
         </div>
-
-
-
       </div>
     </div>
     <modal
@@ -216,25 +208,21 @@
   </div>
 </template>
 <script>
+import { Editor, EditorContent, EditorMenuBar } from "tiptap";
 import {
-  Editor,
-  EditorContent,
-  EditorMenuBar
-} from "tiptap";
-import {
-          BulletList,
-          CodeBlock,
-          Heading,
-          ListItem,
-          OrderedList,
-          Link,
-          Bold,
-          Code,
-          Italic,
-          Strike,
-          Underline,
-          History,
-} from 'tiptap-extensions'
+  BulletList,
+  CodeBlock,
+  Heading,
+  ListItem,
+  OrderedList,
+  Link,
+  Bold,
+  Code,
+  Italic,
+  Strike,
+  Underline,
+  History,
+} from "tiptap-extensions";
 import axios from "axios";
 
 export default {
@@ -262,7 +250,7 @@ export default {
           new Underline(),
           new History(),
         ],
-      })
+      }),
     };
   },
   created() {
@@ -271,7 +259,7 @@ export default {
   },
   components: {
     EditorMenuBar,
-    EditorContent
+    EditorContent,
   },
   methods: {
     sensownyCzas: function (sqlTime) {
@@ -314,6 +302,7 @@ export default {
         });
     },
     addPost: function () {
+      this.newPost = this.editor.getHTML();
       axios
         .post("/api/add_post", {
           id: this.id,
@@ -324,6 +313,8 @@ export default {
         .then((res) => {
           console.log(res.data);
           this.listPosts();
+          this.editor.clearContent();
+          this.title = "";
         });
     },
     addComment: function (id) {
@@ -333,6 +324,7 @@ export default {
         .then((res) => {
           console.log(res.data);
           this.listPosts();
+          this.comment[id] = "";
         });
     },
     getInvitation: function () {
@@ -353,10 +345,9 @@ export default {
 };
 </script>
 <style scoped>
-
 #classroomView {
   display: grid;
-  grid-template-rows: 0.1fr 1fr;
+  grid-template-rows: 0.03fr 1fr;
   grid-template-columns: 1fr;
 }
 .toolbox {
@@ -380,22 +371,23 @@ export default {
   margin-left: 10vw;
 }
 .addpost {
-  padding-bottom: 1rem;
-  padding-top: 2rem;
+  padding-bottom:1vh;
+  padding-top: 2.5vh;
   background: rgb(39, 39, 39);
   margin-left: 10vw;
   width: 50vw;
   box-shadow: 10px 6px 24px 0px rgba(0, 0, 0, 0.5);
 }
 .komentarze {
+  border-bottom: 2px solid #509df0;
+  box-shadow: 0 1px 0 0 #81a7cf;
   background: rgb(66, 66, 66);
   width: 30vw;
-  max-width:30vw;
-  padding: 5px 5px 2px 5px;
+  max-width: 30vw;
+  padding: 5px 5px 8px 5px;
   word-wrap: break-word;
   min-height: 2rem;
-  margin-bottom: 2vh;
-
+  margin-bottom: 1.5vh;
 }
 textarea {
   resize: none;
@@ -419,31 +411,31 @@ textarea {
 }
 .editor {
   position: relative;
-  width: 45vw;
-  margin: 0 auto 5rem auto;
-  color:black;
+  width: 47.5vw;
+  color: black;
   background: white;
 }
 
 .editor__content {
-    padding: 5px;
+  padding: 2px 2px 0px 2px;
+  min-height: 3rem;
 }
 .menubar {
-  margin-right:auto;
-  margin-left:auto;
+  margin-right: auto;
+  margin-left: auto;
   background: rgb(224, 224, 224);
   padding: 5px;
 }
 
 .menubar__button {
-    border: hidden;
-    border-radius: 5px;
-    box-shadow: none;
+  border: hidden;
+  border-radius: 5px;
+  box-shadow: none;
   background: rgb(224, 224, 224);
 }
 
 .is-active {
-    background: #0061c9;
+  background: #0061c9;
 }
 
 
