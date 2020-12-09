@@ -17,7 +17,8 @@ class CreateWynikisTable extends Migration
             $table->id();
             $table->integer('id_user');
             $table->integer('id_dzial');
-            $table->integer('active_test_id');  
+            $table->integer('active_test_id');
+            $table->integer('teacher_test_id') -> nullable();
             $table->integer('max_points');
             $table->integer('points');
             $table->boolean('passed');

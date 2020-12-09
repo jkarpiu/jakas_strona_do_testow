@@ -5,6 +5,7 @@
                 <thead>
                     <tr>
                         <th>Dzial</th>
+                        <th>Nauczyciel</th>
                         <th>Zdane</th>
                         <th>Punkty</th>
                         <th>Procent</th>
@@ -14,6 +15,7 @@
                 </thead>
                 <tr :key="wynik.id" v-for="wynik in wyniki">
                     <th>{{ wynik.dzial.nazwa }}</th>
+                    <th v-if="wynik.teacher_test">{{  wynik.teacher_test.teacher.fname + " " + wynik.teacher_test.teacher.lname +  ": " +wynik.teacher_test.name }}</th> <th v-else> - </th>
                     <th>{{ wynik.passed ? "Tak" : "Nie" }}</th>
                     <th>{{ wynik.points }} / {{ wynik.max_points }}</th>
                     <th
@@ -65,7 +67,7 @@ export default {
             axios
                 .get("/api/wyniki")
                 .catch(err => {
-                    console.log(err);
+                    console.log(err.response);
                 })
                 .then(res => {
                     console.log(res.data);

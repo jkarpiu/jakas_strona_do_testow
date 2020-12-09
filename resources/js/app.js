@@ -13,7 +13,7 @@ import VueCookies from 'vue-cookies'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faPlus, faLink, faUser, faBold, faItalic, faStrikethrough, faCode, faUndo, faRedo, faUnderline, faListUl, faListOl, } from '@fortawesome/free-solid-svg-icons'
+import { faTrash,faPlus, faLink, faUser, faBold, faItalic, faStrikethrough, faCode, faUndo, faRedo, faUnderline, faListUl, faListOl, } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import vmodal from 'vue-js-modal'
 import { Datetime } from 'vue-datetime';
@@ -31,9 +31,10 @@ import OneGroup from './components/Groups/OneClassroom'
 import ListGroups from './components/Groups/Classrooms';
 import GroupsMain from './components/GroupsMain';
 import Tests from './components/Tests.vue'
+import Dodawanko from './components/AddDzial'
 
 
-library.add(faPlus, faLink, faUser, faBold, faItalic, faStrikethrough, faCode, faUndo, faRedo, faUnderline, faListUl, faListOl);
+library.add(faTrash, faPlus, faLink, faUser, faBold, faItalic, faStrikethrough, faCode, faUndo, faRedo, faUnderline, faListUl, faListOl);
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(VueCookies)
@@ -132,6 +133,10 @@ const routes = [
         path: "/test/:id",
         props: true,
         component: SetTest
+    },
+    {
+        path: '/nowydzial',
+        component: Dodawanko
     },
     {
         path: "*",

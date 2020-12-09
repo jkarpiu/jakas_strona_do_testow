@@ -18,6 +18,7 @@ class CreateTeacherTestsTable extends Migration
             $table->dateTime("start");
             $table->integer("duration");
             $table->integer('threshold')->max(100) -> min(0);
+            $table->integer('questionsAmount');
             $table->string('name');
             $table->integer("dzialy_id");
             $table->integer('teacher_id');
