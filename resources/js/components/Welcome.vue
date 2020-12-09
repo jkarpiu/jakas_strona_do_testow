@@ -1,72 +1,29 @@
 <template>
     <div>
         <div id="background-image">
-
+            <div class="text">To jest nasza zajebista strona na której będziecie mogli rozwiazywac testy na doktora</div>
         </div>
-    
-        <div>
-            <p style="margin: 50px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper nisi eu dictum aliquet.
-                Aenean sit amet nunc vel odio luctus tristique id id mi. Mauris eu diam nulla. Ut finibus lectus vel
-                felis viverra vestibulum. Suspendisse blandit felis lobortis dapibus suscipit. Mauris ante odio,
-                pulvinar sit amet libero vel, pharetra porttitor dolor. Phasellus feugiat urna tortor, id eleifend
-                neque tincidunt vel. Ut euismod ultricies sagittis. Duis nibh velit, pellentesque nec maximus ac,
-                finibus finibus libero. Vivamus vel vulputate dolor, varius cursus neque. Aliquam euismod, erat non
-                ultricies fringilla, ante est vestibulum dui, quis vehicula leo libero et felis. Integer commodo
-                elementum efficitur. Integer lorem magna, vehicula vel finibus ut, porttitor sed nisi. Quisque
-                varius est in nulla luctus, a elementum magna fermentum. Nunc mollis massa posuere, aliquam diam id,
-                dignissim libero. Nullam eget nibh sit amet lacus condimentum viverra.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper nisi eu dictum aliquet.
-                Aenean sit amet nunc vel odio luctus tristique id id mi. Mauris eu diam nulla. Ut finibus lectus vel
-                felis viverra vestibulum. Suspendisse blandit felis lobortis dapibus suscipit. Mauris ante odio,
-                pulvinar sit amet libero vel, pharetra porttitor dolor. Phasellus feugiat urna tortor, id eleifend
-                neque tincidunt vel. Ut euismod ultricies sagittis. Duis nibh velit, pellentesque nec maximus ac,
-                finibus finibus libero. Vivamus vel vulputate dolor, varius cursus neque. Aliquam euismod, erat non
-                ultricies fringilla, ante est vestibulum dui, quis vehicula leo libero et felis. Integer commodo
-                elementum efficitur. Integer lorem magna, vehicula vel finibus ut, porttitor sed nisi. Quisque
-                varius est in nulla luctus, a elementum magna fermentum. Nunc mollis massa posuere, aliquam diam id,
-                dignissim libero. Nullam eget nibh sit amet lacus condimentum viverra.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper nisi eu dictum aliquet.
-                Aenean sit amet nunc vel odio luctus tristique id id mi. Mauris eu diam nulla. Ut finibus lectus vel
-                felis viverra vestibulum. Suspendisse blandit felis lobortis dapibus suscipit. Mauris ante odio,
-                pulvinar sit amet libero vel, pharetra porttitor dolor. Phasellus feugiat urna tortor, id eleifend
-                neque tincidunt vel. Ut euismod ultricies sagittis. Duis nibh velit, pellentesque nec maximus ac,
-                finibus finibus libero. Vivamus vel vulputate dolor, varius cursus neque. Aliquam euismod, erat non
-                ultricies fringilla, ante est vestibulum dui, quis vehicula leo libero et felis. Integer commodo
-                elementum efficitur. Integer lorem magna, vehicula vel finibus ut, porttitor sed nisi. Quisque
-                varius est in nulla luctus, a elementum magna fermentum. Nunc mollis massa posuere, aliquam diam id,
-                dignissim libero. Nullam eget nibh sit amet lacus condimentum viverra.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper nisi eu dictum aliquet.
-                Aenean sit amet nunc vel odio luctus tristique id id mi. Mauris eu diam nulla. Ut finibus lectus vel
-                felis viverra vestibulum. Suspendisse blandit felis lobortis dapibus suscipit. Mauris ante odio,
-                pulvinar sit amet libero vel, pharetra porttitor dolor. Phasellus feugiat urna tortor, id eleifend
-                neque tincidunt vel. Ut euismod ultricies sagittis. Duis nibh velit, pellentesque nec maximus ac,
-                finibus finibus libero. Vivamus vel vulputate dolor, varius cursus neque. Aliquam euismod, erat non
-                ultricies fringilla, ante est vestibulum dui, quis vehicula leo libero et felis. Integer commodo
-                elementum efficitur. Integer lorem magna, vehicula vel finibus ut, porttitor sed nisi. Quisque
-                varius est in nulla luctus, a elementum magna fermentum. Nunc mollis massa posuere, aliquam diam id,
-                dignissim libero. Nullam eget nibh sit amet lacus condimentum viverra.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper nisi eu dictum aliquet.
-                Aenean sit amet nunc vel odio luctus tristique id id mi. Mauris eu diam nulla. Ut finibus lectus vel
-                felis viverra vestibulum. Suspendisse blandit felis lobortis dapibus suscipit. Mauris ante odio,
-                pulvinar sit amet libero vel, pharetra porttitor dolor. Phasellus feugiat urna tortor, id eleifend
-                neque tincidunt vel. Ut euismod ultricies sagittis. Duis nibh velit, pellentesque nec maximus ac,
-                finibus finibus libero. Vivamus vel vulputate dolor, varius cursus neque. Aliquam euismod, erat non
-                ultricies fringilla, ante est vestibulum dui, quis vehicula leo libero et felis. Integer commodo
-                elementum efficitur. Integer lorem magna, vehicula vel finibus ut, porttitor sed nisi. Quisque
-                varius est in nulla luctus, a elementum magna fermentum. Nunc mollis massa posuere, aliquam diam id,
-                dignissim libero. Nullam eget nibh sit amet lacus condimentum viverra.</p>
-        </div>
+        
     </div>
 </template>
 <style scoped>
-
     #background-image   {
-        background: url("img.jpg");
-        width: 1024px;
-        height: 500px;
+        background: url("../../img/serwerownia.jpg") no-repeat center center ;
+        height: 90vh;
         background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 70%  !important;
         display: block;
-        position: relative;
-        background-position: 0 500px;
+        position: relative;   
+    }
+
+    .text   {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 2rem; 
+        text-shadow: 5px 5px 10px black;   
+        width: 300px;
+        
+
     }
 </style>
