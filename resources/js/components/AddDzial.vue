@@ -16,9 +16,11 @@
                     <input
                         class="form-control question-input"
                         placeholder="Podaj treść pytania"
+                        v-model="question.tresc"
                         type="text"
                         name="pytanie"
                     />
+                    <input type="file" @change="selectFile" />
                     <br />
                     <h1 class="header2">Dodaj odpowiedzi</h1>
                     <div
@@ -58,7 +60,8 @@
                                 </button>
                             </div>
                         </div>
-                    </div> <button
+                    </div>
+                    <button
                         class="btn btn-success"
                         @click="
                             question.answers.push(defaultAnswer());
@@ -68,17 +71,17 @@
                     >
                         Dodaj odpowiedź
                     </button>
-
-                    </div
-            ></vue-slick-carousel>
+                </div></vue-slick-carousel
+            >
         </div>
         <input
             type="text"
             placeholder="Nazwa działu"
             class="form-control"
             style="width:40vw; margin: 15px;"
+            v-model="dzialTitle"
         />
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" @click="send" class="btn btn-primary">
             Wyślij
         </button>
     </div>
@@ -87,10 +90,13 @@
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import axios from "axios";
 export default {
     data() {
         return {
             questions: [],
+            dzialTitle: null,
+
             defaultAnswer: function() {
                 return {
                     id: null,
@@ -108,7 +114,8 @@ export default {
             this.questions.push({
                 id: this.questions.length + 1,
                 tresc: "",
-                answers: []
+                answers: [],
+                image
             });
         },
         addAnswer: function(pyt) {
@@ -116,6 +123,23 @@ export default {
             this.questions[pyt].answers[
                 this.questions[pyt].answers.length - 1
             ].id = this.questions[pyt].answers.length;
+        },
+        send: function() {
+            axios
+                .post("/api/add_dzial", {
+                    questions: this.questions,
+                    title: this.dzialTitle
+                })
+                .catch(err => {
+                    console.log(err.response);
+                })
+                .then(res => {
+                    console.log(res.data);
+                });
+        },
+        selectFile(event, id) {
+            // `files` is always an array because the file input may be in multiple mode
+            this.photo = event.target.files[0];
         }
     },
     created() {
