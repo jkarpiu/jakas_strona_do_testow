@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Dzialy extends Model
 {
+    protected $fillable = ['nazwa'];
     public function pytanie()
     {
         return $this->hasMany('App\Pytania', 'id_dzial');

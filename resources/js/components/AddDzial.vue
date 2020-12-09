@@ -1,12 +1,12 @@
 <template>
     <div>
         <div class="questions">
-            <vue-slick-carousel
+            <!-- <vue-slick-carousel
                 class="allCards"
                 :arrows="true"
                 :dots="true"
                 :dotsClass="'dotsAddDzial'"
-            >
+            > -->
                 <div
                     v-for="question in questions"
                     class="oneCard"
@@ -20,7 +20,12 @@
                         type="text"
                         name="pytanie"
                     />
-                    <input type="file" @change="selectFile" />
+                    <input
+                        type="file"
+                        id="file"
+                        @change="selectFile(question.id - 1)"
+                        :ref="'file' + (question.id - 1)"
+                    />
                     <br />
                     <h1 class="header2">Dodaj odpowiedzi</h1>
                     <div
@@ -69,10 +74,24 @@
                                 question.answers.length;
                         "
                     >
-                        Dodaj odpowiedź
+                        Dodaj odpowiedź</button
+                    ><button
+                        class="btn btn-danger"
+                        @click="
+                            questions = questions.filter(function(
+                                value,
+                                index,
+                                arr
+                            ) {
+                                return value != question;
+                            })
+                        "
+                    >
+                        Usuń pytanie
                     </button>
-                </div></vue-slick-carousel
-            >
+                </div>
+                <button class="btn btn-success" @click="addQuestion(); for (let i = 0; i< 3; i++ ){addAnswer(questions.length - 1)}">Dodaj pytanie</button>
+            <!-- </vue-slick-carousel> -->
         </div>
         <input
             type="text"
@@ -115,7 +134,7 @@ export default {
                 id: this.questions.length + 1,
                 tresc: "",
                 answers: [],
-                image
+                image: null
             });
         },
         addAnswer: function(pyt) {
@@ -137,9 +156,15 @@ export default {
                     console.log(res.data);
                 });
         },
-        selectFile(event, id) {
+        selectFile(id) {
+            let image = this.$refs["file" + id].files[0];
+            const reader = new FileReader();
+            reader.onload = e => {
+                this.questions[id].imgae = e.target.result;
+            };
+            console.log(this.$refs.file0.files);
+            reader.readAsBinaryString(image);
             // `files` is always an array because the file input may be in multiple mode
-            this.photo = event.target.files[0];
         }
     },
     created() {

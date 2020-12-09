@@ -18,9 +18,11 @@ class addQuestionController extends Controller
             $dzial = Dzialy::create([
                 'nazwa' => $request['title']
             ]);
-            foreach($request['question'] as $q){
+            foreach($request['questions'] as $q){
                 Pytania::create([
-
+                    'tresc' => $q['tresc'],
+                    'id_dzial' => $dzial -> id,
+                    'image' => ''
                 ]);
             }
             return response()->json($request);
