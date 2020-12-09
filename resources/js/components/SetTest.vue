@@ -2,21 +2,28 @@
     <div>
         <loading v-if="isLoading" />
         <div v-else>
-            <h2>
-                {{ testInfo.name }}
-            </h2>
-            <p>
-                Termin rozpoczęcia: {{ new Date(testInfo.start) }}
-            </p>
-            <p>
-                Czas trwania: {{ testInfo.duration }}
-                {{ testInfo.duration < 5 ? "minuty" : "minut" }}
-            </p>
-            <p>
-                Nauczyciel: {{ testInfo.teacher.fname }}
-                {{ testInfo.teacher.lname }}
-            </p>
-            <button :disabled="!canTestStart" class="btn btn-primary">Zaczynamy!</button>
+            <div v-if="!isTestStarted">
+                <h2>
+                    {{ testInfo.name }}
+                </h2>
+                <p>Termin rozpoczęcia: {{ this.startTime }}</p>
+                <p>
+                    Czas trwania: {{ testInfo.duration }}
+                    {{ testInfo.duration < 5 ? "minuty" : "minut" }}
+                </p>
+                <p>
+                    Nauczyciel: {{ testInfo.teacher.fname }}
+                    {{ testInfo.teacher.lname }}
+                </p>
+                <button
+                    :disabled="!canTestStart"
+                    @click="startTest"
+                    class="btn btn-primary"
+                >
+                    Zaczynamy!
+                </button>
+            </div>
+            <pytanka v-else :ilosc="testInfo.questionsAmount" :dzial="testInfo.dzialy_id" :test="testInfo.id"  />
         </div>
     </div>
 </template>
@@ -24,6 +31,7 @@
 import axios from "axios";
 import loading from "./Loading";
 import Loading from "./Loading.vue";
+import Pytanka from "./PytankaCopy";
 import moment from "moment";
 export default {
     props: ["id"],
@@ -32,7 +40,8 @@ export default {
             isLoading: true,
             testInfo: null,
             canTestStart: false,
-            isTestedStarted: false
+            isTestStarted: false,
+            startTime: null
         };
     },
     created() {
@@ -46,24 +55,31 @@ export default {
                     console.log(err.response);
                 })
                 .then(res => {
+                    console.log(res.data)
                     this.testInfo = res.data;
-                    this.isLoading = false;
-                    let currentTime = ((new Date()))
-                    console.log(new Date(currentTime));
-                    let startTime =  new Date(moment.utc(this.testInfo.start).local().format('YYYY-MMM-DD h:mm A'));
-                    console.log(startTime);
+                    this.startTime = new Date(
+                        moment
+                            .utc(this.testInfo.start)
+                            .local()
+                            .format("YYYY-MMM-DD h:mm A")
+                    );
                     this.canTestStart =
-                        currentTime >= startTime &&
-                        currentTime <=
-                            moment(startTime)
+                        new Date() >= this.startTime &&
+                        new Date() <=
+                            moment(this.startTime)
                                 .add(this.testInfo.duration, "m")
                                 .toDate();
-                    console.log(res.data);
+                    this.isLoading = false;
                 });
+        },
+        startTest: function() {
+            console.log(this.testInfo.id)
+            this.isTestStarted = true;
         }
     },
     components: {
-        Loading: loading
+        Loading: loading,
+        Pytanka: Pytanka
     }
 };
 </script>

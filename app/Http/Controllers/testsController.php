@@ -20,7 +20,8 @@ class testsController extends Controller
                 'threshold' => $request['threshold'],
                 'name' => $request['name'],
                 'dzialy_id' => $request['dzialy_id'],
-                'teacher_id' => Auth::id()
+                'teacher_id' => Auth::id(),
+                'questionsAmount' => $request['questionAmount']
             ]);
             $test->students()->attach($request['students']);
             return response()->json($test);

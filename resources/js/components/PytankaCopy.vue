@@ -12,6 +12,7 @@
                         <h2 style="margin-bottom: 0">
                             {{ myQuestion.session.dzial.nazwa }}
                         </h2>
+                        <small v-if="myQuestion.session.teacher_test">{{ myQuestion.session.teacher_test.name}}</small>
                     </span>
                     <span>
                         <small> Pozostało: </small>
@@ -68,17 +69,29 @@ import axios from "axios";
 import VueCountdown from "@chenfengyuan/vue-countdown";
 import Loading from "./Loading";
 export default {
-    props: ["ilosc"],
+    props: {
+        ilosc: {
+            default: 40,
+            type: Number
+        },
+        dzial: {
+            default: 1,
+            type: Number
+        },
+        test: {
+            default: null,
+            type: Number
+        }
+    },
     data() {
         return {
             myQuestion: [],
-            dzial: 1,
             answers: [],
             answered: [],
             results: null,
             deadline: null,
             sending: false,
-            isLoading: true,
+            isLoading: true
         };
     },
     components: {
@@ -110,17 +123,13 @@ export default {
             this.isLoading = true;
             axios
                 .get("/api/randQuestion", {
-                    params: { dzial: this.dzial, amount: this.ilosc }
+                    params: { dzial: this.dzial, amount: this.ilosc, test: this.test }
                 })
-                .catch(error => {})
+                .catch(error => {console.log(error.response)})
                 .then(res => {
-                    console.log(this.dzial);
-                    console.log(res.data);
                     this.myQuestion = res.data;
                     this.myQuestion.questions.forEach(item => {
-                        console.log(item.odpowiedzi);
                         item.odpowiedzi = this.shuffle(item.odpowiedzi);
-                        console.log(item.odpowiedzi);
                     });
                     this.answered = [];
                     this.results = null;
@@ -137,9 +146,12 @@ export default {
             }
         },
         sendAnswers: function() {
+            console.log(this.test)
             axios
                 .post(
-                    this.$store.state.user ? "/api/saveAnswers" : "/api/sendAnswers",
+                    this.$store.state.user
+                        ? "/api/saveAnswers"
+                        : "/api/sendAnswers",
                     {
                         answers: this.answers,
                         session: this.myQuestion["session"]
@@ -206,8 +218,7 @@ export default {
             if (this.ilosc <= 1) return "Następne pytanie";
             else return "Jeszcze raz";
         }
-    },
-
+    }
 };
 </script>
 <style scoped>

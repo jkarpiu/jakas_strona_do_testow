@@ -36,7 +36,16 @@
                     placeholder="Data i godzina"
                     :input-class="['form-control', 'margin']"
                 ></datetime>
-
+                <input
+                    type="number"
+                    placeholder="Ilość pytań"
+                    min="1"
+                    style="margin-top: 1rem;"
+                    max="400"
+                    class="form-control margin"
+                    v-model="test.questionAmount"
+                    id=""
+                />
                 <input
                     type="number"
                     placeholder="Próg zdania (%)"
@@ -113,12 +122,12 @@ import { Datetime } from "vue-datetime";
 import "vue-datetime/dist/vue-datetime.css";
 import TestsLists from "./TestsLists";
 import axios from "axios";
-import moment from 'moment';
+import moment from "moment";
 let ctx;
 export default {
     components: {
         Datetime: Datetime,
-        TestsLists : TestsLists
+        TestsLists: TestsLists
     },
     data() {
         return {
@@ -127,7 +136,8 @@ export default {
                 start: null,
                 threshold: null,
                 duration: null,
-                students: []
+                students: [],
+                questionAmount: null
             },
             dzialy: [],
             grupy: [],
@@ -145,7 +155,7 @@ export default {
     },
     methods: {
         createTest: function() {
-            console.log(new Date(this.test.start))
+            console.log(new Date(this.test.start));
             axios
                 .post("/api/add_test", {
                     name: this.test.name,
@@ -153,7 +163,8 @@ export default {
                     threshold: this.test.threshold,
                     dzialy_id: this.dzial,
                     duration: this.test.duration,
-                    students: this.test.students
+                    students: this.test.students,
+                    questionAmount: this.test.questionAmount
                 })
                 .catch(err => console.log(err.response))
                 .then(res => {
@@ -169,7 +180,7 @@ export default {
                 })
                 .then(res => {
                     console.log(res.data);
-                    this.testy = res.data
+                    this.testy = res.data;
                 });
         },
         getDzialy: function() {
@@ -203,7 +214,7 @@ export default {
 };
 </script>
 <style scoped>
-#testsView{
+#testsView {
     display: grid;
     grid-template-rows: 0.15fr 1.75fr;
     grid-template-columns: 1fr;
@@ -217,7 +228,7 @@ export default {
     margin-bottom: 1rem;
 }
 
-.btn-left   {
+.btn-left {
     margin-right: 2rem;
 }
 </style>

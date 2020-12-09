@@ -9,6 +9,6 @@ use App\wyniki;
 class userController extends Controller
 {
     public function wyniki() {
-        return response() -> json(wyniki::where('id_user', Auth::id())->with('dzial') -> get() );
+        return response() -> json(wyniki::where('id_user', Auth::id())->with('dzial', 'teacher_test.teacher') -> get() );
     }
 }

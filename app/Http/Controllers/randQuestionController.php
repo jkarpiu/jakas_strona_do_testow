@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 use App\Pytania;
 use App\Odpowiedzi;
 use App\activeTests;
+use App\teacherTest;
 use Carbon\Carbon;
 use App\wyniki;
 use Illuminate\Support\Facades\Auth;
@@ -31,9 +32,10 @@ class randQuestionController extends Controller
             'questions' =>  $this->getQuestion($request['amount'], (int)$request['dzial']),
             'session' => activeTests::create([
                 'token' => Str::random(32),
-                'deadline' => Carbon::now()->addMinutes(60),
-                'dzial_id' => (int)$request['dzial']
-            ])->load('dzial'),
+                'deadline' => $request['test'] == null ? Carbon::now()->addMinutes(60) : Carbon::now()->addMinutes(teacherTest::find($request['test'])['duration']),
+                'dzial_id' => (int)$request['dzial'],
+                'teacher_test_id' => $request['test']
+            ])->load('dzial', 'teacher_test'),
         ];
         return response()->json($response);
     }
@@ -94,7 +96,8 @@ class randQuestionController extends Controller
                 'active_test_id' => $results['id_session'],
                 'max_points' => $results['results']['max_points'],
                 'points' => $results['results']['points'],
-                'passed' => $results['results']['passed']
+                'passed' => $results['results']['passed'],
+                'teacher_test_id' => (activeTests::find($results['id_session']))['teacher_test_id']
             ]);
             return response()->json($results);
         } else

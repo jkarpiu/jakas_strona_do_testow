@@ -72,7 +72,7 @@ body {
     position: absolute;
     top: 11px;
     right: 20px;
-    
+
 }
 
 /* ipies */
@@ -161,13 +161,13 @@ body {
     justify-content: center;
 }
 
-.btn {
+/* .btn {
     width: 10vw;
     background-color: #0061c9;
     color: #fcfcfc;
     margin-bottom: 10vh;
     margin-top: 2vh;
-}
+} */
 
 .card {
     background: rgb(39,39,39);
@@ -177,9 +177,9 @@ body {
 }
 
 .btn-primary {
-    width: 9.7rem;
+    min-width: 9.7rem;
     color: #fcfcfc;
-    height: 2.5rem;
+    min-height: 2.5rem;
     text-decoration: none;
 }
 
@@ -267,4 +267,83 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #014996;
+}
+
+
+.dotsAddDzial {
+  position: absolute;
+  bottom: -10px;
+
+  display: block;
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  text-align: center;
+  margin-bottom: 15px;
+}
+.dotsAddDzial li {
+  position: relative;
+
+  display: inline-block;
+
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+
+  cursor: pointer;
+}
+.dotsAddDzial li button {
+  font-size: 0;
+  line-height: 0;
+
+  display: block;
+
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+
+  cursor: pointer;
+
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.dotsAddDzial li button:hover,
+.dotsAddDzial li button:focus {
+  outline: none;
+}
+.dotsAddDzial li button:hover:before,
+.dotsAddDzial li button:focus:before {
+  opacity: 1;
+}
+.dotsAddDzial li button:before {
+  font-family: 'slick';
+  font-size: 6px;
+  line-height: 20px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  content: '\2022';
+  text-align: center;
+
+  opacity: 0.25;
+  color: white;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.dotsAddDzial li.slick-active button:before {
+  opacity: 0.75;
+  color: white;
 }

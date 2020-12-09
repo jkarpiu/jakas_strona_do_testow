@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class teacherTest extends Model
 {
-    protected $fillable =['start','name', 'duration', 'dzialy_id', 'teacher_id', 'threshold'];
+    protected $fillable =['start','name', 'duration', 'dzialy_id', 'teacher_id', 'threshold', 'questionsAmount'];
     public function students() {
         return $this -> belongsToMany(User::class, 'user_teacher_test');
     }
@@ -15,5 +15,11 @@ class teacherTest extends Model
     }
     public function dzial() {
         return $this -> belongsTo(Dzialy::class, 'dzialy_id');
+    }
+    public function activeTests() {
+        return $this -> hasMany(activeTests::class, 'teacher_test_id');
+    }
+    public function wyniki() {
+        return $this-> hasMany(wyniki::class, 'teacher_test_id');
     }
 }

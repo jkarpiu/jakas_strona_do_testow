@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 class wyniki extends Model
 {
 
-    protected $fillable = ['id_user', 'id_dzial', 'active_test_id', 'max_points', 'points', 'passed'];
+    protected $fillable = ['id_user', 'id_dzial', 'active_test_id', 'max_points', 'points', 'passed', 'teacher_test_id'];
     public function user() {
         return $this->belongsTo('App\User', 'id_user');
     }
@@ -21,5 +21,9 @@ class wyniki extends Model
 
     public function test() {
         return $this->hasOne(activeTests::class, 'active_test_id');
+    }
+
+    public function teacher_test(){
+        return $this->belongsTo(teacherTest::class, 'teacher_test_id');
     }
 }
