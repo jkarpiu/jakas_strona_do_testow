@@ -170,7 +170,8 @@ export default {
                     dzialy_id: this.dzial,
                     duration: this.test.duration,
                     students: this.test.students,
-                    questionAmount: this.test.questionAmount
+                    questionAmount: this.test.questionAmount,
+                    group_id: this.grupa
                 })
                 .catch(err => console.log(err.response))
                 .then(res => {
@@ -182,7 +183,6 @@ export default {
                         duration: null,
                         students: [],
                         questionAmount: null,
-
                     };
                     this.dzial = null
                     this.uczniowie = []
