@@ -65,7 +65,11 @@
                     v-model="test.duration"
                     id=""
                 />
-                <select @click="getDzialy" class="form-control margin" v-model="dzial"
+                <select
+                    @click="getDzialy"
+                    @change="checkAdd"
+                    class="form-control margin"
+                    v-model="dzial"
                     ><option value="null" disabled selected hidden
                         >Wybierz dział</option
                     >
@@ -112,7 +116,7 @@
                 </p>
             </div>
             <button @click="createTest" class="btn btn-primary ">
-                Dodaj test
+                <p v-if="!sending"> Dodaj test test</p> <p v-else>Wysyłanie...</p>
             </button>
         </modal>
     </div>
@@ -144,7 +148,8 @@ export default {
             uczniowie: [],
             testy: [],
             grupa: null,
-            dzial: null
+            dzial: null,
+            sending: false
         };
     },
     created() {
@@ -155,6 +160,7 @@ export default {
     },
     methods: {
         createTest: function() {
+            this.sending = true
             console.log(new Date(this.test.start));
             axios
                 .post("/api/add_test", {
@@ -169,7 +175,20 @@ export default {
                 .catch(err => console.log(err.response))
                 .then(res => {
                     console.log(res);
+                    this.test = {
+                        name: "",
+                        start: null,
+                        threshold: null,
+                        duration: null,
+                        students: [],
+                        questionAmount: null,
+
+                    };
+                    this.dzial = null
+                    this.uczniowie = []
                     this.getTests();
+                    this.sending = false
+                    this.$modal.hide('add-test')
                 });
         },
         getTests: function() {
@@ -209,9 +228,20 @@ export default {
                 .then(res => {
                     console.log(res.data);
                     ctx.uczniowie = res.data;
+                    ctx.uczniowie.forEach((element, index) => {
+                        ctx.test.students[index] = element.id
+                    });
                 });
         },
-        mounted() {}
+        checkAdd() {
+            console.log(this.$router.resolve("/nowydzial"));
+            if (this.dzial == -1) {
+                window.open(this.$router.resolve("/nowydzial").href, "_blank");
+            }
+        }
+    },
+    mounted() {
+        window.addEventListener("focus", this.getDzialy);
     }
 };
 </script>

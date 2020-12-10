@@ -7,92 +7,143 @@
                 :dots="true"
                 :dotsClass="'dotsAddDzial'"
             > -->
-                <div
-                    v-for="question in questions"
-                    class="oneCard"
-                    :key="question.id"
-                >
-                    <h1 class="header1">Dodaj pytanie</h1>
+
+            <h1 class="header1">Dodaj pytanie</h1>
+            <input
+                class="form-control question-input"
+                placeholder="Podaj treść pytania"
+                v-model="currentQuestion.tresc"
+                type="text"
+                name="pytanie"
+            />
+            <input
+                type="file"
+                id="file"
+            />
+            <br />
+            <h1 class="header2">Dodaj odpowiedzi</h1>
+            <div
+                id="head-answer-all"
+                :key="answer.id"
+                v-for="answer in currentQuestion.answers"
+            >
+                <div id="answer-all">
+                    <p class="check-valid">
+                        Poprawna:
+                        <input
+                            type="radio"
+                            v-model="answer.poprawna"
+                            name="valid"
+                            :value="true"
+                        />
+                    </p>
                     <input
-                        class="form-control question-input"
-                        placeholder="Podaj treść pytania"
-                        v-model="question.tresc"
+                        class="form-control answer-input"
+                        placeholder="Odpowiedź"
+                        v-model="answer.tresc"
                         type="text"
-                        name="pytanie"
                     />
-                    <input
-                        type="file"
-                        id="file"
-                        @change="selectFile(question.id - 1)"
-                        :ref="'file' + (question.id - 1)"
-                    />
-                    <br />
-                    <h1 class="header2">Dodaj odpowiedzi</h1>
-                    <div
-                        id="head-answer-all"
-                        :key="answer.id"
-                        v-for="answer in question.answers"
-                    >
-                        <div id="answer-all">
-                            <p class="check-valid">
-                                Poprawna:
-                                <input
-                                    type="radio"
-                                    v-model="answer.poprawna"
-                                    name="valid"
-                                    true-value="true"
-                                />
-                            </p>
-                            <input
-                                class="form-control answer-input"
-                                placeholder="Odpowiedź"
-                                v-model="answer.tresc"
-                                type="text"
-                            />
-                            <div>
-                                <button
-                                    class="btn btn-danger"
-                                    style=""
-                                    @click="
-                                        question.answers = question.answers.filter(
-                                            function(value, index, arr) {
-                                                return value != answer;
-                                            }
-                                        )
-                                    "
-                                >
-                                    <font-awesome-icon icon="trash" />
-                                </button>
-                            </div>
-                        </div>
+                    <div>
+                        <button
+                            class="btn btn-danger"
+                            style=""
+                            @click="
+                                currentQuestion.answers = currentQuestion.answers.filter(
+                                    function(value, index, arr) {
+                                        return value != answer;
+                                    }
+                                )
+                            "
+                        >
+                            <font-awesome-icon icon="trash" />
+                        </button>
                     </div>
-                    <button
-                        class="btn btn-success"
-                        @click="
-                            question.answers.push(defaultAnswer());
-                            question.answers[question.answers.length - 1].id =
-                                question.answers.length;
-                        "
-                    >
-                        Dodaj odpowiedź</button
-                    ><button
-                        class="btn btn-danger"
-                        @click="
-                            questions = questions.filter(function(
-                                value,
-                                index,
-                                arr
-                            ) {
-                                return value != question;
-                            })
-                        "
-                    >
-                        Usuń pytanie
-                    </button>
                 </div>
-                <button class="btn btn-success" @click="addQuestion(); for (let i = 0; i< 3; i++ ){addAnswer(questions.length - 1)}">Dodaj pytanie</button>
+            </div>
+            <button
+                class="btn btn-success"
+                @click="
+                    currentQuestion.answers.push(defaultAnswer());
+                    currentQuestion.answers[currentQuestion.answers.length - 1].id =
+                        currentQuestion.answers.length;
+                "
+            >
+                Dodaj odpowiedź</button
+            ><button
+                class="btn btn-danger"
+                @click="
+                    questions = questions.filter(function(value, index, arr) {
+                        return value != question;
+                    })
+                "
+            >
+                Usuń pytanie
+            </button>
+            <button
+                class="btn btn-success"
+                @click="
+                    addQuestion();
+                    for (let i = 0; i < 3; i++) {
+                        addAnswer(questions.length - 1);
+                    }
+                "
+            >
+                Dodaj pytanie
+            </button>
             <!-- </vue-slick-carousel> -->
         </div>
+
+        <section class="card-list">
+            <div
+                v-for="question in questions"
+                class="oneCard"
+                :key="question.id"
+            >
+                <article class="card">
+                    <header class="card-header">
+                        <h2>{{ question.tresc }}</h2>
+                    </header>
+                    <div class="odpowiedzi">
+                        <ol type="A">
+                            <header
+                                class="answers card-header"
+                                style="margin-top:2vh;"
+                            >
+                                <li>ODPOWIEDZ1</li>
+                            </header>
+                            <header
+                                class="answers card-header"
+                                style="margin-top:2vh;"
+                            >
+                                <li>ODPOWIEDZ1</li>
+                            </header>
+                            <header
+                                class="answers card-header"
+                                style="margin-top:2vh;"
+                            >
+                                <li>ODPOWIEDZ1</li>
+                            </header>
+                            <header
+                                class="answers card-header"
+                                style="margin-top:2vh;"
+                            >
+                                <li>ODPOWIEDZ1</li>
+                            </header>
+                        </ol>
+                    </div>
+                    <div class="card-author">
+                        <font-awesome-icon
+                            icon="user"
+                            style="font-size:2rem;"
+                        />
+                        <div class="author-name">
+                            <div class="author-name-prefix">Autor</div>
+                            Jeff Delaney
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
         <input
             type="text"
             placeholder="Nazwa działu"
@@ -103,138 +154,6 @@
         <button type="submit" @click="send" class="btn btn-primary">
             Wyślij
         </button>
-         <section class="card-list">
- 
-      <article class="card">
-        <header class="card-header">
-          <p>Sep 11th 2020</p>
-          <h2>Pytanie</h2>
-        </header> 
-        <div class="odpowiedzi">
-            <ol type="A">
-                <header class="answers card-header" style="margin-top:2vh;">
-                <li>ODPOWIEDZ1</li>
-                </header>
-                <header class="answers card-header" style="margin-top:2vh;">
-                <li>ODPOWIEDZ1</li>
-                </header>
-                <header class="answers card-header" style="margin-top:2vh;">
-                <li>ODPOWIEDZ1</li>
-                </header>
-                <header class="answers card-header" style="margin-top:2vh;">
-                <li>ODPOWIEDZ1</li>
-                </header>
-            </ol> 
-        </div>
-        <div class="card-author">
-            <font-awesome-icon
-                icon="user"
-                style="font-size:2rem;"
-            />
-          <div class="author-name">
-            <div class="author-name-prefix">Autor</div>
-            Jeff Delaney
-          </div>
-        </div>
-      </article>
-            <article class="card">
-        <header class="card-header">
-          <p>Sep 11th 2020</p>
-          <h2>Pytanie</h2>
-        </header> 
-        <div class="odpowiedzi">
-            <ol type="A">
-                <header class="answers card-header" style="margin-top:2vh;">
-                <li>ODPOWIEDZ1</li>
-                </header>
-                <header class="answers card-header" style="margin-top:2vh;">
-                <li>ODPOWIEDZ1</li>
-                </header>
-                <header class="answers card-header" style="margin-top:2vh;">
-                <li>ODPOWIEDZ1</li>
-                </header>
-                <header class="answers card-header" style="margin-top:2vh;">
-                <li>ODPOWIEDZ1</li>
-                </header>
-            </ol> 
-        </div>
-        <div class="card-author">
-            <font-awesome-icon
-                icon="user"
-                style="font-size:2rem;"
-            />
-          <div class="author-name">
-            <div class="author-name-prefix">Autor</div>
-            Jeff Delaney
-          </div>
-        </div>
-      </article>
-            <article class="card">
-        <header class="card-header">
-          <p>Sep 11th 2020</p>
-          <h2>Pytanie</h2>
-        </header> 
-        <div class="odpowiedzi">
-            <ol type="A">
-                <header class="answers card-header" style="margin-top:2vh;">
-                <li>ODPOWIEDZ1</li>
-                </header>
-                <header class="answers card-header" style="margin-top:2vh;">
-                <li>ODPOWIEDZ1</li>
-                </header>
-                <header class="answers card-header" style="margin-top:2vh;">
-                <li>ODPOWIEDZ1</li>
-                </header>
-                <header class="answers card-header" style="margin-top:2vh;">
-                <li>ODPOWIEDZ1</li>
-                </header>
-            </ol> 
-        </div>
-        <div class="card-author">
-            <font-awesome-icon
-                icon="user"
-                style="font-size:2rem;"
-            />
-          <div class="author-name">
-            <div class="author-name-prefix">Autor</div>
-            Jeff Delaney
-          </div>
-        </div>
-      </article>
-            <article class="card">
-        <header class="card-header">
-          <p>Sep 11th 2020</p>
-          <h2>Pytanie</h2>
-        </header> 
-        <div class="odpowiedzi">
-            <ol type="A">
-                <header class="answers card-header" style="margin-top:2vh;">
-                <li>ODPOWIEDZ1</li>
-                </header>
-                <header class="answers card-header" style="margin-top:2vh;">
-                <li>ODPOWIEDZ1</li>
-                </header>
-                <header class="answers card-header" style="margin-top:2vh;">
-                <li>ODPOWIEDZ1</li>
-                </header>
-                <header class="answers card-header" style="margin-top:2vh;">
-                <li>ODPOWIEDZ1</li>
-                </header>
-            </ol> 
-        </div>
-        <div class="card-author">
-            <font-awesome-icon
-                icon="user"
-                style="font-size:2rem;"
-            />
-          <div class="author-name">
-            <div class="author-name-prefix">Autor</div>
-            Jeff Delaney
-          </div>
-        </div>
-      </article>
-
- </section>
     </div>
 </template>
 <script>
@@ -245,6 +164,12 @@ import axios from "axios";
 export default {
     data() {
         return {
+            currentQuestion: {
+                id: null,
+                tresc: "",
+                answers: [],
+                image: null
+            },
             questions: [],
             dzialTitle: null,
 
@@ -262,18 +187,15 @@ export default {
     },
     methods: {
         addQuestion: function() {
-            this.questions.push({
-                id: this.questions.length + 1,
-                tresc: "",
-                answers: [],
-                image: null
-            });
+            this.questions.push(this.currentQuestion);
+            this.questions[this.questions.length].id =
+                this.questions.length + 1;
         },
         addAnswer: function(pyt) {
-            this.questions[pyt].answers.push(this.defaultAnswer());
-            this.questions[pyt].answers[
-                this.questions[pyt].answers.length - 1
-            ].id = this.questions[pyt].answers.length;
+            this.currentQuestion.answers.push(this.defaultAnswer());
+            this.currentQuestion.answers[
+                this.currentQuestion.answers.length - 1
+            ].id = this.currentQuestion.answers.length;
         },
         send: function() {
             axios
@@ -300,7 +222,7 @@ export default {
         }
     },
     created() {
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 1; i++) {
             this.addQuestion();
             for (let j = 0; j < 3; j++) {
                 this.addAnswer(i);
@@ -310,17 +232,14 @@ export default {
 };
 </script>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
-
-
+<style scoped>
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap");
 
 .card-list {
     display: flex;
     padding: 3rem;
     overflow-x: scroll;
 }
-
 
 .card-list::-webkit-scrollbar {
     width: 10px;
@@ -329,30 +248,35 @@ export default {
 .card-list::-webkit-scrollbar-thumb {
     background: #201c29;
     border-radius: 10px;
-    box-shadow: inset 1px 1px 1px hsla(0,0%,100%,.25), inset -1px -1px 1px rgba(0,0,0,.25);
+    box-shadow: inset 1px 1px 1px hsla(0, 0%, 100%, 0.25),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.25);
 }
 
 .card-list::-webkit-scrollbar-track {
-    background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
+    background: linear-gradient(
+        90deg,
+        #201c29,
+        #201c29 1px,
+        #17141d 0,
+        #17141d
+    );
 }
 
 .card:hover {
     transform: translateY(-1rem);
 }
 
-.card:hover~.card {
+.card:hover ~ .card {
     transform: translateX(130px);
 }
 
-.card-header{
+.card-header {
     border: 1px solid rgba(0, 0, 0, 0.281);
 }
 
-.answers li{
-    margin-left:1vw;
-    
+.answers li {
+    margin-left: 1vw;
 }
-
 
 .card:not(:first-child) {
     margin-left: -130px;
@@ -367,12 +291,11 @@ export default {
     min-width: 300px;
     padding: 1.5rem;
     border-radius: 16px;
-    transition: .2s;
+    transition: 0.2s;
     box-shadow: -1rem 0 2rem #000;
 }
 .odpowiedzi {
     vertical-align: middle;
-
 }
 .card-author {
     position: relative;

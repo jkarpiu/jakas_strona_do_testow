@@ -42,6 +42,16 @@ class testsController extends Controller
         if (Auth::user()-> role == 1){
             return response() -> json(Auth::user() -> studentTests -> find($request['id']) -> load('teacher'));
         }
+        else if(Auth::user() -> role == 2){
+            return response() -> json($this->getTestResults($request));
+        }
+    }
+
+    private function getTestResults(Request $request) {
+        $test = teacherTest::find($request['id'])->load('teacher', 'wyniki.user');
+        if(Auth::id() == $test['teacher']['id'] ) {
+            return $test;
+        }
     }
 
     private function parseTime($timestring)
