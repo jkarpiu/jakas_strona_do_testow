@@ -115,8 +115,8 @@
                     {{ uczen.fname + " " + uczen.lname }}
                 </p>
             </div>
-            <button @click="createTest" class="btn btn-primary ">
-                <p v-if="!sending"> Dodaj test test</p> <p v-else>Wysyłanie...</p>
+            <button @click="createTest" class="btn btn-primary " style=" padding-top:1rem;">
+                <p v-if="!sending"> Dodaj test</p> <p v-else>Wysyłanie...</p>
             </button>
         </modal>
     </div>
