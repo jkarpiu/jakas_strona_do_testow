@@ -29,16 +29,15 @@ class randQuestionController extends Controller
     public function json_onequestion(Request $request)
     {
         $test = teacherTest::find($request['test']);
-        if($request['test'] == null)
-            $deadline = Carbon::now() -> addMinutes(60);
+        if ($request['test'] == null)
+            $deadline = Carbon::now()->addMinutes(60);
         else if (Carbon::parse($test['start'])->addMinutes(10) > Carbon::now() && Carbon::now() > Carbon::parse($test['start'])) {
             $deadline = Carbon::now()->addMinutes($test['duration']);
         } else if (Carbon::parse($test['start'])->addMinutes(10) < Carbon::now() && Carbon::now() < Carbon::parse($test['start'])->addMinutes($test['duration'])) {
             $deadline = Carbon::parse($test['start'])->addMinutes($test['duration']);
         } else
             $deadline = null;
-
-        if ($deadline != null && (!$request['test']|| !($test->wyniki -> where('user_id', Auth::id())))) {
+        if ($deadline != null && (!$request['test'] || sizeof(($test->wyniki->where('user_id', auth::id()))) == 0)) {
             $response = [
                 'questions' =>  $this->getQuestion($request['amount'], (int)$request['dzial']),
                 'session' => activeTests::create([
@@ -50,9 +49,8 @@ class randQuestionController extends Controller
             ];
 
             return response()->json($response);
-        }
-        else
-            return response() -> json('Spoźnienie',401);
+        } else
+            return response()->json('Spoźnienie', 401);
     }
 
 

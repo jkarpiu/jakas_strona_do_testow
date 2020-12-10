@@ -127,6 +127,7 @@ export default {
                 })
                 .catch(error => {console.log(error.response)})
                 .then(res => {
+                    console.log(res.data)
                     this.myQuestion = res.data;
                     this.myQuestion.questions.forEach(item => {
                         item.odpowiedzi = this.shuffle(item.odpowiedzi);
