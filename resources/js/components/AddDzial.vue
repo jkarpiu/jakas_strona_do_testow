@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="currentQ != null">
         <div class="questions">
             <!-- <vue-slick-carousel
                 class="allCards"
@@ -12,20 +12,17 @@
             <input
                 class="form-control question-input"
                 placeholder="Podaj treść pytania"
-                v-model="currentQuestion.tresc"
+                v-model="questions[currentQ].tresc"
                 type="text"
                 name="pytanie"
             />
-            <input
-                type="file"
-                id="file"
-            />
+            <input type="file" id="file" />
             <br />
             <h1 class="header2">Dodaj odpowiedzi</h1>
             <div
                 id="head-answer-all"
                 :key="answer.id"
-                v-for="answer in currentQuestion.answers"
+                v-for="answer in questions[currentQ].answers"
             >
                 <div id="answer-all">
                     <p class="check-valid">
@@ -48,7 +45,7 @@
                             class="btn btn-danger"
                             style=""
                             @click="
-                                currentQuestion.answers = currentQuestion.answers.filter(
+                                questions[currentQ].answers = questions[currentQ].answers.filter(
                                     function(value, index, arr) {
                                         return value != answer;
                                     }
@@ -63,31 +60,13 @@
             <button
                 class="btn btn-success"
                 @click="
-                    currentQuestion.answers.push(defaultAnswer());
-                    currentQuestion.answers[currentQuestion.answers.length - 1].id =
-                        currentQuestion.answers.length;
+                    questions[currentQ].answers.push(defaultAnswer());
+
                 "
             >
-                Dodaj odpowiedź</button
-            ><button
-                class="btn btn-danger"
-                @click="
-                    questions = questions.filter(function(value, index, arr) {
-                        return value != question;
-                    })
-                "
-            >
-                Usuń pytanie
+                Dodaj odpowiedź
             </button>
-            <button
-                class="btn btn-success"
-                @click="
-                    addQuestion();
-                    for (let i = 0; i < 3; i++) {
-                        addAnswer(questions.length - 1);
-                    }
-                "
-            >
+            <button class="btn btn-success" @click="addQuestion">
                 Dodaj pytanie
             </button>
             <!-- </vue-slick-carousel> -->
@@ -95,51 +74,45 @@
 
         <section class="card-list">
             <div
-                v-for="question in questions"
+                v-for="(question, index) in questions"
                 class="oneCard"
                 :key="question.id"
+                @click="currentQ = index"
             >
                 <article class="card">
                     <header class="card-header">
                         <h2>{{ question.tresc }}</h2>
                     </header>
                     <div class="odpowiedzi">
-                        <ol type="A">
+                        <ol style="padding-left: 0" type="A">
                             <header
+                                :key="answer.id"
+                                v-for="answer in question.answers"
                                 class="answers card-header"
-                                style="margin-top:2vh;"
+                                :style="setStyle(answer.poprawna)"
                             >
-                                <li>ODPOWIEDZ1</li>
-                            </header>
-                            <header
-                                class="answers card-header"
-                                style="margin-top:2vh;"
-                            >
-                                <li>ODPOWIEDZ1</li>
-                            </header>
-                            <header
-                                class="answers card-header"
-                                style="margin-top:2vh;"
-                            >
-                                <li>ODPOWIEDZ1</li>
-                            </header>
-                            <header
-                                class="answers card-header"
-                                style="margin-top:2vh;"
-                            >
-                                <li>ODPOWIEDZ1</li>
+                                <li>{{ answer.tresc }}</li>
                             </header>
                         </ol>
                     </div>
-                    <div class="card-author">
-                        <font-awesome-icon
-                            icon="user"
-                            style="font-size:2rem;"
-                        />
-                        <div class="author-name">
-                            <div class="author-name-prefix">Autor</div>
-                            Jeff Delaney
-                        </div>
+                    <div
+                        class="card-author"
+                        style="display: grid; grid-template-columns: 1fr 1fr 0.5fr;"
+                    >
+                        <button
+                            class="btn btn-danger"
+                            @click="
+                                questions = questions.filter(function(
+                                    value,
+                                    index,
+                                    arr
+                                ) {
+                                    return value != question;
+                                })
+                            "
+                        >
+                            <font-awesome-icon icon="trash" />
+                        </button>
                     </div>
                 </article>
             </div>
@@ -157,6 +130,7 @@
     </div>
 </template>
 <script>
+let ctx;
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
@@ -164,16 +138,17 @@ import axios from "axios";
 export default {
     data() {
         return {
-            currentQuestion: {
-                id: null,
-                tresc: "",
-                answers: [],
-                image: null
-            },
             questions: [],
-            dzialTitle: null,
-
-            defaultAnswer: function() {
+            dzialTitle: "",
+            currentQ: null,
+            defaultQuestion: () => {
+                return {
+                    id: null,
+                    tresc: "",
+                    answers: []
+                };
+            },
+            defaultAnswer: () => {
                 return {
                     id: null,
                     tresc: "",
@@ -186,17 +161,6 @@ export default {
         VueSlickCarousel: VueSlickCarousel
     },
     methods: {
-        addQuestion: function() {
-            this.questions.push(this.currentQuestion);
-            this.questions[this.questions.length].id =
-                this.questions.length + 1;
-        },
-        addAnswer: function(pyt) {
-            this.currentQuestion.answers.push(this.defaultAnswer());
-            this.currentQuestion.answers[
-                this.currentQuestion.answers.length - 1
-            ].id = this.currentQuestion.answers.length;
-        },
         send: function() {
             axios
                 .post("/api/add_dzial", {
@@ -210,24 +174,20 @@ export default {
                     console.log(res.data);
                 });
         },
-        selectFile(id) {
-            let image = this.$refs["file" + id].files[0];
-            const reader = new FileReader();
-            reader.onload = e => {
-                this.questions[id].imgae = e.target.result;
-            };
-            console.log(this.$refs.file0.files);
-            reader.readAsBinaryString(image);
-            // `files` is always an array because the file input may be in multiple mode
+        setStyle: function(poprawna) {
+            if (poprawna) {
+                return "margin-top: 2vh; background: #007c02";
+            } else {
+                return "margin-top: 2vh;";
+            }
+        },
+        addQuestion: function() {
+            this.questions.push(this.defaultQuestion());
         }
     },
-    created() {
-        for (let i = 0; i < 1; i++) {
-            this.addQuestion();
-            for (let j = 0; j < 3; j++) {
-                this.addAnswer(i);
-            }
-        }
+    mounted() {
+        this.addQuestion()
+        this.currentQ = 0;
     }
 };
 </script>
@@ -296,6 +256,9 @@ export default {
 }
 .odpowiedzi {
     vertical-align: middle;
+    width: 100%;
+    height: 400px;
+    overflow-y: auto;
 }
 .card-author {
     position: relative;
