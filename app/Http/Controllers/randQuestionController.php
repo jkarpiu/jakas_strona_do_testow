@@ -37,7 +37,7 @@ class randQuestionController extends Controller
             $deadline = Carbon::parse($test['start'])->addMinutes($test['duration']);
         } else
             $deadline = null;
-        if ($deadline != null && (!$request['test'] || sizeof(($test->wyniki->where('user_id', auth::id()))) == 0)) {
+        if ($deadline != null && (!$request['test'] || sizeof(($test->wyniki->where('user_id', Auth::id()))) == 0)) {
             $response = [
                 'questions' =>  $this->getQuestion($request['amount'], (int)$request['dzial']),
                 'session' => activeTests::create([
@@ -63,6 +63,7 @@ class randQuestionController extends Controller
                 'results' =>  null,
                 'id_session' => $testSession['id']
             ];
+            $teacherTest = activeTests::find($valid['id_session']) -> teacher_test;
             $rightAnswers = 0;
             foreach ($request['answers'] as $key => $item) {
                 array_push(
@@ -87,7 +88,7 @@ class randQuestionController extends Controller
                 'points' => $rightAnswers,
                 'max_points' => sizeof($request['answers']),
                 'percentage' => (($rightAnswers / sizeof($request['answers'])) * 100),
-                'passed' => (($rightAnswers / sizeof($request['answers'])) * 100) >= Dzialy::find($request['session']['dzial_id'])['prog']
+                'passed' => (($rightAnswers / sizeof($request['answers'])) * 100) >= ($teacherTest? $teacherTest['threshold'] :(Dzialy::find($request['session']['dzial_id'])['prog']))
             ];
             return $valid;
         } else {

@@ -28,4 +28,8 @@ class groupsModel extends Model
     public function posts() {
         return $this-> hasMany(groupPost::class)->orderBy('id', 'desc') ;
     }
+
+    public function tests() {
+        return $this -> hasMany(teacherTest::class, 'groups_model_id');
+    }
 }

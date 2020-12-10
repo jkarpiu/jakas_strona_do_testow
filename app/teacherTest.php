@@ -22,4 +22,8 @@ class teacherTest extends Model
     public function wyniki() {
         return $this-> hasMany(wyniki::class, 'teacher_test_id');
     }
+
+    public function group() {
+        return $this-> belongsTo(groupsModel::class, 'groups_model_id');
+    }
 }

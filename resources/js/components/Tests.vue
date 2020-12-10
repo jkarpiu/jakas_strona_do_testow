@@ -188,6 +188,7 @@ export default {
                     this.uczniowie = []
                     this.getTests();
                     this.sending = false
+                    this.grupa = null
                     this.$modal.hide('add-test')
                 });
         },
