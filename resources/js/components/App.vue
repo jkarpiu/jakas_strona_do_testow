@@ -7,16 +7,16 @@
             <div class="top-right links">
                 <ul>
                     <span class="dropdown-display">
-                        <router-link to="/losowanie40">
+                        
                             <li>
-                                <a class="dropdown-item">Losuj 40 pytań</a>
-                            </li></router-link
-                        >
-                        <router-link to="/losowanie1">
+                                <a class="dropdown-item" @click="$router.push('/losowanie40')">Losuj 40 pytań</a>
+                            </li>
+                        
+                        
                             <li>
-                                <a class="dropdown-item">Losuj 1 pytanie</a>
-                            </li></router-link
-                        >
+                                <a class="dropdown-item" @click="$router.push('/losowanie1')">Losuj 1 pytanie</a>
+                            </li>
+                        
                         <user-menu @get-user="getUser" />
                     </span>
                 </ul>
@@ -26,7 +26,7 @@
             <router-view @get-user="getUser"></router-view>
         </div>
         <div class="page-footer footer">
-            <p>Stroneczka egzaminki no copyrights</p>
+            <p>| Strona internetowa ipies | no copyright 2020</p>
         </div>
     </div>
 </template>
@@ -68,12 +68,16 @@ export default {
 };
 </script>
 <style>
+.dropdown-item{
+    cursor:pointer;
+}
 .footer {
+    margin:0;
     clear: both;
     color: #fcfcfc;
     display: block;
     height: 0.5vh;
-    margin-top: 1vh;
+    vertical-align: middle;
     text-align: center;
     text-transform: uppercase;
 }

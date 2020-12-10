@@ -20,6 +20,7 @@ class CreateGroupPostsTable extends Migration
             $table->integer('groups_model_id');
             $table->longText('content');
             $table->timestamps();
+            $table->boolean('active');
         });
     }
 

@@ -60,7 +60,7 @@ body {
 }
 
 .links>ul>span>li>ul:hover>a {
-    opacity: 0.3;
+    opacity: 0.8;
 }
 
 .full-height {
@@ -88,15 +88,15 @@ body {
 }
 
 .top-left>a:hover {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .top-right>ul>span>li>a:hover {
-    opacity: 0.3;
+    opacity: 0.8;
 }
 
 .top-right>ul>li>a:hover {
-    opacity: 0.3;
+    opacity: 0.8;
 }
 
 .content {

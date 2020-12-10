@@ -14,6 +14,6 @@ class comments extends Model
     protected $fillable = ['tresc', 'group_post_id', 'user_id'];
 
     public function author(){
-        return $this->BelongsTo(User::class);
+        return $this->BelongsTo(User::class, "user_id");
     }
 }

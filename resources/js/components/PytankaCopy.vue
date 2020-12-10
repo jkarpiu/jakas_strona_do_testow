@@ -223,6 +223,7 @@ export default {
 </script>
 <style scoped>
 .button {
+    padding-bottom:4vh;
     margin-left: auto;
     margin-right: auto;
     display: flex;

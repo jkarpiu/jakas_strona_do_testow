@@ -9,26 +9,28 @@
                     @endif -->
 
         <span v-if="!user">
-            <router-link to="/login">
-                <li><a class="dropdown-item">Zaloguj się</a></li></router-link
-            >
-            <router-link to="/register">
-                <li>
-                    <a class="dropdown-item">Zarejestruj się</a>
-                </li></router-link
-            >
+                <li class="panele">
+                    <a class="dropdown-item"
+                    @click="$router.push('/login')">Zaloguj się</a>
+                </li>
+                <li class="panele">
+                    <a class="dropdown-item"
+                    @click="$router.push('/register')">Zarejestruj się</a>
+                </li>
         </span>
         <span v-else>
-            <router-link to="/groups" v-if="user.role == 2">
-                <li>
-                    <a class="dropdown-item panel">Panel nauczyciela</a>
-                </li></router-link
-            >
-            <router-link to="/groups" v-else-if="user.role == 1">
-                <li>
-                    <a class="dropdown-item panel">Moje klasy</a>
-                </li></router-link
-            >
+            
+                <li v-if="user.role == 2" class="panele">
+                    <a class="dropdown-item panel"
+                    @click="$router.push('/groups')">Panel nauczyciela</a>
+                </li>
+            
+            
+                <li v-else-if="user.role == 1">
+                    <a class="dropdown-item panel"
+                    @click="$router.push('/groups')">Moje klasy</a>
+                </li>
+            
             <li>
                 <a
                     id="navbarDropdown"
@@ -133,8 +135,11 @@ span>li:hover>ul {
     height: 2.5rem;
     z-index: 2;
 }
-
-span>li>ul:hover>a {
-    opacity: 0.3;
+span>span>.panele:hover{
+    opacity: 0.8;
 }
+span>li>ul:hover>a {
+    opacity: 0.8;
+}
+
 </style>

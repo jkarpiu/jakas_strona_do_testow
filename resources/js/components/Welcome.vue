@@ -1,29 +1,55 @@
 <template>
     <div>
+        <div class="logoszew">
+            <div class="logos">
+                <h1>ipies</h1>
+            </div>
+        </div>
         <vue-slick-carousel v-bind="settings" :arrows="false" :dots="true" >
             <div id="background-image">
                 <div class="top-bar">
-                    <p class="text">To jest nasza zajebista strona na której będziecie mogli rozwiazywac testy na doktora. 
-                        Znajduja sie tu testy ze wszystkiego w sumie i nauczyciele ębeda was tym tepic a my sie bedziemy smiac</p>
-                </div>        
+                    <p class="text">Na naszej stronie możesz rozwiązywać testy związane z IT. Oferujemy bogatą w pytania bazę danych, która składa się z arkuszy egzaminacyjnych z poprzednich lat.</p>
+                </div>  
+                <div class="logoszew">
+                <button class="przycisk" @click="test">
+                    <p>ROZWIĄŻ TEST</p>
+                </button>      
+                </div>
             </div>
             <div id="background-image2">
                 <div class="top-bar">
-                    <p class="text">To jest nasza zajebista strona na której będziecie mogli rozwiazywac testy na doktora. 
-                        Znajduja sie tu testy ze wszystkiego w sumie i nauczyciele ębeda was tym tepic a my sie bedziemy smiac</p>
+                    <p class="text">Możesz wykorzystać możliwość zakładania klas, tworzenia pytań i własnych testów. Ustal ich termin, ilość pytań i integruj się ze swoją klasą.</p>
+                </div>
+                <div class="logoszew">
+                <div class="przycisk">
+                    <p>PANEL ...</p>
+                </div>      
                 </div>        
             </div>
             <div id="background-image3">
                 <div class="top-bar">
-                    <p class="text">To jest nasza zajebista strona na której będziecie mogli rozwiazywac testy na doktora. 
-                        Znajduja sie tu testy ze wszystkiego w sumie i nauczyciele ębeda was tym tepic a my sie bedziemy smiac</p>
-                </div>        
+                    <p class="text">Sprawdź swój postęp w rozwiązywaniu testów gdy już masz swoje konto - bez pracy nie ma kołaczy.</p>
+                </div>
+                <div class="logoszew">
+                <div class="przycisk">
+                    <p>WYNIKI</p>
+                </div>      
+                </div>
             </div>
             <div id="background-image4">
                 <div class="top-bar">
-                    <p class="text">To jest nasza zajebista strona na której będziecie mogli rozwiazywac testy na doktora. 
-                        Znajduja sie tu testy ze wszystkiego w sumie i nauczyciele ębeda was tym tepic a my sie bedziemy smiac</p>
-                </div>        
+                    <p class="text">Załóż konto na ipies - jako nauczyciel lub uczeń. Dzięki temu możesz uporządkować swoją organizację pracy.</p>
+                </div>   
+                <div class="logoszew">
+                    <div class="logoszew2">
+                    <div class="przycisk">
+                        <p>ZALOGUJ SIĘ</p>
+                    </div>
+                    <div class="przycisk">
+                        <p>REJESTRACJA</p>
+                    </div>
+                    </div>
+                </div>    
             </div>
         </vue-slick-carousel>
          
@@ -46,7 +72,9 @@ export default {
     },
     components: {VueSlickCarousel},
     methods: {
-
+        test: function(){
+            console.log("DD");
+        }
         }
 
     }
@@ -60,6 +88,7 @@ export default {
         background-size: cover;
         display: block;
         position: relative;   
+        
     }
 
     #background-image2   {
@@ -88,22 +117,23 @@ export default {
         display: block;
         position: relative;   
     }
- 
+    
     .top-bar {
-        padding-top: 2rem;
+        padding-top: 9rem;
 
     }
 
     .text   {
         margin-left: auto;
         margin-right: auto;
-        background-color: rgba(0, 0, 0, 0.7);
-        font-size: 2rem; 
+        background-color: rgba(0, 0, 0, 0.452);
+        font-size: 1.7rem; 
         width: 99.5vw;
         padding: 1rem;
         padding-left:20vw;
         padding-right:20vw;
         margin-top: 2rem;
+        text-align: center;
     }
     
     .dots {
@@ -113,5 +143,57 @@ export default {
     .dot{
         top: -1rem;
         font-size: 50px;
+    }
+    .logos{
+        margin-top:4vh;
+        display:flex;
+        align-items: center;
+        text-align: center;
+        background: #0061c9;
+        justify-content: center;
+		position: absolute;
+        padding:0.7rem 2.4rem;
+        z-index: 1;
+        -webkit-box-shadow: 2px 2px 16px 1px rgba(0,0,0,0.6); 
+        box-shadow: 2px 2px 16px 1px rgba(0,0,0,0.6);
+    }
+    .logoszew{
+        min-width: 50vw;
+        display: flex; 
+        justify-content: center;
+    }
+    .logoszew2{
+        min-width: 30vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+        align-content: center;
+    }
+    
+    .logos h1{
+        font-size: 3.5rem;
+    }
+    .przycisk{
+        font-size: 1.5rem;
+        margin-top:8vh;
+        align-items: center;
+        text-align: center;
+        background: #407ec0;
+        justify-content: space-around;
+        padding:1rem 3rem;
+        z-index: 1;
+        -webkit-box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.6); 
+        box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.6); 
+        cursor: pointer;
+    }
+    .przycisk :hover{
+        background: rgb(241, 120, 33);
+
+    }
+    .przycisk p{
+        margin:0;
+        padding:0;
     }
 </style>
