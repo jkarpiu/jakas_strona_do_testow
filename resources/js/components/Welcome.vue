@@ -48,13 +48,13 @@
                 </div>   
                 <div class="logoszew">
                     <div class="logoszew2">
-                        <a @click="$router.push('/login')">
+                        <a @click="$router.push('/login')" >
                         <div class="przycisk">
                             LOGOWANIE
                         </div>
                         </a>  
                         <a @click="$router.push('/register')">
-                        <div class="przycisk">
+                        <div  class="przycisk">
                             REJESTRACJA
                         </div>
                         </a>  
@@ -173,7 +173,8 @@ export default {
         justify-content: center;
     }
     .logoszew2{
-        min-width: 30vw;
+        max-width:40vw;
+        min-width: 40vw;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -199,7 +200,8 @@ export default {
         cursor: pointer;
     }
     .przycisk :hover{
-        background: rgb(241, 120, 33);
+        border: 1px solid blue;
+        background-color: chartreuse;
 
     }
     .przycisk p{

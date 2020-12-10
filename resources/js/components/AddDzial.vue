@@ -1,16 +1,19 @@
 <template>
     <div v-if="currentQ != null">
-        <div class="addfield" style="width:30vw;">
-                <input
+        <div class="addfield" style="width:30vw;
+                box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);
+                -webkit-box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);
+                -moz-box-shadow: -2px 5px 24px 11px rgba(0, 0, 0, 0.4);">
+            <input
             type="text"
             placeholder="Nazwa działu"
             class="form-control"
-            style="width:25vw; margin: 15px auto"
+            style="margin: 15px auto;"
             v-model="dzialTitle"
-        />
+            />
         </div>
        <div class="container">
-            <div class="row justify-content-center" style="padding-top: 5rem;">
+            <div class="row justify-content-center" style="padding-top: 3rem;">
        
 
            <div class="addfield">
@@ -100,11 +103,12 @@
                 @click="currentQ = index"
             >
                 <article class="card">
-                    <header class="card-header">
-                        <h2>{{ question.tresc }}</h2>
+                    <header class="card-header"
+                            >
+                        <h2 style="min-height: 2.1rem;">{{ question.tresc }}</h2>
                     </header>
                     <div class="odpowiedzi">
-                        <ol style="padding-left: 0" type="A">
+                        <ol style="padding-left: 0; margin-right:0.1vw;" type="A">
                             <header
                                 :key="answer.id"
                                 v-for="answer in question.answers"
@@ -137,10 +141,15 @@
                 </article>
             </div>
         </section>
+    <div class="container">
     <div class="row justify-content-center" style="padding-top: 1rem;">
-        <button type="submit" @click="send" class="btn btn-primary" style="margin:2rem;">
+    <div style="padding-top: 1rem;">
+        <button type="submit" @click="send" class="btn btn-primary" style="margin-bottom: 1rem;">
             Wyślij
         </button>
+
+    </div>
+    </div>
     </div>
     </div>
 </template>
@@ -222,13 +231,14 @@ export default {
     color: #fcfcfc;
     margin-bottom: 2rem;
     max-width: 50vw;
-    min-width:30vw;
+    min-width:35vw;
 }
 .addphoto > p {
-    margin-top:3rem;
+    margin-top:2rem;
     margin-bottom:1vh;
     padding:0;
 }
+
 .header2 {
     margin-top:0;
 }
@@ -238,27 +248,24 @@ export default {
     overflow-x: scroll;
 }
 
-.card-list::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-.card-list::-webkit-scrollbar-thumb {
 
-    border-radius: 10px;
-    box-shadow: inset 1px 1px 1px hsla(0, 0%, 100%, 0.25),
-        inset -1px -1px 1px rgba(0, 0, 0, 0.25);
+.card-list::-webkit-scrollbar {
+  width: 0.5vw;
 }
 
 .card-list::-webkit-scrollbar-track {
-    background: linear-gradient(
-        90deg,
-        #201c29,
-        #201c29 1px,
-        #17141d 0,
-        #17141d
-    );
+  background: rgb(25, 25, 25);
 }
 
+.card-list::-webkit-scrollbar-thumb {
+  background-color: #012e5f;
+  background-clip: content-box;
+  border-radius: 3px;
+}
+
+.card-list::-webkit-scrollbar-thumb:hover {
+  background-color: #014996;
+}
 .card:hover {
     transform: translateY(-1rem);
 }
@@ -268,6 +275,7 @@ export default {
 }
 
 .card-header {
+    background-color: rgb(41, 41, 41);
     border: 1px solid rgba(0, 0, 0, 0.281);
 }
 
@@ -287,7 +295,7 @@ export default {
     width: 400px;
     min-width: 300px;
     padding: 1.5rem;
-    border-radius: 16px;
+    border-radius: 14px;
     transition: 0.2s;
     box-shadow: -1rem 0 2rem #000;
 }

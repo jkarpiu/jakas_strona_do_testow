@@ -262,6 +262,6 @@ export default {
 }
 
 .btn-left {
-    margin-right: 2rem;
+    margin: 2vh;
 }
 </style>
