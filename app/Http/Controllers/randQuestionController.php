@@ -37,7 +37,7 @@ class randQuestionController extends Controller
             $deadline = Carbon::parse($test['start'])->addMinutes($test['duration']);
         } else
             $deadline = null;
-        if ($deadline != null && (!$request['test'] || !($test->wyniki->where('user_id', Auth::id())))) {
+        if ($deadline != null && (!$request['test'] || sizeof(($test->wyniki->where('user_id', auth::id()))) == 0)) {
             $response = [
                 'questions' =>  $this->getQuestion($request['amount'], (int)$request['dzial']),
                 'session' => activeTests::create([
