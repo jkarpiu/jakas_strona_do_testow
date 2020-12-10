@@ -25,7 +25,7 @@
                     <th>{{ test.name }}</th>
                     <th>{{ test.dzial.nazwa }}</th>
                     <th>{{ test.start }}</th>
-                    <th>{{}}</th>
+                    <th>{{ test.group.name }}</th>
                 </tr>
             </table>
         </div>

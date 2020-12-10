@@ -31,13 +31,13 @@ class testsController extends Controller
 
     public function list()
     {
-        return response() ->json(Auth::user()->studentTests);
         if (Auth::user()->role == 1) {
-            return response()->json(Auth::user()->studentTests->loadCount(['wyniki' => function ($n) {
+            $testy = (Auth::user()->studentTests->loadCount(['wyniki' => function ($n) {
                 $n->where('id_user', Auth::id());
-            }])->where('wyniki_count', '<=', 0)->load("dzial", "teacher"));
+            }])->where('wyniki_count', '<=', 0))->load('teacher', 'dzial', 'group');
+            return response()->json($testy);
         } else if (Auth::user()->role == 2) {
-            return response()->json(Auth::user()->teacherTests->load("dzial", "teacher"));
+            return response()->json(Auth::user()->teacherTests->load("dzial", "teacher", 'group'));
         }
     }
 
