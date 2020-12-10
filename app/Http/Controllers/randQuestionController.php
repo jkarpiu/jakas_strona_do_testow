@@ -28,16 +28,31 @@ class randQuestionController extends Controller
 
     public function json_onequestion(Request $request)
     {
-        $response = [
-            'questions' =>  $this->getQuestion($request['amount'], (int)$request['dzial']),
-            'session' => activeTests::create([
-                'token' => Str::random(32),
-                'deadline' => $request['test'] == null ? Carbon::now()->addMinutes(60) : Carbon::now()->addMinutes(teacherTest::find($request['test'])['duration']),
-                'dzial_id' => (int)$request['dzial'],
-                'teacher_test_id' => $request['test']
-            ])->load('dzial', 'teacher_test'),
-        ];
-        return response()->json($response);
+        $test = teacherTest::find($request['test']);
+        if($request['test'] == null)
+            $deadline = Carbon::now() -> addMinutes(60);
+        else if (Carbon::parse($test['start'])->addMinutes(10) > Carbon::now() && Carbon::now() > Carbon::parse($test['start'])) {
+            $deadline = Carbon::now()->addMinutes($test['duration']);
+        } else if (Carbon::parse($test['start'])->addMinutes(10) < Carbon::now() && Carbon::now() < Carbon::parse($test['start'])->addMinutes($test['duration'])) {
+            $deadline = Carbon::parse($test['start'])->addMinutes($test['duration']);
+        } else
+            $deadline = null;
+
+        if ($deadline != null && (!$request['test']|| !($test->wyniki -> where('user_id', Auth::id())))) {
+            $response = [
+                'questions' =>  $this->getQuestion($request['amount'], (int)$request['dzial']),
+                'session' => activeTests::create([
+                    'token' => Str::random(32),
+                    'deadline' => $deadline,
+                    'dzial_id' => (int)$request['dzial'],
+                    'teacher_test_id' => $request['test']
+                ])->load('dzial', 'teacher_test'),
+            ];
+
+            return response()->json($response);
+        }
+        else
+            return response() -> json('Spoźnienie',401);
     }
 
 
