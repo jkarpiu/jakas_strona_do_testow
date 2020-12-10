@@ -51,4 +51,5 @@ Route::group(['middleware' => 'auth.api'], function () {
     Route::post('add_dzial', 'addQuestionController@addDzial');
     Route::post('test_results' , 'testsController@getTestsResults');
     Route::post('remove_post', 'groupsController@remove_post');
+    Route::post('upcoming_tests', 'testsController@upcomingTests');
 });
