@@ -207,6 +207,7 @@
                         </p></i
                     >
                 </div>
+            <div v-if="post.comments.length>0">
                 <div
                     class="komentarze"
                     style="margin-left: 2vw"
@@ -224,12 +225,12 @@
                     <p
                         style="display: inline-block; padding:1px; margin-bottom:0; margin-bottom:0; color:cadetblue;"
                     >
-                        AUTOR
+                        {{ comment.author.fname + " " + comment.author.lname }}
                     </p>
                     <p
                         style="display: inline-block; float: right; font-size: 0.6rem"
                     >
-                        2020-21-37
+                        {{ sensownyCzas(comment.created_at) }}
                     </p>
                     <p
                         style="margin-left: 5px; margin-right: 5px; margin-bottom:0;"
@@ -237,6 +238,10 @@
                         {{ comment.tresc }}
                     </p>
                 </div>
+            </div>
+            <div v-else>
+                <p>Brak komentarzy...</p>
+            </div>
                 <div class="dodawanie" style="margin-left: 0.2vw;">
                     <div
                         class="form active-dodawanie"

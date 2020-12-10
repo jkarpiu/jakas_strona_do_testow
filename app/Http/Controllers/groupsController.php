@@ -76,11 +76,18 @@ class groupsController extends Controller
         } else
             return response()->json(401);
     }
+    public function remove_post(Request $request)
+    {
+        $post = groupPost::find($request['id']);
+        if ($post['author_id'] == Auth::id()){
+            $post->delete();
+        }
+    }
     public function list_posts(Request $request)
     {
         $group = groupsModel::find($request['id']);
         if ($group->students->contains(Auth::id()) || $group->teacher->id == Auth::id()) {
-            return response()->json($group->posts->load('author', 'comments'));
+            return response()->json($group->posts->where('active', true)->load('author', 'comments.author'));
         }
     }
 }
