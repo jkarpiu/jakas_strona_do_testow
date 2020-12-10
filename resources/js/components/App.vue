@@ -25,9 +25,9 @@
         <div class="my-content">
             <router-view @get-user="getUser"></router-view>
         </div>
-        <div class="page-footer footer">
+        <footer class="footer">
             <p>| Strona internetowa ipies | no copyright 2020</p>
-        </div>
+        </footer>
     </div>
 </template>
 <script>
@@ -71,13 +71,19 @@ export default {
 .dropdown-item{
     cursor:pointer;
 }
+.footer > p {
+    padding:0;
+    margin:0;
+}
 .footer {
     margin:0;
+    padding:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     clear: both;
     color: #fcfcfc;
-    display: block;
-    height: 0.5vh;
-    vertical-align: middle;
+    height: 2rem;
     text-align: center;
     text-transform: uppercase;
 }

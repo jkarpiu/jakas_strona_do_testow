@@ -80,7 +80,8 @@ class groupsController extends Controller
     {
         $post = groupPost::find($request['id']);
         if ($post['author_id'] == Auth::id()){
-            $post->delete();
+            $post-> active = false;
+            $post-> save();
         }
     }
     public function list_posts(Request $request)

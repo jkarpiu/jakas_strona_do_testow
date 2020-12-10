@@ -11,9 +11,11 @@
                     <p class="text">Na naszej stronie możesz rozwiązywać testy związane z IT. Oferujemy bogatą w pytania bazę danych, która składa się z arkuszy egzaminacyjnych z poprzednich lat.</p>
                 </div>  
                 <div class="logoszew">
-                <button class="przycisk" @click="test">
-                    <p>ROZWIĄŻ TEST</p>
-                </button>      
+                <a @click="$router.push('/losowanie40')">
+                <div class="przycisk" @click="test">
+                    ROZWIĄŻ TEST
+                </div>
+                </a>      
                 </div>
             </div>
             <div id="background-image2">
@@ -21,9 +23,11 @@
                     <p class="text">Możesz wykorzystać możliwość zakładania klas, tworzenia pytań i własnych testów. Ustal ich termin, ilość pytań i integruj się ze swoją klasą.</p>
                 </div>
                 <div class="logoszew">
+                <a @click="$router.push('/groups')">
                 <div class="przycisk">
-                    <p>PANEL ...</p>
-                </div>      
+                    KLASY
+                </div>
+                </a>     
                 </div>        
             </div>
             <div id="background-image3">
@@ -31,9 +35,11 @@
                     <p class="text">Sprawdź swój postęp w rozwiązywaniu testów gdy już masz swoje konto - bez pracy nie ma kołaczy.</p>
                 </div>
                 <div class="logoszew">
+                <a @click="$router.push('user/wyniki')">
                 <div class="przycisk">
-                    <p>WYNIKI</p>
-                </div>      
+                    WYNIKI
+                </div>
+                </a>    
                 </div>
             </div>
             <div id="background-image4">
@@ -42,12 +48,16 @@
                 </div>   
                 <div class="logoszew">
                     <div class="logoszew2">
-                    <div class="przycisk">
-                        <p>ZALOGUJ SIĘ</p>
-                    </div>
-                    <div class="przycisk">
-                        <p>REJESTRACJA</p>
-                    </div>
+                        <a @click="$router.push('/login')">
+                        <div class="przycisk">
+                            LOGOWANIE
+                        </div>
+                        </a>  
+                        <a @click="$router.push('/register')">
+                        <div class="przycisk">
+                            REJESTRACJA
+                        </div>
+                        </a>  
                     </div>
                 </div>    
             </div>
