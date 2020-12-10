@@ -92,7 +92,7 @@ export default {
 </script>
 <style scoped>
     #background-image   {
-        height: 90vh;
+        height: 91vh;
         background: url("../../images/serwerownia.jpg") no-repeat center center ;
         background-repeat: no-repeat;
         background-size: cover;
@@ -102,7 +102,7 @@ export default {
     }
 
     #background-image2   {
-        height: 90vh;
+        height: 91vh;
         background: url("../../images/server.jpg") no-repeat center center ;
         background-repeat: no-repeat;
         background-size: cover;
@@ -111,7 +111,7 @@ export default {
     }
 
     #background-image3   {
-        height: 90vh;
+        height: 91vh;
         background: url("../../images/room.jpg") no-repeat center center ;
         background-repeat: no-repeat;
         background-size: cover;
@@ -120,7 +120,7 @@ export default {
     }
 
     #background-image4   {
-        height: 90vh;
+        height: 91vh;
         background: url("../../images/kod.jpg") no-repeat center center ;
         background-repeat: no-repeat;
         background-size: cover;
@@ -136,7 +136,7 @@ export default {
     .text   {
         margin-left: auto;
         margin-right: auto;
-        background-color: rgba(0, 0, 0, 0.452);
+        background-color: rgba(0, 0, 0, 0.664);
         font-size: 1.7rem; 
         width: 99.5vw;
         padding: 1rem;

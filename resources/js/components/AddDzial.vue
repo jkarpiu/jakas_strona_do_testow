@@ -1,14 +1,28 @@
 <template>
     <div v-if="currentQ != null">
-        <div class="questions">
+        <div class="addfield" style="width:30vw;">
+                <input
+            type="text"
+            placeholder="Nazwa działu"
+            class="form-control"
+            style="width:25vw; margin: 15px auto"
+            v-model="dzialTitle"
+        />
+        </div>
+       <div class="container">
+            <div class="row justify-content-center" style="padding-top: 5rem;">
+       
+
+           <div class="addfield">
             <!-- <vue-slick-carousel
                 class="allCards"
                 :arrows="true"
                 :dots="true"
                 :dotsClass="'dotsAddDzial'"
             > -->
-
+        
             <h1 class="header1">Dodaj pytanie</h1>
+
             <input
                 class="form-control question-input"
                 placeholder="Podaj treść pytania"
@@ -16,10 +30,15 @@
                 type="text"
                 name="pytanie"
             />
+            <div class="addphoto">
+            <p>Dodaj zdjęcie:</p>            
             <input type="file" id="file" />
-            <br />
+            </div>
+            </div></div>
+
+            <div class="addfield" style="margin-top:1rem;">
             <h1 class="header2">Dodaj odpowiedzi</h1>
-            <div
+            <div 
                 id="head-answer-all"
                 :key="answer.id"
                 v-for="answer in questions[currentQ].answers"
@@ -57,21 +76,22 @@
                     </div>
                 </div>
             </div>
+            <div class="row justify-content-center" style="padding-top: 1rem;">
             <button
                 class="btn btn-success"
                 @click="
-                    questions[currentQ].answers.push(defaultAnswer());
-
-                "
-            >
+                    questions[currentQ].answers.push(defaultAnswer());"
+                     >
                 Dodaj odpowiedź
             </button>
-            <button class="btn btn-success" @click="addQuestion">
-                Dodaj pytanie
-            </button>
+            </div>
             <!-- </vue-slick-carousel> -->
-        </div>
-
+        </div></div>
+            <a @click="addQuestion">
+                <div class="przycisk">
+                Dodaj pytanie
+                </div>
+            </a>
         <section class="card-list">
             <div
                 v-for="(question, index) in questions"
@@ -117,16 +137,11 @@
                 </article>
             </div>
         </section>
-        <input
-            type="text"
-            placeholder="Nazwa działu"
-            class="form-control"
-            style="width:40vw; margin: 15px;"
-            v-model="dzialTitle"
-        />
-        <button type="submit" @click="send" class="btn btn-primary">
+    <div class="row justify-content-center" style="padding-top: 1rem;">
+        <button type="submit" @click="send" class="btn btn-primary" style="margin:2rem;">
             Wyślij
         </button>
+    </div>
     </div>
 </template>
 <script>
@@ -183,6 +198,10 @@ export default {
         },
         addQuestion: function() {
             this.questions.push(this.defaultQuestion());
+            for(var x=0; x<4; x++){
+            this.questions[this.questions.length - 1].answers.push(this.defaultAnswer());
+            }
+            this.currentQ = this.questions.length - 1;
         }
     },
     mounted() {
@@ -195,6 +214,24 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap");
 
+.addfield {
+    margin-right:auto;
+    margin-left:auto;
+    padding:1rem;
+    background: rgb(39,39,39);
+    color: #fcfcfc;
+    margin-bottom: 2rem;
+    max-width: 50vw;
+    min-width:30vw;
+}
+.addphoto > p {
+    margin-top:3rem;
+    margin-bottom:1vh;
+    padding:0;
+}
+.header2 {
+    margin-top:0;
+}
 .card-list {
     display: flex;
     padding: 3rem;
@@ -206,7 +243,7 @@ export default {
     height: 10px;
 }
 .card-list::-webkit-scrollbar-thumb {
-    background: #201c29;
+
     border-radius: 10px;
     box-shadow: inset 1px 1px 1px hsla(0, 0%, 100%, 0.25),
         inset -1px -1px 1px rgba(0, 0, 0, 0.25);
@@ -254,6 +291,19 @@ export default {
     transition: 0.2s;
     box-shadow: -1rem 0 2rem #000;
 }
+.przycisk{
+    font-size: 1.5rem;
+    margin-top:8vh;
+    align-items: center;
+    text-align: center;
+    background: #407ec0;
+    justify-content: space-around;
+    padding:1rem 3rem;
+    z-index: 1;
+    -webkit-box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.6); 
+    box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.6); 
+    cursor: pointer;
+    }
 .odpowiedzi {
     vertical-align: middle;
     width: 100%;
