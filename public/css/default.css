@@ -154,7 +154,7 @@ body {
     display: grid;
     grid-template-columns: 20vw 500px 20vw;
     float: center;
-    left: 20vh;;
+    left: 20vh;
 }
 
 #head-answer-all {
