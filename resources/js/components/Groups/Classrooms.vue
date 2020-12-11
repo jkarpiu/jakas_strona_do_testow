@@ -49,12 +49,17 @@
                 <input
                     placeholder="Kod zaproszenia"
                     type="text"
-                    v-model="inv_code"
+                    v-model.trim="$v.inv_code.$model"
+                                    :class="{
+                                        'is-invalid': $v.inv_code.$error
+                                    }"
                     name=""
                     id=""
                     class="form-control"
                 />
-                <button @click="joinGroup" class="btn btn-primary ">
+                <p>Chodzi o ośmioznakowy kod zaproszenia który podał ci nauczyciel</p>
+                <button @click="joinGroup" class="btn btn-primary "
+                                    :disabled="this.$v.inv_code.$invalid">
                     Dołącz
                 </button>
             </p>
@@ -64,6 +69,11 @@
 <script>
 import axios from "axios";
 import Groups from "./Groups";
+import {
+    required,
+    minLength,
+    maxLength
+} from "vuelidate/lib/validators"
 export default {
     components: { Groups },
     methods: {
@@ -79,6 +89,7 @@ export default {
                 });
         },
         joinGroup: function() {
+            if (!ctx.$v.$invalid) {
             axios
                 .post("/api/join_group", {code: this.inv_code})
                 .catch(err => console.log(err.response))
@@ -87,6 +98,7 @@ export default {
                     this.$modal.hide('join-classroom')
                     this.list = res.data;
                 });
+            }
         },
         getGroups: function async() {
             axios
@@ -104,6 +116,13 @@ export default {
             list: [],
             inv_code: ''
         };
+    },
+    validations : {
+        inv_code: {
+            required,
+            minLength: minLength(8),
+            maxLength: maxLength(8)
+        },
     },
     created() {
         this.getGroups();

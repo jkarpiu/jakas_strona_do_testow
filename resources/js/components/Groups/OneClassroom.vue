@@ -30,7 +30,6 @@
                                 rows="1"
                                 name=""
                                 id=""
-                                v-model="title"
                                 style="width: 47.5vw"
                             ></textarea>
                             <label>Tytuł</label>
@@ -334,6 +333,11 @@
     </div>
 </template>
 <script>
+import {
+    required,
+    minLength,
+    maxLength
+} from "vuelidate/lib/validators"
 import { Editor, EditorContent, EditorMenuBar } from "tiptap";
 import {
     BulletList,
@@ -486,6 +490,11 @@ export default {
                     this.isInvitationLoading = false;
                     this.$modal.show("invitation");
                 });
+        },
+        setPost: function(value) {
+    //   this.name = value
+    //   this.$v.name.$touch()
+    console.log("test")
         }
     }
 };

@@ -12,6 +12,7 @@ import * as VueSpinnersCss from "vue-spinners-css";
 import VueCookies from 'vue-cookies'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex';
+import vuelidate from 'vuelidate';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTrash,faPlus, faLink, faUser, faBold, faItalic, faStrikethrough, faCode, faUndo, faRedo, faUnderline, faListUl, faListOl, } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -43,6 +44,7 @@ Vue.use(VueSpinnersCss);
 Vue.use(Vuex);
 Vue.use(vmodal);
 Vue.use(Datetime);
+Vue.use(vuelidate);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

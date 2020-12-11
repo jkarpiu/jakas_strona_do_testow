@@ -16,14 +16,29 @@
                                 <input
                                     id="email"
                                     type="email"
-                                    class="form-control @error('email') is-invalid @enderror"
+                                    class="form-control"
                                     name="email"
                                     value=""
                                     required
                                     autocomplete="email"
+                                    :class="{
+                                        'is-invalid': $v.email.$error
+                                    }"
                                     autofocus
-                                    v-model="email"
+                                    v-model.trim="$v.email.$model"
                                 />
+                                <div
+                                    class="invalid-feedback"
+                                    v-if="!$v.email.required"
+                                >
+                                    Pole wymagane
+                                </div>
+                                <div
+                                    class="invalid-feedback"
+                                    v-if="!$v.email.email"
+                                >
+                                    To musi być poprawny adres email
+                                </div>
                             </div>
                         </div>
 
@@ -37,13 +52,33 @@
                                 <input
                                     id="password"
                                     type="password"
-                                    class="form-control @error('password') is-invalid @enderror"
+                                    class="form-control"
                                     name="password"
                                     required
+                                    v-model.trim="$v.password.$model"
+                                    :class="{
+                                        'is-invalid': $v.password.$error
+                                    }"
                                     autocomplete="current-password"
-                                    v-model="password"
                                 />
+                                <div
+                                    class="invalid-feedback"
+                                    v-if="!$v.password.required"
+                                >
+                                    Pole wymagane
+                                </div>
+                                <div
+                                    class="invalid-feedback"
+                                    v-if="!$v.password.minLength"
+                                >
+                                    Hasło musi mieć co najmniej
+                                    {{ $v.password.$params.minLength.min }}
+                                    znaków.
+                                </div>
                             </div>
+                        </div>
+                        <div v-if="errCode != null">
+                            <p>Błędne dane logowania</p>
                         </div>
 
                         <div class="form-group row">
@@ -70,6 +105,7 @@
                                 <button
                                     @click="login"
                                     class="btn btn-primary btn-login-page"
+                                    :disabled="this.$v.$invalid"
                                 >
                                     Zaloguj
                                 </button>
@@ -105,29 +141,52 @@
 </template>
 <script>
 import axios from "axios";
+import {
+    required,
+    minLength,
+    between,
+    email,
+    sameAs
+} from "vuelidate/lib/validators";
 let ctx;
 export default {
     data() {
         return {
             email: "",
-            password: ""
+            password: "",
+            errCode: null
         };
+    },
+    validations: {
+        email: {
+            required,
+            email
+        },
+        password: {
+            required,
+            minLength: minLength(8)
+        }
     },
     methods: {
         login: async () => {
-            console.log(ctx);
-            axios
-                .post("/api/login", {
-                    email: ctx.email,
-                    password: ctx.password
-                })
-                .catch(err => {
-                    console.log(err.response);
-                })
-                .then(() => {
-                    ctx.$emit("get-user");
-                    ctx.$router.push("/");
-                });
+            if (!ctx.$v.$invalid) {
+                console.log(ctx);
+                axios
+                    .post("/api/login", {
+                        email: ctx.email,
+                        password: ctx.password
+                    })
+                    .catch(err => {
+                        console.log(err.response);
+                        ctx.errCode = err.response.status
+                    })
+                    .then(() => {
+                        if(!errCode) {
+                        ctx.$emit("get-user");
+                        ctx.$router.push("/");}
+
+                    });
+            }
         }
     },
     created() {
@@ -136,7 +195,7 @@ export default {
 };
 </script>
 <style scoped>
-    .card-header    {
-        font-size: 23px;
-    }
+.card-header {
+    font-size: 23px;
+}
 </style>
