@@ -9,28 +9,35 @@
                     @endif -->
 
         <span v-if="!user">
-                <li class="panele">
-                    <a class="dropdown-item"
-                    @click="$router.push('/login')">Zaloguj się</a>
-                </li>
-                <li class="panele">
-                    <a class="dropdown-item"
-                    @click="$router.push('/register')">Zarejestruj się</a>
-                </li>
+            <li class="panele">
+                <a class="dropdown-item" @click="$router.push('/login')"
+                    >Zaloguj się</a
+                >
+            </li>
+            <li class="panele">
+                <a class="dropdown-item" @click="$router.push('/register')"
+                    >Zarejestruj się</a
+                >
+            </li>
         </span>
         <span v-else>
-            
-                <li v-if="user.role == 2" class="panele">
-                    <a class="dropdown-item panel"
-                    @click="$router.push('/groups')">Panel nauczyciela</a>
-                </li>
-            
-            
-                <li v-else-if="user.role == 1">
-                    <a class="dropdown-item panel"
-                    @click="$router.push('/groups')">Moje klasy</a>
-                </li>
-            
+            <li v-if="user.role == 2" class="panele">
+                <a class="dropdown-item panel" @click="$router.push('/tests')"
+                    >Moje testy</a
+                >
+            </li>
+            <li v-if="user.role == 2" class="panele">
+                <a class="dropdown-item panel" @click="$router.push('/groups')"
+                    >Moje zajęcia</a
+                >
+            </li>
+
+            <li v-else-if="user.role == 1">
+                <a class="dropdown-item panel" @click="$router.push('/groups')"
+                    >Moje klasy</a
+                >
+            </li>
+
             <li>
                 <a
                     id="navbarDropdown"
@@ -43,7 +50,15 @@
                 >
                     {{ user.fname }}
                 </a>
-
+                <ul v-if="$store.state.user.role == 1">
+                    <a
+                        class="dropdown-item"
+                        @click="$router.push('/tests')"
+                        style="cursor: pointer;"
+                    >
+                       Zadane mi testy
+                    </a>
+                </ul>
                 <ul v-if="$store.state.user.role == 1">
                     <a
                         class="dropdown-item"
@@ -108,22 +123,22 @@ li {
     width: 200px;
 }
 
-span>li>ul {
+span > li > ul {
     display: none;
 }
 
- a {
+a {
     color: #fcfcfc;
     padding: 0 15px;
     font-size: 13px;
     font-weight: 500;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
     text-decoration: none;
     text-transform: uppercase;
 }
 
 /* wyloguj */
-span>li:hover>ul {
+span > li:hover > ul {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -135,11 +150,10 @@ span>li:hover>ul {
     height: 2.5rem;
     z-index: 2;
 }
-span>span>.panele:hover{
+span > span > .panele:hover {
     opacity: 0.8;
 }
-span>li>ul:hover>a {
+span > li > ul:hover > a {
     opacity: 0.8;
 }
-
 </style>

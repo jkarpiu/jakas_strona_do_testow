@@ -54,7 +54,7 @@ class testsController extends Controller
     {
         if (Auth::user()->role == 2) {
             if (!$request['id']) {
-                return response()->json(Auth::user()->studentTests::where(Carbon::parse('start'), '>', Carbon::now()))->where(Carbon::parse('start'), '<', Carbon::now()->addWeeks(2));
+                return response()->json(Auth::user()->studentTests::where(Carbon::parse('start'), '>', Carbon::now())->andWhere(Carbon::parse('start'), '<', Carbon::now()->addWeeks(2))->get());
             } else if($request['id']){
                 return response()->json(Auth::user()->studentTests::where('groups_model_id', $request['id'])->where(Carbon::parse('start'), '>', Carbon::now()))->where(Carbon::parse('start'), '<', Carbon::now()->addWeeks(2));
             }
