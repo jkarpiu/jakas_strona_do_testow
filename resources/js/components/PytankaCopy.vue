@@ -122,7 +122,7 @@ export default {
         getQuestion: function() {
             this.isLoading = true;
             axios
-                .get("/api/randQuestion", {
+                .get(this.$store.state.user? "/api/authRandQuestion":"/api/randQuestion", {
                     params: { dzial: this.dzial, amount: this.ilosc, test: this.test }
                 })
                 .catch(error => {console.log(error.response)})

@@ -170,6 +170,7 @@ export default {
     methods: {
         login: async () => {
             if (!ctx.$v.$invalid) {
+                ctx.errCode = null
                 console.log(ctx);
                 axios
                     .post("/api/login", {

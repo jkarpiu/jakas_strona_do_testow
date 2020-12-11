@@ -49,7 +49,8 @@ Route::group(['middleware' => 'auth.api'], function () {
     Route::get('list_tests', 'testsController@list');
     Route::post('add_comment', 'CommentsController@addcomment');
     Route::post('add_dzial', 'addQuestionController@addDzial');
-    Route::post('test_results' , 'testsController@getTestsResults');
+    Route::post('test_results', 'testsController@getTestsResults');
     Route::post('remove_post', 'groupsController@remove_post');
     Route::post('upcoming_tests', 'testsController@upcomingTests');
+    Route::get('authRandQuestion', 'randQuestionController@json_onequestion');
 });
