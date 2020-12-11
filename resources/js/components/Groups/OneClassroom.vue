@@ -29,10 +29,20 @@
                                 class="tekst form-control"
                                 rows="1"
                                 name=""
+                                v-model.trim="$v.title.$model"
+                                :class="{
+                                        'is-invalid': $v.email.$error
+                                    }"
                                 id=""
                                 style="width: 47.5vw"
                             ></textarea>
                             <label>Tytuł</label>
+                            <div
+                                    class="invalid-feedback"
+                                    v-if="!$v.invalid.required"
+                                >
+                                    Pole wymagane
+                                </div>
                             <div class="editor">
                                 <editor-menu-bar
                                     :editor="editor"
@@ -394,6 +404,11 @@ export default {
         EditorContent,
         UpcomingTests: upcoming
     },
+    validation:{
+        title: {
+            required
+        }
+},
     methods: {
 
            removePost: function(id) {

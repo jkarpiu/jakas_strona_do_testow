@@ -8,7 +8,7 @@
 ## Wprowadzenie
 IPIES jest systemem który pozwala na testowanie wiedzy uczniów. Jest on napisany przy użyciu Vue.js i Laravela. 
 
-## Instalacja 
+## Instalacja i konfiguracja
 
 ### Wymagania
 - Dowonlna SQL-owa baza danych (MariaDB, PostgreSQL)
@@ -18,7 +18,7 @@ IPIES jest systemem który pozwala na testowanie wiedzy uczniów. Jest on napisa
 - Composer 
 - npm
 - git 
-### Proces instalacji ( WSL / Linux)
+### Proces instalacji i konfiguracji( WSL / Linux)
 1. Klonujemy repozytorium do wybranego folderu  
    ``` bash
    git clone https://github.com/jkarpiu/jakas_strona_do_testow.git  
@@ -181,4 +181,7 @@ Zmienna $fillable definiuje tutaj pola, które możemy 'wypełniać' z poziomu s
 ### Mapa relacji dla naszego projektu:
 <img style="width: 80vh;  margin-top: 15px;margin-left:auto; margin-right: auto; display:block;" src="graph.png">
 
-Możemy tutaj zobaczyć że np.:
+
+Możemy tutaj zobaczyć że np.: model użytkownika potrafi być połączony z modelem grup kilkoma relacjami. Wynika to z tego że użytkonwik może być zarówno nauczcielem jak i uczniem, ale tylko nauczyciele mogą 'administratorami' grupy, i tylko uczniowie mogą być jej członkami (przynajmniej na chwile obecną).
+
+
