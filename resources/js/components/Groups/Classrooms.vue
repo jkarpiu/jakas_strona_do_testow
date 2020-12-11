@@ -35,7 +35,7 @@
                     id=""
                     class="form-control"
                 />
-                <button @click="createGroup" class="btn btn-primary ">
+                <button @click="createGroup" class="btn btn-primary btn-left">
                     Dodaj
                 </button>
             </p>
@@ -122,6 +122,7 @@ export default {
 }
 .btn-left {
     margin-right: 2rem;
+    margin-top: 1rem;
 }
 
 </style>
