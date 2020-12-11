@@ -52,11 +52,11 @@ class testsController extends Controller
 
     public function upcomingTests(Request $request)
     {
-        if (Auth::user()->role == 2) {
+        if (Auth::user()->role == 1) {
             if (!$request['id']) {
-                return response()->json(Auth::user()->studentTests::where(Carbon::parse('start'), '>', Carbon::now()))->where(Carbon::parse('start'), '<', Carbon::now()->addWeeks(2));
+                return response()->json(Auth::user()->studentTests->whereDate('start', '>', Carbon::now())->andWhereDate('start', '<', Carbon::now()->addWeeks(2))->get());
             } else if($request['id']){
-                return response()->json(Auth::user()->studentTests::where('groups_model_id', $request['id'])->where(Carbon::parse('start'), '>', Carbon::now()))->where(Carbon::parse('start'), '<', Carbon::now()->addWeeks(2));
+                return response()->json(Auth::user()->studentTests->where('groups_model_id', $request['id'])->whereDate('start', '>', Carbon::now())->whereDate( 'start', '<', Carbon::now()->addWeeks(2)));
             }
         }
     }

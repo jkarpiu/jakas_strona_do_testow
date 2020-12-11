@@ -7,16 +7,16 @@
             <div class="top-right links">
                 <ul>
                     <span class="dropdown-display">
-                        
-                            <li>
+
+                            <li v-if="!$store.state.user || $store.state.user.role == 1 ">
                                 <a class="dropdown-item" @click="$router.push('/losowanie40')">Losuj 40 pytań</a>
                             </li>
-                        
-                        
-                            <li>
+
+
+                            <li v-if="!$store.state.user || $store.state.user.role == 1 ">
                                 <a class="dropdown-item" @click="$router.push('/losowanie1')">Losuj 1 pytanie</a>
                             </li>
-                        
+
                         <user-menu @get-user="getUser" />
                     </span>
                 </ul>
