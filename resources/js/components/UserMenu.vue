@@ -56,7 +56,7 @@
                         @click="$router.push('/tests')"
                         style="cursor: pointer;"
                     >
-                       Zadane mi testy
+                       Zadane testy
                     </a>
                 </ul>
                 <ul v-if="$store.state.user.role == 1">
