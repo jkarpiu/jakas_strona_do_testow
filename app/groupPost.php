@@ -8,6 +8,9 @@ class groupPost extends Model
 {
     protected $fillable = ['author_id', 'groups_model_id', 'content', 'title', 'active'];
 
+    public function comments(){
+        return $this->hasMany(comments::class);
+    }
     public function group () {
         return $this -> belongsTo(groupsModel::class );
     }
@@ -16,7 +19,4 @@ class groupPost extends Model
         return $this -> belongsTo (User::class, 'author_id');
     }
 
-    public function comments(){
-        return $this->hasMany(comments::class);
-    }
 }

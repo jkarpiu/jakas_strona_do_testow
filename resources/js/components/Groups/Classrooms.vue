@@ -45,7 +45,6 @@
             styles="background-color: #191919; padding: 25px;"
             adaptive
         >
-            <p>
                 <input
                     placeholder="Kod zaproszenia"
                     type="text"
@@ -57,12 +56,14 @@
                     id=""
                     class="form-control"
                 />
+                <div v-if="errCode === 422">
+                    <p>Już jesteś członkiem tej klasy</p>
+                </div>
                 <p>Chodzi o ośmioznakowy kod zaproszenia który podał ci nauczyciel</p>
                 <button @click="joinGroup" class="btn btn-primary "
                                     :disabled="this.$v.inv_code.$invalid">
                     Dołącz
                 </button>
-            </p>
         </modal>
     </div>
 </template>
@@ -89,11 +90,17 @@ export default {
                 });
         },
         joinGroup: function() {
-            if (!ctx.$v.$invalid) {
+            if (!this.$v.$invalid) {
             axios
                 .post("/api/join_group", {code: this.inv_code})
-                .catch(err => console.log(err.response))
+                .catch(err => {
+                    if(err.response.status == 422){
+                        this.list = err.response.data
+                        this.errCode = 422
+                    }
+                    console.log(err.response)})
                 .then(res => {
+                    this.errCode = null;
                     console.log(res)
                     this.$modal.hide('join-classroom')
                     this.list = res.data;
@@ -114,7 +121,8 @@ export default {
         return {
             new_group_name: "",
             list: [],
-            inv_code: ''
+            inv_code: '',
+            errCode: null
         };
     },
     validations : {
