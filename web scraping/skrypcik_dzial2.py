@@ -54,7 +54,7 @@ for g in range(10000):
 
         elif i.get_attribute("class")=="obrazek" and not repeat:
             photo = i.find_element_by_class_name("img-responsive").get_attribute("src")
-            filename = 'images_dzial2\pytanie' + str(id_pytanie - 1) + '.jpg'
+            filename = '\images_dzial2\pytanie' + str(id_pytanie - 1) + '.jpg'
             print("Pobieram obrazek: " + filename)
             all_pytania[-1]['image'] = filename.replace('\\', '/')
             urllib.request.urlretrieve(photo, filename)
