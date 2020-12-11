@@ -181,7 +181,7 @@ export default {
                         ctx.errCode = err.response.status
                     })
                     .then(() => {
-                        if(!errCode) {
+                        if(!ctx.errCode) {
                         ctx.$emit("get-user");
                         ctx.$router.push("/");}
 
