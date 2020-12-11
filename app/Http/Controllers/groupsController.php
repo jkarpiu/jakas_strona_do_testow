@@ -54,9 +54,12 @@ class groupsController extends Controller
                 $n->with('students');
             }])->get();
             if (!empty($invitation) && Carbon::parse($invitation[0]['expire_date']) > Carbon::now()) {
-                if (!in_array(Auth::id(), $invitation[0]->group->students->all())) {
+                if (!in_array(Auth::id(), (array_column( $invitation[0]->group->students->all(), 'id')))) {
                     $invitation[0]->group->students()->attach(Auth::id());
                     return response()->json(Auth::user()->studentGroups);
+                }
+                else {
+                    return response() -> json(Auth::user() -> studentGroups, 422);
                 }
             } else {
                 return response()->json('Niepoprawny kod', 401);
