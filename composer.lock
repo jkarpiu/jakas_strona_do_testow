@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a9390b197b03279481ff6ea5cd572df",
+    "content-hash": "9f97f9063aeb5d285c72de815d7fe652",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -773,6 +773,49 @@
                 }
             ],
             "time": "2020-10-22T13:57:20+00:00"
+        },
+        {
+            "name": "gussrw/laravel-routes",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GussRw/Documentation-Laravel-Routes.git",
+                "reference": "70e2f4a6dfb9971cf3f9883c3230c12a22ed0dad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GussRw/Documentation-Laravel-Routes/zipball/70e2f4a6dfb9971cf3f9883c3230c12a22ed0dad",
+                "reference": "70e2f4a6dfb9971cf3f9883c3230c12a22ed0dad",
+                "shasum": ""
+            },
+            "type": "laravel-plugin",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "GussRw\\LaravelRoutes\\LaravelRoutesServiceProvider"
+                    ],
+                    "aliases": {
+                        "Routes": "GussRw\\LaravelRoutes\\Facade\\Routes"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GussRw\\LaravelRoutes\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "GussRw",
+                    "email": "gussrw1@gmail.com"
+                }
+            ],
+            "description": "Documentation of Laravel Routes",
+            "time": "2018-04-26T23:11:15+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",

@@ -45,7 +45,6 @@
             styles="background-color: #191919; padding: 25px;"
             adaptive
         >
-            <p>
                 <input
                     placeholder="Kod zaproszenia"
                     type="text"
@@ -65,7 +64,6 @@
                                     :disabled="this.$v.inv_code.$invalid">
                     Dołącz
                 </button>
-            </p>
         </modal>
     </div>
 </template>
