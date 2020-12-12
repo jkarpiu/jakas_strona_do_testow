@@ -319,6 +319,7 @@
                         <button
                             class="btn btn-primary"
                             @click="removePost(post.id)"
+                            v-if="$store.state.user.role==2"
                         >
                             usun
                         </button>

@@ -7,7 +7,7 @@
                 v-for="test in testy"
             ></p>
         </div>
-        <div class="wyniki_table">
+        <div class="wyniki_table" style="margin-top:6vh;">
             <table>
                 <thead>
                     <tr>

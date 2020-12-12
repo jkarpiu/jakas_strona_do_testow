@@ -1,5 +1,5 @@
 <template>
-    <div>
+
         <div class="wyniki_table">
             <table>
                 <thead>
@@ -32,11 +32,10 @@
                 </tr>
             </table>
         </div>
-    </div>
+
 </template>
 <style>
 .wyniki_table table {
-    margin-top: 2vh;
     box-shadow: -2px 1px 24px 2px rgba(0, 0, 0, 0.4);
     margin-left: auto;
     margin-right: auto;
