@@ -4,7 +4,19 @@
 
 <h1>IPIES - dokuemntacja techniczna </h1>
 
+## Spis treści
 
+ * [IPIES - dokuemntacja techniczna ](#ipies---dokuemntacja-techniczna-)
+      * [Spis treści](#spis-tre\xC5\x9Bci)
+      * [Wprowadzenie](#wprowadzenie)
+      * [Instalacja i konfiguracja](#instalacja-i-konfiguracja)
+         * [Wymagania](#wymagania)
+         * [Proces instalacji i konfiguracji( WSL / Linux)](#proces-instalacji-i-konfiguracji-wsl--linux)
+      * [Ogólny zarys działania aplikacji](#og\xC3\xB3lny-zarys-dzia\xC5\x82ania-aplikacji)
+      * [Struktura modeli](#struktura-modeli)
+         * [Migracje - struktura bazy danych](#migracje---struktura-bazy-danych)
+         * [Modele - realacje i pole $fillable](#modele---realacje-i-pole-fillable)
+         * [Mapa relacji dla naszego projektu:](#mapa-relacji-dla-naszego-projektu) 
 ## Wprowadzenie
 IPIES jest systemem który pozwala na testowanie wiedzy uczniów. Jest on napisany przy użyciu Vue.js i Laravela. 
 
@@ -90,6 +102,19 @@ IPIES jest systemem który pozwala na testowanie wiedzy uczniów. Jest on napisa
     ```
 14. Przechodzimy w naszej przeglądarce na adres 127.0.0.1:8000
 <img style="width: 80vh;  margin-top: 15px;margin-left:auto; margin-right: auto; display:block;" src="docs_images/homepage.png">
+
+
+## Ogólny zarys działania aplikacji 
+
+Nasza aplikacja jest napisana w oparciu o model SPA, co oznacza że cały HTML wczytywany jest tylko raz, reszta danych przesyłanych między przeglądarką, serwerem to tylko czysty JSON. Zaletami takiego roziwiązania  są:  
+- skrócenie czasu ładowania poszczęgólnych podstron
+- większa kontrola nad tym co widzi użytkownik 
+- mniejsze zużycie np.: danych mobilnych
+
+Rozwiązanie to ma też swoje wady takie jak np.:
+- Zwiększony początkowy czas ładowania strony
+- dodatkowe czynności podczas wymiany danych
+
 
 ## Struktura modeli
 
