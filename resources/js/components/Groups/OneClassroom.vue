@@ -31,18 +31,18 @@
                                 name=""
                                 v-model.trim="$v.title.$model"
                                 :class="{
-                                        'is-invalid': $v.email.$error
-                                    }"
+                                    'is-invalid': $v.title.$error
+                                }"
                                 id=""
                                 style="width: 47.5vw"
                             ></textarea>
                             <label>Tytuł</label>
                             <div
-                                    class="invalid-feedback"
-                                    v-if="!$v.invalid.required"
-                                >
-                                    Pole wymagane
-                                </div>
+                                class="invalid-feedback"
+                                v-if="!$v.title.required"
+                            >
+                                Pole wymagane
+                            </div>
                             <div class="editor">
                                 <editor-menu-bar
                                     :editor="editor"
@@ -343,11 +343,7 @@
     </div>
 </template>
 <script>
-import {
-    required,
-    minLength,
-    maxLength
-} from "vuelidate/lib/validators"
+import { required, minLength, between } from "vuelidate/lib/validators";
 import { Editor, EditorContent, EditorMenuBar } from "tiptap";
 import {
     BulletList,
@@ -364,8 +360,8 @@ import {
     History
 } from "tiptap-extensions";
 import axios from "axios";
-import upcoming from '../UpcomingTests';
-import UpcomingTests from '../UpcomingTests.vue';
+import upcoming from "../UpcomingTests";
+import UpcomingTests from "../UpcomingTests.vue";
 
 export default {
     props: ["id"],
@@ -404,14 +400,13 @@ export default {
         EditorContent,
         UpcomingTests: upcoming
     },
-    validation:{
+    validations: {
         title: {
             required
         }
-},
+    },
     methods: {
-
-           removePost: function(id) {
+        removePost: function(id) {
             axios
                 .post("/api/remove_post", {
                     id: id
@@ -465,19 +460,21 @@ export default {
         },
         addPost: function() {
             this.newPost = this.editor.getHTML();
-            axios
-                .post("/api/add_post", {
-                    id: this.id,
-                    content: this.newPost,
-                    title: this.title
-                })
-                .catch(err => console.log(err.response))
-                .then(res => {
-                    console.log(res.data);
-                    this.listPosts();
-                    this.editor.clearContent();
-                    this.title = "";
-                });
+            if (!this.$v.title.$invalid) {
+                axios
+                    .post("/api/add_post", {
+                        id: this.id,
+                        content: this.newPost,
+                        title: this.title
+                    })
+                    .catch(err => console.log(err.response))
+                    .then(res => {
+                        console.log(res.data);
+                        this.listPosts();
+                        this.editor.clearContent();
+                        this.title = "";
+                    });
+            }
         },
         addComment: function(id) {
             axios
@@ -507,9 +504,9 @@ export default {
                 });
         },
         setPost: function(value) {
-    //   this.name = value
-    //   this.$v.name.$touch()
-    console.log("test")
+            //   this.name = value
+            //   this.$v.name.$touch()
+            console.log("test");
         }
     }
 };
