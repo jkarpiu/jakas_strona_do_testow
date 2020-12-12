@@ -2,35 +2,43 @@
 <br>
 <br>
 
-<h1>IPIES - dokuemntacja techniczna </h1>
+<h1>IPIES - dokumentacja techniczna </h1>
 
 ## Spis treści
 
- * [IPIES - dokuemntacja techniczna ](#ipies---dokuemntacja-techniczna-)
-      * [Spis treści](#spis-tre\xC5\x9Bci)
-      * [Wprowadzenie](#wprowadzenie)
-      * [Instalacja i konfiguracja](#instalacja-i-konfiguracja)
-         * [Wymagania](#wymagania)
-         * [Proces instalacji i konfiguracji( WSL / Linux)](#proces-instalacji-i-konfiguracji-wsl--linux)
-      * [Ogólny zarys działania aplikacji](#og\xC3\xB3lny-zarys-dzia\xC5\x82ania-aplikacji)
-      * [Struktura modeli](#struktura-modeli)
-         * [Migracje - struktura bazy danych](#migracje---struktura-bazy-danych)
-         * [Modele - realacje i pole $fillable](#modele---realacje-i-pole-fillable)
-         * [Mapa relacji dla naszego projektu:](#mapa-relacji-dla-naszego-projektu) 
+- [Spis treści](#spis-treści)
+- [Wprowadzenie](#wprowadzenie)
+- [Instalacja i konfiguracja](#instalacja-i-konfiguracja)
+  - [Wymagania](#wymagania)
+  - [Proces instalacji i konfiguracji ( WSL / Linux)](#proces-instalacji-i-konfiguracji--wsl--linux)
+- [](#)
+- [Ogólny zarys działania aplikacji](#ogólny-zarys-działania-aplikacji)
+  - [Dlaczego SPA?](#dlaczego-spa)
+  - [Przykład interakcji między systemami](#przykład-interakcji-między-systemami)
+- [Backend](#backend)
+  - [Struktura modeli](#struktura-modeli)
+    - [Migracje - struktura bazy danych](#migracje---struktura-bazy-danych)
+    - [Modele - relacje i pole $fillable](#modele---relacje-i-pole-fillable)
+  - [Mapa relacji dla naszego projektu:](#mapa-relacji-dla-naszego-projektu)
+  - [Struktura adresów i kontrolerów API](#struktura-adresów-i-kontrolerów-api)
+    - [Adresy](#adresy)
+    - [Kontrolery](#kontrolery)
+- [Frontend](#frontend)
+  - [Routing](#routing)
 ## Wprowadzenie
-IPIES jest systemem który pozwala na testowanie wiedzy uczniów. Jest on napisany przy użyciu Vue.js i Laravela. 
+IPIES jest systemem który pozwala na testowanie wiedzy uczniów. Jest on napisany przy użyciu Vue.js i Laravel-a. 
 
 ## Instalacja i konfiguracja
 
 ### Wymagania
-- Dowonlna SQL-owa baza danych (MariaDB, PostgreSQL)
+- Dowolna SQL-owa baza danych (MariaDB, PostgreSQL)
 - PHP 7.x
     - php-xml
     - Rozszerzenie wybranej bazy danych ( np.: php-mysql ) 
 - Composer 
 - npm
 - git 
-### Proces instalacji i konfiguracji( WSL / Linux)
+### Proces instalacji i konfiguracji ( WSL / Linux)
 1. Klonujemy repozytorium do wybranego folderu  
    ``` bash
    git clone https://github.com/jkarpiu/jakas_strona_do_testow.git  
@@ -40,7 +48,7 @@ IPIES jest systemem który pozwala na testowanie wiedzy uczniów. Jest on napisa
    ``` bash
    composer install
    ```
-3. Instalujemy paczki Javascripta:
+3. Instalujemy paczki Javascript-a:
    
    ``` bash
    npm install
@@ -74,7 +82,7 @@ IPIES jest systemem który pozwala na testowanie wiedzy uczniów. Jest on napisa
    ```bash
    ./artisan migrate
    ```
-8. Generujemy klucze, które potem bedą używane w procesie autoryzacji użytkowników
+8. Generujemy klucze, które potem będą używane w procesie autoryzacji użytkowników
    ```bash
    ./artisan migrate
    ```
@@ -83,7 +91,7 @@ IPIES jest systemem który pozwala na testowanie wiedzy uczniów. Jest on napisa
     ``` bash
     ./artisan storage:link
     ```
-10. Kopiujemy pliki zawierające liste z pytaniami egzaminacyjnymi
+10. Kopiujemy pliki zawierające listę z pytaniami egzaminacyjnymi
     ```
     ```
 11. Zapisujemy te pytania oraz podstawowe informacje do bazy
@@ -92,7 +100,7 @@ IPIES jest systemem który pozwala na testowanie wiedzy uczniów. Jest on napisa
     ./artisan db:seed --class=ee08_seeder //wbrew nazwie to nie tylko ee08
     ./artisan db:seed --class=SchoolSedder
     ```
-12. Tworzymy jedną paczkę ze wsyztskich napisanych kompentów Vue
+12. Tworzymy jedną paczkę ze wszystkich napisanych komponentów Vue
     ```bash
     npm run dev
     ```
@@ -105,9 +113,10 @@ IPIES jest systemem który pozwala na testowanie wiedzy uczniów. Jest on napisa
 
 
 ## Ogólny zarys działania aplikacji 
+### Dlaczego SPA?
 
-Nasza aplikacja jest napisana w oparciu o model SPA, co oznacza że cały HTML wczytywany jest tylko raz, reszta danych przesyłanych między przeglądarką, serwerem to tylko czysty JSON. Zaletami takiego roziwiązania  są:  
-- skrócenie czasu ładowania poszczęgólnych podstron
+Nasza aplikacja jest napisana w oparciu o model SPA, co oznacza że cały HTML wczytywany jest tylko raz, reszta danych przesyłanych między przeglądarką, serwerem to tylko czysty JSON. Zaletami takiego rozwiązania  są:  
+- skrócenie czasu ładowania poszczególnych podstron
 - większa kontrola nad tym co widzi użytkownik 
 - mniejsze zużycie np.: danych mobilnych
 
@@ -115,12 +124,29 @@ Rozwiązanie to ma też swoje wady takie jak np.:
 - Zwiększony początkowy czas ładowania strony
 - dodatkowe czynności podczas wymiany danych
 
+<img style="width: 80vh;  margin-top: 15px;margin-left:auto; margin-right: auto; display:block;" src="docs_images/schema.svg">
 
-## Struktura modeli
+### Przykład interakcji między systemami 
 
-### Migracje - struktura bazy danych
+Jako praktyczny przykład działania tego założenia w naszej aplikacji weźmy uruchomienie testu niezadanego przez nauczyciela:
+1. Użytkownik klika w "Losuj 40 pytań"
+2. Vue router zmienia aktualny widok na komponent testu z odpowiednim parametrem.
+3. Komponent wysyłá zapytanie o pytania do API Laravel-a, z danymi dotyczącymi testu
+4. Laravel przekierowuje dane z adresu do odpowiedniej funkcji
+5. Funkcja sprawdza, czy test jest zadany przez nauczyciela, czy nie. Nasz nie jest więc ustawienia testu są domyślne np.: dla EE.09 mamy 60 min, próg zdania 50 % i wylosowane 40 pytań
+6. Tworzona jest sesja testu w tabeli activeTests, ma ona swój unikalny klucz i tam także zapisany jest "deadline" naszego testu.
+7. Laravel losuje 40 pytań z bazy.
+8. Funkcja zwraca jako odpowiedź treść, id pytań odpowiedzi (bez informacji która jest poprawna) oraz informacje o sesji testu.
+9. Vue wyświetla pobrane pytania do rozwiązania oraz zapisuje do zmiennej informacje o sesji.
+10. Po rozwiązaniu testu Vue wysyła listę zaznaczonych odpowiedzi do innego adresu api, a Laravel jeżeli wszystko się zgadza zwraca do Vue wyniki oraz listę poprawnych odpowiedzi. 
+11. Vue wyświetla pobrane dane.
 
-Pliki definiujące strukture bazy danych można znaleźć w folderze database / migrations 
+## Backend
+### Struktura modeli
+
+#### Migracje - struktura bazy danych
+
+Pliki definiujące strukturę bazy danych można znaleźć w folderze database / migrations 
 ```
 migrations
 ├── 2014_10_12_000000_create_users_table.php
@@ -149,7 +175,7 @@ migrations
 └── 2020_12_07_131419_create_comments_table.php
 ```
 
-Każdy z tych plików ma raczej podobną strukture, najważniejszą częscią jest funkcja up(). Zawiera ona definicje kolumn danej tabeli np.: w pliku comments_table.php
+Każdy z tych plików ma raczej podobną strukturę, najważniejszą częścią jest funkcja up(). Zawiera ona definicje kolumn danej tabeli np.: w pliku comments_table.php
 
 ```php
 Schema::create('comments', function (Blueprint $table) {
@@ -161,12 +187,12 @@ Schema::create('comments', function (Blueprint $table) {
 });
 ```
 Na przykładzie 4 linijki możemy zobaczyć że tworzona jest kolumna o nazwie treść i typie longText. 
-Konwencja w Laravelu mówi że kolumna zawierająca klucz obcy powinna mieć nazwę składającą się z nazwy tabeli do której ten klucz się odnosi i słówka id. Całośc zapisana ma być w notacji węgierskiej. Relacje same w sobie definiowane są w plikach modeli, ale to w większych szczęgółach opisane jest poniżej.
-Opróćz tego możemy tu także zobaczyć dwie funckje nie przyjmujące parametru: id oraz timestamps. Funkcja id definiuje klucz podstawowy z domyślnymi SQL-wymi parametrami (AUTO-INCREMENT i UNIQUE), a timestamps dodaje dwa pola, jedno z datą utworzenia rekordu, a drugie z datą ostatniej edycii.
+Konwencja w Laravel-u mówi że kolumna zawierająca klucz obcy powinna mieć nazwę składającą się z nazwy tabeli do której ten klucz się odnosi i słówka id. Całość zapisana ma być w notacji węgierskiej. Relacje same w sobie definiowane są w plikach modeli, ale to w większych szczegółach opisane jest poniżej.
+Oprócz tego możemy tu także zobaczyć dwie funkcje nie przyjmujące parametru: id oraz timestamps. Funkcja id definiuje klucz podstawowy z domyślnymi SQL-ymi parametrami (AUTO-INCREMENT i UNIQUE), a timestamps dodaje dwa pola, jedno z datą utworzenia rekordu, a drugie z datą ostatniej edycji.
 
-### Modele - realacje i pole $fillable
+#### Modele - relacje i pole $fillable
 
-W głównym folderze app możemy znależć pliki odpowiedzialne za definicje relacji i innych rzeczy związanych z odnoszeniem się do bazy danych w kodze
+W głównym folderze app możemy znaleźć pliki odpowiedzialne za definicje relacji i innych rzeczy związanych z odnoszeniem się do bazy danych w kodze
 
 ```bash
 app
@@ -189,7 +215,7 @@ app
 ├── User.php
 └── wyniki.php
 ```
-W każdym z tych plików znajdziemy mniej więcej podobną strukture z główną klasą definiującą model w niej np.: w pliku groupPost.php
+W każdym z tych plików znajdziemy mniej więcej podobną strukturę z główną klasą definiującą model w niej np.: w pliku groupPost.php
 
 ```php
 protected $fillable = ['author_id', 'groups_model_id', 'content', 'title', 'active'];
@@ -207,6 +233,70 @@ Zmienna $fillable definiuje tutaj pola, które możemy 'wypełniać' z poziomu s
 <img style="width: 80vh;  margin-top: 15px;margin-left:auto; margin-right: auto; display:block;" src="graph.png">
 
 
-Możemy tutaj zobaczyć że np.: model użytkownika potrafi być połączony z modelem grup kilkoma relacjami. Wynika to z tego że użytkonwik może być zarówno nauczcielem jak i uczniem, ale tylko nauczyciele mogą 'administratorami' grupy, i tylko uczniowie mogą być jej członkami (przynajmniej na chwile obecną).
+Możemy tutaj zobaczyć że np.: model użytkownika potrafi być połączony z modelem grup kilkoma relacjami. Wynika to z tego że użytkownik może być zarówno nauczycielem jak i uczniem, ale tylko nauczyciele mogą 'administratorami' grupy, i tylko uczniowie mogą być jej członkami (przynajmniej na chwile obecną).
 
+### Struktura adresów i kontrolerów API
 
+#### Adresy
+Adresy ap zdefiniowane są w pliku /routes/api.php możemy tam zobaczyć że każdy z zdefiniowanych adresów ma mniej więcej podobną budowę:
+ ``` php
+Route::get('miasta', 'basicServicesController@miasta');
+ ```
+w której to po słówku route definiowany jest rodzaj akcji ( post / get),
+później w nawiasach zobaczymy adres oraz kontroler i funkcje do jakiej się odwołujemy.
+Możemy też zobaczyć że niektóre z funkcji mają middleware 'auth.api'. Nie pozwala on niezalogowanym użytkownikom na dostęp do danej części aplikacji, a później w kontrolerze daje nam dostęp do obiektu z danymi zalogowanego użytkownika.
+
+#### Kontrolery
+Pliki zawierające większość naszych kontrolerów możemy znaleźć w folderze /app/Htpp/controllers. Znajdują się tam następujące pliki: 
+
+```bash
+app/Http/controllers
+├── addQuestionController.php
+├── AuthController.php
+├── basicServicesController.php
+├── CommentsController.php
+├── Controller.php
+├── groupsController.php
+├── HomeController.php
+├── randQuestionController.php
+├── SpaController.php
+├── testsController.php
+└── userController.php
+```
+
+Weźmy za przykład plik basicServicesController.php. Na początku pliku zdefiniowany jest namespace dla kontrolerów, później do naszego pliku importujemy potrzebne modele oraz dodatkowe paczki, modele mają przedrostek App\ np.:
+```php 
+use App\citiesModel;
+```
+importuje model miast do naszego pliku. 
+
+Poniżej zdefiniowana jest klasa naszego kontrolera, a w niej poszczególne metody do których odnosimy się w pliku routes/api.php
+Np: funkcja miasta:
+```php
+public function miasta(Request $request)
+    {
+        return response()->json(
+            regionsModel::with('cities')->find($request['id'])->cities
+        );
+    }
+```
+Przyjmuje parametr $request, który jest obiektem zawierającym wszystkie dane wysłane do danej ścieżki dowolną metodą ( np.: post, get ).
+Dalej funkcja ta zwraca odpowiedź w formacie json, w której to zawarte są wszystkie miasta, w danym regionie o danym id. W podobny sposób działą większość naszych kontrolerów, jednak zwykle mają więcej 'ciekawej logiki' związanej z czasem, czy użytkownikiem.
+
+## Frontend
+
+### Routing
+Routing-iem w naszej aplikacji zajmuje się Vue-Router.
+Wszystkie możliwe adresy 'webowe' dostępne są w zmiennej stałej routes znajdującej się w pliku resources/js/app.js. 
+Weźmy za przykład adres losowanie40
+```javascript
+{
+    path: '/losowanie40',
+    name: 'losowanie40',
+    component: Pytanka,
+    props: { ilosc: 40 }
+},
+```
+
+Atrybuty path i name raczej nie wymagają wyjaśnienia. Atrybut component określa jaki komponent będzie głównym komponentem tego adresu, a props definiuje zmienne jakie chcemy podać temu komponentowi. Komponenty są importowane na górze pliku ( więcej o komponentach poniżej ).
+Głównym komponentem w środku którego wyświetlane są inne komponenty jest app, zdefiniowano to w stałej router. 
