@@ -116,7 +116,7 @@
                 </p>
             </div>
             <button @click="createTest" class="btn btn-primary " style=" padding-top:1rem;">
-                <p v-if="!sending"> Dodaj test</p> <p v-else>Wysyłanie...</p>
+                <p v-if="!sending">Dodaj test</p> <p v-else>Wysyłanie...</p>
             </button>
         </modal>
     </div>
@@ -249,7 +249,7 @@ export default {
 <style scoped>
 #testsView {
     display: grid;
-    grid-template-rows: 0.15fr 1.75fr;
+    grid-template-rows: 3rem 1.75fr;
     grid-template-columns: 1fr;
 }
 .toolbox {

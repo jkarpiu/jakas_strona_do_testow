@@ -38,22 +38,23 @@
             <input type="file" id="file" />
             </div>
             </div></div>
-
-            <div class="addfield" style="margin-top:1rem;">
+    <div class="row justify-content-center">
+            <div class="addfield" style="margin-top:2rem;">
             <h1 class="header2">Dodaj odpowiedzi</h1>
             <div 
                 id="head-answer-all"
                 :key="answer.id"
-                v-for="answer in questions[currentQ].answers"
+                v-for="(answer, i) in questions[currentQ].answers"
             >
                 <div id="answer-all">
                     <p class="check-valid">
                         Poprawna:
                         <input
                             type="radio"
-                            v-model="answer.poprawna"
+                            v-model="questions[currentQ].answers[i].poprawna"
                             name="valid"
                             :value="true"
+                            
                         />
                     </p>
                     <input
@@ -89,7 +90,7 @@
             </button>
             </div>
             <!-- </vue-slick-carousel> -->
-        </div></div>
+        </div></div></div>
             <a @click="addQuestion">
                 <div class="przycisk">
                 Dodaj pytanie
@@ -202,7 +203,7 @@ export default {
             if (poprawna) {
                 return "margin-top: 2vh; background: #007c02";
             } else {
-                return "margin-top: 2vh;";
+                return "margin-top: 2vh; background: rgb(41, 41, 41);";
             }
         },
         addQuestion: function() {
@@ -231,7 +232,7 @@ export default {
     color: #fcfcfc;
     margin-bottom: 2rem;
     max-width: 50vw;
-    min-width:35vw;
+    min-width:40vw;
 }
 .addphoto > p {
     margin-top:2rem;
