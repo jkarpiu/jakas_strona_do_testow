@@ -17,6 +17,7 @@
                 </div>
                 </a>      
                 </div>
+
             </div>
             <div id="background-image2">
                 <div class="top-bar">
