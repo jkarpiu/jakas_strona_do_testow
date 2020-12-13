@@ -7,11 +7,9 @@
 ## Spis treści
 
 - [Spis treści](#spis-treści)
-- [Wprowadzenie](#wprowadzenie)
 - [Instalacja i konfiguracja](#instalacja-i-konfiguracja)
   - [Wymagania](#wymagania)
   - [Proces instalacji i konfiguracji ( WSL / Linux)](#proces-instalacji-i-konfiguracji--wsl--linux)
-- [](#)
 - [Ogólny zarys działania aplikacji](#ogólny-zarys-działania-aplikacji)
   - [Dlaczego SPA?](#dlaczego-spa)
   - [Przykład interakcji między systemami](#przykład-interakcji-między-systemami)
@@ -24,8 +22,18 @@
     - [Adresy](#adresy)
     - [Kontrolery](#kontrolery)
 - [Frontend](#frontend)
+  - [Komponenty](#komponenty)
   - [Routing](#routing)
-## Wprowadzenie
+- [Todo naszego projektu](#todo-naszego-projektu)
+- [Użyte paczki](#użyte-paczki)
+  - [Front](#front)
+  - [Backend](#backend-1)
+  
+<br>
+<br>
+<br>
+<br>
+
 IPIES jest systemem który pozwala na testowanie wiedzy uczniów. Jest on napisany przy użyciu Vue.js i Laravel-a. 
 
 ## Instalacja i konfiguracja
@@ -86,7 +94,6 @@ IPIES jest systemem który pozwala na testowanie wiedzy uczniów. Jest on napisa
    ```bash
    ./artisan migrate
    ```
-## 
 9. Tworzymy dowiązania pozwalające odczytywać pliki potrzebne do działania niektórych elementów strony
     ``` bash
     ./artisan storage:link
@@ -285,6 +292,93 @@ Dalej funkcja ta zwraca odpowiedź w formacie json, w której to zawarte są wsz
 
 ## Frontend
 
+### Komponenty
+Frontend naszej aplikacji jest podzielony na na zamknięte osobne komponenty. Każdy taki komponent zawiera własne style, skrypty (które muszą być pisane obiektowo oczywiście) i szablon strony, który jest napisany w HTML-u z kilkoma specyficznymi dla Vue dodatkami. wszystkie nasze komponenty znajdują się w folderze resources/js/components. 
+
+```bash
+components
+├── AddDzial.vue
+├── App.vue
+├── Groups
+│   ├── Classrooms.vue
+│   ├── Groups.vue
+│   └── OneClassroom.vue
+├── GroupsMain.vue
+├── Loading.vue
+├── Login.vue
+├── PageNotFound.vue
+├── Pytanka
+│   ├── JednoPytanie.vue
+│   └── Wyniki.vue
+├── PytankaCopy.vue
+├── Register.vue
+├── SchoolSelector.vue
+├── SetTest.vue
+├── TestsLists.vue
+├── Tests.vue
+├── test.ts
+├── UpcomingTests.vue
+├── UserMenu.vue
+├── Welcome.vue
+└── WynikiZapisane.vue
+```
+Jako przykładowy komponent do analizy weźmy JednoPytanie.vue.
+Plik ten podzielony jest trzema tagami: template, script i style. 
+Ciekawszymi rzeczami w template są te związane typowo z vue. Np.: możemy przypisać wartość dowolnego parametru do zmiennej zdefiniowanej wewnątrz tagu script. Przykładem tutaj może być div wyświetlający jedną odpowiedź dla naszego pytania: 
+```html
+<div
+    class="ans"
+    :style="calculateColor(odpowiedz.id)"
+    @click="selectAnswer(odpowiedz.id)"
+>
+    <li>
+        <p style="margin: 0; padding: 0; margin-left: 5px">
+            {{ odpowiedz.tresc }}
+        </p>
+    </li>
+</div>
+```
+Gdzie do parametru style przypisana jest wartość, którą zwraca funkcja calculateColor:
+```javascript 
+calculateColor: function (id) {
+    if (this.answered == null) {
+        if (this.check == id) {
+          return "background-color: #0061c9;";
+        }
+        return " ";
+    } else if (
+        this.answered.zaznaczana.id == 1 &&
+        id == this.answered.poprawna.id
+      ) {
+        return "background-color: #007c02;";
+      } else if (this.answered.poprawna.id == id) {
+        return "background-color: #007c02;";
+      } else if (
+        !this.answered.zaznaczana.poprawna &&
+        id == this.answered.zaznaczana.id
+      ) {
+        return "background-color: darkred;";
+      }
+    }
+```
+Która to wybiera nam kolor tła w zależności od tego, czy odpowiedź jest poprawna, zaznaczona, czy też niepoprawna.
+
+W naszym projekcie często też używaliśmy paczki axios wewnątrz skryptów, aby kontaktować się z API. Np.: w komponencie WynikiZapisane.vue (konwencje w nazewnictwie nie są naszą mocną stroną) istnieje metoda getWynik:
+```javascript 
+getWyniki: function() {
+            console.log("test");
+            axios
+                .get("/api/wyniki")
+                .catch(err => {
+                    console.log(err.response);
+                })
+                .then(res => {
+                    console.log(res.data);
+                    this.wyniki = res.data;
+                });
+        },
+```
+Gdzie axios pobiera dane z adresu /api/wyniki, a następnie w funkcji then zapisuje je do zmiennej this.wyniki zapisanej w obiekcie data. Do tej zmiennej później możemy się odnieść w szablonie komponentu. 
 ### Routing
 Routing-iem w naszej aplikacji zajmuje się Vue-Router.
 Wszystkie możliwe adresy 'webowe' dostępne są w zmiennej stałej routes znajdującej się w pliku resources/js/app.js. 
@@ -300,3 +394,40 @@ Weźmy za przykład adres losowanie40
 
 Atrybuty path i name raczej nie wymagają wyjaśnienia. Atrybut component określa jaki komponent będzie głównym komponentem tego adresu, a props definiuje zmienne jakie chcemy podać temu komponentowi. Komponenty są importowane na górze pliku ( więcej o komponentach poniżej ).
 Głównym komponentem w środku którego wyświetlane są inne komponenty jest app, zdefiniowano to w stałej router. 
+
+## Todo naszego projektu
+- Lepsza walidacja formularzy
+- W pełni dziłające logowanie z Google
+- Załączniki do postów grupach
+- Możliwość zadawania zadań grupom
+- Możliwość oddania projektu z plikiem
+- Edytory typu office przy oddawaniu projektu (OnlyOffice?)
+- Możliwość zadania testu kilku grupom naraz
+- Więcej rodzajów pytań (otwarte, prawda i fałśz, połącz opcje)
+- Możliwwość utawienia kolejności pytań
+- Wyświetlanie nadchodzących testów
+- Możliwość sprawdzenie swoich odpowiedzi z poziomu podstrony wyniki
+
+## Użyte paczki
+### Front
+- Vue 
+- Vuex
+- Vue-router
+- Bootstrap
+- JQuery
+- Fontawesome
+- vue-countdown
+- moment.js
+- tiptap editor
+- vue slick caousel
+- vue spinners css
+- vuelidate
+- Laravel-mix
+- typescript
+
+### Backend
+
+- Laravel
+- Laravel-passport
+- Laravel-socialite
+- Laravel-er-diagram-generator
