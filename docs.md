@@ -99,7 +99,8 @@ IPIES jest systemem który pozwala na testowanie wiedzy uczniów. Jest on napisa
     ./artisan storage:link
     ```
 10. Kopiujemy pliki zawierające listę z pytaniami egzaminacyjnymi
-    ```
+    ```bash
+    mv web\ scraping/data storage/app/
     ```
 11. Zapisujemy te pytania oraz podstawowe informacje do bazy
     ```bash

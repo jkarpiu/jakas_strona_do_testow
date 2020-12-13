@@ -83,13 +83,24 @@ const routes = [
         component: Register
     },
     {
-        path: '/losowanie40',
+        path: '/losowanie40_ee08',
+        name: 'losowanie40',
+        component: Pytanka,
+        props: { ilosc: 40, dzial: 2 }
+    },
+    {
+        path: '/losowanie40_ee09',
         name: 'losowanie40',
         component: Pytanka,
         props: { ilosc: 40 }
+    },{
+        path: '/losowanie1_ee08',
+        name: 'losowanie40',
+        component: Pytanka,
+        props: { ilosc: 1, dzial: 2 }
     },
     {
-        path: '/losowanie1',
+        path: '/losowanie1_ee09',
         name: 'losowanie1',
         component: Pytanka,
         props: { ilosc: 1 }

@@ -23,7 +23,8 @@ class DzialySeeder extends Seeder
             ]
         );
         Dzialy::create([
-            'nazwa' => 'EE.09',
+            'nazwa' => 'EE.08',
+            'prog' => 50,
             'public' => true
         ]);
         Dzialy::create([

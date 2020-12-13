@@ -107,6 +107,9 @@ export default {
     watch: {
         ilosc: function() {
             this.getQuestion(this.dzial);
+        },
+        dzial : function(){
+            this.getQuestion(this.dzial)
         }
     },
     methods: {

@@ -14,7 +14,7 @@
         </div>
        <div class="container">
             <div class="row justify-content-center" style="padding-top: 3rem;">
-       
+
 
            <div class="addfield">
             <!-- <vue-slick-carousel
@@ -23,7 +23,7 @@
                 :dots="true"
                 :dotsClass="'dotsAddDzial'"
             > -->
-        
+
             <h1 class="header1">Dodaj pytanie</h1>
 
             <input
@@ -34,14 +34,14 @@
                 name="pytanie"
             />
             <div class="addphoto">
-            <p>Dodaj zdjęcie:</p>            
+            <p>Dodaj zdjęcie:</p>
             <input type="file" id="file" />
             </div>
             </div></div>
     <div class="row justify-content-center">
             <div class="addfield" style="margin-top:2rem;">
             <h1 class="header2">Dodaj odpowiedzi</h1>
-            <div 
+            <div
                 id="head-answer-all"
                 :key="answer.id"
                 v-for="(answer, i) in questions[currentQ].answers"
@@ -51,10 +51,10 @@
                         Poprawna:
                         <input
                             type="radio"
-                            v-model="questions[currentQ].answers[i].poprawna"
+                            @change="setCorrect(i)"
                             name="valid"
                             :value="true"
-                            
+
                         />
                     </p>
                     <input
@@ -186,6 +186,15 @@ export default {
         VueSlickCarousel: VueSlickCarousel
     },
     methods: {
+        setCorrect: function(i ) {
+            this.questions[this.currentQ].answers.forEach((element, index) => {
+                if(index == i){
+                    element.poprawna = true
+                }else {
+                    element.poprawna = false
+                }
+            });
+        },
         send: function() {
             axios
                 .post("/api/add_dzial", {
@@ -309,8 +318,8 @@ export default {
     justify-content: space-around;
     padding:1rem 3rem;
     z-index: 1;
-    -webkit-box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.6); 
-    box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.6); 
+    -webkit-box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.6);
+    box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.6);
     cursor: pointer;
     }
 .odpowiedzi {

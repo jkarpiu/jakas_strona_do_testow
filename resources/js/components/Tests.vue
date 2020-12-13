@@ -60,7 +60,7 @@
                     type="number"
                     placeholder="Czas na rozwiązanie testu (min)"
                     min="1"
-                    max="240"
+                    max="720"
                     class="form-control margin"
                     v-model="test.duration"
                     id=""
@@ -73,7 +73,7 @@
                     ><option value="null" disabled selected hidden
                         >Wybierz dział</option
                     >
-                    <option value="-1">Dodaj dzial</option>
+                    <option value="null">Dodaj dzial</option>
                     <option
                         :key="dzial.id"
                         v-for="dzial in dzialy"
@@ -115,8 +115,13 @@
                     {{ uczen.fname + " " + uczen.lname }}
                 </p>
             </div>
-            <button @click="createTest" class="btn btn-primary " style=" padding-top:1rem;">
-                <p v-if="!sending">Dodaj test</p> <p v-else>Wysyłanie...</p>
+            <button
+                @click="createTest"
+                class="btn btn-primary "
+                style=" padding-top:1rem;"
+            >
+                <p v-if="!sending">Dodaj test</p>
+                <p v-else>Wysyłanie...</p>
             </button>
         </modal>
     </div>
@@ -127,6 +132,7 @@ import "vue-datetime/dist/vue-datetime.css";
 import TestsLists from "./TestsLists";
 import axios from "axios";
 import moment from "moment";
+import { required, minLength, between } from "vuelidate/lib/validators";
 let ctx;
 export default {
     components: {
@@ -158,9 +164,44 @@ export default {
         this.getTests();
         ctx = this;
     },
+    validation: {
+        grupa: {
+            required
+        },
+
+        dzial: {
+            required
+        },
+        test: {
+            threshold: {
+                required,
+                between: between(1, 100)
+            },
+            start: {
+                required
+            },
+            name: {
+                required,
+                minLength: minLength(3)
+            },
+            duration: {
+                required,
+                between: between(1, 720)
+            },
+            students: {
+                required
+            },
+            questionAmount: {
+                required,
+                between: between(1, 720)
+            },
+
+        }
+
+    },
     methods: {
         createTest: function() {
-            this.sending = true
+            this.sending = true;
             console.log(new Date(this.test.start));
             axios
                 .post("/api/add_test", {
@@ -182,14 +223,14 @@ export default {
                         threshold: null,
                         duration: null,
                         students: [],
-                        questionAmount: null,
+                        questionAmount: null
                     };
-                    this.dzial = null
-                    this.uczniowie = []
+                    this.dzial = null;
+                    this.uczniowie = [];
                     this.getTests();
-                    this.sending = false
-                    this.grupa = null
-                    this.$modal.hide('add-test')
+                    this.sending = false;
+                    this.grupa = null;
+                    this.$modal.hide("add-test");
                 });
         },
         getTests: function() {
@@ -230,7 +271,7 @@ export default {
                     console.log(res.data);
                     ctx.uczniowie = res.data;
                     ctx.uczniowie.forEach((element, index) => {
-                        ctx.test.students[index] = element.id
+                        ctx.test.students[index] = element.id;
                     });
                 });
         },
