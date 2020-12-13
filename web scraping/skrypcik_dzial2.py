@@ -25,7 +25,10 @@ def sprawdzanko(tresc):
 for g in range(10000):
     options = Options()
     options.add_argument("--start-maximized")
-    driver = webdriver.Chrome(chrome_options=options, executable_path='C:\Python39\chromedriver.exe')
+    options.add_argument('--headless')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
+    driver = webdriver.Chrome(chrome_options=options, executable_path='/usr/bin/chromedriver')
     print("Łącze się z oknem przeglądarki")
     driver.get("https://egzamin-informatyk.pl/testy-inf02-ee08-sprzet-systemy-sieci/")
     time.sleep(5)
@@ -89,5 +92,5 @@ for g in range(10000):
     print("Najwyższe id pytania: " + str(id_pytanie - 1))
     print("Ilość odpowiedzi: " + str(len(all_odpowiedzi)))
     print("Powtórek: " + str(g + 1))
-    print("-----------------------------------------\n") 
+    print("-----------------------------------------\n")
 
