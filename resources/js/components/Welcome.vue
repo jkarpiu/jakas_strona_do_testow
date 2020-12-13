@@ -16,7 +16,7 @@
                 </div>
                 <div class="logoszew">
                     <a @click="$router.push('/losowanie40_ee08')">
-                        <div class="przycisk" @click="test">
+                        <div class="przycisk">
                             ROZWIĄŻ TEST
                         </div>
                     </a>
