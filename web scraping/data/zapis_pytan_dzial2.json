@@ -1,0 +1,5264 @@
+[
+    {
+        "id": 497,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie497.jpg",
+        "tresc": "Aby zapisać dane na płycie pokazanej na rysunku, jest potrzebny napęd"
+    },
+    {
+        "id": 498,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie498.jpg",
+        "tresc": "Którą bramkę logiczną opisuje wyrażenie ?"
+    },
+    {
+        "id": 499,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wskaż nieprawidłowe stwierdzenie dotyczące Active Directory:"
+    },
+    {
+        "id": 500,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Urządzeniem, które służy do wycinania kształtów oraz grawerowania między innymi w materiałach drewnianych, szklanych i metalowych, jest ploter"
+    },
+    {
+        "id": 501,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Połączenia typu punkt-punkt, poprzez publiczną infrastrukturę telekomunikacyjną, oznacza się skrótem"
+    },
+    {
+        "id": 502,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaki będzie koszt zakupu kabla UTP kat.5e przeznaczonego do budowy sieci komputerowej złożonej z 6 stanowisk komputerowych, w której średnia odległość stanowiska od przełącznika wynosi 9 m? Dla każdej linii kablowej należy uwzględnić 1 m zapasu kabla, a cena 1 metra kabla wynosi 1,50 zł."
+    },
+    {
+        "id": 503,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie503.jpg",
+        "tresc": "Na rysunku przedstawiono konfigurację urządzenia. Do których portów należy podłączyć serwer o adresie IP 192.168.20.254/24 oraz stację roboczą o adresie IP 192.168.20.10/24, aby zapewnić komunikację tych urządzeń w sieci?"
+    },
+    {
+        "id": 504,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Po wydaniu polecenia: net user w wierszu poleceń systemu Windows, zostanie wyświetlona"
+    },
+    {
+        "id": 505,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie505.jpg",
+        "tresc": "Magistrala zakończona elementem przedstawionym na rysunku jest charakterystyczna dla interfejsu"
+    },
+    {
+        "id": 506,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie506.jpg",
+        "tresc": "Przedstawione wbudowane narzędzie systemów Windows w wersji Enterprise lub Ultimate służy do"
+    },
+    {
+        "id": 507,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które konto nie jest kontem wbudowanym w system Windows XP?"
+    },
+    {
+        "id": 508,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Linux hasła użytkowników są przechowywane w pliku:"
+    },
+    {
+        "id": 509,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Linux polecenie chmod umożliwia"
+    },
+    {
+        "id": 510,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie510.jpg",
+        "tresc": "Przedstawiony na rysunku element elektroniczny to:"
+    },
+    {
+        "id": 511,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z adresów jest adresem rozgłoszeniowym dla hosta o adresie IP 171.25.172.29 i masce sieci 255.255.0.0?"
+    },
+    {
+        "id": 512,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaka jest szybkość transferu danych w sieciach FDDI (ang. Fiber Distributed Data Interface) opartych na technologii światłowodowej?"
+    },
+    {
+        "id": 513,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Protokół pocztowy, za pomocą którego możemy odbierać pocztę z serwera, to"
+    },
+    {
+        "id": 514,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie514.jpg",
+        "tresc": "Które złącze płyty głównej komputera służy do zainstalowania przedstawionej na zdjęciu karty graficznej?"
+    },
+    {
+        "id": 515,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie515.jpg",
+        "tresc": "Przy pomocy taśmy 34-pinowej przedstawionej na rysunku podłącza się do płyty głównej komputera"
+    },
+    {
+        "id": 516,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Linux informacje o okresie ważności hasła są zapisane w pliku"
+    },
+    {
+        "id": 517,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Najczęściej stosowany kodek mowy podczas konfiguracji bramki VoIP to"
+    },
+    {
+        "id": 518,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Włączenie usługi Udostępnienie połączenia internetowego w systemie Windows uruchamia automatyczne nadawanie adresów IP dla komputerów (hostów) z niej korzystających. W tym celu wykorzystywana jest usługa"
+    },
+    {
+        "id": 519,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jakie mogą być typy partycji dyskowych w systemie operacyjnym Windows?"
+    },
+    {
+        "id": 520,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W stacjach roboczych są zainstalowane karty sieciowe Ethernet 10/100/1000 ze złączem RJ45. Które medium transmisyjne należy wybrać do budowy sieci komputerowej, aby zapewnić pracę z najwyższą przepustowością?"
+    },
+    {
+        "id": 521,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który protokół służy do szyfrowanego terminalowego łączenia się ze zdalnym komputerem?"
+    },
+    {
+        "id": 522,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Pierwszą czynnością niezbędną do zabezpieczenia rutera przed dostępem do jego panelu konfiguracyjnego przez osoby niepowołane jest"
+    },
+    {
+        "id": 523,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Materiałem eksploatacyjnym dla kolorowej drukarki laserowej jest"
+    },
+    {
+        "id": 524,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby sprawdzić statystyki użycia pamięci wirtualnej w systemie Linux, należy sprawdzić zawartość pliku"
+    },
+    {
+        "id": 525,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie525.jpg",
+        "tresc": "Rysunek przedstawia konfigurację urządzenia WiFi. Wskaż, które stwierdzenie dotyczące konfiguracji jest prawdziwe:"
+    },
+    {
+        "id": 526,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które polecenie diagnostyczne należy zastosować do wyświetlania informacji o tym, czy miejsce docelowe odpowiada i po jakim czasie została odebrana odpowiedź?"
+    },
+    {
+        "id": 527,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Windows 7 w celu skopiowania katalogu c: est wraz z podkatalogami na dysk przenośny, nalezy użyć polecenia"
+    },
+    {
+        "id": 528,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Główny rekord rozruchowy dysku twardego to"
+    },
+    {
+        "id": 529,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który przyrząd pomiarowy służy do sprawdzenia wartości napięć w zasilaczu?"
+    },
+    {
+        "id": 530,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie530.jpg",
+        "tresc": "Na rysunku przedstawiono okno konfiguracyjne rutera. Ustawione parametry świadczą o tym, że"
+    },
+    {
+        "id": 531,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z wymienionych adresów IP należy do klasy C?"
+    },
+    {
+        "id": 532,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Którym symbolem oznaczona jest skrętka nieekranowana?"
+    },
+    {
+        "id": 533,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Natychmiast po zauważeniu utraty ważnych plików na dysku twardym użytkownik powinien"
+    },
+    {
+        "id": 534,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W komputerze zamontowano nowy dysk twardy o pojemności 8 TB i podzielono go na 2 partycje, każda po 4 TB wielkości. Którego typu tablicy partycji należy użyć, aby można było dokonać takiego partycjonowania?"
+    },
+    {
+        "id": 535,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Prawidłowo zaprojektowana sieć komputerowa powinna umożliwiać rozbudowę, czyli charakteryzować się"
+    },
+    {
+        "id": 536,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Windows XP na komputerze klienckim, plik \"hosts\" jest plikiem tekstowym, który służy do mapowania"
+    },
+    {
+        "id": 537,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Najlepsze zabezpieczenie komputera przed wirusami stanowi zainstalowanie"
+    },
+    {
+        "id": 538,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie538.jpg",
+        "tresc": "Korzystając z zamieszczonej w tabeli specyfikacji płyty głównej, określ maksymalną liczbę kart rozszerzeń, które można podłączyć do magistrali Peripheral Component Interconnect"
+    },
+    {
+        "id": 539,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Sprawdzenie minimalnego okresu ważności hasła w systemie Windows umożliwia polecenie"
+    },
+    {
+        "id": 540,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Narzędzie iptables w systemie Linux służy do"
+    },
+    {
+        "id": 541,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Komputer, którego naprawa ma zostać przeprowadzona u klienta, nie reaguje na wciśnięcie przycisku POWER. Pierwszą czynnością harmonogramu prac związanych z lokalizacją i usunięciem tej usterki powinno być"
+    },
+    {
+        "id": 542,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wymiana koncentratorów na przełączniki w sieci Ethernet spowoduje"
+    },
+    {
+        "id": 543,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie543.jpg",
+        "tresc": "W ramce zamieszczono zawartość jednego z plików systemu operacyjnego MS Windows. Jest to plik"
+    },
+    {
+        "id": 544,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która topologia fizyczna jest stosowana w sieciach o topologii logicznej Token Ring?"
+    },
+    {
+        "id": 545,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Co oznacza znajdujący się w dokumentacji technicznej płyty głównej parametr LGA 775?"
+    },
+    {
+        "id": 546,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które medium transmisyjne należy zastosować, aby połączyć dwa punkty dystrybucyjne odległe od siebie o 600m?"
+    },
+    {
+        "id": 547,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które z protokołów przekazują okresowe kopie tablic rutingu do sąsiedniego rutera i NIE MAJĄ pełnej informacji o odległych ruterach?"
+    },
+    {
+        "id": 548,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W nowoczesnych ekranach dotykowych poprawność działania ekranu zapewnia mechanizm wykrywający zmianę"
+    },
+    {
+        "id": 549,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Niektóre systemy operacyjne są wielodostępne (multiuser). Systemy takie"
+    },
+    {
+        "id": 550,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Protokołem dostępu do sieci pakietowej z szybkością nie przekraczającą 2 Mbit/s jest protokół"
+    },
+    {
+        "id": 551,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Standard o nazwie IEEE 802.11 stosowany w lokalnych sieciach komputerowych opisuje sieć:"
+    },
+    {
+        "id": 552,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie552.jpg",
+        "tresc": "Na podstawie zrzutu ekranu przedstawiającego konfigurację przełącznika można stwierdzić, że"
+    },
+    {
+        "id": 553,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie553.jpg",
+        "tresc": "Przedstawiona na rysunku usterka, widoczna na ekranie komputera, nie może być spowodowana przez"
+    },
+    {
+        "id": 554,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie554.jpg",
+        "tresc": "Który procesor jest kompatybilny z płytą główną o przedstawionej specyfikacji?"
+    },
+    {
+        "id": 555,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które polecenie należy wydać w systemie Windows, aby sprawdzić tabelę translacji adresów IP na adresy fizyczne używane przez protokół rozróżniania adresów?"
+    },
+    {
+        "id": 556,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Windows, zainstalowanym w wersji obsługującej przydziały dyskowe, użytkownik o nazwie Gość"
+    },
+    {
+        "id": 557,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Większą wydajność programów multimedialnych w systemie rodziny Windows zapewnia technologia"
+    },
+    {
+        "id": 558,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Pełny adres logowania do serwera FTP o nazwie ftp.nazwa.pl to"
+    },
+    {
+        "id": 559,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Ile hostów maksymalnie można zaadresować w sieci o adresie IP klasy B?"
+    },
+    {
+        "id": 560,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Na płycie głównej wykorzystującej układ Intel 865G"
+    },
+    {
+        "id": 561,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Liczba 10101110110(2) zapisana w systemie szesnastkowym ma postać"
+    },
+    {
+        "id": 562,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Skrót MAN oznacza sieć"
+    },
+    {
+        "id": 563,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie563.jpg",
+        "tresc": "Na rysunku przedstawiono sieć lokalną opartą na okablowaniu kat. 6. Stacja robocza C nie może skomunikować się z siecią. Jaki problem warstwy fizycznej może powodować brak łączności?"
+    },
+    {
+        "id": 564,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby serwer umożliwiał transmisję danych w pasmach częstotliwości 2,4 GHz oraz 5 GHz, należy zainstalować w nim kartę sieciową pracującą w standardzie"
+    },
+    {
+        "id": 565,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Komunikat \"BIOS checksum error\" wyświetlany podczas uruchomienia komputera oznacza najczęściej"
+    },
+    {
+        "id": 566,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Użytkownik systemu Windows otrzymuje komunikaty o zbyt małej pamięci wirtualnej. Problem ten można rozwiązać przez:"
+    },
+    {
+        "id": 567,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która rola systemu Windows Server umożliwia m.in. uproszczoną, bezpieczną i zdalną instalację systemów operacyjnych Windows na komputerach w sieci?"
+    },
+    {
+        "id": 568,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Dana jest sieć o adresie 172.16.0.0/16. Które z adresów sieci 172.16.0.0/16 są prawidłowe, jeśli zostaną wydzielone cztery podsieci o masce 18 bitowej?"
+    },
+    {
+        "id": 569,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby utworzyć las w strukturze katalogowej AD DS (Active Directory Domain Services), należy utworzyć co najmniej"
+    },
+    {
+        "id": 570,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Podczas normalnego działania systemu operacyjnego w laptopie pojawił się komunikat o konieczności formatowania wewnętrznego dysku twardego. Wskazuje on na:"
+    },
+    {
+        "id": 571,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który standard szyfrowania należy wybrać podczas konfiguracji karty sieciowej, aby zabezpieczyć transmisję bezprzewodową?"
+    },
+    {
+        "id": 572,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie572.jpg",
+        "tresc": "Na zdjęciu przedstawiono złącza karty graficznej. Złącze cyfrowe to"
+    },
+    {
+        "id": 573,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Zasilanie dostarczane przez płytę główną dla pamięci typu SDRAM DDR3 może mieć wartość"
+    },
+    {
+        "id": 574,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Transmisję danych z maksymalną przepustowością 6Gb/s umożliwia interfejs"
+    },
+    {
+        "id": 575,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jakiego typu rekord jest tworzony automatycznie w momencie utworzenia strefy wyszukiwania do przodu w konfiguracji serwera DNS w systemach Windows Server?"
+    },
+    {
+        "id": 576,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która usługa pozwala rejestrować i rozpoznawać nazwy NetBIOS jako używane w sieci adresy IP?"
+    },
+    {
+        "id": 577,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Medium transmisyjne odporne na zakłócenia elektromagnetyczne i atmosferyczne to"
+    },
+    {
+        "id": 578,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Adres MAC karty sieciowej zapisany w postaci binarnej wynosi 00000000-00010100-10000101-10001011-01101011-10001010. Który z zapisów jest postacią heksadecymalną tego adresu?"
+    },
+    {
+        "id": 579,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Usługa, która pozwala na pobieranie i przesyłanie plików na serwer, to"
+    },
+    {
+        "id": 580,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z rekordów DNS należy dodać w strefie wyszukiwania do przodu, aby zmapować nazwę domeny DNS na adres IP?"
+    },
+    {
+        "id": 581,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W celu powiększenia lub zmniejszania ikony na pulpicie należy kręcić kółkiem myszy, przytrzymując jednocześnie klawisz:"
+    },
+    {
+        "id": 582,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Program testujący wydajność sprzętu komputerowego to"
+    },
+    {
+        "id": 583,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Którą konfigurację sieciową może mieć komputer należący do tej samej sieci LAN, co komputer o adresie 192.168.1.10/24?"
+    },
+    {
+        "id": 584,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Windows przypadkowo usunięto konto użytkownika bez usunięcia katalogu domowego. Odzyskanie niezaszyfrowanych danych z katalogu domowego użytkownika jest"
+    },
+    {
+        "id": 585,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Za pomocą polecenia ipconfig /flushdns można wykonać konserwację urządzenia sieciowego polegającą na"
+    },
+    {
+        "id": 586,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Sieć o adresie 192.168.1.128/29 pozwala na podłączenie"
+    },
+    {
+        "id": 587,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Komputer o adresie IP 192.168.5.165 z maską podsieci 255.255.255.192 pracuje w sieci o adresie"
+    },
+    {
+        "id": 588,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Przynależność komputera do konkretnej sieci wirtualnej NIE może być określona na podstawie"
+    },
+    {
+        "id": 589,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W celu wyegzekwowania od użytkowników lokalnych systemów z rodziny Windows Server okresowej zmiany hasła i stosowania haseł o odpowiedniej długości spełniających wymagania co do złożoności, należy skonfigurować"
+    },
+    {
+        "id": 590,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie590.jpg",
+        "tresc": "Które urządzenie należy wykorzystać do podłączenia urządzenia peryferyjnego, wyposażonego w bezprzewodowy interfejs wykorzystujący do komunikacji fale świetlne w zakresie podczerwieni, z laptopem, który nie ma takiego interfejsu, a ma natomiast interfejs USB?"
+    },
+    {
+        "id": 591,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie591.jpg",
+        "tresc": "Wskaż wtyk zasilający, który podczas montażu zestawu komputerowego należy podłączyć do napędu optycznego."
+    },
+    {
+        "id": 592,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Po podłączeniu sprawnej klawiatury do dowolnego z portów USB nie można wybrać awaryjnego trybu uruchomienia systemu Windows. Mimo to, klawiatura po uruchomieniu systemu w normalnym trybie, działa prawidłowo. Wskazuje to na:"
+    },
+    {
+        "id": 593,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Protokół typu klient-serwer oraz żądanie-odpowiedź, który stosowany jest do udostępniania plików, to"
+    },
+    {
+        "id": 594,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie594.jpg",
+        "tresc": "W którym gnieździe należy zainstalować procesor INTEL CORE i3-4350- 3.60 GHz, x2/4, 4MB, 54W, HD 4600, BOX, s-1150?"
+    },
+    {
+        "id": 595,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Rodzina adapterów wykonanych w technologii Powerline umożliwiająca wykorzystanie sieci energetycznej w obrębie jednego domu/mieszkania do przesyłania sygnału sieciowego nosi nazwę:"
+    },
+    {
+        "id": 596,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaką liczbę adresów urządzeń sieciowych zapewnia do dyspozycji stosowanie klasy adresowej C w sieciach opartych na rodzinie protokołów TCP/IP?"
+    },
+    {
+        "id": 597,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby zaktualizować zmiany w konfiguracji systemu operacyjnego Windows wykonane za pomocą edytora zasad grup, można posłużyć się poleceniem"
+    },
+    {
+        "id": 598,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie598.jpg",
+        "tresc": "Za pomocą narzędzia diagnostycznego Tracert można ustalić trasę do punktu docelowego. Przez ile routerów przeszedł pakiet wysłany do hosta 172.16.0.99?"
+    },
+    {
+        "id": 599,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie599.jpg",
+        "tresc": "Przedstawiono wynik uzyskany po uruchomieniu w systemie Windows polecenia IPCONFIG /ALL. Jak zostały skonfigurowane właściwości protokołu TCP/IP dla karty sieciowej?"
+    },
+    {
+        "id": 600,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie600.jpg",
+        "tresc": "Jeśli jednostka alokacji ma 1024 bajty, to pliki zamieszczone w tabeli zajmą na dysku:"
+    },
+    {
+        "id": 601,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które urządzenie aktywne umożliwi połączenie z siecą lokalną za pomocą kabla UTP 15 komputerów, drukarki sieciowej oraz rutera?"
+    },
+    {
+        "id": 602,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który adres IPv4 jest stosowany w celu sprawdzenia stosu protokołów TCP/IP wewnątrz jednego hosta?"
+    },
+    {
+        "id": 603,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby w budowanej sieci komputerowej zapewnić najmniejszy wpływ zakłóceń elektromagnetycznych na przesyłany sygnał należy zastosować"
+    },
+    {
+        "id": 604,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie604.jpg",
+        "tresc": "Na schemacie mikroprocesora wskazany strzałką blok jest odpowiedzialny za"
+    },
+    {
+        "id": 605,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie605.jpg",
+        "tresc": "Przedstawiony na rysunku wpis w dzienniku zdarzeń zalicza się do zdarzeń typu"
+    },
+    {
+        "id": 606,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do utworzenia partycji w systemie Windows można użyć przystawki"
+    },
+    {
+        "id": 607,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Algorytm, który jest stosowany w celu sprawdzenia czy ramka Ethernet nie zawiera błędów, to"
+    },
+    {
+        "id": 608,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie608.jpg",
+        "tresc": "Który z elementów pokazanych na schemacie karty dźwiękowej na rysunku służy do cyfrowego przetwarzania sygnałów?"
+    },
+    {
+        "id": 609,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Linux do monitorowania bieżących procesów służy polecenie"
+    },
+    {
+        "id": 610,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do której warstwy modelu ISO/OSI należy segmentowanie danych, komunikacja w trybie połączeniowym z wykorzystaniem protokołu TCP oraz komunikacja w trybie bezpołączeniowym z wykorzystaniem protokołu UDP?"
+    },
+    {
+        "id": 611,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Odległość toru nieekranowanego kabla sieciowego od oświetleniowej instalacji elektrycznej powinna wynosić minimum"
+    },
+    {
+        "id": 612,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wydając w wierszu poleceń systemu Windows Server polecenie convert, można przeprowadzić"
+    },
+    {
+        "id": 613,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Rezydentna część programu antywirusowego jako podstawowa forma ochrony antywirusowej, odpowiedzialna za ciągłe nadzorowanie chronionego systemu komputerowego, to"
+    },
+    {
+        "id": 614,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Po włączeniu komputera procedura POST pokazuje 512 MB RAM. Na karcie właściwości ogólnych systemu operacyjnego Windows widnieje wartość 480 MB RAM. Co jest przyczyną tej różnicy?"
+    },
+    {
+        "id": 615,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie615.jpg",
+        "tresc": "Jednym z efektów wykonania przedstawionego polecenia jest"
+    },
+    {
+        "id": 616,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie616.jpg",
+        "tresc": "Podczas podłączenia sprawnego monitora do innego komputera jest wyświetlany komunikat przedstawiony na rysunku. Pojawienie się komunikatu jest spowodowane"
+    },
+    {
+        "id": 617,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Odzyskanie listy kontaktów w telefonie komórkowym z zainstalowanym systemem Android jest możliwe, gdy użytkownik wcześniej wykonał synchronizację danych urządzenia z Google Drive za pomocą"
+    },
+    {
+        "id": 618,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Monitor CRT łączy się z kartą graficzną za pomocą złącza"
+    },
+    {
+        "id": 619,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Kabel sieciowy zakończony wtykami RJ45 sprawdzano diodowym testerem okablowania. Na testerze diody LED zapalały się kolejno oprócz diod oznaczonych numerami 2 i 3, które zapalały się równocześnie na jednostce głównej testera, a nie zapalały się na jednostce zdalnej. Co było tego przyczyną?"
+    },
+    {
+        "id": 620,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Za przydzielanie czasu procesora do określonych zadań odpowiada"
+    },
+    {
+        "id": 621,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z interfejsów jest portem równoległym?"
+    },
+    {
+        "id": 622,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Pewną liczbę naturalną w systemie szesnastkowym zapisano następująco: 41. Wskaż tę liczbę zapisaną w systemie dziesiętnym"
+    },
+    {
+        "id": 623,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która usługa musi być uruchomiona na ruterze, aby ruter mógł zmieniać adresy IP źródłowe i docelowe przy przekazywaniu pakietów pomiędzy sieciami?"
+    },
+    {
+        "id": 624,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Technologia Hot swap zapewnia"
+    },
+    {
+        "id": 625,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Okablowanie pionowe w sieci strukturalnej łączy"
+    },
+    {
+        "id": 626,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Zmniejszenie liczby jedynek w masce umożliwi zaadresowanie"
+    },
+    {
+        "id": 627,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do ilu maksymalnie GB pamięci RAM może uzyskać dostęp 32-bitowa wersja systemu Windows?"
+    },
+    {
+        "id": 628,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które stwierdzenie dotyczy sieci P2P - peer to peer?"
+    },
+    {
+        "id": 629,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaka jest standardowa wartość maksymalnej odległości pomiędzy urządzeniami sieciowymi, połączonymi bezpośrednio przewodem UTP kat.5e?"
+    },
+    {
+        "id": 630,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Windows XP w celu utworzenia nowego użytkownika o nazwie egzamin z hasłem qwerty należy użyć polecenia"
+    },
+    {
+        "id": 631,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który ze standardów Gigabit Ethernet umożliwia budowę segmentów sieci o długości 550 m/5000 m z prędkością transmisji 1 Gb/s?"
+    },
+    {
+        "id": 632,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Którego z poleceń systemu Linux należy użyć do utworzenia archiwum danych?"
+    },
+    {
+        "id": 633,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby zapewnić największe bezpieczeństwo danych przy wykorzystaniu dokładnie 3 dysków, powinny one być zapisywane w macierzy dyskowej"
+    },
+    {
+        "id": 634,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Internetowy protokół pocztowy, który pozwala na zarządzanie wieloma folderami pocztowymi oraz pobieranie i operowanie na listach znajdujących się na zdalnym serwerze, to"
+    },
+    {
+        "id": 635,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wskaż program DTP"
+    },
+    {
+        "id": 636,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Napięcie dostarczane do poszczególnych elementów komputera w zasilaczu komputerowym w standardzie ATX jest zmniejszane z wartości 230 V między innymi do wartości"
+    },
+    {
+        "id": 637,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie637.jpg",
+        "tresc": "W jakim systemie operacyjnym przy instalacji sterowników do nowego urządzenia może pojawić się komunikat"
+    },
+    {
+        "id": 638,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który program należy zainstalować na serwerze internetowym z systemem Linux, aby można było korzystać z baz danych?"
+    },
+    {
+        "id": 639,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wymieniając uszkodzoną kartę graficzną, która współpracowała z monitorem wyposażonym tylko w wejście analogowe, należy wybrać kartę"
+    },
+    {
+        "id": 640,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaka jest różnica pomiędzy poleceniem ps a poleceniem top w systemie Linux?"
+    },
+    {
+        "id": 641,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Prawidłowym wynikiem mnożenia dwóch liczb binarnych 11100110 i 00011110 jest liczba"
+    },
+    {
+        "id": 642,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Architektura fizyczna sieci, zwana inaczej topologią fizyczną sieci komputerowych określa"
+    },
+    {
+        "id": 643,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby w systemie Windows ustawić właściwości wszystkich zainstalowanych urządzeń lub wyświetlić ich listę, należy użyć narzędzia"
+    },
+    {
+        "id": 644,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która z wymienionych czynności konserwacyjnych drukarek dotyczy tylko drukarki laserowej?"
+    },
+    {
+        "id": 645,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Administrator sieci LAN zauważył przejście w tryb awaryjny urządzenia typu UPS. Świadczy to o awarii systemu"
+    },
+    {
+        "id": 646,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która z cech charakteryzuje przełącznik sieciowy?"
+    },
+    {
+        "id": 647,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jakim poleceniem w systemie Linux, nadamy pełny dostęp wszystkim użytkownikom do zasobów?"
+    },
+    {
+        "id": 648,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Równoważnym zapisem 2^32 bajtów jest zapis:"
+    },
+    {
+        "id": 649,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Norma EN 50167 dotyczy okablowania"
+    },
+    {
+        "id": 650,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie650.jpg",
+        "tresc": "Rezultat wykonania którego polecenia z systemu Windows przedstawia rysunek?"
+    },
+    {
+        "id": 651,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który podzespół NIE JEST kompatybilny z płytą główną MSI A320M Pro-VD-S socket AM4, 1x PCI-Ex16, 2x PCI-Ex1, 4x SATA III, 2x DDR4- max 32 GB, 1x D-SUB, 1x DVI-D, ATX?"
+    },
+    {
+        "id": 652,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Po wydaniu polecenia net accounts /MINPWLEN:11 systemu Windows, wartość 11 zostanie ustawiona dla"
+    },
+    {
+        "id": 653,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wskaż domyślny port do przekazywania poleceń (command) serwera usługi FTP"
+    },
+    {
+        "id": 654,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie654.jpg",
+        "tresc": "Przyczyną problemu z wydrukiem z drukarki laserowej pokazanym na rysunku jest"
+    },
+    {
+        "id": 655,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie655.jpg",
+        "tresc": "Na rysunku procesor oznaczony jest numerem"
+    },
+    {
+        "id": 656,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Łącze światłowodowe wykorzystywane do transmisji danych w standardzie 10GBASE-SR może mieć długość wynoszącą maksymalnie"
+    },
+    {
+        "id": 657,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Diody elektroluminescencyjne RGB są źródłem światła w skanerach"
+    },
+    {
+        "id": 658,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jak nazywa się współpracujące z monitorami CRT urządzenie wskazujące z końcówką wyposażoną w światłoczuły element, która poprzez dotknięcie ekranu monitora powoduje przesłanie sygnału do komputera, umożliwiając w ten sposób lokalizację kursora?"
+    },
+    {
+        "id": 659,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Protokół, który umożliwia przekształcanie 32-bitowych adresów IP na 48-bitowe fizyczne adresy MAC w komputerowych sieciach typu Ethernet nosi nazwę:"
+    },
+    {
+        "id": 660,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Polecenie \"mmc\" systemu Windows 2OOO/Windows XP uruchamia narzędzie do tworzenia, zapisywania oraz otwierania"
+    },
+    {
+        "id": 661,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Program, który umożliwia komunikację między kartą sieciową a systemem operacyjnym, to"
+    },
+    {
+        "id": 662,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie662.jpg",
+        "tresc": "Na rysunku przedstawiono przekrój kabla"
+    },
+    {
+        "id": 663,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z adresów jest adresem hosta należącego do sieci 10.128.0.0/10?"
+    },
+    {
+        "id": 664,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Urządzenie ADSL służy do uzyskania połączenia"
+    },
+    {
+        "id": 665,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który port jest wykorzystywany przez protokół FTP (File transfer Protocol)"
+    },
+    {
+        "id": 666,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do sprawdzenia wartości napięcia w zasilaczu służy"
+    },
+    {
+        "id": 667,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Okresowych kopii zapasowych dysku serwera nie można tworzyć na wymiennych nośnikach typu"
+    },
+    {
+        "id": 668,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do zamiany kodu źródłowego na program wykonywalny służy"
+    },
+    {
+        "id": 669,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Harmonogram zadań w systemie Windows pozwala przypisać"
+    },
+    {
+        "id": 670,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który protokół wykorzystują komputery do powiadomienia rutera o chęci przyłączenia się lub odejścia z określonej grupy rozgłoszeniowej?"
+    },
+    {
+        "id": 671,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która warstwa modelu ISO/OSI jest związana z protokołem IP?"
+    },
+    {
+        "id": 672,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Rodzina protokołów, której cechą jest wspólna technika szyfrowania, to"
+    },
+    {
+        "id": 673,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Co pozwala utrzymać równomierny rozkład ciepła między procesorem a radiatorem?"
+    },
+    {
+        "id": 674,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie674.jpg",
+        "tresc": "Która usługa serwera Windows pozwoli użytkownikom końcowym sieci przedstawionej na rysunku na korzystanie z Internetu?"
+    },
+    {
+        "id": 675,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Norma dotycząca okablowania strukturalnego to"
+    },
+    {
+        "id": 676,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W którym z rejestrów wewnętrznych procesor zapisuje dodatkowe cechy wyniku wykonywanej operacji?"
+    },
+    {
+        "id": 677,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wskaż 24-pinowe lub 29-pinowe złącze żenskie, które może przesyłać skompresowany cyfrowy sygnał na monitor."
+    },
+    {
+        "id": 678,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jednym z narzędzi używanych do tworzenia kopii partycji i dysków jest"
+    },
+    {
+        "id": 679,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Użycie komendy perfmon w wierszu poleceń systemu Windows spowoduje"
+    },
+    {
+        "id": 680,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Odpowiednikiem adresu pętli zwrotnej jest w IPv6 adres"
+    },
+    {
+        "id": 681,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która z liczb w zapisie dziesiętnym jest prawidłową reprezentacją liczby 10111111 (2)?"
+    },
+    {
+        "id": 682,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z adresów IPv4 jest adresem klasy C?"
+    },
+    {
+        "id": 683,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie683.jpg",
+        "tresc": "Do ilu sieci należą komputery o podanych w tabeli adresach IP i standardowej masce sieci?"
+    },
+    {
+        "id": 684,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Odmianą pamięci tylko do odczytu, którą można wykasować za pomocą światła ultrafioletowego, jest pamięcią"
+    },
+    {
+        "id": 685,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Magistrala PCI-Express wykorzystuje do transmisji danych metodę komunikacji"
+    },
+    {
+        "id": 686,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby zagwarantować użytkownikom Active Directory możliwość logowania się i dostęp do zasobów tej usługi w przypadku awarii kontrolera domeny, należy"
+    },
+    {
+        "id": 687,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie687.jpg",
+        "tresc": "Który typ fizycznej topologii sieci komputerowej przedstawia rysunek?"
+    },
+    {
+        "id": 688,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jak nazywa się technologia umożliwiająca łączenie kart graficznych opracowana przez firmę NVIDIA?"
+    },
+    {
+        "id": 689,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z wymienionych mechanizmów zapewni najwyższy poziom bezpieczeństwa sieci bezprzewodowych standardu 802.11n?"
+    },
+    {
+        "id": 690,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Zakres we/wy kontrolera DMA zapisany w postaci heksadecymalnej wynosi 0094-009F, a w systemie dziesiętnym"
+    },
+    {
+        "id": 691,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "AES (ang. Advanced Encryption Standard)"
+    },
+    {
+        "id": 692,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie692.jpg",
+        "tresc": "Na rysunku przedstawiono narzędzie systemu Windows 7 przeznaczone do"
+    },
+    {
+        "id": 693,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie693.jpg",
+        "tresc": "Które polecenie należy wydać, aby uzyskać wykaz przedstawionych plików?"
+    },
+    {
+        "id": 694,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Co należy zrobić z wiadomością pocztową od nieznanej osoby, zawierającą niepewny załącznik?"
+    },
+    {
+        "id": 695,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Na płycie głównej uległa uszkodzeniu zintegrowana karta sieciowa. Komputer nie może uruchomić systemu operacyjnego, gdyż nie ma dysku twardego ani żadnych napędów optycznych, a system operacyjny uruchamiany jest z sieci lokalnej. Aby przywrócić utraconą funkcjonalność, należy zamontować w komputerze"
+    },
+    {
+        "id": 696,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Ataki mające na celu zatrzymanie działania aplikacji i procesów zachodzących w urządzeniu sieciowym to ataki typu"
+    },
+    {
+        "id": 697,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Windows konto użytkownika tworzy się poleceniem"
+    },
+    {
+        "id": 698,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie698.jpg",
+        "tresc": "Na rysunku przedstawiono gniazdo:"
+    },
+    {
+        "id": 699,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która topologia fizyczna zapewnia połączenia nadmiarowe pomiędzy urządzeniami sieci?"
+    },
+    {
+        "id": 700,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie700.jpg",
+        "tresc": "Na rysunku podano podstawową informację o konfiguracji karty sieciowej. Do której klasy adresów IP należy adres przypisany tej karcie?"
+    },
+    {
+        "id": 701,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Instalowanie systemów Linux oraz Windows 7 przebiegło bez żadnych utrudnień. Systemy zainstalowały się poprawnie z domyślnymi ustawieniami. Na tym samym komputerze, przy identycznej konfiguracji, podczas instalowania systemu Windows XP wyświetlony został komunikat o braku dysków twardych co może świadczyć o"
+    },
+    {
+        "id": 702,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Linux narzędziem do monitorowania użycia procesora, pamięci, procesów oraz obciążenia systemu z poziomu powłoki jest"
+    },
+    {
+        "id": 703,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W celu promowania serwera do roli kontrolera domeny w systemach Windows Server należy zastosować polecenie"
+    },
+    {
+        "id": 704,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Router Wi-Fi pracujący w standardzie 802.11n pozwala uzyskać maksymalną prędkość transmisji"
+    },
+    {
+        "id": 705,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który skrót określa typ licencji Microsoft przeznaczonej dla szkół, uczelni wyższych, instytucji rządowych oraz dużych przedsiębiorstw?"
+    },
+    {
+        "id": 706,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie706.jpg",
+        "tresc": "Jaki będzie koszt brutto materiałów niezbędnych do wykonania sieci lokalnej dla 6 stanowisk komputerowych, jeżeli do wykonania sieci potrzeba 100 m kabla UTP kat. 5e i 20 m kanału instalacyjnego? Ceny elementów sieci zestawiono w tabeli"
+    },
+    {
+        "id": 707,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie707.jpg",
+        "tresc": "Przyczyną awarii klawiatury może być uszkodzenie"
+    },
+    {
+        "id": 708,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W sieci LAN do zabezpieczenia urządzeń sieciowych przed przepięciami oraz różnicami potencjałów, które mogą wystąpić podczas burzy lub innych wyładowań atmosferycznych, należy wykorzystać"
+    },
+    {
+        "id": 709,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby uporządkować pliki na dysku w celu przyspieszenia pracy systemu, należy:"
+    },
+    {
+        "id": 710,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jak nazywamy atak na sieć komputerową polegający na przechwytywaniu pakietów przesyłanych w sieci?"
+    },
+    {
+        "id": 711,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z adresów jest adresem rozgłoszeniowym sieci 172.16.64.0/26?"
+    },
+    {
+        "id": 712,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Narzędziem do monitorowania wydajności i niezawodności w systemach Windows 7, Windows Server 2008 R2 oraz Windows Vista jest"
+    },
+    {
+        "id": 713,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Systemy operacyjne z rodziny Linux rozprowadzane są na podstawie licencji"
+    },
+    {
+        "id": 714,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który interfejs umożliwia korzystanie ze sterowników i oprogramowania systemu operacyjnego, zapewniając m.in. przepływ danych między pamięcią systemową a dyskiem SATA?"
+    },
+    {
+        "id": 715,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które zadanie spełnia system informatyczny?"
+    },
+    {
+        "id": 716,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie716.jpg",
+        "tresc": "Urządzenie przedstawione na rysunku to"
+    },
+    {
+        "id": 717,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie717.jpg",
+        "tresc": "Jaką cyfrą został oznaczony procesor na schemacie płyty głównej komputera?"
+    },
+    {
+        "id": 718,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Administrator nadający adresy prywatne w klasie C, z maską 24 bitową dla komputerów w sieci lokalnej, wybierze zakres"
+    },
+    {
+        "id": 719,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z protokołów jest szyfrowanym protokołem terminalowym?"
+    },
+    {
+        "id": 720,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Na stabilność obrazu w monitorach CRT znaczący wpływ ma"
+    },
+    {
+        "id": 721,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który zestaw protokołów jest stosowany w procesie komunikacji hosta z serwerem WWW po wpisaniu adresu strony w przeglądarce internetowej hosta?"
+    },
+    {
+        "id": 722,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jeżeli podczas podłączenia stacji dysków elastycznych 1,44 MB kabel danych zostanie podłączony odwrotnie, to"
+    },
+    {
+        "id": 723,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Programem służącym do wyświetlenia listy aktywnych urządzeń pracujących w sieci LAN jest"
+    },
+    {
+        "id": 724,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie724.jpg",
+        "tresc": "Na rysunku przedstawiono tylny panel"
+    },
+    {
+        "id": 725,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do wykonania monitoringu stanu dysków twardych w serwerach, komputerach stacjonarnych i laptopach można wykorzystać program"
+    },
+    {
+        "id": 726,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Elementem służącym do utrwalania tonera na papierze podczas wydruku z drukarki laserowej jest"
+    },
+    {
+        "id": 727,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie727.jpg",
+        "tresc": "Umieszczany na urządzeniach symbol, będący certyfikatem zgodności urządzeń pod względem emisji promieniowania, ergonomii, energooszczędności i ekologii, przedstawiono na rysunku"
+    },
+    {
+        "id": 728,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Granicy dla domeny kolizyjnej nie wyznaczają porty urządzeń takich jak"
+    },
+    {
+        "id": 729,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Zalecana wielkość pamięci RAM dla systemu operacyjnego Windows Server 2008 to co najmniej"
+    },
+    {
+        "id": 730,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Liczba szesnastkowa: FFFF w systemie dwójkowym ma postać"
+    },
+    {
+        "id": 731,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które polecenie powinien zastosować root w systemie Ubuntu Linux, aby zaktualizować wszystkie pakiety (cały system) do nowej wersji wraz z nowym jądrem?"
+    },
+    {
+        "id": 732,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jest to najnowsza wersja klienta wieloplatformowego, cenionego przez użytkowników na całym świecie, serwera wirtualnej sieci prywatnej, pozwalającego na zestawienie pomiędzy hostem a komputerem lokalnym połączenia, obsługującego uwierzytelnianie z użyciem kluczy, jak również certyfikatów, nazwy użytkownika i hasła, a także, w wersji dla Windows, dodatkowych kart. Który z programów został opisany przed chwilą?"
+    },
+    {
+        "id": 733,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie733.jpg",
+        "tresc": "Rysunek przedstawia konfigurację protokołu TCP/IP serwera i stacji roboczej. Na serwerze jest zainstalowana rola serwera DNS. Polecenie ping www.cke.edu.pl uruchomione na serwerze daje wynik pozytywny, a na stacji roboczej negatywny. Aby usługa DNS na stacji działała prawidłowo, należy zmienić adres"
+    },
+    {
+        "id": 734,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Dysk SSD to urządzenie wykorzystujące"
+    },
+    {
+        "id": 735,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jeżeli adres IP stacji roboczej ma postać 176.16.50.10/26to adres rozgłoszeniowy oraz maksymalna liczba hostów w sieci wynoszą odpowiednio"
+    },
+    {
+        "id": 736,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Protokół, który tłumaczy nazwy domenowe na adresy IP, to"
+    },
+    {
+        "id": 737,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Z ilu bitów składa się adres fizyczny MAC karty sieciowej?"
+    },
+    {
+        "id": 738,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "SuperPi to program wykorzystywany do sprawdzenia"
+    },
+    {
+        "id": 739,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby zmienić właściciela pliku w systemie Linux, należy użyć polecenia"
+    },
+    {
+        "id": 740,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie740.jpg",
+        "tresc": "Rysunek przedstawia konfigurację karty sieciowej dla urządzenia o adresie IP 10.15.89.104/25. Wynika z niego, że"
+    },
+    {
+        "id": 741,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Standard podstawki procesora bez nóżek to"
+    },
+    {
+        "id": 742,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z wymienionych systemów operacyjnych nie jest obsługiwany przez system plików ext4?"
+    },
+    {
+        "id": 743,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Znajdujący się w dokumentacji technicznej płyty głównej symbol: \"LGA 775\" oznacza typ gniazda dla procesorów:"
+    },
+    {
+        "id": 744,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Urządzenie, które łączy segmenty sieci i przekazuje ramki między segmentami tej sieci z doborem portu urządzenia, do którego są przekazywane poszczególne ramki, to"
+    },
+    {
+        "id": 745,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Atak typu hijacking na serwer sieciowy charakteryzuje się"
+    },
+    {
+        "id": 746,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Główny rekord rozruchowy dysku twardego komputera to"
+    },
+    {
+        "id": 747,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie747.jpg",
+        "tresc": "Który z symboli oznacza przełącznik?"
+    },
+    {
+        "id": 748,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "GRUB, LILO, NTLDR to:"
+    },
+    {
+        "id": 749,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie749.jpg",
+        "tresc": "Ile symboli przełączników i ruterów jest na schemacie?"
+    },
+    {
+        "id": 750,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Współcześnie pamięci podręczne procesora drugiego poziomu (ang. \"L-2 cache\") wykonane są z układów pamięci"
+    },
+    {
+        "id": 751,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie751.jpg",
+        "tresc": "Na przedstawionej płycie głównej możliwy jest montaż procesora z obudową typu"
+    },
+    {
+        "id": 752,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Przełącznik sieciowy standardu Fast Ethernet umożliwia transmisję danych z maksymalną prędkością"
+    },
+    {
+        "id": 753,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie753.jpg",
+        "tresc": "Jaką funkcję pełni układ zaznaczony strzałką na schemacie karty graficznej?"
+    },
+    {
+        "id": 754,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które urządzenie zastosowane w sieci komputerowej NIE ZMIENIA liczby domen kolizyjnych?"
+    },
+    {
+        "id": 755,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Narzędziem systemu Windows, służącym do sprawdzenia wpływu poszczególnych procesów i usłg na wydajność procesora oraz tego, w jakim stopniu generują one obciążenie pamięci czy dysku, jest"
+    },
+    {
+        "id": 756,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do sprawdzania rozmiaru katalogu w systemie Linux służy polecenie"
+    },
+    {
+        "id": 757,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie757.jpg",
+        "tresc": "Element oznaczony numerem 1 na schemacie blokowym karty graficznej"
+    },
+    {
+        "id": 758,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie758.jpg",
+        "tresc": "Który standard złącza DVI umożliwia przesyłanie wyłącznie sygnału analogowego"
+    },
+    {
+        "id": 759,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Na nowym komputerze program antywirusowy należy zainstalować"
+    },
+    {
+        "id": 760,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie760.jpg",
+        "tresc": "Fizyczna topologia sieci komputerowej, którą przedstawiono na rysunku, to topologia"
+    },
+    {
+        "id": 761,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Którego narzędzia trzeba użyć do zarobienia końcówek kabla UTP w module keystone ze stykami typu 110?"
+    },
+    {
+        "id": 762,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Maska w postaci pełnej podsieci o prefiksie /25 to"
+    },
+    {
+        "id": 763,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które elementy systemu komputerowego podlegają utylizacji w wyspecjalizowanych zakładach przetwarzania z uwagi na zawartość niebezpiecznych substancji lub pierwiastków chemicznych?"
+    },
+    {
+        "id": 764,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Połączenie VPN obsługiwane przez system Windows Server, w którym uwierzytelnienie użytkowników następuje przez niezabezpieczone połączenia, a dopiero po wymianie uwierzytelnień rozpoczyna się szyfrowanie połączenia, to"
+    },
+    {
+        "id": 765,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do połączenia kilku komputerów w sieć lokalną można użyć"
+    },
+    {
+        "id": 766,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie766.jpg",
+        "tresc": "Z którym medium transmisyjnym wykorzystuje się przedstawiony na rysunku adapter?"
+    },
+    {
+        "id": 767,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który aplet panelu sterowania w systemie Windows 7 umożliwia ograniczenie czasu pracy użytkownika na komputerze?"
+    },
+    {
+        "id": 768,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Narzędzia dostrajania oraz Unity Tweak Tool to narzędzia systemu Linux służące do"
+    },
+    {
+        "id": 769,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Program tar umożliwia"
+    },
+    {
+        "id": 770,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Windows przeprowadzenie analizy wpływu uruchamianych programów na wydajność komputera jest między innymi możliwe po użyciu polecenia"
+    },
+    {
+        "id": 771,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W budynku biurowym należy podłączyć komputer do routera ADSL przy użyciu przewodu UTP Cat 5e. Maksymalna odległość pomiędzy komputerem, a routerem powinna wynosić"
+    },
+    {
+        "id": 772,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie772.jpg",
+        "tresc": "Który parametr w konfiguracji punktu dostępowego pełni rolę loginu wykorzystywanego podczas próby nawiązywania połączenia z punktem dostępowym sieci bezprzewodowej?"
+    },
+    {
+        "id": 773,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Windows Server narzędziem umożliwiającym zarządzanie zasadami grupy jest"
+    },
+    {
+        "id": 774,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie774.jpg",
+        "tresc": "Pamięć RAM przedstawiona na rysunku, montowana jest na płycie głównej wyposażonej w gniazdo"
+    },
+    {
+        "id": 775,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W technologii Ethernet protokół dostępu do nośnika CSMA/CD jest metodą z"
+    },
+    {
+        "id": 776,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Windows 7 narzędzie trybu poleceń Cipher.exe służy do"
+    },
+    {
+        "id": 777,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie777.jpg",
+        "tresc": "Na rysunku przedstawiono element, który jest częścią składową"
+    },
+    {
+        "id": 778,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Użytkownik systemu operacyjnego Linux chce przypisać adres IP 152.168.1.200 255.255.0.0 interfejsowi sieciowemu. Które polecenie powinien wydać, mając uprawnienia root?"
+    },
+    {
+        "id": 779,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "We właściwościach karty graficznej w zakładce Zasoby jest określony jeden z zakresów pamięci dla tej karty od A0000h do BFFFFh. Wielkość ta oznacza obszar pamięci określony adresem fizycznym"
+    },
+    {
+        "id": 780,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W technologii Blu-ray nośnik jednokrotnego zapisu oznaczany jest"
+    },
+    {
+        "id": 781,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który skrócony zapis odpowiada następującej masce podsieci: 255.255.248.0?"
+    },
+    {
+        "id": 782,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W sieci o adresie 192.168.20.0 zastosowano maskę podsieci 255.255.255.248. Ile adresów IP będzie dostępnych dla urządzeń?"
+    },
+    {
+        "id": 783,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaką nazwę nosi niepożądane oprogramowanie komputerowe instalowane najczęściej bez wiedzy użytkownika?"
+    },
+    {
+        "id": 784,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Szkodliwe oprogramowanie, które w celu umożliwienia ataku na zainfekowany komputer może np. otworzyć jeden z portów, to"
+    },
+    {
+        "id": 785,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie785.jpg",
+        "tresc": "Jaka jest kolejność przewodów we wtyku RJ45 zgodnie z sekwencją połączeń T568A?"
+    },
+    {
+        "id": 786,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Dokument, którego celem jest przedstawienie inwestorowi oferty cenowej wykonania robót instalatorskich sieci komputerowej, to"
+    },
+    {
+        "id": 787,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby ustawić w systemach operacyjnych rodziny Windows właściwość pliku na tylko do odczytu, należy użyć polecenia"
+    },
+    {
+        "id": 788,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Komputer utracił połączenie z siecią komputerową. Jakie działanie należy wykonać w pierwszej kolejności, aby rozwiązać problem?"
+    },
+    {
+        "id": 789,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie789.jpg",
+        "tresc": "Określ wielkość klastra na podstawie zamieszczonego fragmentu komunikatu systemu WINDOWS wyświetlonego po zakończeniu działania programu format a:"
+    },
+    {
+        "id": 790,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który standard realizacji sieci Ethernet, definiuje sieć zbudowaną na kablu koncentrycznym, odługości segmentu nie przekraczającym 185 m?"
+    },
+    {
+        "id": 791,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie791.jpg",
+        "tresc": "Który błąd okablowania jest widoczny na wyświetlaczu testera pokazującego mapę połączeń żył kabla typu skrętka?"
+    },
+    {
+        "id": 792,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W sieci Ethernet 100Base-TX do transmisji danych wykorzystywane są żyły kabla UTP dołączone do pinów"
+    },
+    {
+        "id": 793,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "FDDI (ang. Fiber Distributed Data Interface) to standard transmisji danych oparty na technologii światłowodowej. Jaką topologię stosujemy w sieciach wykonanych wg tej technologii?"
+    },
+    {
+        "id": 794,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Komputer ma adres IP 192.168.0.1, maska podsieci to 255.255.255.0. Który adres jest adresem rozgłoszeniowym podsieci, do której należy ten komputer?"
+    },
+    {
+        "id": 795,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Dodatkowe cechy wyniku operacji wykonywanej przez jednostkę arytmetyczno - logiczną ALU zawiera"
+    },
+    {
+        "id": 796,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Klawiatura QWERTY umożliwiająca wprowadzenie znaków charakterystycznych dla języka polskiego nazywana jest również klawiaturą"
+    },
+    {
+        "id": 797,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby połączyć komputer z siecią LAN, należy wykorzystać interfejs"
+    },
+    {
+        "id": 798,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Odpowiednikiem Linuksowego programu fsck w systemach rodziny Windows jest program"
+    },
+    {
+        "id": 799,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby uruchomić tryb awaryjny w systemach rodziny Windows, należy podczas uruchamiania komputera wcisnąć klawisz"
+    },
+    {
+        "id": 800,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby w adresie IPv4 wyznaczyć długość prefiksu adresu sieci, należy sprawdzić"
+    },
+    {
+        "id": 801,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z adresów IPv4 wraz z prefiksem jest adresem sieci?"
+    },
+    {
+        "id": 802,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie802.jpg",
+        "tresc": "Program WinRaR wyświetlił okienko informacyjne pokazane na rysunku. Z jakiego typu licencji na program korzystał do tej pory użytkownik?"
+    },
+    {
+        "id": 803,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Ile bitów minimum będzie wymaganych w systemie binarnym do zapisania liczby heksadecymalnej 110 (h)?"
+    },
+    {
+        "id": 804,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby połączyć komputery w sieć przewodową opartą na topologii gwiazdy, należy zastosować"
+    },
+    {
+        "id": 805,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jeżeli w konfiguracji karty graficznej zostanie wybrane odświeżanie obrazu większe od zalecanego, monitor CRT spełniający normy TCO 99"
+    },
+    {
+        "id": 806,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie806.jpg",
+        "tresc": "Która z topologii fizycznych sieci komputerowej jest przedstawiona na rysunku?"
+    },
+    {
+        "id": 807,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który protokół jest wykorzystywany przez polecenie ping?"
+    },
+    {
+        "id": 808,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie808.jpg",
+        "tresc": "Symbol graficzny przedstawiony na rysunku oznacza"
+    },
+    {
+        "id": 809,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie809.jpg",
+        "tresc": "Na rysunku przedstawiono sieć komputerową w topologii"
+    },
+    {
+        "id": 810,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Licencja oprogramowania umożliwiająca darmowe rozpowszechnianie aplikacji to"
+    },
+    {
+        "id": 811,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jednostka obliczeń zmiennoprzecinkowych to"
+    },
+    {
+        "id": 812,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Przed instalacją sterownika urządzenia peryferyjnego system operacyjny Windows powinien sprawdzać, czy sterownik posiada podpis"
+    },
+    {
+        "id": 813,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Monitor powinien spełniać standard"
+    },
+    {
+        "id": 814,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Odpowiednikiem macierzy RAID 1 w systemie Windows jest wolumin"
+    },
+    {
+        "id": 815,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jakie oprogramowanie, zapobiegające włamaniu do sieci, należy zainstalować na serwerze udostępniającym połączenie z internetem?"
+    },
+    {
+        "id": 816,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Ile adresów IP jest potrzebnych do zaadresowania 4 komputerów podłączonych do przełącznika tak, aby mogły się komunikować ze sobą?"
+    },
+    {
+        "id": 817,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Maksymalna długość kabla miedzianego UTP kategorii 5e łączącego bezpośrednio dwa urządzenia sieciowe, zgodnie z standardem Fast Ethernet 100Base-TX, wynosi"
+    },
+    {
+        "id": 818,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Atak komputerowy, polegający na wyłudzaniu poufnych informacji osobistych przez podszywanie się pod godną zaufania osobę lub instytucję, to"
+    },
+    {
+        "id": 819,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jakie są wartości pasma częstotliwości oraz maksymalnej szybkości transmisji danych w standardzie 802.11g WiFi?"
+    },
+    {
+        "id": 820,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do sprawdzenia prawidłowych przebiegów i wartości napięć układu urządzenia elektronicznego można użyć"
+    },
+    {
+        "id": 821,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Powodem niekontrolowanego zapełnienia dysku może być"
+    },
+    {
+        "id": 822,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie822.jpg",
+        "tresc": "Jakiego narzędzia wraz z parametrami, należy użyć w systemie Windows, aby wyświetlić przedstawione informacje o dysku twardym?"
+    },
+    {
+        "id": 823,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie823.jpg",
+        "tresc": "Na zamieszczonym zrzucie panelu konfiguracyjnego rutera widać, że serwer DHCP"
+    },
+    {
+        "id": 824,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Dla zmiany zeskanowanego obrazu na tekst należy zastosować oprogramowanie wykorzystujące techniki"
+    },
+    {
+        "id": 825,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które urządzenie należy zastosować by zwiększyć zasięg sieci bezprzewodowej w budynku?"
+    },
+    {
+        "id": 826,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Zastosowanie polecenia net localgroup w systemie Windows spowoduje"
+    },
+    {
+        "id": 827,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Funkcje różnych kategorii (daty i czasu, finansowe, tekstowe, matematyczne, statystyczne) są elementem składowym"
+    },
+    {
+        "id": 828,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Windows moduł odpowiedzialny za internetowe usługi informacyjne to"
+    },
+    {
+        "id": 829,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które z poleceń należy wydać w systemie Windows 7, aby bezpośrednio z wiersza poleceń uruchomić program Zapora systemu Windows z zabezpieczeniami zaawansowanymi?"
+    },
+    {
+        "id": 830,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do przywracania struktury kluczy rejestru z kopii zapasowej w systemie Windows stosowane jest polecenie"
+    },
+    {
+        "id": 831,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby zwolnić miejsce na dysku bez utraty danych, należy wykonać"
+    },
+    {
+        "id": 832,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie832.jpg",
+        "tresc": "Zamieszczony komunikat widoczny po uruchomieniu narzędzia do naprawy systemu Windows może świadczyć o"
+    },
+    {
+        "id": 833,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Linux polecenie ps spowoduje wyświetlenie"
+    },
+    {
+        "id": 834,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Polecenie systemu Windows stosowane do sprawdzenia trasy, po której są przesyłane pakiety w sieci, to"
+    },
+    {
+        "id": 835,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Trzech użytkowników komputera z zainstalowanym systemem operacyjnym Windows XP Pro ma swoje foldery z dokumentami w katalogu głównym dysku C:. Na dysku jest zainstalowany system plików NTFS. Użytkownicy mają założone w systemie konta z ograniczeniami. W jaki sposób należy zabezpieczyć folder każdego z użytkowników, by pozostali nie mogli modyfikować zawartości folderu?"
+    },
+    {
+        "id": 836,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Po uruchomieniu komputera pojawił się komunikat \"Non-system disk or disk error. Replace and strike any key when ready\". Przyczyną może być"
+    },
+    {
+        "id": 837,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Bezpłatnym programem antywirusowym dostarczanym przez Microsoft dla użytkowników legalnych wersji systemu operacyjnego Windows jest"
+    },
+    {
+        "id": 838,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z wymienionych adresów IPv4 należy do klasy B?"
+    },
+    {
+        "id": 839,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Kabel typu skrętka, w której pojedyncza para żył jest foliowana oraz całość kabla jest w ekranie z folii i siatki, oznacza się symbolem"
+    },
+    {
+        "id": 840,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Okresowych kopii zapasowych dysków serwera nie można tworzyć na wymiennych nośnikach typu"
+    },
+    {
+        "id": 841,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Zgodnie ze specyfikacją JEDEC typowe napięcie zasilania modułów niskonapięciowych pamięci RAM DDR3L wynosi"
+    },
+    {
+        "id": 842,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaki jest domyślny port serwera usługi WWW?"
+    },
+    {
+        "id": 843,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie843.jpg",
+        "tresc": "Jaka jest kolejność części adresu globalnego IPv6 typu unicast przedstawionego na rysunku?"
+    },
+    {
+        "id": 844,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które stwierdzenie NIE dotyczy pamięci typu cache L1?"
+    },
+    {
+        "id": 845,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie operacyjnym wystąpił błąd sterownika TWAIN. Może być on powodem niepoprawnej pracy"
+    },
+    {
+        "id": 846,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z adresów jest adresem klasy B?"
+    },
+    {
+        "id": 847,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie847.jpg",
+        "tresc": "Zgodnie z zamieszczonym fragmentem testu w komputerze jest zainstalowana"
+    },
+    {
+        "id": 848,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jakim poleceniem w systemie Linux, można zmienić prawa dostępu do pliku bądź katalogu?"
+    },
+    {
+        "id": 849,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Użytkownik uszkodził płytę główną z gniazdem procesora AM2. Uszkodzoną płytę można zastąpić, bez konieczności wymiany procesora i pamięci, modelem z gniazdem"
+    },
+    {
+        "id": 850,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Urządzenie sieciowe służące do połączenia pięciu komputerów ze sobą w tej samej sieci, tak aby nie występowały kolizje pakietów, to"
+    },
+    {
+        "id": 851,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie851.jpg",
+        "tresc": "Na rysunku jest przedstawiony fragment procesu komunikacji z serwerem przechwyconej przez program Wireshark. Który to serwer?"
+    },
+    {
+        "id": 852,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie852.jpg",
+        "tresc": "Do jakiego rodzaju wtyków jest stosowana przedstawiona na rysunku zaciskarka?"
+    },
+    {
+        "id": 853,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z wymienionych programów umożliwi sporządzenie rysunku technicznego przedstawiającego plan instalacji logicznej sieci lokalnej budynku?"
+    },
+    {
+        "id": 854,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Serwer Samba umożliwia współdzielenie plików i drukarek w sieci za pomocą demona"
+    },
+    {
+        "id": 855,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie855.jpg",
+        "tresc": "Na rysunku przedstawiona jest karta"
+    },
+    {
+        "id": 856,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie856.jpg",
+        "tresc": "Urządzenie peryferyjne przedstawione na rysunku to skaner biometryczny, wykorzystujący do autoryzacji"
+    },
+    {
+        "id": 857,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemach operacyjnych Windows ograniczenie użytkownikom dostępu do poszczególnych katalogów, plików lub dysków umożliwia system plików"
+    },
+    {
+        "id": 858,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie858.jpg",
+        "tresc": "Na rysunku przedstawiono interfejs w komputerze przeznaczony do podłączenia"
+    },
+    {
+        "id": 859,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie859.jpg",
+        "tresc": "Które urządzenie zostało przedstawione na rysunku?"
+    },
+    {
+        "id": 860,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W których nośnikach pamięci masowej jedną z najczęstszych przyczyn uszkodzeń jest uszkodzenie powierzchni?"
+    },
+    {
+        "id": 861,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z adresów IP należy do klasy A?"
+    },
+    {
+        "id": 862,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Sieć komputerowa ograniczająca się do komputerów wyłącznie jednej organizacji, w której mogą istnieć usługi, realizowane przez serwery w sieci LAN, np. strony WWW, poczta elektroniczna to"
+    },
+    {
+        "id": 863,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie863.jpg",
+        "tresc": "Komputer wyposażono w płytę główną przedstawioną na rysunku. Aby zwiększyć moc obliczeniową komputera zaleca się"
+    },
+    {
+        "id": 864,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie864.jpg",
+        "tresc": "W sieci Ethernet 100BaseTX dla transmisji danych wykorzystywane są żyły kabla UTP dołączone do pinów"
+    },
+    {
+        "id": 865,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jak należy wpisać w formule arkusza kalkulacyjnego adres komórki B3, żeby przy kopiowaniu tej formuły w dowolne miejsce arkusza adres komórki B3 pozostał niezmieniony?"
+    },
+    {
+        "id": 866,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaka jest liczba adresów, które można przydzielić urządzeniom pracującym w sieci o adresie IP 192.168.20.0/26?"
+    },
+    {
+        "id": 867,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W adresie IP należącym do klasy A, wartość pierwszego bajtu jest zawarta w przedziale"
+    },
+    {
+        "id": 868,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie868.jpg",
+        "tresc": "Rysunek przedstawia"
+    },
+    {
+        "id": 869,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W którym miejscu znajduje się nagłówek i stopka w dokumencie tekstowym Word?"
+    },
+    {
+        "id": 870,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Połączenie typu trunk dwóch przełączników daje możliwość"
+    },
+    {
+        "id": 871,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie871.jpg",
+        "tresc": "Adresem IP hosta skonfigurowanym na karcie sieciowej eth0 jest"
+    },
+    {
+        "id": 872,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Taśma barwiąca jest podstawowym materiałem eksploatacyjnym drukarki"
+    },
+    {
+        "id": 873,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który adres IP jest adresem urządzenia pracującego w sieci 10.0.0.0/17?"
+    },
+    {
+        "id": 874,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wskaż zakres adresów IP należący do klasy A, służący do adresacji prywatnej w sieciach komputerowych:"
+    },
+    {
+        "id": 875,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby podłączyć projektor multimedialny do komputera, nie należy używać złącza"
+    },
+    {
+        "id": 876,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wyznaczanie optymalnej trasy dla połączenia sieciowego to"
+    },
+    {
+        "id": 877,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Polecenie net accounts zastosowane w wierszu poleceń systemu Windows, powodujące ustawienie maksymalnej liczby dni ważności hasła, wymaga użycia opcji"
+    },
+    {
+        "id": 878,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaką liczbę dziesiętną zapisano na jednym bajcie w kodzie znak – moduł: 1 1111111"
+    },
+    {
+        "id": 879,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Minimalną długość hasła użytkownika w systemie Windows można ustawić za pomocą polecenia"
+    },
+    {
+        "id": 880,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaki protokół odpowiada za zamianę adresów IP na adresy kontroli dostępu do nośnika (MAC)?"
+    },
+    {
+        "id": 881,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Zestaw narzędzi do montażu okablowania miedzianego typu \"skrętka\" w sieci lokalnej powinien zawierać"
+    },
+    {
+        "id": 882,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Okablowanie strukturalne należy zaliczyć do infrastruktury"
+    },
+    {
+        "id": 883,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Podstawową metodą zabezpieczenia sieci komputerowej przed atakiem z zewnątrz jest stosowanie"
+    },
+    {
+        "id": 884,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Linux polecenie chmod 321 start spowoduje nadanie następujących uprawnień plikowi start:"
+    },
+    {
+        "id": 885,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Konwerter RAMDAC przetwarza sygnał"
+    },
+    {
+        "id": 886,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Przed rozpoczęciem modernizacji komputerów osobistych oraz serwerów, polegającej na dołożeniu nowych modułów pamięci RAM, należy sprawdzić"
+    },
+    {
+        "id": 887,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Liczbie 16 bitowej 0011110010101110 zapisanej w systemie dwójkowym odpowiada w systemie szesnastkowym liczba"
+    },
+    {
+        "id": 888,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Zapis koloru RGB(255, 170, 129) odpowiada notacji"
+    },
+    {
+        "id": 889,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do pomiaru wartości rezystancji służy"
+    },
+    {
+        "id": 890,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które z wymienionych poleceń w systemie Windows XP służy do sprawdzenia bieżącej konfiguracji IP systemu Windows?"
+    },
+    {
+        "id": 891,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Linux do monitorowania w czasie rzeczywistym uruchomionych procesów służy polecenie:"
+    },
+    {
+        "id": 892,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W modelu RGB, w systemie szesnastkowym, kolor jest zapisany następująco: ABCDEF. Natężenie koloru niebieskiego w tym zapisie ma wartość dziesiętną"
+    },
+    {
+        "id": 893,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który przyrząd jest stosowany do pomiarów długości i tłumienności przewodów miedzianych?"
+    },
+    {
+        "id": 894,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby sprawdzić integralność systemu plików w systemie Linux należy użyć polecenia"
+    },
+    {
+        "id": 895,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Plik ma rozmiar 2 KiB. Jest to"
+    },
+    {
+        "id": 896,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby móc tworzyć konta użytkowników, komputerów i innych obiektów oraz przechowywać centralnie informacje o nich, należy na serwerze Windows zainstalować rolę"
+    },
+    {
+        "id": 897,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Użytkownicy z grupy Pracownicy nie mogą drukować dokumentów przy użyciu serwera wydruku na systemie operacyjnym Windows Server. Mają oni przydzielone uprawnienia tylko \"Zarządzanie dokumentami\". Co należy zrobić, aby rozwiązać opisany problem?"
+    },
+    {
+        "id": 898,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie898.jpg",
+        "tresc": "Zgodnie z przedstawionym w tabeli standardem opisu pamięci PC-100 wskaż pamięć, która ma maksymalny czas dostępu 6 nanosekund i minimalne opóźnienie między sygnałami CAS i RAS wynoszące 2 cykle zegara"
+    },
+    {
+        "id": 899,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W jednostce ALU do akumulatora została wpisana liczba dziesiętna 240. Jaka jest jej binarna reprezentacja?"
+    },
+    {
+        "id": 900,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które szyfrowanie stosowane w sieciach bezprzewodowych, jest najmniej odporne na łamanie haseł?"
+    },
+    {
+        "id": 901,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Mechanizm zasilacza komputerowego chroniący przed przegrzaniem zasilacza jest oznaczony w dokumentacji technicznej jako zabezpieczenie typu"
+    },
+    {
+        "id": 902,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Transmisja interfejsem równoległym synchronicznym cechuje się tym, że"
+    },
+    {
+        "id": 903,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do cech pojedynczego konta użytkownika pracującego w systemie Windows Serwer należy"
+    },
+    {
+        "id": 904,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie904.jpg",
+        "tresc": "W czterech sklepach sprzedawany jest ten sam komputer w różnych cenach. Najtaniej można go nabyć w sklepie:"
+    },
+    {
+        "id": 905,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie905.jpg",
+        "tresc": "Przy pomocy taśmy 60-pinowej przedstawionej na rysunku podłącza się do płyty głównej komputera"
+    },
+    {
+        "id": 906,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Najbardziej zaawansowany tryb pracy portu równoległego standardu IEEE-1284 tworzący dwukierunkową magistralę 8-bitową mogącą przesyłać zarówno dane, jak i adresy z maksymalną szybkością transmisji do 2,3 MB/s, pozwalający na podłączenie do 64 urządzeń, to"
+    },
+    {
+        "id": 907,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Ile dział elektronowych posiada matryca LCD?"
+    },
+    {
+        "id": 908,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Liczba heksadecymalna 1E2F(16) zapisana w systemie oktalnym ma postać"
+    },
+    {
+        "id": 909,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do montażu zestawu komputerowego z płytą główną zawierającą gniazdo procesora typu Socket AM3 można zastosować procesor"
+    },
+    {
+        "id": 910,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie910.jpg",
+        "tresc": "Zgodnie z zamieszczonym cennikiem, średni koszt wyposażenia stanowiska komputerowego wynosi:"
+    },
+    {
+        "id": 911,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który element stanowi zawartość dokumentacji powykonawczej?"
+    },
+    {
+        "id": 912,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie912.jpg",
+        "tresc": "Sposób działania którego protokołu został przedstawiony na rysunku?"
+    },
+    {
+        "id": 913,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie913.jpg",
+        "tresc": "Rysunek przedstawia schemat ethernetowego połączenia niekrosowanych, ośmiopinowych złącz 8P8C. Schemat ten nosi nazwę:"
+    },
+    {
+        "id": 914,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Brak informacji o parzystości liczby lub o znaku wyniku wykonywanej operacji w ALU, może świadczyć o problemach w działaniu"
+    },
+    {
+        "id": 915,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wskaż domyślną maskę dla adresu IP klasy B"
+    },
+    {
+        "id": 916,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie916.jpg",
+        "tresc": "Jakie elementy znajdują się na przedstawionej płycie głównej?"
+    },
+    {
+        "id": 917,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które polecenie w systemie Linux umożliwia sprawdzenie adresu IP przypisanego do interfejsu sieciowego?"
+    },
+    {
+        "id": 918,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Materiałem eksploatacyjnym w drukarce laserowej jest"
+    },
+    {
+        "id": 919,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Podczas przeglądania stron WWW, w celu podniesienia bezpieczeństwa prywatnych danych, jest wskazane wyłączenie w opcjach przeglądarki"
+    },
+    {
+        "id": 920,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do pomiaru wartości mocy pobieranej przez komputer należy użyć"
+    },
+    {
+        "id": 921,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie921.jpg",
+        "tresc": "Które urządzenie sieciowe zostało przedstawione na rysunku?"
+    },
+    {
+        "id": 922,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Programem nasłuchowym służącym do przechwytywania i nagrywania różnych pakietów sieciowych oraz ich dekodowania jest"
+    },
+    {
+        "id": 923,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie923.jpg",
+        "tresc": "Na rysunku został przedstawiony schemat budowy logicznej"
+    },
+    {
+        "id": 924,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Podczas skanowania reprodukcji obrazu z czasopisma, na skanie obrazu pojawiły się regularne wzory, tak zwana mora. Z jakiej funkcji skanera należy skorzystać, aby usunąć morę?"
+    },
+    {
+        "id": 925,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do wykonania obrazu dysku twardego można użyć programu"
+    },
+    {
+        "id": 926,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Protokołem pakietów użytkownika wykonującym usługę bezpołączeniowego dostarczania datagramów jest"
+    },
+    {
+        "id": 927,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Na komputerze podłączonym do Internetu, w programie antywirusowym bazę wirusów należy aktualizować co najmniej"
+    },
+    {
+        "id": 928,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Linux mamy następujące prawa dostępu do pewnego pliku rwxr--r-- . Jakim poleceniem zmienimy je na rwxrwx---?"
+    },
+    {
+        "id": 929,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Akronim określający usługi, których zadaniem jest między innymi nadawanie priorytetu przesyłanym pakietom oraz kształtowanie przepustowości w sieci, to"
+    },
+    {
+        "id": 930,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie930.jpg",
+        "tresc": "Która karta graficzna nie będzie współpracowała z monitorem, wyposażonym w złącza przedstawione na zdjęciu (zakładając, że do podłączenia monitora nie można zastosować adaptera)?"
+    },
+    {
+        "id": 931,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie931.jpg",
+        "tresc": "Na rysunku przedstawiono sieć o topologii"
+    },
+    {
+        "id": 932,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby wdrożyć usługę zdalnej instalacji systemów operacyjnych na stacjach roboczych należy w Windows Server zainstalować rolę"
+    },
+    {
+        "id": 933,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Za pomocą polecenia dxdiag wywołanego z wiersza poleceń systemu Windows można"
+    },
+    {
+        "id": 934,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Interfejs używany do komunikacji między urządzeniami przenośnymi, wykorzystujący cyfrową transmisję optyczną bezprzewodową do przesyłania danych na stosunkowo krótkim odcinku, to"
+    },
+    {
+        "id": 935,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W Windows 7 konfigurację interfejsu sieciowego można wykonać, stosując rozwinięcie polecenia"
+    },
+    {
+        "id": 936,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie936.jpg",
+        "tresc": "Na rysunku przedstawiono taśmę (kabel) złącza"
+    },
+    {
+        "id": 937,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Shareware to rodzaj licencji polegającej na"
+    },
+    {
+        "id": 938,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Podczas montażu sieci komputerowej, przy wierceniu otworów w ścianach, NIE NALEŻY używać"
+    },
+    {
+        "id": 939,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Pliki, które znajdują się w koszu, można odzyskać poprzez zastosowanie polecenia"
+    },
+    {
+        "id": 940,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które określenie dotyczące konta użytkownika Active Directory w systemie Windows jest prawdziwe?"
+    },
+    {
+        "id": 941,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Na stronie wydrukowanej na drukarce laserowej pojawiają się jaśniejsze i ciemniejsze obszary. Aby rozwiązać problemy z nieciągłością i jakością wydruku, należy"
+    },
+    {
+        "id": 942,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który adres podsieci jest prawidłowy po pożyczeniu 4 bitów z części hosta z adresu klasowego 192.168.1.0?"
+    },
+    {
+        "id": 943,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która drukarka wykorzystuje technikę polegającą na przenoszeniu stałego barwnika z taśmy na papier odporny na wysoką temperaturę?"
+    },
+    {
+        "id": 944,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Komputer ma pełnić rolę serwera sieci lokalnej, udostępniającego innym komputerom połączenie z Internetem przez podłączenie do gniazda sieci rozległej za pomocą kabla UTP Cat 5e. Obecnie komputer jest jedynie podłączony do switcha sieci lokalnej również kablem UTP Cat 5e, nie posiada innych gniazd 8P8C. O jaki element musi być on koniecznie rozbudowany?"
+    },
+    {
+        "id": 945,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Niskopoziomowe formatowanie dysku IDE HDD"
+    },
+    {
+        "id": 946,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie946.jpg",
+        "tresc": "Poniżej przedstawiono fragment pliku konfiguracyjnego usługi serwerowej w systemie Linux. Jest to usługa"
+    },
+    {
+        "id": 947,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby uzyskać przepustowość na poziomie 4 GB/s w każdą stronę, należy zamontować w zestawie komputerowym kartę graficzną wykorzystującą interfejs"
+    },
+    {
+        "id": 948,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W dokumentacji jednego z elementów składowych komputera zamieszczono informację, że urządzenie wspiera OpenGL. Dokumentacja dotyczy"
+    },
+    {
+        "id": 949,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby podłączyć do Internetu sieć lokalną, działającą w oparciu o adresy prywatne, należy zastosować"
+    },
+    {
+        "id": 950,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Translacją nazw domenowych na adresy sieciowe zajmuje się usługa"
+    },
+    {
+        "id": 951,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Ile par przewodów jest przeznaczonych w standardzie 100Base-TX do transmisji danych w obu kierunkach?"
+    },
+    {
+        "id": 952,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Adres 2001:0012:0000:0000:0AAA:0000:0000:000B protokołu IPv6 po kompresji przyjmuje postać"
+    },
+    {
+        "id": 953,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Cookie nazywa się plik"
+    },
+    {
+        "id": 954,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z wymienionych elementów jest elementem pasywnym sieci?"
+    },
+    {
+        "id": 955,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie955.jpg",
+        "tresc": "Na fotografii przedstawiono"
+    },
+    {
+        "id": 956,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie956.jpg",
+        "tresc": "W systemie Windows użycie prezentowanego polecenia spowoduje tymczasową zmianę koloru"
+    },
+    {
+        "id": 957,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie957.jpg",
+        "tresc": "Do którego portu należy podłączyć kabel sieci zewnętrznej, by uzyskać pośredni dostęp do Internetu?"
+    },
+    {
+        "id": 958,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Protokołem połączeniowym warstwy transportowej modelu ISO/OSI jest"
+    },
+    {
+        "id": 959,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jeśli wydanie komendy ping 127.0.0.1 skutkuje brakiem odpowiedzi, to"
+    },
+    {
+        "id": 960,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Standard Transport Layer Security (TLS) to rozwinięcie protokołu"
+    },
+    {
+        "id": 961,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Zapis na dyskach BD-R odbywa się za pomocą"
+    },
+    {
+        "id": 962,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaki pierwszy znak w nazwie pliku w systemie Windows oznacza plik tymczasowy?"
+    },
+    {
+        "id": 963,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Partycja, na której zainstalowany jest system operacyjny, nazywana jest partycją"
+    },
+    {
+        "id": 964,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Najszybszym sposobem wstawienia skrótu do konkretnego programu na pulpitach wszystkich użytkowników domenowych jest"
+    },
+    {
+        "id": 965,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie965.jpg",
+        "tresc": "Jaką kartę rozszerzeń komputera przedstawiono na zdjęciu?"
+    },
+    {
+        "id": 966,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby najlepiej zabezpieczyć zgromadzone dane przed odczytem na wypadek kradzieży komputera, należy"
+    },
+    {
+        "id": 967,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Na których portach brama internetowa musi przepuszczać ruch, aby użytkownicy sieci lokalnej mogli pobierać pliki z serwera FTP?"
+    },
+    {
+        "id": 968,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W zasadach haseł w systemie Windows Server jest włączona opcja hasło musi spełniać wymagania co do złożoności. Z co najmniej ilu znaków musi się składać hasło użytkownika?"
+    },
+    {
+        "id": 969,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do której klasy adresów IP należy adres 130.140.0.0?"
+    },
+    {
+        "id": 970,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie970.jpg",
+        "tresc": "Na ilustracji zaznaczono strzałkami funkcję przycisków znajdujących się na obudowie projektora multimedialnego. Za pomocą tych przycisków można"
+    },
+    {
+        "id": 971,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie971.jpg",
+        "tresc": "Schemat układu połączeń bramek logicznych przedstawia"
+    },
+    {
+        "id": 972,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Linux plik ma ustawione uprawnienia na 541. Właściciel może plik:"
+    },
+    {
+        "id": 973,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemach Windows XP Pro/Windows Vista Business/Windows 7 Pro/Windows 8 Pro, opcją gwarantująca poufność danych dla użytkowników korzystających z tego samego komputera, których dane mogą być wykorzystywane wyłącznie przez nich samych, jest"
+    },
+    {
+        "id": 974,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które przyporządkowanie: urządzenie - realizowana funkcja jest błędne?"
+    },
+    {
+        "id": 975,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wynikiem wykonania polecenia arp -a 192.168.1.1 systemu MS Windows jest wyświetlenie"
+    },
+    {
+        "id": 976,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaka usługa umożliwia zdalną instalację systemu operacyjnego?"
+    },
+    {
+        "id": 977,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Ile klawiszy funkcyjnych znajduje się na klawiaturze w standardzie QWERTY?"
+    },
+    {
+        "id": 978,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Linux, aby wyszukać wszystkie pliki z rozszerzeniem txt, które znajdują się w katalogu /home/user i zaczynają się na literę a lub literę b lub literę c, należy wydać polecenie"
+    },
+    {
+        "id": 979,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie979.jpg",
+        "tresc": "Przedstawiony symbol odnosi się do urządzeń"
+    },
+    {
+        "id": 980,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do przetestowania działania serwera DNS w systemach Windows Server można użyć narzędzia nslookup. Jeżeli jako argument polecenia użyje się nazwy komputera, np. nslookup host.domena.com, to nastąpi sprawdzenie"
+    },
+    {
+        "id": 981,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Klient dostarczył niesprawny sprzęt komputerowy do serwisu. Serwisant w trakcie procedury przyjęcia sprzętu, lecz przed przystąpieniem do jego naprawy, powinien"
+    },
+    {
+        "id": 982,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Z jakim parametrem należy wywołać polecenie netstat, aby została wyświetlona statystyka interfejsu sieciowego (liczba wysłanych oraz odebranych bajtów i pakietów)?"
+    },
+    {
+        "id": 983,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jednym z zaleceń dotyczących ochrony antywirusowej jest skanowanie całego komputera. Zgodnie z tym zaleceniem komputer należy skanować"
+    },
+    {
+        "id": 984,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Pamięć nieulotna, elektrycznie kasowana i programowana określana jest skrótem"
+    },
+    {
+        "id": 985,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do którego urządzenia należy podłączyć komputery, aby pracowały w różnych domenach rozgłoszeniowych?"
+    },
+    {
+        "id": 986,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Której liczbie dziesiętnej odpowiada liczba FF zapisana w systemie szesnastkowym?"
+    },
+    {
+        "id": 987,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "System plików, który umożliwia w systemie Windows kompresję danych i nadawanie uprawnień do folderów i plików, to"
+    },
+    {
+        "id": 988,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Podczas pracy z drukarką laserową blade wydruki lub nierównomierne nanoszenie medium drukującego mogą świadczyć o"
+    },
+    {
+        "id": 989,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie operacyjnym Ubuntu konto użytkownika student można usunąć za pomocą polecenia"
+    },
+    {
+        "id": 990,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie990.jpg",
+        "tresc": "Przedstawioną na rysunku kartę rozszerzeń można zainstalować w komputerze, w którym na płycie głównej jest co najmniej jeden wolny slot"
+    },
+    {
+        "id": 991,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W architekturze sieci lokalnych typu klient-serwer"
+    },
+    {
+        "id": 992,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Błędy systemu operacyjnego Windows spowodowane przez konflikty zasobów sprzętowych, takie jak przydział pamięci, przydział przerwań IRQ i kanałów DMA, najłatwiej jest wykryć za pomocą narzędzia"
+    },
+    {
+        "id": 993,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaki jest adres sieci, w której pracuje host o adresie IP 10.10.10.6 klasy A?"
+    },
+    {
+        "id": 994,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Transmisja danych typu półduplex jest transmisją"
+    },
+    {
+        "id": 995,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Administrator sieci komputerowej chce sprawdzić na komputerze z systemem operacyjnym Windows, które połączenia są obecnie zestawiane oraz porty, na których komputer nasłuchuje. W tym celu powinien zastosować polecenie"
+    },
+    {
+        "id": 996,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jeżeli oczekuje się, aby tylko wybrane urządzenia mogły łączyć się z siecią WiFi, należy w punkcie dostępowym"
+    },
+    {
+        "id": 997,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie997.jpg",
+        "tresc": "Na zdjęciu, strzałką wskazano gniazdo interfejsu"
+    },
+    {
+        "id": 998,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wewnętrzny protokół trasowania, którego metryką jest wektor odległości, to"
+    },
+    {
+        "id": 999,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jakiego programu wbudowanego w system Windows 8 Pro można użyć, aby zaszyfrować dane?"
+    },
+    {
+        "id": 1000,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Procedura POST (Power-On Self Test) uruchamiana przez BIOS komputera odpowiada za"
+    },
+    {
+        "id": 1001,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Serwerem poczty e-mail jest"
+    },
+    {
+        "id": 1002,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Użytkownik sieci lokalnej musi mieć możliwość korzystania z plików znajdujących się na serwerze sieciowym. W tym celu powinien"
+    },
+    {
+        "id": 1003,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Topologia fizyczna, w której każdy węzeł ma własne połączenia z wszystkimi pozostałymi węzłami, to topologia"
+    },
+    {
+        "id": 1004,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby sygnały dwóch routerów w sieci WiFi standardu 802.11g nie zakłócały się wzajemnie, należy ustawić kanały o numerach"
+    },
+    {
+        "id": 1005,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W której topologii fizycznej sieci każde urządzenie sieciowe ma dokładnie dwa połączenia, po jednym dla swoich najbliższych sąsiadów, a dane są przesyłane od jednego komputera do następnego w pętli?"
+    },
+    {
+        "id": 1006,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Plik zaszyfrowany przez użytkownika za pomocą systemu NTFS 5.0 jest każdorazowo automatycznie szyfrowany podczas"
+    },
+    {
+        "id": 1007,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który rodzaj macierzy dyskowych oferuje tzw. mirroring dysków?"
+    },
+    {
+        "id": 1008,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Cecha systemu operacyjnego, pozwalająca uruchomić równocześnie kilka aplikacji w ramach podziału czasu, przy czym podział czasu realizowany jest przez same aplikacje nosi nazwę"
+    },
+    {
+        "id": 1009,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Protokół używany przez WWW to"
+    },
+    {
+        "id": 1010,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Liczba 563 (8) zapisana w systemie szesnastkowym to"
+    },
+    {
+        "id": 1011,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Zgodnie z normą PN-EN 50174 okablowanie poziome w systemie okablowania strukturalnego to część okablowania pomiędzy"
+    },
+    {
+        "id": 1012,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Standard IEEE 802.11 definiuje sieci"
+    },
+    {
+        "id": 1013,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaka drukarka powinna być zastosowana w dziale sprzedaży hurtowni materiałów budowlanych do drukowania faktur na papierze samokopiującym, tak aby uzyskać na nim kopie wydruku?"
+    },
+    {
+        "id": 1014,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Kabel typu skrętka, posiadający każdą parę przewodów w osobnym ekranie z folii, przy czym wszystkie przewody znajdują się w ekranie z folii, jest oznaczony symbolem"
+    },
+    {
+        "id": 1015,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1015.jpg",
+        "tresc": "Przedstawiony na rysunku znak zgodny ze standardem Energy Star oznacza urządzenie"
+    },
+    {
+        "id": 1016,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wskaż adres sieci, do której należy host o adresie 172.16.0.123/27"
+    },
+    {
+        "id": 1017,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby nadpisać błędne wpisy w pliku boot.ini w konsoli odzyskiwania systemu Windows, należy użyć polecenia"
+    },
+    {
+        "id": 1018,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1018.jpg",
+        "tresc": "Przedstawiony fragment konfiguracji zapory sieciowej zezwala na ruch sieciowy z wykorzystaniem protokołów"
+    },
+    {
+        "id": 1019,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Typowym objawem wskazującym na zbliżającą się awarię dysku twardego jest pojawienie się"
+    },
+    {
+        "id": 1020,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jak nazywa się rodzaj licencji, który sprawia, że program jest w pełni funkcjonalny, ale można go uruchomić jedynie określoną, niewielką liczbę razy od momentu instalacji?"
+    },
+    {
+        "id": 1021,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W firmie należało naprawić 5 komputerów oraz serwer. Czas naprawy każdego komputera wyniósł 1,5 godziny, a serwera 2,5 godziny. Cena usługi wynosi 100,00 zł za roboczogodzinę plus podatek VAT 23%. Jaka będzie należność brutto za tę usługę?"
+    },
+    {
+        "id": 1022,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Którym elementem sieci SIP jest telefon IP?"
+    },
+    {
+        "id": 1023,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1023.jpg",
+        "tresc": "Do podłączenia dysku wyposażonego w interfejs SAS należy zastosować kabel pokazany na rysunku"
+    },
+    {
+        "id": 1024,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Atak komputerowy przeprowadzony równocześnie z wielu komputerów w sieci, polegający na uniemożliwieniu działania systemu komputerowego poprzez zajęcie wszystkich wolnych zasobów, nosi nazwę"
+    },
+    {
+        "id": 1025,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Dodatkowa funkcja mikroprocesora Intel Turbo Boost pozwala na"
+    },
+    {
+        "id": 1026,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Prawo do modyfikowania kodu oprogramowania przez jego użytkownika daje licencja typu"
+    },
+    {
+        "id": 1027,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które polecenie systemu operacyjnego Linux pozwala sprawdzić aktualną konfigurację interfejsu sieciowego komputera?"
+    },
+    {
+        "id": 1028,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1028.jpg",
+        "tresc": "Rysunek przedstawia panel konfiguracyjny bezprzewodowego urządzenia dostępowego, który umożliwia"
+    },
+    {
+        "id": 1029,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Zgodnie z normą PN-EN 50174 maksymalna długość przebiegu kabla poziomego kategorii 6 pomiędzy punktem abonenckim a punktem dystrybucyjnym w panelu krosowym wynosi"
+    },
+    {
+        "id": 1030,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Zgodnie z KNR (katalogiem nakładów rzeczowych) montaż na skrętce 4-parowej modułu RJ45 i złącza krawędziowego to 0,07 r-g, montaż gniazd abonenckich natynkowych to 0,30 r-g. Jaki będzie koszt robocizny zamontowania 10 pojedynczych gniazd natynkowych z modułami RJ45, jeżeli stawka godzinowa montera-instalatora wynosi 20,00 zł?"
+    },
+    {
+        "id": 1031,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wskaż poprawną postać maski"
+    },
+    {
+        "id": 1032,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Cechą charakterystyczną wirusów polimorficznych jest to, że"
+    },
+    {
+        "id": 1033,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W hurtowni materiałów budowlanych istnieje konieczność jednoczesnego drukowania faktur w kilku egzemplarzach. Należy użyć drukarki"
+    },
+    {
+        "id": 1034,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaka jest kolejność we wtyku RJ-45 zgodnie z normą TIA/EIA-568 dla zakończenia typu T568B?"
+    },
+    {
+        "id": 1035,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Liczba 10011001100 zapisana w postaci heksadecymalnej ma postać"
+    },
+    {
+        "id": 1036,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1036.jpg",
+        "tresc": "Które narzędzie najlepiej wykorzystać do lekkiego odgięcia blachy obudowy komputera oraz zamocowania śruby montażowej w trudno dostępnym miejscu?"
+    },
+    {
+        "id": 1037,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Suma liczb binarnych 1010 + 111 zapisana w systemie dziesiętnym wyniesie"
+    },
+    {
+        "id": 1038,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jakie powinno być rozmieszczenie gniazd komputerowych RJ45 w stosunku do powierzchni biurowej zgodnie z normą PN-EN 50174?"
+    },
+    {
+        "id": 1039,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Urządzenie komputerowe, które bezwzględnie powinno być podłączone do sieci za pośrednictwem UPS, to"
+    },
+    {
+        "id": 1040,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które polecenie w systemie Windows przeznaczonym dla stacji roboczej, służy do ustawienia wymagań dotyczących logowania dla wszystkich kont użytkowników tej stacji roboczej"
+    },
+    {
+        "id": 1041,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Administrator musi podzielić adres 10.0.0.0/16 na 4 równe podsieci o tej samej liczbie hostów. Jaką maskę będą miały te podsieci?"
+    },
+    {
+        "id": 1042,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jeżeli na danej przestrzeni będą działały równocześnie dwie sieci WLAN standardy 802.11g, to aby wyeliminować możliwość wzajemnych zakłóceń należy im przydzielić kanały o numerach różniących się o"
+    },
+    {
+        "id": 1043,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Watomierz jest stosowany do pomiaru"
+    },
+    {
+        "id": 1044,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do sprawdzenia adresów MAC komputerów podłączonych do przełącznika, można użyć polecenia"
+    },
+    {
+        "id": 1045,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemach Windows w celu ustalenia, gdzie w sieci zatrzymał się pakiet używa się komendy"
+    },
+    {
+        "id": 1046,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W drukarce laserowej do utrwalenia na kartce wydruku wykorzystuje się"
+    },
+    {
+        "id": 1047,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Programem służącym do archiwizacji danych w systemie Linux jest"
+    },
+    {
+        "id": 1048,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Oprogramowanie regularnie przerywające działanie poprzez wyświetlenie komunikatu żądania uiszczenia zapłaty, która spowoduje usunięcie tego komunikatu, jest rozpowszechniane na bazie licencji"
+    },
+    {
+        "id": 1049,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1049.jpg",
+        "tresc": "Który z podzespołów komputera przy wyłączonym zasilaniu przechowuje program rozpoczynający ładowanie systemu operacyjnego?"
+    },
+    {
+        "id": 1050,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Stacja robocza ma należeć do tej samej podsieci co serwer o adresie IP 192.168.10.150 i masce 255.255.255.192. Który z adresów IP należy ustawić we właściwościach protokołu TCP/IP karty sieciowej stacji roboczej?"
+    },
+    {
+        "id": 1051,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Program Mozilla Firefox jest rozpowszechniany na podstawie licencji"
+    },
+    {
+        "id": 1052,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby zapobiec nieautoryzowanym zmianom na koncie użytkownika w systemie Windows 7, 8 lub 10 wymagającym uprawnień administratora, należy skonfigurować"
+    },
+    {
+        "id": 1053,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Rolą routera jest"
+    },
+    {
+        "id": 1054,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1054.jpg",
+        "tresc": "Zdjęcie przedstawia"
+    },
+    {
+        "id": 1055,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która wersja systemu operacyjnego Windows Server 2008 posiada najbardziej okrojony interfejs graficzny"
+    },
+    {
+        "id": 1056,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Adresem IPv6 autokonfiguracji łącza jest:"
+    },
+    {
+        "id": 1057,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaki będzie koszt wymiany karty sieciowej w komputerze, jeśli karta kosztuje 40 zł, jej wymiana zajmie pracownikowi serwisu 90 minut, a każda rozpoczęta roboczogodzina kosztuje 60 zł?"
+    },
+    {
+        "id": 1058,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Złącze IrDA do komunikacji bezprzewodowej jest"
+    },
+    {
+        "id": 1059,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Procesem nieodwracalnym, całkowicie uniemożliwiającym odzyskanie danych z dysku twardego, jest"
+    },
+    {
+        "id": 1060,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaką nazwę nosi rodzina procesorów firmy Intel, o niewielkich rozmiarach i małym poborze prądu, dedykowanych do zastosowań mobilnych?"
+    },
+    {
+        "id": 1061,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby przywrócić ustawienia domyślne płyty głównej w przypadku, gdy nie ma możliwości uruchomienia programu BIOS Setup, należy"
+    },
+    {
+        "id": 1062,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1062.jpg",
+        "tresc": "Który typ fizycznej topologii sieci komputerowej przedstawiono na rysunku?"
+    },
+    {
+        "id": 1063,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który protokół nie funkcjonuje w warstwie aplikacji modelu ISO/OSI?"
+    },
+    {
+        "id": 1064,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Układ RAMDAC"
+    },
+    {
+        "id": 1065,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z protokołów wykorzystuje porty 20 i 21?"
+    },
+    {
+        "id": 1066,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Ile par przewodów w standardzie 100Base-TX jest przeznaczonych do transmisji danych w obu kierunkach?"
+    },
+    {
+        "id": 1067,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1067.jpg",
+        "tresc": "Aby uzupełnić prawidłową składnię prezentowanego polecenia, które udostępnia folder Dane pod nazwą test, w miejscu kropek należy wpisać słowo"
+    },
+    {
+        "id": 1068,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z protokołów przekształca logiczne adresy IP na fizyczne adresy MAC stosowane w sieci Ethernet?"
+    },
+    {
+        "id": 1069,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1069.jpg",
+        "tresc": "Na rysunku przedstawiono tylny panel stacji roboczej. Strzałką oznaczono port"
+    },
+    {
+        "id": 1070,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "We wtyczce zasilania SATA został uszkodzony żółty przewód. Oznacza to, że złącze nie podaje napięcia o wartości"
+    },
+    {
+        "id": 1071,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które polecenie systemu operacyjnego Linux jest stosowane do śledzenia komunikacji pakietów TCP/IP lub protokołów transmitowanych lub odbieranych w sieci komputerowej, do komputerowej do której podłączony jest komputer użytkownika?"
+    },
+    {
+        "id": 1072,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1072.jpg",
+        "tresc": "W wyniku użycia narzędzia diagnostycznego chkdsk otrzymano informacje widoczne na zrzucie ekranu. Jaką wielkość posiada pojedynczy klaster dysku?"
+    },
+    {
+        "id": 1073,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaki jest największy adres IP w podsieci 196.10.20.0/26?"
+    },
+    {
+        "id": 1074,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Najkrótszy czas dostępu posiada"
+    },
+    {
+        "id": 1075,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby zapobiec wyładowaniom elektrostatycznym podczas wymiany podzespołów komputerowych, technik powinien zastosować"
+    },
+    {
+        "id": 1076,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Dziedziczenie uprawnień polega na:"
+    },
+    {
+        "id": 1077,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które pole jest zawarte w nagłówku protokołu UDP?"
+    },
+    {
+        "id": 1078,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Serwerowa płyta główna do poprawnego działania wymaga pamięci z rejestrem. Który z wymienionych modułów pamięci będzie kompatybilny z taką płytą"
+    },
+    {
+        "id": 1079,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Protokołem kontrolnym rodziny TCP/IP, którego rolą jest między innymi wykrywanie awarii urządzeń sieciowych, jest"
+    },
+    {
+        "id": 1080,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Specyfika pracy firmy wymaga posługiwania się systemami plików charakteryzujących się dużym bezpieczeństwem i możliwością szyfrowania danych. W tym celu należy zastosować system operacyjny Windows"
+    },
+    {
+        "id": 1081,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W technologii Ethernet 100BaseTX wymagane jest stosowanie skrętki"
+    },
+    {
+        "id": 1082,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która polska norma określa standardy okablowania strukturalnego?"
+    },
+    {
+        "id": 1083,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Dokumentacja powykonawcza projektowanej sieci LAN powinna między innymi zawierać"
+    },
+    {
+        "id": 1084,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Po sprawdzeniu komputera programem diagnostycznym wykryto, że temperatura pracy karty graficznej posiadającej wyjścia HDMI i D-SUB, osadzonej w gnieździe PCI Express komputera stacjonarnego, wynosi 87°C. W takim przypadku serwisant powinien"
+    },
+    {
+        "id": 1085,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który zapis jest postacią pełną maski o prefiksie 25?"
+    },
+    {
+        "id": 1086,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1086.jpg",
+        "tresc": "Przedstawiony stan ekranu terminala uzyskano w wyniku testu przeprowadzonego w systemie Windows. Pracownik serwisu uzyskał w ten sposób informację o:"
+    },
+    {
+        "id": 1087,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do wykonania w systemie Linux kopii zapasowej wybranych plików należy z wiersza poleceń zastosować program"
+    },
+    {
+        "id": 1088,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Adres IP v.4 ma długość"
+    },
+    {
+        "id": 1089,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które stwierdzenie dotyczące protokołu DHCP jest prawidłowe?"
+    },
+    {
+        "id": 1090,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Na płycie głównej uległa uszkodzeniu zintegrowana karta sieciowa. Komputer nie posiada dysku twardego ani żadnych innych napędów takich jak stacja dysków czy CD-ROM. Klient twierdzi, że w sieci firmowej komputery nie posiadają żadnych napędów i wszystko \"czyta\" się z serwera. W celu zapewnienia utraconej funkcjonalności należy zamontować"
+    },
+    {
+        "id": 1091,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wskaż nazwę usługi przełącznika, która umożliwi ustawienie wyższego priorytetu dla transmisji VoIP"
+    },
+    {
+        "id": 1092,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1092.jpg",
+        "tresc": "Na rysunku przedstawiono oprogramowanie monitorujące"
+    },
+    {
+        "id": 1093,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Ile par przewodów skrętki miedzianej kategorii 5e wykorzystuje się do przesyłu danych w standardzie sieci Ethernet 100Base-TX?"
+    },
+    {
+        "id": 1094,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Metoda dostępu do medium transmisyjnego z wykrywaniem kolizji w sieciach LAN jest"
+    },
+    {
+        "id": 1095,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1095.jpg",
+        "tresc": "Adres IP serwera, na którym jest zainstalowana domena www.wp.pl to 212.77.98.9. Co jest przyczyną sytuacji przedstawionej na zrzucie ekranowym?"
+    },
+    {
+        "id": 1096,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Urządzenie umożliwiające łączenie hostów jednej sieci z hostami w innych sieciach to"
+    },
+    {
+        "id": 1097,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W schemacie logicznym okablowania strukturalnego, zgodnie z terminologią polską zawartą w normie PN-EN 50174, właściwością kondygnacyjnego punktu dystrybucyjnego jest to, że"
+    },
+    {
+        "id": 1098,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Urządzeniem działającym w warstwie łącza danych, służącym do łączenia segmentów sieci o różnych architekturach, jest"
+    },
+    {
+        "id": 1099,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która przystawka w systemie Windows umożliwia sprawdzenie stanu sprzętu, aktualizację sterowników oraz rozwiązanie konfliktów urządzeń?"
+    },
+    {
+        "id": 1100,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1100.jpg",
+        "tresc": "Przedstawiony rysunek prezentuje złącze"
+    },
+    {
+        "id": 1101,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1101.jpg",
+        "tresc": "Na zdjęciu przedstawiono kość pamięci"
+    },
+    {
+        "id": 1102,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Z nośników optycznych największą pojemność ma płyta"
+    },
+    {
+        "id": 1103,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1103.jpg",
+        "tresc": "Ile domen kolizyjnych występuje w sieci pokazanej na rysunku?"
+    },
+    {
+        "id": 1104,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby uniknąć uszkodzenia układów scalonych, podczas naprawy sprzętu komputerowego należy stosować"
+    },
+    {
+        "id": 1105,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1105.jpg",
+        "tresc": "Który element szafy krosowniczej jest przedstawiony na rysunku?"
+    },
+    {
+        "id": 1106,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Karta dźwiękowa umożliwiająca odtworzenie pliku zapisanego w formacie MP3 powinna być wyposażona w układ"
+    },
+    {
+        "id": 1107,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W dwóch przyległych pomieszczeniach pewnej firmy występują bardzo silne zakłócenia elektromagnetyczne. Aby zapewnić możliwie największą przepustowość podczas pracy istniejącej sieci LAN, jako medium transmisyjne należy zastosować"
+    },
+    {
+        "id": 1108,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wykonanie polecenia NET USER GRACZ * /ADD zapisanego w wierszu poleceń Windows spowoduje"
+    },
+    {
+        "id": 1109,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Ile maksymalnie komputerów może być zaadresowanych w podsieci o adresie 192.168.1.0/25?"
+    },
+    {
+        "id": 1110,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Najskuteczniejszą metodą zabezpieczenia domowej sieci Wi-Fi jest"
+    },
+    {
+        "id": 1111,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Narzędzie System Image Recovery dostępne w zaawansowanych opcjach rozruchu systemu Windows 7 umożliwia"
+    },
+    {
+        "id": 1112,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Tester okablowania strukturalnego pozwala sprawdzić"
+    },
+    {
+        "id": 1113,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Rozgłaszaniem drukarek w sieci, kolejkowaniem zadań wydruku oraz przydzielaniem praw dostępu do drukarek zajmuje się serwer"
+    },
+    {
+        "id": 1114,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wynikiem dodawania liczb 33(8) oraz 71(8) jest liczba"
+    },
+    {
+        "id": 1115,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Skrót WAN oznacza"
+    },
+    {
+        "id": 1116,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Windows ustawienia bieżącego użytkownika komputera zapisane są w gałęzi rejestru o skróconej nazwie:"
+    },
+    {
+        "id": 1117,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która antena charakteryzuje się największym zyskiem energetycznym oraz umożliwia zestawienie połączenia na dużą odległość?"
+    },
+    {
+        "id": 1118,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby umożliwić wymianę danych pomiędzy siecią w pracowni, a siecią ogólnoszkolną o innej adresacji IP, należy wykorzystać"
+    },
+    {
+        "id": 1119,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1119.jpg",
+        "tresc": "Na rysunku przedstawiono symbol graficzny"
+    },
+    {
+        "id": 1120,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Numer IP zapisuje się w postaci czterech, oddzielonych od siebie kropkami"
+    },
+    {
+        "id": 1121,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Przed wykonaniem prac serwisowych związanych z modyfikacją rejestru systemu Windows należy wykonać"
+    },
+    {
+        "id": 1122,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Active Directory w systemach MS Windows Server 2000 i MS Windows Server 2003 to"
+    },
+    {
+        "id": 1123,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Urządzeniem, które zapewni ochronę przed wszelkiego rodzaju atakami z sieci i może pełnić inne dodatkowe funkcje, jak np. szyfrowanie przesyłanych danych czy automatyczne powiadamianie administratora systemu o włamaniu, jest"
+    },
+    {
+        "id": 1124,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1124.jpg",
+        "tresc": "Komputer K1 jest podłączony do interfejsu G0 rutera, komputer K2 do interfejsu G1 tego samego rutera. Na podstawie przedstawionej w tabelce adresacji ustal prawidłowy adres bramy komputera K2."
+    },
+    {
+        "id": 1125,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1125.jpg",
+        "tresc": "Narzędzie na zdjęciu służy do"
+    },
+    {
+        "id": 1126,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Pamięć podręczna określana jest nazwą"
+    },
+    {
+        "id": 1127,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wynikiem sumowania liczb binarnych 1001101 i 11001 jest"
+    },
+    {
+        "id": 1128,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Odnalezienie głównego rekordu rozruchowego, wczytującego system z aktywnej partycji umożliwia"
+    },
+    {
+        "id": 1129,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Przechowywanie kopii często odwiedzanych stron oraz zwiększenie bezpieczeństwa dzięki odfiltrowywaniu określonych zawartości stron sieci Web można uzyskać poprzez"
+    },
+    {
+        "id": 1130,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Linux polecenie cd ~ służy do"
+    },
+    {
+        "id": 1131,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby zainstalować system openSUSE i skonfigurować jego ustawienia, można wykorzystać narzędzie"
+    },
+    {
+        "id": 1132,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który przyrząd należy wybrać do pomiarów mapy połączeń okablowania strukturalnego sieci lokalnej?"
+    },
+    {
+        "id": 1133,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Impulsator umożliwia testowanie uszkodzonych układów logicznych komputera między innymi przez"
+    },
+    {
+        "id": 1134,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z rodzajów macierzy RAID oferuje tzw. mirroring dysków?"
+    },
+    {
+        "id": 1135,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Licencja Windows OEM nie pozwala na wymianę"
+    },
+    {
+        "id": 1136,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Przydzielaniem czasu procesora do określonych zadań zajmuje się"
+    },
+    {
+        "id": 1137,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1137.jpg",
+        "tresc": "Liczby 1001 oraz 100 w wierszu pliku /etc/passwd oznaczają"
+    },
+    {
+        "id": 1138,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1138.jpg",
+        "tresc": "Przedstawiony na rysunku wtyk (złącze męskie modularne) jest zakończeniem kabla"
+    },
+    {
+        "id": 1139,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1139.jpg",
+        "tresc": "Na rysunku przedstawiono urządzenie do"
+    },
+    {
+        "id": 1140,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Adres IP 158.75.60.16 należy do adresów"
+    },
+    {
+        "id": 1141,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Komputer pracujący w domenie Active Directory nie może połączyć się z kontrolerem domeny, na którym jest przechowywany profil użytkownika. Jaki typ profilu użytkownika zostanie utworzony na tym komputerze?"
+    },
+    {
+        "id": 1142,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Gniazdo LGA znajdujące się na płycie głównej komputera stacjonarnego umożliwia zainstalowanie procesora"
+    },
+    {
+        "id": 1143,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Zużyte kasety od drukarek należy"
+    },
+    {
+        "id": 1144,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1144.jpg",
+        "tresc": "Na rysunku przedstawiono wynik testu okablowania. Zinterpretuj wynik pomiaru."
+    },
+    {
+        "id": 1145,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który protokół zapewnia szyfrowane połączenia?"
+    },
+    {
+        "id": 1146,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Specjalny interfejs wizualny systemu Windows, którego cechą charakterystyczną jest przezroczystość przypominająca szkło oraz subtelne animacje okien, to"
+    },
+    {
+        "id": 1147,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Przy dłuższych przestojach drukarki atramentowej używane w niej pojemniki z tuszem powinny"
+    },
+    {
+        "id": 1148,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Którym poleceniem w systemie Linux można założyć uzytkowników?"
+    },
+    {
+        "id": 1149,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W celu bezpiecznego połączenia z serwerem firmowym przez Internet, tak aby mieć dostęp do zasobów firmowych, należy zastosować oprogramowanie klienta"
+    },
+    {
+        "id": 1150,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Podłączając drukarkę wyposażoną w złącze równoległe do komputera, który posiada tylko porty USB należy zainstalować adapter"
+    },
+    {
+        "id": 1151,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaki jest maksymalny rozmiar pojedynczego datagramu IPv4, którego wielkość liczona jest wraz z jego nagłówkiem?"
+    },
+    {
+        "id": 1152,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W przypadku zaschnięcia dyszy w drukarce atramentowej spowodowanych długimi przestojami należy w pierwszej kolejności"
+    },
+    {
+        "id": 1153,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Grupa, w której uprawnienia członków można przypisywać tylko w obrębie tej samej domeny, co domena nadrzędnej grupy lokalnej domeny, to grupa"
+    },
+    {
+        "id": 1154,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1154.jpg",
+        "tresc": "Który z symboli oznacza zastrzeżenie praw autorskich?"
+    },
+    {
+        "id": 1155,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Polecenie msconfig uruchamia w systemie Windows:"
+    },
+    {
+        "id": 1156,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z protokołów jest używany do wymiany informacji o trasach oraz dostępności sieci pomiędzy ruterami należącymi do tego samego systemu autonomicznego?"
+    },
+    {
+        "id": 1157,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1157.jpg",
+        "tresc": "Na zdjęciu przedstawiono kartę"
+    },
+    {
+        "id": 1158,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Koszt wydrukowania jednej strony tekstu wynosi 95 gr, natomiast koszt przygotowania jednej płyty CD to 1,54 zł. Jakie koszty poniesie firma, przygotowująca płytę z prezentacjami oraz 120 stronicowy poradnik?"
+    },
+    {
+        "id": 1159,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Sieć komputerowa jest złożona z 3 komputerów stacjonarnych i drukarki sieciowej, podłączonych kablem UTP do rutera o interfejsach 1 x WAN, 5 x LAN. Które urządzenie sieciowe umożliwi podłączenie kablem UTP dwóch kolejnych komputerów do tej sieci?"
+    },
+    {
+        "id": 1160,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1160.jpg",
+        "tresc": "Na urządzeniu zasilanym prądem stałym znajduje się przedstawione oznaczenie. Wynika z niego, że urządzenie pobiera moc około"
+    },
+    {
+        "id": 1161,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Narzędzie administracyjne wiersza polecenia umożliwiające testowanie i rozwiązywanie problemów z serwerami DNS to:"
+    },
+    {
+        "id": 1162,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które urządzenie należy wybrać do pomiarów mapy połączeń okablowania strukturalnego sieci lokalnej?"
+    },
+    {
+        "id": 1163,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Autorskie prawo osobiste twórcy do programu komputerowego"
+    },
+    {
+        "id": 1164,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1164.jpg",
+        "tresc": "Przedstawione w ramce parametry katalogowe dotyczą dysku twardego"
+    },
+    {
+        "id": 1165,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Firma otrzymała pulę adresów 10.10.10.0/16. Po wyodrębnieniu podsieci mających po 510 hostów otrzymano adresy podsieci z maską"
+    },
+    {
+        "id": 1166,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które medium transmisyjne zapewnia separację galwaniczną pomiędzy systemami transmisji danych?"
+    },
+    {
+        "id": 1167,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie operacyjnym Linux archiwizację danych wykonuje się poleceniem"
+    },
+    {
+        "id": 1168,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Podstawowy protokół używany do wyznaczenia trasy i wysyłania nią pakietu danych w sieci komputerowej to"
+    },
+    {
+        "id": 1169,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "System S.M.A.R.T przeznaczony jest do monitorowania pracy i wykrywania błędów"
+    },
+    {
+        "id": 1170,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1170.jpg",
+        "tresc": "W firmie zainstalowano pięć komputerów o adresach kart sieciowych podanych w tabeli. W związku z tym można wyróżnić"
+    },
+    {
+        "id": 1171,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Instalując system operacyjny Linux należy skorzystać z systemu plików"
+    },
+    {
+        "id": 1172,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby zapobiec występowaniu różnic w kolorach między zeskanowanymi zdjęciami wyświetlanymi na monitorze komputerowym a ich oryginałami, należy wykonać"
+    },
+    {
+        "id": 1173,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Przy wyborze zasilacza komputerowego największe znaczenie"
+    },
+    {
+        "id": 1174,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wskaż najbardziej prawdopodobną przyczynę wystąpienia komunikatu: CMOS checksum error press F1 to continue press DEL to setup przy uruchomieniu komputera"
+    },
+    {
+        "id": 1175,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W drukarce igłowej materiałem eksploatacyjnym jest"
+    },
+    {
+        "id": 1176,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Ile maksymalnie urządzeń można zaadresować w sieci o adresacji IPv4 klasy C?"
+    },
+    {
+        "id": 1177,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jak skonfigurować zaporę Windows, zachowując zasady bezpieczeństwa, aby za pomocą polecenia ping było możliwe sprawdzenie poprawności komunikacji z innymi urządzeniami pracującymi w sieci?"
+    },
+    {
+        "id": 1178,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "AC-72-89-17-6E-B2 to adres fizyczny karty sieciowej zapisany w postaci"
+    },
+    {
+        "id": 1179,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która licencja umożliwia bezpłatne wykorzystywanie programu, pod warunkiem, że użytkownik zatroszczy się o środowisko naturalne?"
+    },
+    {
+        "id": 1180,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Zastosowanie którego urządzenia może być przyczyną zwiększenia liczby kolizji pakietów w sieci?"
+    },
+    {
+        "id": 1181,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Materiałem eksploatacyjnym plotera solwentowego jest"
+    },
+    {
+        "id": 1182,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Zapisywanie kluczy rejestru do pliku nazywamy"
+    },
+    {
+        "id": 1183,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W dokumentacji systemu operacyjnego Windows XP opisane są pliki z rozszerzeniem .dll. Rozszerzenie to dotyczy pliku"
+    },
+    {
+        "id": 1184,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które urządzenie należy zastosować do podziału domeny rozgłoszeniowej?"
+    },
+    {
+        "id": 1185,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaka przepływność definiuje standard sieci Ethernet IEEE 802.3z"
+    },
+    {
+        "id": 1186,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który standard sieci LAN definiuje dostęp do medium na podstawie tokenu (żetonu)?"
+    },
+    {
+        "id": 1187,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W pomieszczeniu biurowym należy zainstalować 5 podwójnych gniazd abonenckich. Średnia odległość gniazda abonenckiego od lokalnego punktu dystrybucyjnego wynosi 10m. Jaki będzie przybliżony koszt zakupu kabla UTP kategorii 5e przeznaczonego do budowy sieci lokalnej, jeżeli cena brutto 1m kabla UTP kategorii 5e wynosi 1,60 zł?"
+    },
+    {
+        "id": 1188,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1188.jpg",
+        "tresc": "Użytkownik laptopa chce do niego podłączyć przedstawioną na rysunku kartę sieciową. Aby to było możliwe, laptop musi być wyposażony w gniazdo"
+    },
+    {
+        "id": 1189,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Pomiar tłumienia w kablowym torze transmisyjnym pozwala określić"
+    },
+    {
+        "id": 1190,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby można było przeprowadzić instalację sieciową na stacjach roboczych systemów operacyjnych z rodziny Windows należy na serwerze dodać usługi"
+    },
+    {
+        "id": 1191,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1191.jpg",
+        "tresc": "Którą maskę sieci należy zastosować dla sieci nr 1 i sieci nr 2, aby urządzenia o przedstawionych adresach mogły się komunikować w swoich sieciach?"
+    },
+    {
+        "id": 1192,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1192.jpg",
+        "tresc": "Rysunek przedstawia topologię"
+    },
+    {
+        "id": 1193,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Użytkownik chce tak zmodernizować komputer, aby działały na nim gry wymagające DirectX12. Jaki system operacyjny powinien zakupić do modernizowanego komputera, aby wspierał DX12?"
+    },
+    {
+        "id": 1194,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1194.jpg",
+        "tresc": "W tabeli zamieszczono podstawowe dane techniczne dwóch interfejsów. Wynika z nich, że SATA w porównaniu z ATA ma"
+    },
+    {
+        "id": 1195,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Ile bitów należy wyodrębnić z części hosta, aby z sieci o adresie IPv4 170.16.0.0/16 wydzielić 24 podsieci?"
+    },
+    {
+        "id": 1196,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które polecenie jest stosowane do monitorowania lokalnych połączeń?"
+    },
+    {
+        "id": 1197,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "DB-25 jest wykorzystywane jako złącze"
+    },
+    {
+        "id": 1198,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wskaż zdanie nieprawdziwe:"
+    },
+    {
+        "id": 1199,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1199.jpg",
+        "tresc": "Jakie narzędzie służy do mocowania pojedynczych żył kabla miedzianego w złączach?"
+    },
+    {
+        "id": 1200,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Podczas zamykania systemu operacyjnego na ekranie pojawił się błąd, tak zwany bluescreen 0x000000F3 Bug Check 0xF3 DISORDERLY_SHUTDOWN - niepowodzenie zamykania systemu, spowodowane brakiem pamięci. Błąd ten może wskazywać na"
+    },
+    {
+        "id": 1201,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który adres protokołu IP w wersji 4 ma prawidłową strukturę?"
+    },
+    {
+        "id": 1202,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemach operacyjnych Windows konto użytkownika, o największych uprawnieniach domyslnych, należy do grupy"
+    },
+    {
+        "id": 1203,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1203.jpg",
+        "tresc": "Pokazany na rysunku symbol graficzny oznacza złącze"
+    },
+    {
+        "id": 1204,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1204.jpg",
+        "tresc": "Jak nazywa się port panelu tylnego komputera zamieszczony na rysunku?"
+    },
+    {
+        "id": 1205,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z podanych adresów IP nie jest adresem prywatnym?"
+    },
+    {
+        "id": 1206,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Windows za pomocą polecenia assoc można"
+    },
+    {
+        "id": 1207,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z protokołów przesyła datagramy użytkownika NIE GWARANTUJĄC ich dostarczenia?"
+    },
+    {
+        "id": 1208,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do utworzenia woluminu RAID 5 w serwerze potrzeba minimum"
+    },
+    {
+        "id": 1209,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jeżeli w komórce arkusza kalkulacyjnego MS Excel, zamiast cyfr pojawiają się znaki ########, to należy przede wszystkim sprawdzić, czy"
+    },
+    {
+        "id": 1210,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Programem, który dostarcza najwięcej informacji diagnostycznych o procesorze CPU, jest"
+    },
+    {
+        "id": 1211,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która norma dotyczy okablowania strukturalnego?"
+    },
+    {
+        "id": 1212,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1212.jpg",
+        "tresc": "Symbol graficzny odnosi się do standardu urządzeń"
+    },
+    {
+        "id": 1213,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1213.jpg",
+        "tresc": "W przedstawionej na schemacie płycie głównej zasilanie należy podłączyć do złącza oznaczonego numerem"
+    },
+    {
+        "id": 1214,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które z podanych oznaczeń określa, że jest to kabel typu skrętka posiadający podwójne ekranowanie?"
+    },
+    {
+        "id": 1215,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Największą szybkość transmisji danych w sieci bezprzewodowej uzyska się stosując urządzenia standardu"
+    },
+    {
+        "id": 1216,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1216.jpg",
+        "tresc": "Rysunek przedstawia symbol graficzny"
+    },
+    {
+        "id": 1217,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do interfejsów równoległych zaliczany jest interfejs"
+    },
+    {
+        "id": 1218,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Urządzenie sieciowe most (ang. bridge):"
+    },
+    {
+        "id": 1219,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Liczba 22 użyta w adresie http://www.adres_serwera.pl:22 oznacza numer"
+    },
+    {
+        "id": 1220,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1220.jpg",
+        "tresc": "Na zdjęciu przedstawiono"
+    },
+    {
+        "id": 1221,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Wskaż prawidłową postać maski podsieci"
+    },
+    {
+        "id": 1222,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Skaner antywirusowy wykrył niepożądane oprogramowanie. Z opisu wynika, że jest to dialer, który pozostawiony w systemie"
+    },
+    {
+        "id": 1223,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby zapisać 10 GB danych na jednej płycie DVD, należy użyć nośnika typu"
+    },
+    {
+        "id": 1224,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Którym poleceniem w systemie Linux przypisuje się adres IP i maskę podsieci dla interfejsu eth0?"
+    },
+    {
+        "id": 1225,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1225.jpg",
+        "tresc": "Przedstawiona na rysunku topologia sieci to"
+    },
+    {
+        "id": 1226,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby chronić komputery w sieci lokalnej przed nieautoryzowanym dostępem oraz atakami typu DoS należy zainstalować i skonfigurować"
+    },
+    {
+        "id": 1227,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Drugi monitor CRT podłączony do zestawu komputerowego służy do"
+    },
+    {
+        "id": 1228,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który zestaw protokołów jest charakterystyczny dla warstwy internetowej modelu TCP/IP?"
+    },
+    {
+        "id": 1229,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do śledzenia trasy datagramu IP do punktu docelowego służy polecenie"
+    },
+    {
+        "id": 1230,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która usługa serwerowa zapewnia automatyczną konfigurację parametrów sieciowych stacji roboczych?"
+    },
+    {
+        "id": 1231,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Serwerem DNS w systemie Linux jest"
+    },
+    {
+        "id": 1232,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Windows do instalacji aktualizacji oraz przywracania sterowników urządzeń należy użyć przystawki"
+    },
+    {
+        "id": 1233,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaki jest adres rozgłoszeniowy sieci o adresie IP 192.168.10.0/24?"
+    },
+    {
+        "id": 1234,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1234.jpg",
+        "tresc": "Która fizyczna topologia sieci komputerowej jest przedstawiona na rysunku?"
+    },
+    {
+        "id": 1235,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do sporządzenia projektu sieci komputerowej dla budynku szkoły najlepiej wykorzystać edytor grafiki wektorowej, którym jest program"
+    },
+    {
+        "id": 1236,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Poprawność działania pamięci operacyjnej RAM można sprawdzić za pomocą programu diagnostycznego"
+    },
+    {
+        "id": 1237,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1237.jpg",
+        "tresc": "Urządzeniem sieciowym przedstawionym na schemacie sieci jest"
+    },
+    {
+        "id": 1238,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1238.jpg",
+        "tresc": "Jaki rodzaj transmisji danych przesyłanych przez interfejs komputera osobistego został przedstawiony na rysunku?"
+    },
+    {
+        "id": 1239,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Kod kontroli cyklicznej odpowiadający za korekcję błędów i weryfikację poprawności danych otrzymywanych przez stację docelową nosi nazwę:"
+    },
+    {
+        "id": 1240,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1240.jpg",
+        "tresc": "Które urządzenie diagnostyczne jest przedstawione na rysunku i opisane w specyfikacji przedstawionej w tabeli?"
+    },
+    {
+        "id": 1241,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Oprogramowanie komputerowe, z którego można korzystać za darmo i bez ograniczeń czasowych, rozpowszechniane jest w ramach licencji typu"
+    },
+    {
+        "id": 1242,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W modelu hierarchicznym sieci, komputery użytkowników są elementami warstwy"
+    },
+    {
+        "id": 1243,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Prefetching to"
+    },
+    {
+        "id": 1244,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który zapis adresu IPv4 wraz z maską jest błędny?"
+    },
+    {
+        "id": 1245,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Przerywając pracę na komputerze zachowujemy możliwości szybkiego powrotu do pracy po wybraniu w systemie Windows opcji:"
+    },
+    {
+        "id": 1246,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Licencja na Office 365 PL Personal (1 stanowisko, subskrypcja na 1 rok) ESD jest przypisana do"
+    },
+    {
+        "id": 1247,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1247.jpg",
+        "tresc": "Montaż przedstawionej karty graficznej będzie możliwy na płycie głównej wyposażonej w złącze"
+    },
+    {
+        "id": 1248,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1248.jpg",
+        "tresc": "Ikona z wykrzyknikiem przedstawiona na rysunku, która występuje przy nazwie urządzenia w Menedżerze urządzeń, oznacza, że urządzenie to"
+    },
+    {
+        "id": 1249,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która czynność doprowadzi do nieodwracalnej utraty danych, w przypadku uszkodzenia systemu plików?"
+    },
+    {
+        "id": 1250,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Numer przerwania przydzielony dla karty sieciowej został przedstawiony w postaci binarnej jako liczba 10101. Jaka to liczba dziesiętna?"
+    },
+    {
+        "id": 1251,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby możliwe było przesyłanie cyfrowego sygnału audio i wideo bez strat jakości z komputera do urządzenia zewnętrznego podłączonego do wyjścia karty graficznej, to karta graficzna powinna być wyposażona w interfejs"
+    },
+    {
+        "id": 1252,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1252.jpg",
+        "tresc": "Zdjęcie przedstawia 168-stykową pamięć"
+    },
+    {
+        "id": 1253,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Mapowanie dysków jest"
+    },
+    {
+        "id": 1254,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1254.jpg",
+        "tresc": "Na podstawie informacji z \"Właściwości systemu\" można wywnioskować, że na komputerze jest zainstalowana fizycznie pamięć RAM o pojemności"
+    },
+    {
+        "id": 1255,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Co jest przyczyną pojawienia się na ekranie komputera komunikatu, że system wykrył konflikt adresów IP?"
+    },
+    {
+        "id": 1256,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Monitor wydajności i niezawodności w systemie Windows jest uruchamiany za pomocą przystawki"
+    },
+    {
+        "id": 1257,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Po uruchomieniu komputera pojawił się komunikat: Non-system disk or disk error. Replace and strike any key when ready. Przyczyną może być"
+    },
+    {
+        "id": 1258,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które oznaczenie określa normę dotyczącą okablowania strukturalnego?"
+    },
+    {
+        "id": 1259,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Standard ACPI BIOSu komputera odpowiada za"
+    },
+    {
+        "id": 1260,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W dokumentacji płyty głównej jest informacja „Wsparcie dla S/PDIF Out”. Oznacza to, że dana płyta główna zawiera"
+    },
+    {
+        "id": 1261,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Adresem rozgłoszeniowym sieci, w której pracuje host o adresie IP 195.120.252.32 i masce podsieci 255.255.255.192 jest"
+    },
+    {
+        "id": 1262,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Z jakiego systemu plików należy skorzystać instalując Linuxa, by mieć możliwość definiowania uprawnień do plików i folderów?"
+    },
+    {
+        "id": 1263,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do zabezpieczenia systemów sieciowych przed atakami z zewnątrz należy użyć"
+    },
+    {
+        "id": 1264,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Program służący do diagnozy komputera wyświetlił komunikat NIC ERROR. Komunikat ten oznacza awarię karty"
+    },
+    {
+        "id": 1265,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1265.jpg",
+        "tresc": "Wskaż znak umieszczany na urządzeniach elektrycznych przeznaczonych do obrotu i sprzedaży w Unii Europejskiej"
+    },
+    {
+        "id": 1266,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Mechanizm umożliwiający podłączenie urządzeń peryferyjnych współpracujących z systemem komputerowym, w którym podłączane urządzenie jest rozpoznawane za pomocą nadanego mu numeru identyfikacyjnego, to"
+    },
+    {
+        "id": 1267,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1267.jpg",
+        "tresc": "Na rysunku przedstawiono schemat zasady działania"
+    },
+    {
+        "id": 1268,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Użytkownik notebooka chce w jego wnętrzu zamontować drugi dysk twardy. Notebook jest wyposażony tylko w jedną zatokę dla HDD. Rozwiązaniem tego problemu może być wykorzystanie dysku wyposażonego w interfejs"
+    },
+    {
+        "id": 1269,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "IMAP jest protokołem"
+    },
+    {
+        "id": 1270,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Przerzutnik bistabilny przechowuje bit informacji w pamięci"
+    },
+    {
+        "id": 1271,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W celu zwiększenia niezawodności oraz wydajności transmisji danych na serwerze należy"
+    },
+    {
+        "id": 1272,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby zapobiec utracie danych w programie do prowadzenia ewidencji uczniów, należy po zakończeniu pracy każdego dnia wykonać"
+    },
+    {
+        "id": 1273,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Usługa o nazwie: \"Pulpit zdalny\" domyślnie działa na porcie"
+    },
+    {
+        "id": 1274,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby poprawić wydajność komputera, można w nim zamontować procesor obsługujący technologię Hyper-Threading, umożliwiającą"
+    },
+    {
+        "id": 1275,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1275.jpg",
+        "tresc": "Który typ pamięci należy umieścić na płycie głównej komputera w miejscu wskazanym strzałką?"
+    },
+    {
+        "id": 1276,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1276.jpg",
+        "tresc": "Zgodnie z normą PN-EN 50174 dopuszczalna łączna długość kabla połączeniowego pomiędzy punktem abonenckim a komputerem i kabla krosowniczego (A+C) wynosi"
+    },
+    {
+        "id": 1277,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Zjawisko przesłuchu, występujące w sieciach komputerowych, polega na"
+    },
+    {
+        "id": 1278,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która z grup w systemie Windows Serwer posiada najmniejsze uprawnienia?"
+    },
+    {
+        "id": 1279,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Maksymalny transfer danych napędu CD dla prędkości przesyłu x42 wynosi"
+    },
+    {
+        "id": 1280,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Udostępnianie linuksowych usług drukowania oraz serwera plików stacjom roboczym Windows, OS X, Linux umożliwia serwer"
+    },
+    {
+        "id": 1281,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Kopię danych w systemie Linux można wykonać za pomocą polecenia"
+    },
+    {
+        "id": 1282,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1282.jpg",
+        "tresc": "Na rysunku przedstawiającym budowę drukarki, w której nierównomiernie podawany jest toner na bęben, należy wymienić wałek magnetyczny, który jest oznaczony numerem"
+    },
+    {
+        "id": 1283,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Konfiguracja usług na serwerze realizowana jest poprzez"
+    },
+    {
+        "id": 1284,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W dokumentacji powykonawczej fizycznej i logicznej struktury sieci lokalnej musi znajdować się"
+    },
+    {
+        "id": 1285,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który system plików należy wybrać podczas instalacji systemu Linux?"
+    },
+    {
+        "id": 1286,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W okablowaniu strukturalnym opartym na skrętce UTP kat. 6, należy stosować gniazda sieciowe typu"
+    },
+    {
+        "id": 1287,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do automatycznego przydzielania adresów IP stacjom roboczym jest stosowana usługa"
+    },
+    {
+        "id": 1288,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1288.jpg",
+        "tresc": "W systemie Windows do uruchomienia przedstawionego narzędzia należy użyć polecenia"
+    },
+    {
+        "id": 1289,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z interfejsów jest interfejsem równoległym?"
+    },
+    {
+        "id": 1290,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który protokół wykorzystują komputery do powiadomienia rutera o członkostwie w danej grupie rozgłoszeniowej?"
+    },
+    {
+        "id": 1291,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Protokołem odpowiedzialnym za wykrywanie i eliminowanie kolizji w sieciach Ethernet jest"
+    },
+    {
+        "id": 1292,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które protokoły są protokołami warstwy transportowej modelu ISO/OSI?"
+    },
+    {
+        "id": 1293,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Interfejsem wewnętrznym komputera jest"
+    },
+    {
+        "id": 1294,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1294.jpg",
+        "tresc": "Który port na przedstawionej płycie umożliwia podłączenie zewnętrznego dysku poprzez interfejs e-SATA?"
+    },
+    {
+        "id": 1295,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z adresów stacji roboczej jest adresem klasy C?"
+    },
+    {
+        "id": 1296,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Przydzielaniem numerów IP w sieci zajmuje się serwer"
+    },
+    {
+        "id": 1297,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1297.jpg",
+        "tresc": "W tabeli zamieszczono dane katalogowe procesora AMD Athlon 1333 Model 4 Thunderbird. Z jaką częstotliwością realizowane są przesłania międzyrejestrowe?"
+    },
+    {
+        "id": 1298,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do wyświetlania zawartości katalogu w systemie Linux służy polecenie:"
+    },
+    {
+        "id": 1299,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który protokół jest wykorzystywany do przesyłania plików bez nawiązania połączenia?"
+    },
+    {
+        "id": 1300,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1300.jpg",
+        "tresc": "Na załączonym rysunku przedstawiono operację"
+    },
+    {
+        "id": 1301,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który protokół warstwy aplikacji jest stosowany do zarządzania urządzeniami sieciowymi za pośrednictwem sieci?"
+    },
+    {
+        "id": 1302,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Scandisk to program, który stosuje się do"
+    },
+    {
+        "id": 1303,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby blokować i usuwać szkodliwe oprogramowanie typu exploit, robaki oraz trojany, należy zainstalować oprogramowanie"
+    },
+    {
+        "id": 1304,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która z wymienionych cech kabla koncentrycznego RG-58 spowodowała, że nie jest on obecnie wykorzystywany do budowy lokalnych sieci komputerowych?"
+    },
+    {
+        "id": 1305,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby zwiększyć bezpieczeństwo zasobów sieciowych administrator sieci komputerowej w firmie otrzymał polecenie podzielenia istniejącej lokalnej sieci komputerowej na 16 podsieci. Dotychczasowa sieć miała adres IP 192.168.20.0 z maską 255.255.255.0. Którą maskę sieci powinien zastosować administrator?"
+    },
+    {
+        "id": 1306,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jednoczesne zwiększenie szybkości operacji (zapis/odczyt) i bezpieczeństwa przechowywania danych umożliwia macierz dyskowa"
+    },
+    {
+        "id": 1307,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "fps (ang. frames per second) bezpośrednio odnosi się do"
+    },
+    {
+        "id": 1308,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który sterownik drukarki jest niezależny od urządzenia i systemu operacyjnego oraz jest standardem w urządzeniach poligraficznych?"
+    },
+    {
+        "id": 1309,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Administrator chce udostępnić w sieci trzem użytkownikom należącym do grupy Serwisanci tylko folder C:instrukcje. Które z rozwiązań powinien zastosować?"
+    },
+    {
+        "id": 1310,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który typ routingu najlepiej zastosować w rozbudowanych, szybko zmieniających się sieciach?"
+    },
+    {
+        "id": 1311,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do dynamicznej obsługi sprzętu w Linuxie jest stosowany system"
+    },
+    {
+        "id": 1312,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1312.jpg",
+        "tresc": "Na rysunku przedstawiono fragment dokumentacji technicznej płyty głównej GA-K8NF-9-RH rev. 2.x. Wynika z niej, że maksymalna liczba możliwych do zamontowania kart rozszerzeń (pomijając interfejs USB) wynosi"
+    },
+    {
+        "id": 1313,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Odpowiednikiem maski 255.255.252.0 jest prefiks"
+    },
+    {
+        "id": 1314,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jakie połączenie z Internetem można udostępniać sieci lokalnej?"
+    },
+    {
+        "id": 1315,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Które karty sieciowe o podanych adresach MAC zostały wyprodukowane przez tego samego producenta?"
+    },
+    {
+        "id": 1316,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "User Datagram Protocol (UDP) jest protokołem"
+    },
+    {
+        "id": 1317,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1317.jpg",
+        "tresc": "Które złącze na tylnym panelu komputera oznaczane jest przedstawionym symbolem graficznym?"
+    },
+    {
+        "id": 1318,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby w systemie Windows przydzielić użytkownikowi prawo do zmiany czasu systemowego, należy użyć przystawki"
+    },
+    {
+        "id": 1319,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1319.jpg",
+        "tresc": "W dokumentacji technicznej procesora producent umieścił wyniki testu przeprowadzonego za pomocą programu CPU-Z. Wynika z niego, że procesor ma"
+    },
+    {
+        "id": 1320,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Symulowanie stanów logicznych obwodów cyfrowych umożliwia"
+    },
+    {
+        "id": 1321,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Użytkownik systemu Windows otrzymuje komunikaty o zbyt małej pamięci wirtualnej. Problem ten można rozwiązać przez"
+    },
+    {
+        "id": 1322,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Programem służącym do diagnozowania połączeń między hostami w systemie Windows jest"
+    },
+    {
+        "id": 1323,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Elementem eksploatacyjnym drukarki laserowej NIE JEST"
+    },
+    {
+        "id": 1324,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby podłączyć kasę fiskalną wyposażoną w złącze komunikacyjne DB-9M do komputera stacjonarnego, należy zastosować przewód"
+    },
+    {
+        "id": 1325,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W czasie przeprowadzania procedury POST na ekranie pojawia się komunikat \"CMOS Battery State Low\". Co w takiej sytuacji należy zrobić, aby komunikat nie pojawił się w przyszłości"
+    },
+    {
+        "id": 1326,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Grupowa licencja oprogramowania Microsoft to licencja typu"
+    },
+    {
+        "id": 1327,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Karta sieciowa standardu Fast Ethernet pozwala na transfer danych z maksymalną szybkością"
+    },
+    {
+        "id": 1328,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Dane z dysku twardego HDD z uszkodzonym sterownikiem silnika SM można odzyskać"
+    },
+    {
+        "id": 1329,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Protokołem wysyłania poczty elektronicznej jest"
+    },
+    {
+        "id": 1330,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Narzędziem systemu Linux, służącym do monitorowania systemu przy pomocy scentralizowanego mechanizmu, jest program"
+    },
+    {
+        "id": 1331,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby utworzyć bezpieczny wirtualny tunel między dwoma komputerami podłączonymi do Internetu, należy zastosować technologię"
+    },
+    {
+        "id": 1332,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do aktualizacji systemów Linux można wykorzystać programy"
+    },
+    {
+        "id": 1333,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jakie polecenie w systemach Windows/Linux jest zwyczajowo stosowane do śledzenia trasy pakietów w sieciach IP?"
+    },
+    {
+        "id": 1334,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1334.jpg",
+        "tresc": "Wynik działania polecenia ls -l użytego w systemie Linux przedstawia rysunek"
+    },
+    {
+        "id": 1335,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który protokół umożliwia bezpieczne połączenie klienta z zachowaniem jego prywatności ze stroną internetową banku?"
+    },
+    {
+        "id": 1336,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Gorące podłączenie (hot-plug) oznacza, że podłączane urządzenie jest"
+    },
+    {
+        "id": 1337,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Narzędzie systemów z rodziny Windows tracert jest stosowane do"
+    },
+    {
+        "id": 1338,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby bezprzewodowo połączyć mysz z komputerem, należy użyć interfejsu"
+    },
+    {
+        "id": 1339,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1339.jpg",
+        "tresc": "Przycisk umieszczony na obudowie rutera, którego opis znajduje się w ramce, jest stosowany w celu"
+    },
+    {
+        "id": 1340,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaką rozdzielczość musi obsługiwać karta graficzna, aby oglądać na 23-calowym monitorze materiał video w trybie Full HD?"
+    },
+    {
+        "id": 1341,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Liczba 356 zapisana w systemie dwójkowym to"
+    },
+    {
+        "id": 1342,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do konfiguracji interfejsu sieciowego w systemie Linux służy polecenie"
+    },
+    {
+        "id": 1343,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z sieciowych systemów operacyjnych jest udostępniany na licencji GNU?"
+    },
+    {
+        "id": 1344,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1344.jpg",
+        "tresc": "Za pomocą przedstawionego na rysunku urządzenia można przetestować działanie"
+    },
+    {
+        "id": 1345,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Program typu recovery, w warunkach domowych, pozwala na odzyskanie danych z dysku twardego w przypadku"
+    },
+    {
+        "id": 1346,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do konfiguracji i personalizacji środowiska graficznego GNOME w różnych systemach Linux należy wykorzystać program"
+    },
+    {
+        "id": 1347,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Pierwszą usługą instalowaną na serwerze jest usługa domenowa w usłudze Active Directory. Podczas instalacji kreator automatycznie wyświetli monit o konieczności zainstalowania usługi serwera"
+    },
+    {
+        "id": 1348,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Szkodliwe samoreplikujące się programy komputerowe wykorzystujące luki w systemie operacyjnym, które potrafią uzupełniać i zmieniać swoją funkcjonalność to"
+    },
+    {
+        "id": 1349,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Recykling można określić jako"
+    },
+    {
+        "id": 1350,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W systemie Linux wyświetlenie informacji o uruchomionych procesach umożliwia polecenie"
+    },
+    {
+        "id": 1351,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Dostarczanie nieprawidłowych napięć do płyty głównej może prowadzić do"
+    },
+    {
+        "id": 1352,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaki rodzaj tablicy partycji należy wybrać, aby utworzyć na dysku twardym partycję o wielkości 3TB?"
+    },
+    {
+        "id": 1353,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który protokół jest wykorzystywany do transmisji danych w warstwie transportowej modelu ISO/OSI?"
+    },
+    {
+        "id": 1354,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Po instalacji z domyślnymi ustawieniami system Windows XP NIE OBSŁUGUJE systemu plików"
+    },
+    {
+        "id": 1355,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do sprawdzenia indeksu stabilności systemu Windows Server należy wykorzystać narzędzie"
+    },
+    {
+        "id": 1356,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Podstawową funkcją serwera FTP jest"
+    },
+    {
+        "id": 1357,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jednym ze sposobów utrudnienia osobom niepowołanym dostępu do sieci bezprzewodowej jest"
+    },
+    {
+        "id": 1358,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1358.jpg",
+        "tresc": "Informacje przedstawione na rysunku są wynikiem działania polecenia"
+    },
+    {
+        "id": 1359,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Który z trybów nie jest dostępny dla narzędzia lupa w systemie Windows?"
+    },
+    {
+        "id": 1360,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Aby wstrzymać działanie programu zapisanego w pliku wsadowym Windows, do momentu naciśnięcia dowolnego klawisza należy użyć komendy"
+    },
+    {
+        "id": 1361,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "W której technologii budowy projektorów wykorzystywany jest system mikroskopijnych luster, z których każde odpowiada 1 pikselowi wyświetlanego obrazu?"
+    },
+    {
+        "id": 1362,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Do bezpośredniego połączenia ze sobą dwóch komputerów w przewodowej sieci LAN należy użyć"
+    },
+    {
+        "id": 1363,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Urządzeniem stosowanym do przekształcania otrzymanych ramek w sygnały, które później są przesyłane w obrębie sieci komputerowej, jest"
+    },
+    {
+        "id": 1364,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Z jaką najniższą efektywną częstotliwością taktowania mogą współpracować pamięci DDR2?"
+    },
+    {
+        "id": 1365,
+        "id_dzial": 2,
+        "image": "images_dzial2/pytanie1365.jpg",
+        "tresc": "Który przyrząd jest narzędziem stosowanym do ściągania izolacji?"
+    },
+    {
+        "id": 1366,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Po instalacji z domyślnymi ustawieniami system Windows XP nie obsługuje systemu plików"
+    },
+    {
+        "id": 1367,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Która tablica partycji umożliwia utworzenie do 128 partycji podstawowych na jednym dysku?"
+    },
+    {
+        "id": 1368,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Instalowanie w systemie operacyjnym Windows Server usługi Active Directory wymaga wcześniejszego zainstalowania i skonfigurowania serwera"
+    },
+    {
+        "id": 1369,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Jaką rolę serwera z rodziny Windows Server należy dodać, aby serwer realizował usługi rutingu?"
+    },
+    {
+        "id": 1370,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Lokalnej podsieci komputerowej nadano adres IP 172.16.10.0/24. Komputer1 ma adres IP 172.16.0.10, komputer2 - 172.16.10.100, a komputer3 - 172.16.255.20. Który z komputerów należy do tej podsieci?"
+    },
+    {
+        "id": 1371,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Urządzenie peryferyjne sterowane za pomocą komputera, stosowane do pracy z płaskimi powierzchniami wielkoformatowymi, które do tworzenia wydruku odpornego na czynniki zewnętrzne wykorzystuje farby na bazie rozpuszczalników, to ploter"
+    },
+    {
+        "id": 1372,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Ile bitów ma adres logiczny IPv6?"
+    },
+    {
+        "id": 1373,
+        "id_dzial": 2,
+        "image": "",
+        "tresc": "Użytkownik komputera udostępnia publicznie posiadane pliki w sieci Internet. Prawa autorskie zostaną naruszone, gdy udostępni"
+    }
+]

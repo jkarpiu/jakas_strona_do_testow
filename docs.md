@@ -404,7 +404,7 @@ Głównym komponentem w środku którego wyświetlane są inne komponenty jest a
 - Możliwość oddania projektu z plikiem
 - Edytory typu office przy oddawaniu projektu (OnlyOffice?)
 - Możliwość zadania testu kilku grupom naraz
-- Więcej rodzajów pytań (otwarte, prawda i fałśz, połącz opcje)
+- Więcej rodzajów pytań (otwarte, prawda i fałsz, połącz opcje)
 - Możliwość ustawienia kolejności pytań
 - Wyświetlanie nadchodzących testów
 - Możliwość sprawdzenie swoich odpowiedzi z poziomu podstrony wyniki
