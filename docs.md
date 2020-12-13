@@ -2,7 +2,7 @@
 <br>
 <br>
 
-<h1>IPIES - dokumentacja techniczna </h1>
+<h1>IPIES.EDU.PL - dokumentacja techniczna </h1>
 
 ## Spis treści
 
@@ -397,16 +397,17 @@ Głównym komponentem w środku którego wyświetlane są inne komponenty jest a
 
 ## Todo naszego projektu
 - Lepsza walidacja formularzy
-- W pełni dziłające logowanie z Google
+- W pełni działające logowanie z Google
 - Załączniki do postów grupach
 - Możliwość zadawania zadań grupom
 - Możliwość oddania projektu z plikiem
 - Edytory typu office przy oddawaniu projektu (OnlyOffice?)
 - Możliwość zadania testu kilku grupom naraz
 - Więcej rodzajów pytań (otwarte, prawda i fałśz, połącz opcje)
-- Możliwwość utawienia kolejności pytań
+- Możliwość ustawienia kolejności pytań
 - Wyświetlanie nadchodzących testów
 - Możliwość sprawdzenie swoich odpowiedzi z poziomu podstrony wyniki
+- Typ zadania w którym można pisać kod (cos w stylu clash of code)
 
 ## Użyte paczki
 ### Front
