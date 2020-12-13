@@ -9,13 +9,13 @@
             <div id="background-image">
                 <div class="top-bar">
                     <p class="text">Na naszej stronie możesz rozwiązywać testy związane z IT. Oferujemy bogatą w pytania bazę danych, która składa się z arkuszy egzaminacyjnych z poprzednich lat.</p>
-                </div>
+                </div>  
                 <div class="logoszew">
-                <a @click="$router.push('/losowanie40_ee08')">
+                <a @click="$router.push('/losowanie40')">
                 <div class="przycisk" @click="test">
                     ROZWIĄŻ TEST
                 </div>
-                </a>
+                </a>      
                 </div>
             </div>
             <div id="background-image2">
@@ -27,8 +27,8 @@
                 <div class="przycisk">
                     KLASY
                 </div>
-                </a>
-                </div>
+                </a>     
+                </div>        
             </div>
             <div id="background-image3">
                 <div class="top-bar">
@@ -39,30 +39,30 @@
                 <div class="przycisk">
                     WYNIKI
                 </div>
-                </a>
+                </a>    
                 </div>
             </div>
             <div id="background-image4">
                 <div class="top-bar">
                     <p class="text">Załóż konto na ipies - jako nauczyciel lub uczeń. Dzięki temu możesz uporządkować swoją organizację pracy.</p>
-                </div>
+                </div>   
                 <div class="logoszew">
                     <div class="logoszew2">
                         <a @click="$router.push('/login')" >
                         <div class="przycisk">
                             LOGOWANIE
                         </div>
-                        </a>
+                        </a>  
                         <a @click="$router.push('/register')">
                         <div  class="przycisk">
                             REJESTRACJA
                         </div>
-                        </a>
+                        </a>  
                     </div>
-                </div>
+                </div>    
             </div>
         </vue-slick-carousel>
-
+         
     </div>
 </template>
 <script>
@@ -82,6 +82,9 @@ export default {
     },
     components: {VueSlickCarousel},
     methods: {
+        test: function(){
+            console.log("DD");
+        }
         }
 
     }
@@ -94,8 +97,8 @@ export default {
         background-repeat: no-repeat;
         background-size: cover;
         display: block;
-        position: relative;
-
+        position: relative;   
+        
     }
 
     #background-image2   {
@@ -104,7 +107,7 @@ export default {
         background-repeat: no-repeat;
         background-size: cover;
         display: block;
-        position: relative;
+        position: relative;   
     }
 
     #background-image3   {
@@ -113,7 +116,7 @@ export default {
         background-repeat: no-repeat;
         background-size: cover;
         display: block;
-        position: relative;
+        position: relative;   
     }
 
     #background-image4   {
@@ -122,9 +125,9 @@ export default {
         background-repeat: no-repeat;
         background-size: cover;
         display: block;
-        position: relative;
+        position: relative;   
     }
-
+    
     .top-bar {
         padding-top: 9rem;
 
@@ -134,7 +137,7 @@ export default {
         margin-left: auto;
         margin-right: auto;
         background-color: rgba(0, 0, 0, 0.664);
-        font-size: 1.7rem;
+        font-size: 1.7rem; 
         width: 99.5vw;
         padding: 1rem;
         padding-left:20vw;
@@ -142,7 +145,7 @@ export default {
         margin-top: 2rem;
         text-align: center;
     }
-
+    
     .dots {
         height: 2rem;
         width: 99.5vw;
@@ -161,12 +164,12 @@ export default {
 		position: absolute;
         padding:0.7rem 2.4rem;
         z-index: 1;
-        -webkit-box-shadow: 2px 2px 16px 1px rgba(0,0,0,0.6);
+        -webkit-box-shadow: 2px 2px 16px 1px rgba(0,0,0,0.6); 
         box-shadow: 2px 2px 16px 1px rgba(0,0,0,0.6);
     }
     .logoszew{
         min-width: 50vw;
-        display: flex;
+        display: flex; 
         justify-content: center;
     }
     .logoszew2{
@@ -179,7 +182,7 @@ export default {
         align-items: stretch;
         align-content: center;
     }
-
+    
     .logos h1{
         font-size: 3.5rem;
     }
@@ -192,8 +195,8 @@ export default {
         justify-content: space-around;
         padding:1rem 3rem;
         z-index: 1;
-        -webkit-box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.6);
-        box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.6);
+        -webkit-box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.6); 
+        box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.6); 
         cursor: pointer;
     }
     .przycisk :hover{
