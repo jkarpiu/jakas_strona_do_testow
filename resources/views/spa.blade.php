@@ -20,7 +20,6 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/default.css') }}" rel="stylesheet">
-minor 
     <link rel="shortcut icon" type="image/jpg" href="/images/icon.png"/>
 </head>
 
