@@ -92,7 +92,7 @@ IPIES jest systemem który pozwala na testowanie wiedzy uczniów. Jest on napisa
    ```
 8. Generujemy klucze, które potem będą używane w procesie autoryzacji użytkowników
    ```bash
-   ./artisan migrate
+   ./artisan passport:install
    ```
 9. Tworzymy dowiązania pozwalające odczytywać pliki potrzebne do działania niektórych elementów strony
     ``` bash
