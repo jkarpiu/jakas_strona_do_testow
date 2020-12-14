@@ -128,7 +128,7 @@
                                         />
                                     </div>
                                     <div class="google-text">
-                                        Zaloguj się z Google
+                                        Zaloguj się z Google (Tylko uczeń)
                                     </div>
                                 </a>
                             </div>

@@ -68,6 +68,7 @@ class LoginController extends Controller
             $newUser->lname            = $user->user['family_name'];
             $newUser->email           = $user->email;
             $newUser->google_id       = $user->id;
+            $newUser->role            = 1;
             $newUser->save();
             auth()->login($newUser, true);
         }

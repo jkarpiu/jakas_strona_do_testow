@@ -14,6 +14,10 @@ use App\Dzialy;
 |
 */
 
+Route::get('/google_login', 'Auth\LoginController@redirectToProvider');
+
+Route::get('/callback', 'Auth\LoginController@handleProviderCallback');
+
 Route::get('/{any}', 'SpaController@index')->where('any', '.*');
 
 Route::get('/', function () {
@@ -46,7 +50,6 @@ Route::post('/dodaj_pytanie', 'addQuestionController@addQuestion');
 
 Route::post('/odp', 'randQuestionController@odpowiadanie');
 
-Route::get('/google_login', 'Auth\LoginController@redirectToProvider');
 
 Route::get('/callback', 'Auth\LoginController@handleProviderCallback');
 
