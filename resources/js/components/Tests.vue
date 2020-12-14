@@ -73,7 +73,7 @@
                     ><option value="null" disabled selected hidden
                         >Wybierz dział</option
                     >
-                    <option value="null">Dodaj dzial</option>
+                    <option value="-1">Dodaj dzial</option>
                     <option
                         :key="dzial.id"
                         v-for="dzial in dzialy"
